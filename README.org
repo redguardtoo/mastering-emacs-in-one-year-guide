@@ -1,0 +1,6 @@
+* 中文
+关于如何在一年内成为高手的指导.目前只提供中文版本.
+
+Web版本也会发布在我的[[http://blog.csdn.net/redguardtoo/article/details/7222501][CSND博客]]和[[http://blog.binchen.org/?p=268][个人博客]].
+* English version
+Text guide on how to master Emacs in one year. Currently it's only written in Chinese.
