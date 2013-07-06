@@ -1,0 +1,73 @@
+#+OPTIONS: ^:{}
+* Emacs for C++ developers
+  :PROPERTIES:
+  :ID:       o2b:d260ed4e-b55b-46b5-9fcd-6d5a6bca36c7
+  :END:
+#+OPTIONS: toc:nil
+
+Author: Chen Bin <chenbin DOT sh AT gmail DOT com>
+Created: <2013-07-06>
+URL: [[http://blog.binchen.org]]
+
+** warning
+This is only a draft. I recorded my points here and will add more content later.
+** original discussion 
+https://plus.google.com/110954683162859211810/posts/ZSc9Dtu7Vpz
+** code auto complete
+- clang is must
+- I prefer company-mode
+- auto-complete and auto-complete-clang is also fine
+- I will avoid any packages from cedet because my computer is slow
+- the only meaningful difference between auto-complete and company-mode is UI, but that in real programming actually make huge difference
+- in reality, I found I use hippie-expand more often simply because it's more responsive
+** scm
+- I use git. No interest in other scm tools
+- the old commands in emacs is still convienent
+- Many people use magit. Maybe its most useful feature is you can interactively create new commits by marked hunks in git cache/index.
+- I don't use magit. Command line looks good enough for me.
+** code editing
+- I use evil-mode, vim key binding, end of story
+- complete line in evil-mode is actually very useful
+- search and replace in evil-mode is even better than the orginal vim one
+- I use evil-nerd-commenter to comment/uncomment code
+** code navigation
+- for navigation in current file, I use imenu
+- for navigation between files, you can use cscope or gtags
+- both are good enough for me. I use gtags simply because it's udpated more often
+- ctags is good for C and simple C++ code. Avoid writing complex C++ code could be a better idea. Then you can use ctags.
+** flymake (real time syntax check)
+- I found it a huge boost to my productivity
+- The headache to write makefile to make flymake work is huge. For example, Manually insert correct include C++ header directories into makefile.
+- I suggest use cmake and cpputils-cmake to do this job automatically 
+** compile
+- compile mode in Emacs. All the handy hot keys to locate the next previous compile error.
+- you can change variable compile-command from "make" to "make -C /whatever/directory/you/want" in elisp.
+- hide the compiling message window in elisp when compiling succeeds.
+** debug
+- I use M-x gud-gdb which works on gdb 6.3. On OSX 10.7.3, gdb 6.3 is the installed by default.
+- Set hot key for gud-run
+- Or only use the cli gdb plus some tile window manager like i3. Because for real world debugging, the actual thing you need do is watch the variable, read the context of the code.
+- Gud and dired could be programmically changed, so you can jump to the directory of executable easily
+** documentation
+- The only meaningful documentation these days for me is to search google, search stackoverflow. So I need trigger firefox from Emacs.
+** clipboard
+- It's useful when you copy/paste code from firefox
+- I found the only reliable way is use cli tool for cross-platform development. xclip is not as reliable as xsel.
+** file
+- jump to the corresponding header. You know "M-x ff-find-other-file"? In real projects, you need give set up 3rd party C++ directories for search. cpputils-cmake can help you. But of course you can do it manually.
+- ido is good
+- helm plugins are fine. But "M-x helm-ls-git-ls" is very useful if you use git.
+- sometime I just use "M-x rgrep"
+- Os grep plus percol by mooz plus some handy clipboard bash function plus ":e" in evil-mode is very useful to search and open file quickly
+- I don't understand why everything should be done in Emacs, Some handy shell tools plus Emacs is much more powerful.
+** window 
+- I usually open 4~8 sub-windows
+- Use window-numbering.el, the hotkeys are "M-NUM".
+- I use evil-mode, so no need to input numeric argument
+- I am also using other window navigation plugins, but they are rarely used.
+- winner-mode, undo the windows layout
+** command
+- I use smex to input commands because I cannot remember hot keys because hot keys are different in different modes.
+** code template
+- yasnippet
+- My tip is to assign a unique hot key for yas/expand. So you can use single character as the key of your most frequently used snippet. "a" for assert "l" for log and "i" for include. Other snippets are rarely used actually.
