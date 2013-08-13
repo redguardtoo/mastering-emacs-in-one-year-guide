@@ -88,7 +88,7 @@
 
 这是浪费时间!
 
-我应该一开始就照抄 [[http://www.sanityinc.com/][世界级大师Steve Purcell]]的[[https://github.com/purcell/emacs.d][emacs配置]](注意,[[https://github.com/purcell/emacs.d/commit/af5ca84073adad64f02c8d216bcac943563997c2][Purcell的af5ca840]]版本支持Emacs23.1及更高版本,在Linux/OSX/Cygwin下测试过,更高版本只保证支持emacs24,因purcell只在mac下用emacs24版本,如果一定要使用emacs23,可考虑我的版本,网址见后文).
+我应该一开始就照抄[[http://www.sanityinc.com/][大师Steve Purcell]]的[[https://github.com/purcell/emacs.d][emacs配置]]([[https://github.com/purcell/emacs.d/commit/af5ca84073adad64f02c8d216bcac943563997c2][Purcell的af5ca840]]版本支持Emacs23.1及更高版本,在Linux/OSX/Cygwin下测试过,更高版本只保证支持emacs24,因purcell只在mac下用emacs24版本,如果一定要使用emacs23,可考虑我的版本,网址见后文).
 
 我请求你不要重复我的错误,不要质疑,不要创新,跟着Steve Purcell这样的高手做.
 
@@ -107,6 +107,7 @@
 
 以上事实在我给出的网址中稍作调查即可得知.
 
+注意:Steve Purcell更新插件比较频繁,不是很稳定,初学者可以考虑用[[http://eschulte.github.io/emacs-starter-kit/][Eric Schulte的Emacs Starter Kit]]代替.
 ** 在google plus上搜索emacs相关内容
 google plus技术geek比例高.我推荐[[https://plus.google.com/113859563190964307534][Xah Lee]],他的个人网站为[[http://xahlee.org/][李杀网]], 其账号名为ErgoEmacs.Xah Lee每周二会在Google Plus上组织一次Emacs问答.
 ** 加入google plus的Emacs社区
@@ -207,7 +208,6 @@ Xah Lee提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Ema
 - 去掉了git和subversion的依赖. 你只要下载我的配置,确保网络OK(因第一次启动Emacs会自动下载安装软件包).
 - 已安装了拼音输入法eim
 - C++支持强大,因我还做一些桌面开发
-- 我会两到三个月从Purcell的配置同步一次
 
 注意,Purcell是顶尖的Web开发者,他会试用各种最新的Web开发技术,如果你用了我的配置,Web开发插件更新会滞后一段时间.另外我的开发工具链和Purcell的不完全一致.你自己权衡了.
 *** 我已是Vi高手,为什么要转到Emacs来?
