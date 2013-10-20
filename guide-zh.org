@@ -11,9 +11,9 @@
   :END:
 作者: 陈斌(redguardtoo)
 
-版本号: 20130801
+版本号: 20131020
 
-更新时间: <2013-08-01 Thu>
+更新时间: <2013-10-20 日>
 
 原创时间: [2012-01-31 周二 15:08]
 
@@ -88,26 +88,19 @@
 
 这是浪费时间!
 
-我应该一开始就照抄[[http://www.sanityinc.com/][大师Steve Purcell]]的[[https://github.com/purcell/emacs.d][emacs配置]]([[https://github.com/purcell/emacs.d/commit/af5ca84073adad64f02c8d216bcac943563997c2][Purcell的af5ca840]]版本支持Emacs23.1及更高版本,在Linux/OSX/Cygwin下测试过,更高版本只保证支持emacs24,因purcell只在mac下用emacs24版本,如果一定要使用emacs23,可考虑我的版本,网址见后文).
+我应该一开始就照抄[[http://www.sanityinc.com/][世界级大师Steve Purcell]]的[[https://github.com/purcell/emacs.d][emacs配置]] .
 
-我请求你不要重复我的错误,不要质疑,不要创新,跟着Steve Purcell这样的高手做.
+*警告*,Purcell总爱试用最新的Web开发的新技术,对他而言稳定性不是第一位的,*如果*你有足够的热情和能力,愿意和他一起折腾,那么你的Emacs水平会提高得很快.
+
+这个如果是很重要的前提,当我上了Purcell的贼船时,我已有10年开发经验,精通多种开发语言,你可以在github上看一下我给Purcell报了多少bug.
+
+如果你不愿意过于折腾,那么你至少不要重复我的错误,你不要质疑,你不要创新,你要跟着高手做.比如[[https://github.com/eschulte/emacs24-starter-kit][Eric Schulte的Emacs-starter-kit]]很适合初学者.[[https://github.com/bbatsov/prelude][Bozhidar Batsov的配置]]也不错(不一定适合初学者).也可以用[[https://github.com/redguardtoo/emacs.d][我的配置]].
 
 直说了把,你是初学者,开始阶段应以学习模仿为主.这点怎么强调也不过分!
 
 为了加深印象,让我再举一个例子.一些读者向我反映,Emacs快捷键太多,背起来压力很大.实际上这是初学者先入为主的偏见.对高手来说,有了恰当的工具后,快捷键很多情况下并不需要.盲目地去背快捷键只会延迟你成为高手那一刻的到来.如果你只是复制了高手的配置开始使用而不是纠结于完成被快捷键这个无聊的任务,你会发觉高手以安装了名为smex的插件,使得你直接输入命令比用快捷键还快.所以背快捷键也不需要了.
 
-顺便说一下,Steve Purcell的配置需要git才能更新,这意味着你需要安装git和cygwin(限于windows平台).这是买一送二,我又给你介绍了两个高手必备的世界级工具.
-
-考虑到我的热情会被认为是传销,而我的严密逻辑和事实论证可能被忽视,我有必要简单明了地说明推崇Steve Purcell原因:
-- 已有很多人推荐他的配置(请google)
-- 能力出众,背景相当好(我已调查过他的Linkedin Profile)
-- 人近中年,心智成熟(例如,他只在Mac下使用Emacs24,但是能够根据我在Linux/Cygwin下使用Emacs23的需求做调整).
-- 工程经验丰富(看他的代码一目了然)
-- 勇于求新,不断尝试新插件,在他这个年龄极为突出
-
-以上事实在我给出的网址中稍作调查即可得知.
-
-注意:Steve Purcell更新插件比较频繁,不是很稳定,初学者可以考虑用[[http://eschulte.github.io/emacs-starter-kit/][Eric Schulte的Emacs Starter Kit]]代替.
+顺便说一下,很多高手的配置需要git才能更新,这意味着你需要安装git和cygwin(限于windows平台).这是买一送二,我又给你介绍了两个高手必备的世界级工具.
 
 ** 高手都在哪里
 *** 加入google plus的Emacs社区
@@ -118,16 +111,16 @@ Google Plus的[[https://plus.google.com/communities/114815898697665598016][Emacs
 另外,著名Emacs用户[[https://plus.google.com/113859563190964307534][Xah Lee]](个人网站为[[http://xahlee.org/][李杀网]], 其账号名为ErgoEmacs)每周二会在Google Plus上组织一次Emacs问答.
 
 *** reddit的Emacs社区质量也不错
-[[http://www.reddit.com/r/emacs/][reddit]]上有时候一些讨论挺有新意,深度上不及Google+.
+[[http://www.reddit.com/r/emacs/][reddit]]上一些讨论挺有新意,深度上不及Google+.
 
-由于prism事件暴光,,所以一些Emacs高手为了抗议google泄漏隐私给美国政府的NSA,离开了google+社区,他们可能以后会把主要精力投入reddit的社区,所以reddit可能会在geek的氛围上有所增强.
+由于Prism事件,一些Emacs高手抗议Google泄漏隐私给美国政府的NSA,离开了google+社区,他们可能以后会把主要精力投入reddit,所以reddit会在geek的氛围上有所增强.
 
 *** github是geek云集的地方
 github的版本控制服务很好.现在它的社区化倾向越来越强了,我喜欢.
 
 例如,可以看一下[[https://github.com/languages/Emacs%20Lisp]]上最酷的Emacs插件.
 *** Emacs牛人的博客
-最好的是[[http://planet.emacsen.org/][Planet Emacsen]],是多个Emacs博客的集合.
+最好的是[[http://planet.emacsen.org/][Planet Emacsen]],多个Emacs博客的集合.
 ** 搜索最新讯息
 *** 在twitter上以"emacs :en"定期搜索
 twitter人多,更新结果快.
