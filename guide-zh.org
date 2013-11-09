@@ -82,7 +82,7 @@
 
 长期来说,在任何领域要成为高手,兴趣是最重要的.
 
-以我为例,我急需[[http://en.wikipedia.org/wiki/Getting_Things_Done][GTD]]的工具,emacs的而[[http://orgmode.org/][org-mode]]是世界上最好的GTD工具(没有之一).在使用org-mode大大节省了时间后,对于emacs爱屋及乌,兴趣高涨了100倍.
+以我为例,我急需[[http://en.wikipedia.org/wiki/Getting_Things_Done][GTD]]的工具,而emacs的[[http://orgmode.org/][org-mode]]是世界上最好的GTD工具(没有之一).用org-mode大大节省了时间后,我对于emacs爱屋及乌,兴趣高涨了100倍.
 ** 站在巨人的肩膀上
 这方面我是个负面榜样.开始阶段我还是抱着玩的心态,喜欢到处找有趣的配置粘贴到我的.emacs中去.
 
