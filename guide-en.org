@@ -3,9 +3,9 @@
 #+OPTIONS: toc:nil
   :PROPERTIES:
   :ID:       o2b:24796fba-6de7-4712-b83e-b86969c31335
-  :POST_DATE: [2012-01-31 周二 15:08]
+  :POST_DATE: [2012-01-31 Tue 15:08]
   :POSTID:   268
-  :ARCHIVE_TIME: 2012-12-26 三 19:21
+  :ARCHIVE_TIME: 2012-12-26 Wed 19:21
   :ARCHIVE_FILE: ~/projs/mastering-emacs-in-one-year-guide/guide-zh.org
   :ARCHIVE_CATEGORY: emacs
   :END:
@@ -15,17 +15,16 @@ Version: 20130801
 
 Updated: <2013-08-01 Thu>
 
-Created: [2012-01-31 周二 15:08]
+Created: [2012-01-31 Tue 15:08]
 
 Copyright: This work is licensed under the [[http://creativecommons.org/licenses/by-nc-nd/3.0/][Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License]].
 
-** 注意
+** Notes
 This article is placed at [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide]].
 
-So please use above URL to contact me instead of my Email for your good. Because the github's issue tracker will send me email which is always in my folder with highest priority.
+Please use above URL to contact me instead of send my email for your own good. Because the github's issue tracker will also send me email which is always in the folder with highest priority.
 
-I will provide long-term support for this article. 
-我会长期维护本文.因为Emacs本质上是一个社区和平台,不断有新的有趣的人和技术出现.我会根据社区的最新情况更新本文.
+Emacs is actually more a community than a static software. Cool geeks keep popping up in this community. So I will keep updating this article to notify you the latest information of Emacs community.
 
 ** 简介
 成为Emacs高手很容易.一年前我还在Vi阵营,偶尔使用Emacs还总是忘记"退出"的快捷键,但是一年后我跨入高手行列.
