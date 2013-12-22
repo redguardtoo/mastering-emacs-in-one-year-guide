@@ -20,11 +20,16 @@ Created: [2012-01-31 Tue 15:08]
 Copyright: This work is licensed under the [[http://creativecommons.org/licenses/by-nc-nd/3.0/][Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License]].
 
 ** Notes
+*** Report this guide's bug
 This article is placed at [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide]].
 
-Please use above URL to contact me instead of send my email for your own good. Because the github's issue tracker will also send me email which is always in the folder with highest priority.
+Please use above URL to contact me instead of send my email for your own good because github notification mail is always in my first priority folder.
 
-Emacs is actually more a community than a static software. Cool geeks keep popping up in this community. So I will keep updating this article to notify you the latest information of Emacs community.
+*** I will provide long-term update
+Emacs is actually more a community than a software. Interesting geeks and addons emerge from time to time. I will update this article according to the latest status of community.
+
+*** If you don't agree some of my points
+Please contact through github.
 
 ** 简介
 成为Emacs高手很容易.一年前我还在Vi阵营,偶尔使用Emacs还总是忘记"退出"的快捷键,但是一年后我跨入高手行列.
