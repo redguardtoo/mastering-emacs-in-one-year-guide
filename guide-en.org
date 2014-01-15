@@ -31,47 +31,55 @@ Emacs is actually more a community than a software. Interesting geeks and addons
 *** If you don't agree some of my points
 Please contact through github.
 
-** 简介
-成为Emacs高手很容易.一年前我还在Vi阵营,偶尔使用Emacs还总是忘记"退出"的快捷键,但是一年后我跨入高手行列.
+** Introduction
+Becoming an Emacs master is easy. One year is totally enough! 
 
-现在网上很多中文文章都是和你强调Emacs有多牛,以激发你的兴趣.最有名的大概是[[http://docs.huihoo.com/homepage/shredderyin/][王垠]]的[[http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/865628_1.html][Emacs是一种信仰！世界最强编辑器介绍]].
+I, for example, was a Emacs dummy who can never figure out how to exit Emacs (press Ctrl-X Ctrl-C) one year ago. Now I [[https://github.com/redguardtoo][am good at Emacs]].
 
-这些好文章让你激动,你因此定下来一个伟大崇高的目标(掌握神一样的编辑器Emacs),接下来就是执行了(如何高效地学习Emacs).
+So this guide is basically the summary of my experience on mastering emacs. It will focus on philosophy and methodology instead of technical details.
 
-国内关于"如何做"的文章不多,那些涉及到"如何做"的文章,涉及细节比较多,而谈一般方法论的较少,所以本文的重点就是谈谈一般方法.
+** Why Emacs (OPTIONAL)
+I will keep this part short because the focus of this article is on HOW instead WHY
+*** Emacs can get the job done more quickly and efficiently
+IDE is usually optimized for special programming language or application framework. But Emacs is much more powerful on general work flow.
 
-** 为什么要学习Emacs(可选)
-简单谈谈,因为我本文的重点是"怎么做",而不是"为什么".
-*** 和单纯的IDE比较,Emacs可以做的更多更快
-这里的更多并不是和IDE比支持某编程语言的特性更多,而是指Emacs内可完成的通用任务比较多更快捷.
+When people say IDE is good for programming. They are usually talking about code navigation, code completion and real time documetation lookup.
 
-例如,我做开发时碰到难题,需要实时上IRC请教国外高手(工作流包括粘贴我的代码到pastebin或者gist,在irc内提问,看网页,将解决方案粘贴回来),emacs集成了IRC工具和浏览器(w3m),操作就很方便.
+For solving the hardest and general design problem, we usually spend more time on reading, investigation and communication. A typical workflow is like paste prototype code into [[http://pastebin.com/]] or [[https://gist.github.com/]], ask people in IRC, search in stackoverflow and paste the code back. Emacs has support for IRC and browser (w3m). So the workflow could be followed easily.
 
-我使用Visual Studio多年了,Firefox使用我也是高手,相信我,大多数情况下还是Emacs更快.
+I have more than 10 year experience on most commercial IDEs. Trust me, Emacs is better for most programming tasks.
 
-当然口说无凭,请看以下两段高手操作的youtube视频:
+As a proof, check below video demos of Emacs operation:
 - [[http://www.youtube.com/watch?v=Ho6nMWGtepY][Writing PPT with org-mode and beamer in Emacs ]]
 - [[http://www.youtube.com/watch?v=EQAd41VAXWo][Emacs Power: Can your editor do THIS! ]]
-*** Emacs是自由软件基金会开发的招牌开源软件
-个人会丧失开发软件的兴趣,公司会倒闭而停止维护软件.但是自由软件基金会会一直存在下去.Emacs作为其招牌软件也会一直被维护下去,我在该软件上投资的时间和精力也永远不会贬值.
-*** 使用Emacs可以立刻开始工作.
-软件是开源的,配置是纯文本,而且软件的资源消耗较小,安装包很小(命令行版本的安装包30M左右),所以在任何环境下我都可以用Emacs开始工作,overhead很小.
+*** Emacs is maintained by Free Software Foundation (FSF)
+FSF has been around for almost 40 years. I assume it will exist for next 40 years. So Emacs will live for a very long time. My investment on Emacs will not be lost.
+*** No overhead
+Pro:
+- Emacs is open sourced 
+- it supports all platforms.
+- it's configuration is simple text
 
-这在大项目中特别明显,例如,某项目我需要同时编辑perl,java,C,bash,SQL,需要远程编辑在美国服务器上的代码,网速也不是很快.Emacs的优势就体现出来了.
+So I can start work in any environment in 5 minutes with Emacs. For example, on windows, I only need download portable Emacs executable and my set up (a folder containing some text files). Done!
 
-*** 一年指的是充分利用空闲时间,一年后自然水到渠成
-我没说一年内必须什么事也不干专门学Emacs,悬梁刺股没有短期利益回报的学习方法是我最反对的.
+I used to work for a project which required me editing perl/java/C/bash/SQL code at the same time. The code is hosted on some remote sever far way from my office. We don't have the quickest network connection in the world so we do all the work in command line and shell. So Emacs is the only choice.
 
-我赞成的方法是,开始阶段花极少的时间得到巨大的回报(如下文谈到的Org-mode),以兴趣做导向.
+If you have survive enough *huge* projects like I have, you will appreciate the "No overhead" advantage of Emacs. Emacs will never block your productivity. To help you understand a huge project means. Here is a true story, one month is needed for set up second develop environment because some advanced gadget required is on the ship crossing the pacific. So the team has to make do with the first development environment by remote ssh.
+*** Use your spare time during one year
+It's useless to study Emacs in academic way for one year.
 
-每天花多少时间取决于个人需要和如何管理,以我为例,每天八小时上班时间中有很多零碎时间可以利用,上下班通勤时间有一个小时可以利用.
+Use emacs instead. Focus on what benefit emacs can bring.
 
-*** 态度决定一切
-长期来说你能取得的成就是由态度决定的.
+For example, I'm interested in Emacs because I need time tracking my tasks. Emacs org-mode is the best tool in the world for that purpose.
 
-优秀人士的两个特点:
-1. 勇于接受新事物
-2. 追求更强的过程本身就是目的
+Spare time during one year is enough.
+
+*** Attitude is altitude
+How good you will be at Emacs (or anything?) is determined by your attitude,
+
+Two points to be successful (mastering Emacs in one year):
+1. open minded
+2. better yourself is the purpose
 ** 读官方教程
 打开Emacs后,同时按下Alt和X健,输入help-with-tutorial(后文中,类似快捷键以简写`M-x help-with-tutorial`代替),回车.
 
