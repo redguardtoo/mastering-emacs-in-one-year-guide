@@ -11,9 +11,9 @@
   :END:
 作者: 陈斌(redguardtoo)
 
-版本号: 20131122
+版本号: 20140127
 
-更新时间: <2013-11-22 Fri>
+更新时间: <2014-01-27 Mon>
 
 原创时间: <2012-01-31 Tue>
 
@@ -40,14 +40,22 @@
 - 我文章的标题是*一年成为高手*,不是一年入门
 - 我就是这么做的,你可以看看一年内我给他报了多少bug
 
+*** 不要复制粘帖本文
+如前所述,我会不断更新维护本文,如果你只是拷贝粘帖全文,会使你自己和其他人错过最新的更新.
+
+如果您想和他人分享本文,最好是分享本文的链接,
+- 最新的中英文纯文字版本会发布在github上 ([[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide]])
+- 中文HTML版本会发布到我的官方博客 (http://blog.binchen.org/?p=268)
+- 考虑到中国大陆的网络情况,还有另一中文HTML版镜像 ([[http://blog.csdn.net/redguardtoo/article/details/7222501]])
+
 ** 简介
-成为Emacs高手很容易.一年前我还在Vi阵营,偶尔使用Emacs还总是忘记"退出"的快捷键,但是一年后我跨入高手行列.
+成为Emacs高手很容易.一年前我还在Vi阵营,偶尔用Emacs还忘记"退出"的快捷键,但一年后我跨入高手行列.
 
-现在网上很多中文文章都是和你强调Emacs有多牛,以激发你的兴趣.最有名的大概是[[http://docs.huihoo.com/homepage/shredderyin/][王垠]]的[[http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/865628_1.html][Emacs是一种信仰！世界最强编辑器介绍]].
+很多文章都是强调Emacs有多牛,以激发你的兴趣.最有名的大概是[[http://docs.huihoo.com/homepage/shredderyin/][王垠]]的[[http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/865628_1.html][Emacs是一种信仰！世界最强编辑器介绍]].
 
-这些好文章让你激动,你因此定下来一个伟大崇高的目标(掌握神一样的编辑器Emacs),接下来就是执行了(如何高效地学习Emacs).
+这些好文章让你激动,你因此定下一个伟大目标(掌握神一样的编辑器Emacs),接下来就是执行了(如何高效地学习Emacs).
 
-国内关于"如何做"的文章不多,那些涉及到"如何做"的文章,涉及细节比较多,而谈一般方法论的较少,所以本文的重点就是谈谈一般方法.
+网上关于"如何做"的文章不多,那些涉及到"如何做"的文章,涉及细节多而谈方法论少,所以本文的重点就是谈谈一般方法.
 
 ** 为什么要学习Emacs(可选)
 简单谈谈,因为我本文的重点是"怎么做",而不是"为什么".
@@ -82,9 +90,21 @@ Emacs本身并不能给你带来任何好处,这就决定了其社区成员都�
 *** 态度决定一切
 长期来说你能取得的成就是由态度决定的.
 
-优秀人士的两个特点:
+优秀人士的特点:
 1. 勇于接受新事物
 2. 追求更强的过程本身就是目的
+3. 举一反三
+
+例如,虽然Emacs默认的快捷键已很高效,但是我更新了我的快捷键操作.保存文件时我原来要按按"Ctrl+X Ctrl+S",现在按",ww".少按了一个键,同时手指避免了额外移动一寸去按Ctrl键.
+
+这似乎是个微小的改动,因为保存文件并不是一个很频繁的动作.而且放弃熟悉的快捷键操作,使用一个陌生的快捷键开始也有点不习惯(后文我提到,我也是一个熟练的Vim用户,但是Vim的保存快捷键默认是":w",并不是现在的键位).
+
+但是这只是我改进效率的一个开端,我花了几个月时间把所有的操作都以类似的方法优化了一边.然后我又想到了进一步的优化应该有可靠的统计数据为基础,所以我安装了名为[[https://github.com/dacap/keyfreq][keyfreq]]的Emacs插件,对于我使用最频繁的操作重新分配了最方便的快捷键.
+
+假设我一开始因为已习惯了Vim或者Emacs默认的快捷键,或因为改进保存文件动作的效率提升太小,所以拒绝改变,那么就不会有后来的大规模优化键位的工程.
+
+或者有人说输入代码效率只是软件开发流程中很小一部分,重要的是"XXXX(编程思想,架构,框架...)".此所谓顾左右而言它.如果你能举一反三,自然可以猜到同样的方法和原则也适用于软件开发的任何一部分,"但是..."只是不做的借口罢了.
+
 ** 读官方教程
 打开Emacs后,同时按下Alt和X健,输入help-with-tutorial(后文中,类似快捷键以简写`M-x help-with-tutorial`代替),回车.
 
@@ -120,7 +140,7 @@ Emacs本身并不能给你带来任何好处,这就决定了其社区成员都�
 
 ** 高手都在哪里
 *** 加入google plus的Emacs社区
-Google Plus的[[https://plus.google.com/communities/114815898697665598016][Emacs社区]]在此时(<2012-12-25 二>)Geek的气场非常强,讨论的贴子质量非常高.我上过很多大众和小众的Emacs社区,这是我的经验之谈.例如,我加入了Linkedin和Facebook的Emacs社区,目前打算都退出.并不是这些社区不够专业,只是Google Plus讨论问题的技术层次比较高.
+Google Plus的[[https://plus.google.com/communities/114815898697665598016][Emacs社区]]在此时(<2012-12-25 二>)Geek的气场非常强,讨论的贴子质量非常高.我上过很多大众和小众的Emacs社区,这是我的经验之谈.例如,我加入了Linkedin和Facebook的Emacs社区,目前都退出了.并不是这些社区不够专业,只是Google Plus讨论问题的技术层次比较高.
 
 如果你只能加入一个网络社区的话,那么就是Google plus了.
 
@@ -184,25 +204,27 @@ Xah Lee提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Ema
 - 经常更新
 - 功能强大
 
-所有插件都可以通过Emacs自带的package manager下载.
+所有插件都可以通过Emacs的package manager下载.
 
 以下是插件清单:
-| 名称          | 说明                                              | 同类插件                         |
-|---------------+---------------------------------------------------+----------------------------------|
-| evil          | 将Emacs变为vi                                     | viper                            |
-| org           | org-mode,全能的note工具                           | 不知道                           |
-| org2blog      | 给wordpress写博客                                 | 不知道                           |
-| company-mode  | 自动完成输入,支持各种语言和后端                   | cedet, auto-complete             |
-| expand-region | 按快捷键选中当前文本,可以将选择区域扩展或者收缩   | 不知道                           |
-| smex          | 让输入M-x command变得飞快                         | 不知道                           |
-| yasnippet     | 强大的文本模板输入工具                            | 不知道                           |
-| flymake-xxxx  | 以flymake开头的所有包,针对不同语言做语法检查      | flycheck                         |
-| helm          | 选择和自动完成的框架,在其上有很多插件完成具体功能 | ido                              |
-| ido           | 和helm类似,我是helm和ido同时用                    | helm                             |
-| js2-mode      | javascript的major-mode,自带javascript语法解释器   | javascript-mode,js-mode,js3-mode |
-| w3m           | Emacs的网络浏览器                                 | w3                               |
-| elnode        | elisp写的Web服务器                                | 不知道                           |
-| smartparens   | 自动输入需要成对输入的字符如右括号之类的字符      | autopair                         |
+| 名称                | 说明                                              | 同类插件                         |
+|---------------------+---------------------------------------------------+----------------------------------|
+| [[https://gitorious.org/evil/][evil]]                | 将Emacs变为vi                                     | viper                            |
+| [[http://orgmode.org/][org]]                 | org-mode,全能的note工具                           | 不知道                           |
+| [[https://github.com/punchagan/org2blog][org2blog]]            | 给wordpress写博客                                 | 不知道                           |
+| [[https://github.com/company-mode/company-mode][company-mode]]        | 自动完成输入,支持各种语言和后端                   | cedet, auto-complete             |
+| [[https://github.com/magnars/expand-region.el][expand-region]]       | 按快捷键选中当前文本,可以将选择区域扩展或者收缩   | 不知道                           |
+| [[https://github.com/nonsequitur/smex][smex]]                | 让输入M-x command变得飞快                         | 不知道                           |
+| [[https://github.com/capitaomorte/yasnippet][yasnippet]]           | 强大的文本模板输入工具                            | 不知道                           |
+| [[http://www.emacswiki.org/emacs/FlyMake][flymake-xxxx]]        | 以flymake开头的所有包,针对不同语言做语法检查      | flycheck                         |
+| [[https://github.com/emacs-helm/helm][helm]]                | 选择和自动完成的框架,在其上有很多插件完成具体功能 | ido                              |
+| [[http://www.emacswiki.org/emacs/InteractivelyDoThings][ido]]                 | 和helm类似,我是helm和ido同时用                    | helm                             |
+| [[https://github.com/mooz/js2-mode][js2-mode]]            | javascript的major-mode,自带javascript语法解释器   | javascript-mode,js-mode,js3-mode |
+| [[http://www.emacswiki.org/emacs/emacs-w3m][w3m]]                 | Emacs的网络浏览器                                 | 不知道                           |
+| [[https://github.com/nicferrier/elnode][elnode]]              | elisp写的Web服务器                                | 不知道                           |
+| [[https://github.com/Fuco1/smartparens][smartparens]]         | 自动输入需要成对输入的字符如右括号之类的字符      | autopair                         |
+| [[https://github.com/nschum/window-numbering.el][window-numbering.el]] | 跳转到不同的子窗口                                | 不知道                           |
+| [[https://github.com/fxbois/web-mode][web-mode]]            | 支持各种HTML文件                                  | nxml-mode,nxhtml-mode,html-mode  |
 
 ** 小结
 看到这里你应该很清楚了,我的方法就是以兴趣作为切入点,以天才作为榜样,大量阅读,大量练习.
