@@ -211,24 +211,24 @@ Xah Lee 提供 [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费 
 所有插件都可以通过 Emacs 的 package manager 下载。
 
 以下是插件清单：
-| 名称                | 说明                                              | 同类插件                         |
-|---------------------+---------------------------------------------------+----------------------------------|
-| [[https://gitorious.org/evil/][evil]]                | 将 Emacs 变为 vi                                     | viper                            |
-| [[http://orgmode.org/][org]]                 | org-mode，全能的 note 工具                           | 不知道                           |
-| [[https://github.com/punchagan/org2blog][org2blog]]            | 给 wordpress 写博客                                 | 不知道                           |
-| [[https://github.com/company-mode/company-mode][company-mode]]        | 自动完成输入，支持各种语言和后端                   | cedet，auto-complete             |
-| [[https://github.com/magnars/expand-region.el][expand-region]]       | 按快捷键选中当前文本，可以将选择区域扩展或者收缩   | 不知道                           |
-| [[https://github.com/nonsequitur/smex][smex]]                | 让输入 M-x command 变得飞快                         | 不知道                           |
-| [[https://github.com/capitaomorte/yasnippet][yasnippet]]           | 强大的文本模板输入工具                            | 不知道                           |
-| [[http://www.emacswiki.org/emacs/FlyMake][flymake-xxxx]]        | 以 flymake 开头的所有包，针对不同语言做语法检查      | flycheck                         |
-| [[https://github.com/emacs-helm/helm][helm]]                | 选择和自动完成的框架，在其上有很多插件完成具体功能 | ido                              |
-| [[http://www.emacswiki.org/emacs/InteractivelyDoThings][ido]]                 | 和 helm 类似，我是 helm 和 ido 同时用                    | helm                             |
-| [[https://github.com/mooz/js2-mode][js2-mode]]            | javascript 的 major-mode，自带 javascript 语法解释器   | javascript-mode、js-mode、js3-mode |
-| [[http://www.emacswiki.org/emacs/emacs-w3m][w3m]]                 | Emacs 的网络浏览器                                 | 不知道                           |
-| [[https://github.com/nicferrier/elnode][elnode]]              | elisp 写的 Web 服务器                                | 不知道                           |
-| [[https://github.com/Fuco1/smartparens][smartparens]]         | 自动输入需要成对输入的字符如右括号之类的字符      | autopair                         |
-| [[https://github.com/nschum/window-numbering.el][window-numbering.el]] | 跳转到不同的子窗口                                | 不知道                           |
-| [[https://github.com/fxbois/web-mode][web-mode]]            | 支持各种 HTML 文件                                  | nxml-mode、nxhtml-mode、html-mode  |
+| 名称                | 说明                                                 | 同类插件                           |
+|---------------------+------------------------------------------------------+------------------------------------|
+| [[https://gitorious.org/evil/][evil]]                | 将 Emacs 变为 vi                                     | viper                              |
+| [[http://orgmode.org/][org]]                 | org-mode，全能的 note 工具                           | 不知道                             |
+| [[https://github.com/punchagan/org2blog][org2blog]]            | 给 wordpress 写博客                                  | 不知道                             |
+| [[https://github.com/company-mode/company-mode][company-mode]]        | 自动完成输入，支持各种语言和后端                     | cedet，auto-complete               |
+| [[https://github.com/magnars/expand-region.el][expand-region]]       | 按快捷键选中当前文本，可以将选择区域扩展或者收缩     | 不知道                             |
+| [[https://github.com/nonsequitur/smex][smex]]                | 让输入 M-x command 变得飞快                          | 不知道                             |
+| [[https://github.com/capitaomorte/yasnippet][yasnippet]]           | 强大的文本模板输入工具                               | 不知道                             |
+| [[http://www.emacswiki.org/emacs/FlyMake][flymake-xxxx]]        | 以 flymake 开头的所有包，针对不同语言做语法检查      | flycheck                           |
+| [[https://github.com/emacs-helm/helm][helm]]                | 选择和自动完成的框架，在其上有很多插件完成具体功能   | ido                                |
+| [[http://www.emacswiki.org/emacs/InteractivelyDoThings][ido]]                 | 和 helm 类似，我是 helm 和 ido 同时用                | helm                               |
+| [[https://github.com/mooz/js2-mode][js2-mode]]            | javascript 的 major-mode，自带 javascript 语法解释器 | javascript-mode、js-mode、js3-mode |
+| [[http://www.emacswiki.org/emacs/emacs-w3m][w3m]]                 | Emacs 的网络浏览器                                   | 不知道                             |
+| [[https://github.com/nicferrier/elnode][elnode]]              | elisp 写的 Web 服务器                                | 不知道                             |
+| [[https://github.com/Fuco1/smartparens][smartparens]]         | 自动输入需要成对输入的字符如右括号之类的字符         | autopair                           |
+| [[https://github.com/nschum/window-numbering.el][window-numbering.el]] | 跳转到不同的子窗口                                   | 不知道                             |
+| [[https://github.com/fxbois/web-mode][web-mode]]            | 支持各种 HTML 文件                                   | nxml-mode、nxhtml-mode、html-mode  |
 
 ** 小结
 看到这里你应该很清楚了，我的方法就是以兴趣作为切入点，以天才作为榜样，大量阅读，大量练习。
