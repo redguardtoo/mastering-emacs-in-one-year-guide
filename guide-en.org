@@ -43,7 +43,7 @@ I will keep this part short because the focus of this article is on HOW instead 
 *** Emacs can get the job done more quickly and efficiently
 IDE is usually optimized for special programming language or application framework. But Emacs is much more powerful on general work flow.
 
-When people say IDE is good for programming. They are usually talking about code navigation, code completion and real time documetation lookup.
+When people say IDE is good for programming. They are usually talking about code navigation, code completion and real time documentation lookup.
 
 For solving the hardest and general design problem, we usually spend more time on reading, investigation and communication. A typical workflow is like paste prototype code into [[http://pastebin.com/]] or [[https://gist.github.com/]], ask people in IRC, search in stackoverflow and paste the code back. Emacs has support for IRC and browser (w3m). So the workflow could be followed easily.
 
