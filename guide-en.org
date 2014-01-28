@@ -74,20 +74,20 @@ For example, I'm interested in Emacs because I need time tracking my tasks. Emac
 
 Spare time during one year is enough.
 
-*** Attitude is altitude
-How good you will be at Emacs (or anything?) is determined by your attitude,
+*** What matters is Attitude
+How good you will be at Emacs is determined by your attitude,
 
-Two points to be successful (mastering Emacs in one year):
+Points to be successful (mastering Emacs in one year):
 1. open minded
 2. better yourself is the purpose
-** 读官方教程
-打开Emacs后,同时按下Alt和X健,输入help-with-tutorial(后文中,类似快捷键以简写`M-x help-with-tutorial`代替),回车.
+3. Half a tale is enough for a wise man. 
+** Read the official tutorial
+Start Emacs, press ALT and X key together, then input "help-with-tutorial", press ENTER. That's all you need to open the tutorial.
 
-仅需半小时.关于Emacs的多难学的谬论可以休矣,因为半小时的代价微不足道.想想你去年有多少小时白白虚度了吧.
+Reading this tutorial will take you about half an hour. It's not too much time to learn a life time skill.
 
-这步是必须的,不要跳过!
+Reading tutorial is essential. Don't skip this step. For example, many Emacs newbies asked me how to open online help for some command. They should not ask basic question like this if they had read the tutorial.
 
-例如,我发觉很多读者的问题是不知道如何查看变量函数的文档,这在官方教程中都有说明.
 ** 以兴趣和急需解决的问题作为切入点
 因为如果微小的努力能得到巨大的回报,你就会越学越有乐趣,进入一个感情上的正反馈.
 
