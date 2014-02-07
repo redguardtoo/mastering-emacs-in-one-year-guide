@@ -82,18 +82,18 @@ Points to be successful (mastering Emacs in one year):
 2. better yourself is the purpose
 3. Half a tale is enough for a wise man. 
 ** Read the official tutorial
-Start Emacs, press ALT and X key together, then input "help-with-tutorial", press ENTER. That's all you need to open the tutorial.
+Start Emacs, press Alt and X key together, then input "help-with-tutorial", press ENTER. That's all you need to open the tutorial.
 
 Reading this tutorial will take you about half an hour. It's not too much time to learn a life time skill.
 
 Reading tutorial is essential. Don't skip this step. For example, many Emacs newbies asked me how to open online help for some command. They should not ask basic question like this if they had read the tutorial.
 
-** 以兴趣和急需解决的问题作为切入点
-因为如果微小的努力能得到巨大的回报,你就会越学越有乐趣,进入一个感情上的正反馈.
+** What's the first practical issue Emacs can help
+That's the most important question you need ask yourself before you start.
 
-长期来说,在任何领域要成为高手,兴趣是最重要的.
+The learning is like investment. If you can get huge benefit by investing a little time, you will be motivated and keep on the learning.
 
-以我为例,我急需[[http://en.wikipedia.org/wiki/Getting_Things_Done][GTD]]的工具,emacs的而[[http://orgmode.org/][org-mode]]是世界上最好的GTD工具(没有之一).在使用org-mode大大节省了时间后,对于emacs爱屋及乌,兴趣高涨了100倍.
+Me, for example, have spent many years looking for some tool to manage my time until I find the [[http://orgmode.org/][org-mode]], which is a Emacs plugin.
 ** 站在巨人的肩膀上
 这方面我是个负面榜样.开始阶段我还是抱着玩的心态,喜欢到处找有趣的配置粘贴到我的.emacs中去.
 
