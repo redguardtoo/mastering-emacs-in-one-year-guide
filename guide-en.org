@@ -82,22 +82,22 @@ Points to be successful (mastering Emacs in one year):
 2. better yourself is the purpose
 3. Half a tale is enough for a wise man. 
 ** Read the official tutorial
-Start Emacs, press Alt and X key together, then input "help-with-tutorial", press ENTER. That's all you need to open the tutorial.
+Start Emacs, press ALT and X key together (M-x is used as abbreviation for Alt-X, C-x for Ctrl-X from now on). Input "help-with-tutorial", press ENTER. That's all you need to open the tutorial.
 
 Reading this tutorial will take you about half an hour. It's not too much time to learn a life time skill.
 
-Reading tutorial is essential. Don't skip this step. For example, many Emacs newbies asked me how to open online help for some command. They should not ask basic question like this if they had read the tutorial.
+Reading tutorial is essential. Don't skip this step. For example, many Emacs newbies asked me how to open online help for some command which could be answered by reading the tutorial.
 
 ** What's the first practical issue Emacs can help
 That's the most important question you need ask yourself before you start.
 
 The learning is like investment. If you can get huge benefit by investing a little time, you will be motivated and keep on the learning.
 
-Me, for example, have spent many years looking for some tool to manage my time until I find the [[http://orgmode.org/][org-mode]], which is a Emacs plugin.
-** 站在巨人的肩膀上
-这方面我是个负面榜样.开始阶段我还是抱着玩的心态,喜欢到处找有趣的配置粘贴到我的.emacs中去.
+Me, for example, have spent many years looking for some time-management tool until I find the [[http://orgmode.org/][org-mode]] (a Emacs plugin).
+** Standing on the shoulders of giants
+I learned this lesson the hard way. At the beginning, I regarded Emacs as some geek toy. I digged around the internet for the fun elisp I can pasted into my ~/.emacs.
 
-这是浪费时间!
+That's totally waste of time since my goal is to become an Emacs master!
 
 我应该一开始就照抄[[http://www.sanityinc.com/][大师Steve Purcell]]的[[https://github.com/purcell/emacs.d][emacs配置]]([[https://github.com/purcell/emacs.d/commit/af5ca84073adad64f02c8d216bcac943563997c2][Purcell的af5ca840]]版本支持Emacs23.1及更高版本,在Linux/OSX/Cygwin下测试过,更高版本只保证支持emacs24,因purcell只在mac下用emacs24版本,如果一定要使用emacs23,可考虑我的版本,网址见后文).
 
