@@ -1,5 +1,5 @@
 #+OPTIONS: ^:{}
-* 一年成为 Emacs 高手（像神一样使用编辑器）                                         :emacs:zh:
+* 一年成为Emacs高手(像神一样使用编辑器)                                         :emacs:zh:
 #+OPTIONS: toc:nil
   :PROPERTIES:
   :ID:       o2b:24796fba-6de7-4712-b83e-b86969c31335
@@ -9,7 +9,7 @@
   :ARCHIVE_FILE: ~/projs/mastering-emacs-in-one-year-guide/guide-zh.org
   :ARCHIVE_CATEGORY: emacs
   :END:
-作者：陈斌（redguardtoo）
+作者：陈斌(redguardtoo)
 
 版本号：20140127
 
@@ -17,190 +17,186 @@
 
 原创时间：<2012-01-31 Tue>
 
-版权：本文采用以下协议进行授权，[[http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh][自由转载 - 非商用 - 非衍生 - 保持署名 | Creative Commons BY-NC-ND 3.0]]，转载请注明作者及出处。
+版权：本文采用以下协议进行授权,[[http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh][自由转载 - 非商用 - 非衍生 - 保持署名 | Creative Commons BY-NC-ND 3.0]],转载请注明作者及出处.
 
 
 ** 注意
 *** 如何给我报告 bug
-本文已放在 GitHub 上，网址为 [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide]]。
+本文已放在 GitHub 上,网址为 [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide]].
 
-如果有任何疑问，请直接在以上网址给我报 bug。这比发 Email 要快得多。因为你报的任何 bug 我都会自动收到 GitHub 的 Email，GitHub 的 Email 永远会归类至我的最优先文件夹下。
+如果有任何疑问,请在以上网址给我报 bug.这比 Email 要快.因为你报的任何 bug 我都会自动收到 GitHub 的邮件通知,GitHub 的邮件永远会归类至我的最优先文件夹下.
 
-如果直接给我发 Email，就会淹没于垃圾邮件中。
+如果直接给我发 Email,就会淹没于垃圾邮件中.
 
 *** 我会长期维护本文
-因为 Emacs 本质上是一个社区和平台，不断有新的有趣的人和技术出现。我会根据社区的最新情况更新本文。
+Emacs 本质上是一个社区和平台,不断有新的有趣的人和技术出现.我会定期更新本文.
 
 *** 如果你对本文的某些观点并不赞同
-欢迎讨论，讨论的方法就是在 GitHub 上给我报告 bug。
+欢迎讨论,讨论的方法就是在 GitHub 上给我报告 bug.
 
-不过在报告 bug 之前，请考虑到我文中的每个观点都是经过长期实践得出的，绝非简单的拷贝粘帖他人的观点。
+在报告 bug 之前,请考虑到我观点都是经过长期实践得出的,绝非拷贝自他人.
 
-例如有人认为我推荐的 Purcell 的配置更新太快，对于初学者太难了。但是：
-- 我文章的标题是 * 一年成为高手 *，不是一年入门
-- 我就是这么做的，你可以看看一年内我给他报了多少 bug
+例如有人认为我推荐的 Purcell 的配置更新太快,对于初学者太难了.但是：
+- 我文章的标题是 *一年成为高手*,不是一年入门
+- 我就是这么做的,你可以看看一年内我给他报了多少 bug
 
 *** 不要复制粘帖本文
-如前所述，我会不断更新维护本文，如果你只是拷贝粘帖全文，会使你自己和其他人错过最新的更新。
+如前所述,我会长期维护本文,如果你只是拷贝粘帖全文,会使你自己和其他人错过最新更新.
 
-如果您想和他人分享本文，最好是分享本文的链接，
+如果您想分享本文,最好分享本文的链接,
 - 最新的中英文纯文字版本会发布在 GitHub 上 ([[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide]])
 - 中文 HTML 版本会发布到我的官方博客 (http://blog.binchen.org/?p=268)
-- 考虑到中国大陆的网络情况，还有另一中文 HTML 版镜像 ([[http://blog.csdn.net/redguardtoo/article/details/7222501]])
+- 考虑到中国大陆的网络情况,还有另一中文 HTML 版镜像 ([[http://blog.csdn.net/redguardtoo/article/details/7222501]])
 
 ** 简介
-成为 Emacs 高手很容易。一年前我还在 Vi 阵营，偶尔用 Emacs 还忘记 " 退出 " 的快捷键，但一年后我跨入高手行列。
+成为 Emacs 高手很容易.一年前我还在 Vi 阵营,偶尔用 Emacs 还忘记"退出"的快捷键,但一年后我跨入高手行列.
 
-很多文章都是强调 Emacs 有多牛，以激发你的兴趣。最有名的大概是 [[http://docs.huihoo.com/homepage/shredderyin/][王垠]] 的 [[http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/865628_1.html][Emacs 是一种信仰！世界最强编辑器介绍]]。
+很多文章都是强调 Emacs 有多牛,以激发你的兴趣.最有名的大概是[[http://docs.huihoo.com/homepage/shredderyin/][王垠]]的[[http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/865628_1.html][Emacs 是一种信仰！世界最强编辑器介绍]].
 
-这些好文章让你激动，你因此定下一个伟大目标 (掌握神一样的编辑器 Emacs)，接下来就是执行了 (如何高效地学习 Emacs)。
+这些好文章让你激动,你因此定下一个伟大目标 (掌握神一样的编辑器 Emacs),接下来就是执行了 (如何高效地学习 Emacs).
 
-网上关于 " 如何做 " 的文章不多，那些涉及到 " 如何做 " 的文章，涉及细节多而谈方法论少，所以本文的重点就是谈谈一般方法。
+网上关于"如何做"的文章不多,那些涉及到 "如何做" 的文章,涉及细节多而谈方法论少,所以本文的重点就是谈谈一般方法.
 
-** 为什么要学习 Emacs(可选)
-简单谈谈，因为我本文的重点是 " 怎么做 "，而不是 " 为什么 "。
+** 为什么要用Emacs(可选)
+简单谈谈,因为我本文的重点是"怎么做 ",而不是"为什么 ".
 *** Emacs 的特点决定了其社区的平均技术水准都不低
-Emacs 用 Lisp 开发，Lisp 的不同寻常的语法决定了其开发者都是资深开发者，掌握了多门语言。
+Emacs 用 Lisp 开发,Lisp 的不同寻常的语法决定了其开发者都是资深开发者,掌握了多门语言.
 
-Emacs 本身并不能给你带来任何好处，这就决定了其社区成员都是纯粹的技术人员，投机取巧的功利主义者对其是没有兴趣 (反例就是某些以 Cloud 和 Big 开头的技术)。
-*** 和单纯的 IDE 比较，Emacs 可以做的更多更快
-这里的更多并不是和 IDE 比支持某编程语言的特性更多，而是指 Emacs 内可完成的通用任务比较多更快捷。
+Emacs 本身并不能给你带来任何好处,这就决定了其社区成员都是纯粹的技术人员,投机取巧的功利主义者对其是没有兴趣.
+*** 和单纯的 IDE 比较,Emacs 可以做的更多更快
+这里的更多并不是和 IDE 比支持某编程语言的特性更多,而是指 Emacs 内可完成的通用任务比较多更快捷.
 
-例如，我做开发时碰到难题，需要实时上 IRC 请教国外高手 (工作流包括粘贴我的代码到 pastebin 或者 gist，在 irc 内提问，看网页，将解决方案粘贴回来)，emacs 集成了 IRC 工具和浏览器 (w3m)，操作就很方便。
+例如,我做开发时碰到难题,需要实时上 IRC 请教国外高手 (工作流包括粘贴我的代码到 pastebin 或者 gist,在 irc 内提问,看网页,将解决方案粘贴回来),emacs 集成了 IRC 工具和浏览器 (w3m),操作就很方便.
 
-我使用 Visual Studio 多年了，Firefox 使用我也是高手，相信我，大多数情况下还是 Emacs 更快。
+我使用 Visual Studio 多年了,Firefox 使用我也是高手,相信我,大多数情况下还是 Emacs 更快.
 
-当然口说无凭，请看以下两段高手操作的 youtube 视频：
+当然口说无凭,请看以下两段高手操作的 youtube 视频：
 - [[http://www.youtube.com/watch?v=Ho6nMWGtepY][Writing PPT with org-mode and beamer in Emacs ]]
 - [[http://www.youtube.com/watch?v=EQAd41VAXWo][Emacs Power: Can your editor do THIS! ]]
 *** Emacs 是自由软件基金会开发的招牌开源软件
-个人会丧失开发软件的兴趣，公司会倒闭而停止维护软件。但是自由软件基金会会一直存在下去。Emacs 作为其招牌软件也会一直被维护下去，我在该软件上投资的时间和精力也永远不会贬值。
-*** 使用 Emacs 可以立刻开始工作。
-软件是开源的，配置是纯文本，而且软件的资源消耗较小，安装包很小 (命令行版本的安装包 30M 左右)，所以在任何环境下我都可以用 Emacs 开始工作，overhead 很小。
+个人会丧失开发软件的兴趣,公司会倒闭而停止维护软件.但是自由软件基金会会一直存在下去.Emacs 作为其招牌软件也会一直维护下去,我在其上投资永远不会贬值.
+*** 使用 Emacs 可以立刻开始工作.
+软件是开源的,配置是纯文本,而且软件的资源消耗较小,安装包很小 (命令行版本的安装包 30M 左右),所以在任何环境下我都可以用 Emacs 开始工作,overhead 很小.
 
-这在大项目中特别明显，例如，某项目我需要同时编辑 perl、java、C、bash、SQL，需要远程编辑在美国服务器上的代码，网速也不是很快。Emacs 的优势就体现出来了。
+这在大项目中特别明显,例如,某项目我需要同时编辑 perl、java、C、bash、SQL,需要远程编辑在美国服务器上的代码,网速也不是很快.Emacs 的优势就体现出来了.
 
-*** 一年指的是充分利用空闲时间，一年后自然水到渠成
-我没说一年内必须什么事也不干专门学 Emacs，悬梁刺股没有短期利益回报的学习方法是我最反对的。
+*** 一年指的是充分利用空闲时间,一年后自然水到渠成
+我没说一年内必须什么事也不干专门学 Emacs,悬梁刺股没有短期利益回报的学习方法是我最反对的.
 
-我赞成的方法是，开始阶段花极少的时间得到巨大的回报 (如下文谈到的 Org-mode)，以兴趣做导向。
+我赞成的方法是,开始阶段花极少的时间得到巨大的回报 (如下文谈到的 Org-mode),以兴趣做导向.
 
-每天花多少时间取决于个人需要和如何管理，以我为例，每天八小时上班时间中有很多零碎时间可以利用，上下班通勤时间有一个小时可以利用。
+每天花多少时间取决于个人需要和如何管理,以我为例,每天八小时上班时间中有很多零碎时间可以利用,上下班通勤时间有一个小时可以利用.
 
 *** 态度决定一切
-长期来说你能取得的成就是由态度决定的。
+长期来说你能取得的成就是由态度决定的.
 
 优秀人士的特点：
 1. 勇于接受新事物
 2. 追求更强的过程本身就是目的
 3. 举一反三
 
-例如，虽然 Emacs 默认的快捷键已很高效，但是我更新了我的快捷键操作。保存文件时我原来要按按 "Ctrl+X Ctrl+S"，现在按 ",ww"。少按了一个键，同时手指避免了额外移动一寸去按 Ctrl 键。
+例如,虽然 Emacs 默认的快捷键已很高效,但是我更新了我的快捷键操作.保存文件时我原来要按按 "Ctrl+X Ctrl+S",现在按 ",ww".少按了一个键,同时手指避免了额外移动一寸去按 Ctrl 键.
 
-这似乎是个微小的改动，因为保存文件并不是一个很频繁的动作。而且放弃熟悉的快捷键操作，使用一个陌生的快捷键开始也有点不习惯 (后文我提到，我也是一个熟练的 Vim 用户，但是 Vim 的保存快捷键默认是 ":w"，并不是现在的键位)。
+这似乎是个微小的改动,因为保存文件并不是一个很频繁的动作.而且放弃熟悉的快捷键操作,使用一个陌生的快捷键开始也有点不习惯 (后文我提到,我也是一个熟练的 Vim 用户,但是 Vim 的保存快捷键默认是 ":w",并不是现在的键位).
 
-但是这只是我改进效率的一个开端，我花了几个月时间把所有的操作都以类似的方法优化了一边。 然后我又想到了进一步的优化应该有可靠的统计数据为基础，所以我安装了名为 [[https://github.com/dacap/keyfreq][keyfreq]] 的 Emacs 插件，对于我使用最频繁的操作重新分配了最方便的快捷键。
+但是这只是我改进效率的一个开端,我花了几个月时间把所有的操作都以类似的方法优化了一边. 然后我又想到了进一步的优化应该有可靠的统计数据为基础,所以我安装了名为 [[https://github.com/dacap/keyfreq][keyfreq]] 的 Emacs 插件,对于我使用最频繁的操作重新分配了最方便的快捷键.
 
-假设我一开始因为已习惯了 Vim 或者 Emacs 默认的快捷键，或因为改进保存文件动作的效率提升太小，所以拒绝改变，那么就不会有后来的大规模优化键位的工程。
+假设我一开始因为已习惯了 Vim 或者 Emacs 默认的快捷键,或因为改进保存文件动作的效率提升太小,所以拒绝改变,那么就不会有后来的大规模优化键位的工程.
 
-或者有人说输入代码效率只是软件开发流程中很小一部分，重要的是 "XXXX(编程思想，架构，框架...)"。此所谓顾左右而言它。如果你能举一反三，自然可以猜到同样的方法和原则也适用于软件开发的任何一部分，" 但是..." 只是不做的借口罢了。
+或者有人说输入代码效率只是软件开发流程中很小一部分,重要的是 "XXXX(编程思想,架构,框架...)".此所谓顾左右而言它.如果你能举一反三,自然可以猜到同样的方法和原则也适用于软件开发的任何一部分," 但是..." 只是不做的借口罢了.
 
 ** 读官方教程
-打开 Emacs 后，同时按下 Alt 和 X 健，输入 help-with-tutorial（后文中，类似快捷键以简写 `M-x help-with-tutorial` 代替），回车。
+打开 Emacs 后,同时按下 Alt 和 X 健,输入 help-with-tutorial(后文中,类似快捷键以简写 `M-x help-with-tutorial` 代替),回车.
 
-仅需半小时。关于 Emacs 的多难学的谬论可以休矣，因为半小时的代价微不足道。想想你去年有多少小时白白虚度了吧。
+仅需半小时.关于 Emacs 的多难学的谬论可以休矣,因为半小时的代价微不足道.想想你去年有多少小时白白虚度了吧.
 
-这步是必须的，不要跳过!
+这步是必须的,不要跳过!
 
-例如，我发觉很多读者的问题是不知道如何查看变量函数的文档，这在官方教程中都有说明。
+例如,我发觉很多读者的问题是不知道如何查看变量函数的文档,这在官方教程中都有说明.
 ** 以兴趣和急需解决的问题作为切入点
-因为如果微小的努力能得到巨大的回报，你就会越学越有乐趣，进入一个感情上的正反馈。
+因为如果微小的努力能得到巨大的回报,你就会越学越有乐趣,进入一个感情上的正反馈.
 
-长期来说，在任何领域要成为高手，兴趣是最重要的。
+长期来说,在任何领域要成为高手,兴趣是最重要的.
 
-以我为例，我急需 [[http://en.wikipedia.org/wiki/Getting_Things_Done][GTD]] 的工具，而 Emacs 的 [[http://orgmode.org/][org-mode]] 是世界上最好的 GTD 工具 (没有之一). 用 org-mode 大大节省了时间后，我对于 Emacs 爱屋及乌，兴趣高涨了 100 倍。
+以我为例,我急需 [[http://en.wikipedia.org/wiki/Getting_Things_Done][GTD]] 的工具,而 Emacs 的 [[http://orgmode.org/][org-mode]] 是世界上最好的 GTD 工具 (没有之一). 用 org-mode 大大节省了时间后,我对于 Emacs 爱屋及乌,兴趣高涨了 100 倍.
 ** 站在巨人的肩膀上
-这方面我是个负面榜样。开始阶段我还是抱着玩的心态，喜欢到处找有趣的配置粘贴到我的 .emacs 中去。
+这方面我是个负面榜样.开始阶段我还是抱着玩的心态,喜欢到处找有趣的配置粘贴到我的 .emacs 中去.
 
 这是浪费时间!
 
-我应该一开始就照抄 [[http://www.sanityinc.com/][世界级大师 Steve Purcell]] 的 [[https://github.com/purcell/emacs.d][emacs 配置]]。
+我应该一开始就照抄 [[http://www.sanityinc.com/][世界级大师 Steve Purcell]] 的 [[https://github.com/purcell/emacs.d][emacs 配置]].
 
-*警告，Purcell 总爱试用最新的 Web 开发的新技术，对他而言稳定性不是第一位的，如果你有足够的热情和能力，愿意和他一起折腾，那么你的 Emacs 水平会提高得很快*
+*警告,Purcell 总爱试用最新的 Web 开发的新技术,对他而言稳定性不是第一位的,如果你有足够的热情和能力,愿意和他一起折腾,那么你的 Emacs 水平会提高得很快*
 
-这个如果是很重要的前提，当我上了 Purcell 的贼船时，我已有 10 年开发经验，精通多种开发语言。
+这个如果是很重要的前提,当我上了 Purcell 的贼船时,我已有 10 年开发经验,精通多种开发语言.
 
-如果你不愿意过于折腾，那么你至少不要重复我的错误，你不要质疑，你不要创新，你要跟着高手做。比如 [[https://github.com/eschulte/emacs24-starter-kit][Eric Schulte 的 Emacs-starter-kit]] 很适合初学者。[[https://github.com/bbatsov/prelude][Bozhidar Batsov 的配置]] 也不错 (不一定适合初学者)。也可以用 [[https://github.com/redguardtoo/emacs.d][我的配置]]。
+如果你不愿意过于折腾,那么你至少不要重复我的错误,你不要质疑,你不要创新,你要跟着高手做.比如 [[https://github.com/eschulte/emacs24-starter-kit][Eric Schulte 的 Emacs-starter-kit]] 很适合初学者.[[https://github.com/bbatsov/prelude][Bozhidar Batsov 的配置]] 也不错 (不一定适合初学者).也可以用 [[https://github.com/redguardtoo/emacs.d][我的配置]].
 
-直说了把，你是初学者，开始阶段应以学习模仿为主。这点怎么强调也不过分！
+直说了把,你是初学者,开始阶段应以学习模仿为主.这点怎么强调也不过分！
 
-为了加深印象，让我再举一个例子。一些读者向我反映，Emacs 快捷键太多，背起来压力很大。实际上这是初学者先入为主的偏见。对高手来说，有了恰当的工具后，快捷键很多情况下并不需要。盲目地去背快捷键只会延迟你成为高手那一刻的到来。如果你只是复制了高手的配置开始使用而不是纠结于完成被快捷键这个无聊的任务，你会发觉高手以安装了名为 smex 的插件，使得你直接输入命令比用快捷键还快。所以背快捷键也不需要了。
+为了加深印象,让我再举一个例子.一些读者向我反映,Emacs 快捷键太多,背起来压力很大.实际上这是初学者先入为主的偏见.对高手来说,有了恰当的工具后,快捷键很多情况下并不需要.盲目地去背快捷键只会延迟你成为高手那一刻的到来.如果你只是复制了高手的配置开始使用而不是纠结于完成背快捷键这个无聊的任务,你会发觉高手以安装了名为 smex 的插件,使得你直接输入命令比用快捷键还快.所以背快捷键也不需要了.
 
-顺便说一下，很多高手的配置需要 git 才能更新，这意味着你需要安装 Git 和 Cygwin（限于 windows 平台）。这是买一送二，我又给你介绍了两个高手必备的世界级工具。
+顺便说一下,很多高手的配置需要 git 才能更新,这意味着你需要安装 Git 和 Cygwin(限于 windows 平台).这是买一送二,我又给你介绍了两个高手必备的世界级工具.
 
 ** 高手都在哪里
 *** 加入 google plus 的 Emacs 社区
-Google Plus 的 [[https://plus.google.com/communities/114815898697665598016][Emacs 社区]] 在此时 (<2012-12-25 二>)Geek 的气场非常强，讨论的贴子质量非常高。我上过很多大众和小众的 Emacs 社区，这是我的经验之谈。例如，我加入了 Linkedin 和 Facebook 的 Emacs 社区，目前都退出了。并不是这些社区不够专业，只是 Google Plus 讨论问题的技术层次比较高。
+Google Plus 的 [[https://plus.google.com/communities/114815898697665598016][Emacs 社区]] 在此时Geek 的气场非常强,讨论的贴子质量非常高.我上过很多大众和小众的 Emacs 社区,这是我的经验之谈.例如,我加入了 Linkedin 和 Facebook 的 Emacs 社区,目前都退出了.并不是这些社区不够专业,只是 Google Plus 讨论问题的技术层次比较高.
 
-如果你只能加入一个网络社区的话，那么就是 Google plus 了。
+如果你只能加入一个网络社区的话,那么就是 Google Plus 了.
 
-另外，著名 Emacs 用户 [[https://plus.google.com/113859563190964307534][Xah Lee]](个人网站为 [[http://xahlee.org/][李杀网]]，其账号名为 ErgoEmacs) 每周二会在 Google Plus 上组织一次 Emacs 问答。
+另外,著名 Emacs 用户 [[https://plus.google.com/113859563190964307534][Xah Lee]](个人网站为 [[http://xahlee.org/][李杀网]],其账号名为 ErgoEmacs) 每周二会在 Google Plus 上组织一次 Emacs 问答.
 
 *** reddit 的 Emacs 社区质量也不错
-[[http://www.reddit.com/r/emacs/][reddit]] 上一些讨论挺有新意，深度上不及 Google+。
-
-由于 Prism 事件，一些 Emacs 高手抗议 Google 泄漏隐私给美国政府的 NSA，离开了 google+ 社区，他们可能以后会把主要精力投入 reddit，所以 reddit 会在 geek 的氛围上有所增强。
+[[http://www.reddit.com/r/emacs/][reddit]] 上一些讨论挺有新意,深度上不及 Google+.
 
 *** GitHub 是 geek 云集的地方
-GitHub 的版本控制服务很好。现在它的社区化倾向越来越强了，我喜欢。
+GitHub 的版本控制服务很好.现在它的社区化倾向越来越强了,我喜欢.
 
-例如，可以看一下 [[https://github.com/search?p=1&q=stars%3A%3E20+extension%3Ael+language%3Aelisp&ref=searchresults&type=Repositories]] 上最酷的 Emacs 插件。
+例如,可以看一下 [[https://github.com/search?p=1&q=stars%3A%3E20+extension%3Ael+language%3Aelisp&ref=searchresults&type=Repositories]] 上最酷的 Emacs 插件.
 *** Emacs 牛人的博客
-最好的是 [[http://planet.emacsen.org/][Planet Emacsen]]，多个 Emacs 博客的集合。
+最好的是 [[http://planet.emacsen.org/][Planet Emacsen]],多个 Emacs 博客的集合.
 ** 搜索最新讯息
 *** 在 twitter 上以 "emacs :en" 定期搜索
-twitter 人多，更新结果快。
+twitter 人多,更新结果快.
 *** 在 stackoverflow 上搜索 emacs 相关的讨论
 google "emacs-related-keywords site:stackoverflow.com"
 
-我会定期搜索，同样的帖子反复精读。因为 stackoverflow 上的讨论质量很高。
+我会定期搜索,同样的帖子反复精读.因为 stackoverflow 上的讨论质量很高.
 *** 使用 google 快讯
-每周一次给我邮箱发一次摘要，仅限最佳结果。这样的话信息质量可以得到保证。
+每周一次给我邮箱发一次摘要,仅限最佳结果.这样的话信息质量可以得到保证.
 *** 到 Youtube 上看 emacs 相关的视频
-例如，我就是看了 [[http://www.youtube.com/watch?feature=player_embedded&v=oJTwQvgfgMM][Google Tech Talks 上这个 Org-mode 作者的介绍]] 而爱上 org-mode。
+例如,我就是看了 [[http://www.youtube.com/watch?feature=player_embedded&v=oJTwQvgfgMM][Google Tech Talks 上这个 Org-mode 作者的介绍]] 而爱上 org-mode.
 
-注意，Youtube 搜索的结果是最佳匹配的。问题是关于 Emacs 的视频并不太多，如果按照 Youtube 的算法，我每次搜索看到的总是那几个录像。所以如果关注重点是看看 Emacs 社区有些什么新东西的话，默认搜索结果应以时间排序。
+注意,Youtube 搜索的结果是最佳匹配的.问题是关于 Emacs 的视频并不太多,如果按照 Youtube 的算法,我每次搜索看到的总是那几个录像.所以如果关注重点是看看 Emacs 社区有些什么新东西的话,默认搜索结果应以时间排序.
 
 ** 将 emacs 配置管理起来
-我将 emacs 配置纳入 github 的版本控制，见 [[https://github.com/redguardtoo/emacs.d]]。
+我将 emacs 配置纳入 github 的版本控制,见 [[https://github.com/redguardtoo/emacs.d]].
 
-版本控制可以是认为一个集中式的知识管理，任何时刻任何地点对 Emacs 配置的修改都要及时上传和合并 (merge)。这点对于个人能力的长期积累很重要。
-** 将 emacs 相关资料 (如电子图书，博客文章) 管理起来
-我将我收集的所有 Emacs 相关资讯都放在 dropbox 的服务器上，然后用 dropbox 的软件同步资料到我的智能手机和我的 IPad 上，这样我可以充分利用空闲时间学习。
+版本控制可以是认为一个集中式的知识管理,任何时刻任何地点对 Emacs 配置的修改都要及时上传和合并 (merge).这点对于个人能力的长期积累很重要.
+** 将 emacs 相关资料 (如电子图书,博客文章) 管理起来
+我将所有 Emacs 相关资讯都放在 dropbox 的服务器上,这样资料就同步到我的智能手机和我的平板电脑上,我可以充分利用空闲时间学习.
 
-请 [[https://www.getdropbox.com/referrals/NTg1ODg2Mjk][点击这里注册 dropbox 帐号]]。注意，dropbox 客户端完全可以在国内使用，虽然访问其首页可能有点问题。
+请 [[https://www.getdropbox.com/referrals/NTg1ODg2Mjk][点击这里注册 dropbox 帐号]].注意,dropbox 客户端完全可以在国内使用,虽然访问其首页可能有点问题.
 
 ** EmacsWiki
-[[http://www.emacswiki.org/][EmacsWiki]] 是一个社区维护的 Emacs 文档，可以认为是最酷插件和最佳实践的集合点。
-** Emacs Lisp 书籍推荐（可选）
-关于 Emacs Lisp (elisp) 书籍，我已读完 [[http://www.amazon.com/Introduction-Programming-Emacs-Lisp/dp/1882114566][<An Introduction to Programming in Emacs Lisp]] by Robert J. Chassell>。我建议你不要读该书。因为写得不好。很枯燥，重点不突出，而且内容已有点过时了。
+[[http://www.emacswiki.org/][EmacsWiki]] 是一个社区维护的 Emacs 文档,可以认为是最酷插件和最佳实践的集合点.
+** Emacs Lisp 书籍推荐(可选)
+[[http://www.amazon.com/Writing-GNU-Emacs-Extensions-Glickstein/dp/1565922611][<Writing GNU Emacs Extensions]] by Bob Glickstein>是Elisp编程书籍中最好的.生动,例子丰富.作者明显是高手,并且用心安排了书的结构.例如,他很早就介绍了 defadvice 的用法.我很认同这点,dfadvice 是 elisp 语言的精华.
 
-我正在读 [[http://www.amazon.com/Writing-GNU-Emacs-Extensions-Glickstein/dp/1565922611][<Writing GNU Emacs Extensions]] by Bob Glickstein>。我强烈推荐这本书，重点突出，生动，例子丰富。作者明显是高手，并且用心安排了书的结构。例如，他很早就介绍了 defadvice 的用法。我很认同这点，dfadvice 是 elisp 语言的精华。
-
-Xah Lee 提供 [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费 Emacs Lisp 教程]] 也相当不错。
+Xah Lee 提供 [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费 Emacs Lisp 教程]] 也相当不错.
 
 ** 认识到 Emacs 是一种生活方式
-如果你照着我以上的做法做，就可以认识到 Emacs 牛人其他也很牛。Emacs 实际上体现了牛人的一种生活方式。
+如果你照着我以上的做法做,就可以认识到 Emacs 牛人其他也很牛.Emacs 实际上体现了牛人的一种生活方式.
 
-像那些牛人一样思考，像那些牛人一样做事，不要怀疑，不要犹豫，很快你就会发觉自己也开始有些牛人的气质了。
+像那些牛人一样思考,像那些牛人一样做事,不要怀疑,不要犹豫,很快你就会发觉自己也开始有些牛人的气质了.
 
-例如，[[http://sachachua.com/blog/][Sacha Chua]] 就是这样一个有牛人气质的女孩，这是她的 [[http://www.youtube.com/watch?v=eoyi2vrsWow][Youtube 录像]]. 她学习 Emacs 的方式是 [[http://sachachua.com/blog/2012/07/transcript-emacs-chat-john-wiegley/][让 Emacs 自动将手册语音合成]]，这样她在房间里走来走去的时候也可以听文档了。
+例如,[[http://sachachua.com/blog/][Sacha Chua]] 就是这样一个有牛人气质的女孩,这是她的 [[http://www.youtube.com/watch?v=eoyi2vrsWow][Youtube 录像]]. 她学习 Emacs 的方式是 [[http://sachachua.com/blog/2012/07/transcript-emacs-chat-john-wiegley/][让 Emacs 自动将手册语音合成]],这样她在房间里走来走去的时候也可以听文档了.
 
-想想看，这些用 Emacs 的人都是什么样的 Geek 啊！所以，我认为 Emacs 不仅仅是一种工具，它是个社区，一种文化。
+想想看,这些用 Emacs 的人都是什么样的 Geek 啊！所以,我认为 Emacs 不仅仅是一种工具,它是个社区,一种文化.
 
-对我而言，加入 Emacs 社区让我学会了谦卑。当我明白了 Emacs 的其朴素的设计思想和其强大的可拓展性后，我的感觉是敬畏，因为我做不出这样的软件。
+对我而言,加入 Emacs 社区让我学会了谦卑.当我明白了 Emacs 的其朴素的设计思想和其强大的可拓展性后,我的感觉是敬畏,因为我做不出这样的软件.
 
-我既没有能力把一个编辑器设计成一个人工智能语言 Lisp 的平台，也不可能花 30 多年的时间对一个软件精益求精。
+我既没有能力把一个编辑器设计成一个人工智能语言 Lisp 的平台,也不可能花 30 多年的时间对一个软件精益求精.
 
 ** 精品 Emacs 第三方插件推荐
 我推荐插件标准如下：
@@ -208,164 +204,164 @@ Xah Lee 提供 [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费 
 - 经常更新
 - 功能强大
 
-所有插件都可以通过 Emacs 的 package manager 下载。
+所有插件都可以通过 Emacs 的 package manager 下载.
 
 以下是插件清单：
-| 名称                | 说明                                                 | 同类插件                           |
-|---------------------+------------------------------------------------------+------------------------------------|
-| [[https://gitorious.org/evil/][evil]]                | 将 Emacs 变为 vi                                     | viper                              |
-| [[http://orgmode.org/][org]]                 | org-mode，全能的 note 工具                           | 不知道                             |
-| [[https://github.com/punchagan/org2blog][org2blog]]            | 给 wordpress 写博客                                  | 不知道                             |
-| [[https://github.com/company-mode/company-mode][company-mode]]        | 自动完成输入，支持各种语言和后端                     | cedet，auto-complete               |
-| [[https://github.com/magnars/expand-region.el][expand-region]]       | 按快捷键选中当前文本，可以将选择区域扩展或者收缩     | 不知道                             |
-| [[https://github.com/nonsequitur/smex][smex]]                | 让输入 M-x command 变得飞快                          | 不知道                             |
-| [[https://github.com/capitaomorte/yasnippet][yasnippet]]           | 强大的文本模板输入工具                               | 不知道                             |
-| [[http://www.emacswiki.org/emacs/FlyMake][flymake-xxxx]]        | 以 flymake 开头的所有包，针对不同语言做语法检查      | flycheck                           |
-| [[https://github.com/emacs-helm/helm][helm]]                | 选择和自动完成的框架，在其上有很多插件完成具体功能   | ido                                |
-| [[http://www.emacswiki.org/emacs/InteractivelyDoThings][ido]]                 | 和 helm 类似，我是 helm 和 ido 同时用                | helm                               |
-| [[https://github.com/mooz/js2-mode][js2-mode]]            | javascript 的 major-mode，自带 javascript 语法解释器 | javascript-mode、js-mode、js3-mode |
-| [[http://www.emacswiki.org/emacs/emacs-w3m][w3m]]                 | Emacs 的网络浏览器                                   | 不知道                             |
-| [[https://github.com/nicferrier/elnode][elnode]]              | elisp 写的 Web 服务器                                | 不知道                             |
-| [[https://github.com/Fuco1/smartparens][smartparens]]         | 自动输入需要成对输入的字符如右括号之类的字符         | autopair                           |
-| [[https://github.com/nschum/window-numbering.el][window-numbering.el]] | 跳转到不同的子窗口                                   | 不知道                             |
-| [[https://github.com/fxbois/web-mode][web-mode]]            | 支持各种 HTML 文件                                   | nxml-mode、nxhtml-mode、html-mode  |
+| 名称                | 说明                                                | 同类插件                           |
+|---------------------+-----------------------------------------------------+------------------------------------|
+| [[https://gitorious.org/evil/][evil]]                | 将 Emacs 变为 vi                                    | viper                              |
+| [[http://orgmode.org/][org]]                 | org-mode,全能的 note 工具                           | 不知道                             |
+| [[https://github.com/punchagan/org2blog][org2blog]]            | 给 wordpress 写博客                                 | 不知道                             |
+| [[https://github.com/company-mode/company-mode][company-mode]]        | 自动完成输入,支持各种语言和后端                     | cedet,auto-complete                |
+| [[https://github.com/magnars/expand-region.el][expand-region]]       | 按快捷键选中当前文本,可以将选择区域扩展或者收缩     | 不知道                             |
+| [[https://github.com/nonsequitur/smex][smex]]                | 让输入 M-x command 变得飞快                         | 不知道                             |
+| [[https://github.com/capitaomorte/yasnippet][yasnippet]]           | 强大的文本模板输入工具                              | 不知道                             |
+| [[http://www.emacswiki.org/emacs/FlyMake][flymake-xxxx]]        | 以 flymake 开头的所有包,针对不同语言做语法检查      | flycheck                           |
+| [[https://github.com/emacs-helm/helm][helm]]                | 选择和自动完成的框架,在其上有很多插件完成具体功能   | ido                                |
+| [[http://www.emacswiki.org/emacs/InteractivelyDoThings][ido]]                 | 和 helm 类似,我是 helm 和 ido 同时用                | helm                               |
+| [[https://github.com/mooz/js2-mode][js2-mode]]            | javascript 的 major-mode,自带 javascript 语法解释器 | javascript-mode、js-mode、js3-mode |
+| [[http://www.emacswiki.org/emacs/emacs-w3m][w3m]]                 | Emacs 的网络浏览器(需安装命令行工具w3m)             | 不知道                             |
+| [[https://github.com/nicferrier/elnode][elnode]]              | elisp 写的 Web 服务器                               | 不知道                             |
+| [[https://github.com/Fuco1/smartparens][smartparens]]         | 自动输入需要成对输入的字符如右括号之类的字符        | autopair                           |
+| [[https://github.com/nschum/window-numbering.el][window-numbering.el]] | 跳转到不同的子窗口                                  | 不知道                             |
+| [[https://github.com/fxbois/web-mode][web-mode]]            | 支持各种 HTML 文件                                  | nxml-mode、nxhtml-mode、html-mode  |
 
 ** 小结
-看到这里你应该很清楚了，我的方法就是以兴趣作为切入点，以天才作为榜样，大量阅读，大量练习。
+看到这里你应该很清楚了,我的方法就是以兴趣作为切入点,以天才作为榜样,大量阅读,大量练习.
 
-如果你想获得真才实学，想变得更强，变得更优秀，这就是唯一的方法，唯一的捷径。
+如果你想获得真才实学,想变得更强,变得更优秀,这就是唯一的方法,唯一的捷径.
 
-这个方法不是我发明的，古往今来的杰出人士都是这么做的，如果你需要一点 " 更科学的 " 论证，请参考 [[http://book.douban.com/subject/4726323/][一万小时天才理论]]。
+这个方法不是我发明的,古往今来的杰出人士都是这么做的,如果你需要一点"更科学的"论证,请参考 [[http://book.douban.com/subject/4726323/][一万小时天才理论]].
 
 ** 联系我
-这是我的 [[https://twitter.com/#!/chen_bin][twitter]] 和 [[https://plus.google.com/110954683162859211810][google plus]] 以及 [[http://www.weibo.com/u/2453581630][微博]]，也可以通过我的 email<chenbin DOT sh AT GMAIL DOT COM>联系我。我也在新浪 weibo.com 上开通账号 emacsguru。
+这是我的 [[https://twitter.com/#!/chen_bin][twitter]] 和 [[https://plus.google.com/110954683162859211810][google plus]] 以及 [[http://www.weibo.com/u/2453581630][微博]],也可以通过我的 email<chenbin DOT sh AT GMAIL DOT COM>联系我.我也在新浪 weibo.com 上开通账号 emacsguru.
 
-我的主力博客为 [[http://blog.binchen.org]]。
+我的主力博客为 [[http://blog.binchen.org]].
 
-我不会回答 Emacs 配置的具体问题，因为如果你通读本文，应该知道哪里找答案更好。
+我不会回答 Emacs 配置的具体问题,因为如果你通读本文,应该知道哪里找答案更好.
 
 ** 答疑
 *** Steve Purcell 的配置是否有文档可以参考？
-除了 README 外没有，我主要是通过看 EmacsWiki 和源代码来了解。一个窍门是通常主源代码文件的头部有使用指南。
+除了 README 外没有,我主要是通过看 EmacsWiki 和源代码来了解.一个窍门是通常主源代码文件的头部有使用指南.
 
-*** Steve Pucell 的 Emacs 配置需运行 Git 和 subversion，有没有更简单的配置？
+*** Steve Pucell 的 Emacs 配置需运行 Git 和 subversion,有没有更简单的配置？
 那么你可以用 [[https://github.com/redguardtoo/emacs.d][我的配置]]：
-- 去掉了 Git 和 subversion 的依赖。你只要下载我的配置，确保网络 OK(因第一次启动 Emacs 会自动下载安装软件包)。
+- 去掉了 Git 和 subversion 的依赖.你只要下载我的配置,确保网络 OK(因第一次启动 Emacs 会自动下载安装软件包).
 - 已安装了拼音输入法 eim
-- C++ 支持强大，因我还做一些桌面开发
+- C++ 支持强大,因我还做一些桌面开发
 
-注意，Purcell 是顶尖的 Web 开发者，他会试用各种最新的 Web 开发技术，如果你用了我的配置，Web 开发插件更新会滞后一段时间。另外我的开发工具链和 Purcell 的不完全一致。你自己权衡了。
-*** 我已是 Vi 高手，为什么要转到 Emacs 来?
-嘿嘿，我也是 Vi 精通后转到 Emacs 的。我转换阵营的原因就是因为 Emacs 的强大 (例如和 gdb 的完美结合) 以及其脚本语言是 lisp。
+注意,Purcell 是顶尖的 Web 开发者,他会试用各种最新的 Web 开发技术,如果你用了我的配置,Web 开发插件更新会滞后一段时间.另外我的开发工具链和 Purcell 的不完全一致.你自己权衡了.
+*** 我已是 Vi 高手,为什么要转到 Emacs 来?
+嘿嘿,我也是 Vi 精通后转到 Emacs 的.我转换阵营的原因就是因为 Emacs 的强大 (例如和 gdb 的完美结合) 以及其脚本语言是 lisp.
 
-当然 Vi 的多模式编辑和快捷键比 Emacs 要高效得多，所以最佳方案是 Vi 的快捷键加上 Emacs 的强大。
+当然 Vi 的多模式编辑和快捷键比 Emacs 要高效得多,所以最佳方案是 Vi 的快捷键加上 Emacs 的强大.
 
-目前我在用 evil-mode，在 Emacs 下模拟 Vim 操作，结合了两者的优点。简单地说，现在我的运行模式 " 神用编辑器之神 "。
+目前我在用 evil-mode,在 Emacs 下模拟 Vim 操作,结合了两者的优点.简单地说,现在我的运行模式"神用编辑器之神 ".
 
-*警告*，Steve Purcell 和我默认都启用了 Vim 的快捷键，如果你不习惯的话，可以打开 ~/.emacs.d/init.el，将其中相应的一行注释掉，具体注释哪一行请参考 README。
-*** 我对于 Emacs 的默认快捷键很不习惯，怎么办？
-Emacs 的快捷键是经过几十年考验相当高效的，我建议你在未成为高手前还是学习 Emacs 的默认快捷键。
+*警告*,Steve Purcell 和我默认都启用了 Vim 的快捷键,如果你不习惯的话,可以打开 ~/.emacs.d/init.el,将其中相应的一行注释掉,具体注释哪一行请参考 README.
+*** 我对于 Emacs 的默认快捷键很不习惯,怎么办？
+Emacs 的快捷键是经过几十年考验相当高效的,我建议你在未成为高手前还是学习 Emacs 的默认快捷键.
 
-如果一定要在 Emacs 下用 Windows 快捷键的，可以考虑 [[http://ergoemacs.org/][ergoemacs]]。
+如果一定要在 Emacs 下用 Windows 快捷键的,可以考虑 [[http://ergoemacs.org/][ergoemacs]].
 *** Emacs 快捷键太多记不住怎么办?
-没有必要记快捷键，我也只能记住常用的十几个快捷键。顺其自然，常用的命令你自然会记住快捷键，过一段时间不用了，又会忘掉，这很正常。
+没有必要记快捷键,我也只能记住常用的十几个快捷键.顺其自然,常用的命令你自然会记住快捷键,过一段时间不用了,又会忘掉,这很正常.
 
-目前很多高手在用 [[http://www.emacswiki.org/Smex][Smex]]，可以飞快输入命令，很多快捷键实际上不需要了。
-*** 使用牛人的 Emacs 的配置后，发觉界面有些奇怪的 bug，怎么改?
-不要改! 参考上文 [站在巨人的肩膀上] 一章，你觉得奇怪可能是因为缺乏经验，把某些特性误认为是 bug。请坚持至少一年。
+目前很多高手在用 [[http://www.emacswiki.org/Smex][Smex]],可以飞快输入命令,很多快捷键实际上不需要了.
+*** 使用牛人的 Emacs 的配置后,发觉界面有些奇怪的 bug,怎么改?
+不要改! 参考上文 [站在巨人的肩膀上] 一章,你觉得奇怪可能是因为缺乏经验,把某些特性误认为是 bug.请坚持至少一年.
 
-例如，有人向我反映，在编辑任何文本的时候，会发觉右边约第 80 列处总有一竖线，希望能去掉。这实际上是一特性，提醒你每一行不要宽度不要超过第 80 列。这里是 [[http://www.emacswiki.org/emacs/EightyColumnRule][每行不要超过 80 列的原因]]。
+例如,有人向我反映,在编辑任何文本的时候,会发觉右边约第 80 列处总有一竖线,希望能去掉.这实际上是一特性,提醒你每一行不要宽度不要超过第 80 列.这里是 [[http://www.emacswiki.org/emacs/EightyColumnRule][每行不要超过 80 列的原因]].
 
-我建议你学习 Emacs 的第一年的原则应是，理解而不判断。
+我建议你学习 Emacs 的第一年的原则应是,理解而不判断.
 
-*** 已按指示下载更新软件包，但是好象没有任何作用，也没有任何错误信息
-删除 home 目录下的 .emacs、~/.emacs.d/init.el 就是取代原来的 .emacs。
+*** 已按指示下载更新软件包,但是好象没有任何作用,也没有任何错误信息
+删除 home 目录下的 .emacs、~/.emacs.d/init.el 就是取代原来的 .emacs.
 *** 我有任何关于如何配置 Emacs 的具体问题
 - 读官方教程
 - 善用 google 和我提供的信息
-例如，
+例如,
 问：在 .emacs.d 中的 init.el 文件起什么作用？
-答：google "emacswiki init.el"。
-*** 使用牛人的配置后启动 emacs 报错，如何解决？
-首先确认你已装上了 * 你需要的 * 第三方命令行工具，这些工具是可选的，清单见 [[https://github.com/redguardtoo/emacs.d][我的 README]]。
+答：google "emacswiki init.el".
+*** 使用牛人的配置后启动 emacs 报错,如何解决？
+首先确认你已装上了 *你需要的* 第三方命令行工具,这些工具是可选的,清单见 [[https://github.com/redguardtoo/emacs.d][我的.emacs.d的README]].
 
-如果排除了以上原因. 重新启动 emacs，带上 "--debug-init" 参数，然后将显示的错误信息及环境报告牛人，给我也行。报告 bug 的方式最好是用 GitHub 的 bug 跟踪系统。
+如果排除了以上原因. 重新启动 emacs,带上 "--debug-init" 参数,然后将显示的错误信息及环境报告到你所用的.emacs.d对应的开发者# .
 
-报告 bug 应该给出所有细节。例如很多读者给我的 bug 都是由于第三方插件版本较新引起的，我拿到版本号后，才能下载特定版本的插件以重现 bug。否则基本是无从下手，只能靠猜，来回邮件会浪费你很多时间。
-*** 牛人的 Emacs 配置太复杂，不容易掌控，还是我自己从一个简单的 .emacs 改起好控制
-那么你就是走我后悔莫及的老路，一个人在黑暗中摸索。开头兴致很高，但现实是残酷的，碰到复杂问题解决不了。于是选择逃避，最好的借口是 Emacs 太复杂，放弃 Emacs。
+报告 bug 应该给出细节.例如很多读者给我的 bug 都是由于第三方插件版本较新引起的,我拿到版本号后,才能下载特定版本的插件以重现 bug.否则只能靠猜,来回邮件会浪费读者很多时间.
+*** 牛人的 Emacs 配置太复杂,不容易掌控,还是我自己从一个简单的 .emacs 改起好控制
+那么你就是走我后悔莫及的老路,一个人在黑暗中摸索.开头兴致很高,但现实是残酷的,碰到复杂问题解决不了.于是选择逃避,最好的借口是 Emacs 太复杂,放弃 Emacs.
 
-我最终醒悟过来，走上了光明大道，很多走上岐路的人恐怕就没有这个觉悟和毅力了。
+我最终醒悟过来,走上了光明大道,很多走上岐路的人恐怕就没有这个觉悟和毅力了.
 
-希望自己掌控坦率地说是一个非技术问题，因为没有自信心，所以有一种补偿心里。 希望通过一种错误的方式来证明自己。结局无非是恶性循环。
+希望自己掌控坦率地说是一个非技术问题,因为没有自信心,所以有一种补偿心里. 希望通过一种错误的方式来证明自己.结局无非是恶性循环.
 
-正确地方法是放下身段至少一年 (我已反复强调这一点)，打好基本功，读书，虚心地向高手学习。
+正确地方法是放下身段至少一年 (我已反复强调这一点),打好基本功,读书,虚心地向高手学习.
 
 让我举一个例子说明:
-有一个读者向我反映他用了 purcell 的配置，但是 Lisp 的环境花了三天时间也搞不定。虽然我对除 Elisp 以外的其他 Lisp 方言毫无经验，还是花了 15 分钟帮他解决了这个问题。解决方法很简单，就是 [[https://github.com/redguardtoo/emacs.d/commit/c903cfc48611252b791fcea9b8925cefde3121ae][指定一下用哪个 Lisp 解释器]]。
+有一个读者向我反映他用了 purcell 的配置,但是 Lisp 的环境花了三天时间也搞不定.虽然我对除 Elisp 以外的其他 Lisp 方言毫无经验,还是花了 15 分钟帮他解决了这个问题.解决方法很简单,就是 [[https://github.com/redguardtoo/emacs.d/commit/c903cfc48611252b791fcea9b8925cefde3121ae][指定一下用哪个 Lisp 解释器]].
 
 解决该问题需要的基本功很简单：
-- 知道管道 (pipe)，stdout、stderr 是什么。这是 Linux 下做系统开发最最基本的知识.
-- 读文章一开头推荐的官方 Emacs 教程，知道如何使用在线帮助。我解决该问题的关键也就是把文档读了一下，文档中已经清楚地说明如何设置 Lisp 解释器
-- 知道如何 Google。我知道要设置的变量名后，代码懒得写，直接以变量名搜到相应代码 (一行而已)，拷贝粘帖。
+- 知道管道 (pipe),stdout、stderr 是什么.这是 Linux 下做系统开发最最基本的知识.
+- 读文章一开头推荐的官方 Emacs 教程,知道如何使用在线帮助.我解决该问题的关键也就是把文档读了一下,文档中已经清楚地说明如何设置 Lisp 解释器
+- 知道如何 Google.我知道要设置的变量名后,代码懒得写,直接以变量名搜到相应代码 (一行而已),拷贝粘帖.
 *** 为什么我用了牛人的配置后自己额外添加的插件无效
-Emacs 是个开放平台，其众多插件 release 之前并不一定有严格的测试。所以插件之间可能有冲突。
+Emacs 是个开放平台,其众多插件 release 之前并不一定有严格的测试.所以插件之间可能有冲突.
 
-这也是我为什么建议初学者直接使用牛人配置的原因，因为牛人已经解决了众多兼容性的问题，你只要直接享受他的服务就行了。
+这也是我为什么建议初学者直接使用牛人配置的原因,因为牛人已经解决了众多兼容性的问题,你只要直接享受他的服务就行了.
 
-即使你发觉了牛人尚未来得及处理的 bug，最有效的方法是提交 bug 报告给牛人，而不是自己去钻研 elisp。
-*** 我想用 Windows 版本的 Emacs 而不是 Cygwin 版本的 Emacs，怎么做?
-需要对基本的命令行操作有一定的熟悉。关键知识点有两个：
-1. 设置 HOME 环境变量，因为 .emacs.d 中的某些 elisp 脚本假定 .emacs.d 在 HOME 所对应的路径中。
-2. Emacs 的某些功能需要使用第三方的命令行工具，这些工具的路径应该添加至环境变量 PATH 中 (可选，原因见后面)。
-3. 替代步骤 2 的另一更好的方法是使用第三方插件将 Windows 版本的 Emacs 和 Cygwin 的工具和 * 文档 * 完美结合，参考 [[http://stackoverflow.com/questions/3286723/emacs-cygwin-setup-under-windows/13245173#13245173][我 (redguardtoo) 在 stackoverflow 上的回答]]。不过需要更多的配置。
+即使你发觉了牛人尚未来得及处理的 bug,最有效的方法是提交 bug 报告给牛人,而不是自己去钻研 elisp.
+*** 我想用 Windows 版本的 Emacs 而不是 Cygwin 版本的 Emacs,怎么做?
+需要对基本的命令行操作有一定的熟悉.关键知识点有两个：
+1. 设置 HOME 环境变量,因为 .emacs.d 中的某些 elisp 脚本假定 .emacs.d 在 HOME 所对应的路径中.
+2. Emacs 的某些功能需要使用第三方的命令行工具,这些工具的路径应该添加至环境变量 PATH 中 (可选,原因见后面).
+3. 替代步骤 2 的另一更好的方法是使用第三方插件将 Windows 版本的 Emacs 和 Cygwin 的工具和 *文档* 完美结合,参考 [[http://stackoverflow.com/questions/3286723/emacs-cygwin-setup-under-windows/13245173#13245173][我 (redguardtoo) 在 stackoverflow 上的回答]].不过需要更多的配置.
 
-如果你不知道如何在 Windows 下添加修改环境变量，不知道如何安装第三方工具，建议还是先用 cygwin 中的 Emacs，因为 cygwin 已自带某些工具，没有的话，安装也和方便。且在 cygwin 下环境变量 HOME 默认已有。
+如果你不知道如何在 Windows 下添加修改环境变量,不知道如何安装第三方工具,建议还是先用 cygwin 中的 Emacs,因为 cygwin 已自带某些工具,没有的话,安装也和方便.且在 cygwin 下环境变量 HOME 默认已有.
 
-第三方命令行工具清单请参考上文 [[https://github.com/redguardtoo/emacs.d][我的 .emacs.d]] 中的 README（Steve Purcell 没有列出这些工具，因他只用 OS X）。
-*** Emacs 在代码跳转上和商业的 IDE 还是有差距，有什么解决方案？
-这个差距说到底是后端语法解析引擎的问题。坦率地说通常人们问我这个问题都是以微软的 Visual Studio 和 Eclipse 作为参照对象的。
+第三方命令行工具清单请参考上文 [[https://github.com/redguardtoo/emacs.d][我的.emacs.d]] 中的 README(Steve Purcell 没有列出这些工具,因他只用 OS X).
+*** Emacs 在代码跳转上和商业的 IDE 还是有差距,有什么解决方案？
+这个差距说到底是后端语法解析引擎的问题.坦率地说通常人们问我这个问题都是以微软的 Visual Studio 和 Eclipse 作为参照对象的.
 
-就 C++ 来说目前有使用苹果公司的 clang 的方案，效果还不错。就 Java 来说，有使用 eclipse 做为后端引擎的方案。具体使用什么 Emacs 插件来调用这些引擎有很多选择，不展开了。
+就 C++ 来说目前有使用苹果公司的 clang 的方案,效果还不错.就 Java 来说,有使用 eclipse 做为后端引擎的方案.具体使用什么 Emacs 插件来调用这些引擎有很多选择,不展开了.
 
-实战中，我通常就是使用 ctags 或者 etags 作为后端引擎，因其所有语言通吃。 虽然解析效果差一点，但是通过我遵循恰当的命名规范，对编程效率没有什么影响。
+实战中,我通常就是使用 ctags 或者 etags 作为后端引擎,因其所有语言通吃. 虽然解析效果差一点,但是通过我遵循恰当的命名规范,对编程效率没有什么影响.
 
-使用 ctags 或者 etags 还可以帮助菜鸟程序员改掉一个很严重的毛病。菜鸟因为缺乏自信心和经验，所以变量和函数名的命名通常都过于通用，给自己是架构师在写一个大型的通用 Framework 的幻觉。这对于真实的产品研发来说是一个很严重的问题，想象你要修改某个接口的所有调用，定义，文档和测试案例，并且这个接口在多个语言中都有使用。这个接口如果有一个通用的名字如 list，是会把维护人员气死的 (我曾经碰到过一朵奇葩，他还有喜把变量名和函数名叫完全一样名字的 " 好习惯 ")。叫 ListMySpecificService 则好的多。使用 ctags/etags 这类比较弱的解析引擎就会逼你起一个不那么普通的名字。
+使用 ctags 或者 etags 还可以帮助菜鸟程序员改掉一个很严重的毛病.菜鸟因为缺乏自信心和经验,所以变量和函数名的命名通常都过于通用,给自己是架构师在写一个大型的通用 Framework 的幻觉.这对于真实的产品研发来说是一个很严重的问题,想象你要修改某个接口的所有调用,定义,文档和测试案例,并且这个接口在多个语言中都有使用.这个接口如果有一个通用的名字如 list,是会把维护人员气死的 (我曾经碰到过一朵奇葩,他还有喜把变量名和函数名叫完全一样名字的"好习惯 ").叫 ListMySpecificService 则好的多.使用 ctags/etags 这类比较弱的解析引擎就会逼你起一个不那么普通的名字.
 *** 为什么 Emacs 启动时从服务器 (elpa) 安装第三方软件包 (package) 会失败?
-请启动 Emacs 后，运行 `M-x package-refresh-contents` 以从服务器更新最新的软件索引，然后重启 Emacs 即可。
+请启动 Emacs 后,运行 `M-x package-refresh-contents` 以从服务器更新最新的软件索引,然后重启 Emacs 即可.
 
-如果你没有使用 Emacs 24，并且没有完全拷贝高手的配置 (这是本文的中心思想)，那么你需要安装配置 package.el，细节请参考 [[http://marmalade-repo.org/][这里]]。
+如果你没有使用 Emacs 24,并且没有完全拷贝高手的配置 (这是本文的中心思想),那么你需要安装配置 package.el,细节请参考 [[http://marmalade-repo.org/][这里]].
 
-Emacs 下载软件包 (package) 是通过 http 方式，所以如果网络出问题的话你需要用 http 代理服务器，具体操作见后文。
+Emacs 下载软件包 (package) 是通过 http 方式,所以如果网络出问题的话你需要用 http 代理服务器,具体操作见后文.
 *** 有些网站 Emacs 访问不了 (原因你懂得)
-在命令行中启动 Emacs 时加上 "http_proxy=your-proxy-server-ip:port" 前缀。
+在命令行中启动 Emacs 时加上 "http_proxy=your-proxy-server-ip:port" 前缀.
 
-例如，
+例如,
 #+BEGIN_SRC sh
 http_proxy=http://127.0.0.1:8000 emacs -nw
 #+END_SRC
 *** 掌握 Emacs Lisp 是否是成为 Emacs 高手的必要条件?
-否。但 Emacs Lisp 是很强大的语言，其特点是一切皆可修改。当我说 " 一切 " 的时候，我就是指字面意义上的 " 一切 "，并不是修辞上的夸张。
+否.但 Emacs Lisp 是很强大的语言,其特点是一切皆可修改.当我说"一切"的时候,我就是指字面意义上的"一切",并不是修辞上的夸张.
 
-我用过许多编辑器，除了 Emacs 外，没有一个能做到 " 一切都可修改 " 这点 .vi 也不行。
+我用过许多编辑器,除了 Emacs 外,没有一个能做到"一切都可修改"这点 .vi 也不行.
 
-所以学点 Lisp 对于你提高 Emacs 的使用水平没什么坏处。另外 Lisp 是种不错的语言，如果你的职业是 IT 的话，Lisp 值得一学。
+所以学点 Lisp 对于你提高 Emacs 的使用水平没什么坏处.另外 Lisp 是种不错的语言,如果你的职业是 IT 的话,Lisp 值得一学.
 
-顺便说一下，Lisp 是中很容易的学的语言，比 VB 容易多了，一旦你适应其语法后，就会发觉它其实对程序员蛮友好的，至少少打很多字。
+顺便说一下,Lisp 是中很容易的学的语言,比 VB 容易多了,一旦你适应其语法后,就会发觉它其实对程序员蛮友好的,至少少打很多字.
 *** 早点学习 Emacs Lisp 是否有助于早日成为 Emacs 高手？
-否則，只会起阻碍作用！
+否則,只会起阻碍作用！
 
-即使你只对 Lisp 语言本身感兴趣，熟练掌握 Emacs 也有很大帮助。在 Emacs 没有相当基础前学习 Emacs Lisp 是在浪费时间。
+即使你只对 Lisp 语言本身感兴趣,熟练掌握 Emacs 也有很大帮助.在 Emacs 没有相当基础前学习 Emacs Lisp 是在浪费时间.
 
-参考前文关于找到切入点的一节，我推荐的学习 Lisp 的顺序是，先使用优秀的 Emacs 配置享受到 Emacs 的好处，有了兴趣后学习 Emacs Lisp 就水到渠成了。
-*** Emacs 基本操作我会了，下一步学些什么比较迷茫
-关键是你打算用 Emacs 这个强大的瑞士军刀做什么。
+参考前文关于找到切入点的一节,我推荐的学习 Lisp 的顺序是,先使用优秀的 Emacs 配置享受到 Emacs 的好处,有了兴趣后学习 Emacs Lisp 就水到渠成了.
+*** Emacs 基本操作我会了,下一步学些什么比较迷茫
+关键是你打算用 Emacs 这个强大的瑞士军刀做什么.
 
-我在前文中已经强调过以兴趣和解决实际问题作为切入点。
+我在前文中已经强调过以兴趣和解决实际问题作为切入点.
 
 再举一些我自己的例子说明:
-- 我有写博客需要，懒得用 wordpress 那个破界面，所以用 org2blog
-- 开发 ruby on rails 程序需要 IDE，装了 rinari
-- 做跨平台 C++ 桌面开发，装了 cmake-mode。
-- 我要开发巨型项目 (需要在多个目录窗口间跳来跳去)，所以装了 window-numbering.el。
-- 巨型项目需要我同时调试多种语言，所以我装了 evil-nerd-commenter，这样不用记住特定语言的语法就可以 comment/uncomment 代码。
+- 我有写博客需要,懒得用 wordpress 那个破界面,所以用 org2blog
+- 开发 ruby on rails 程序需要 IDE,装了 rinari
+- 做跨平台 C++ 桌面开发,装了 cmake-mode.
+- 我要开发巨型项目 (需要在多个目录窗口间跳来跳去),所以装了 window-numbering.el.
+- 巨型项目需要我同时调试多种语言,所以我装了 evil-nerd-commenter,这样不用记住特定语言的语法就可以 comment/uncomment 代码.
