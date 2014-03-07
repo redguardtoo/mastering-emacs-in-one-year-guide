@@ -173,6 +173,8 @@ google "emacs-related-keywords site:stackoverflow.com"
 我将 emacs 配置纳入 github 的版本控制,见 [[https://github.com/redguardtoo/emacs.d]].
 
 版本控制可以是认为一个集中式的知识管理,任何时刻任何地点对 Emacs 配置的修改都要及时上传和合并 (merge).这点对于个人能力的长期积累很重要.
+
+共享Emacs实际也是一种利己的行为,有很多人使用我的配置,等于帮我管理我的Emacs.
 ** 将 emacs 相关资料 (如电子图书,博客文章) 管理起来
 我将所有 Emacs 相关资讯都放在 dropbox 的服务器上,这样资料就同步到我的智能手机和我的平板电脑上,我可以充分利用空闲时间学习.
 
