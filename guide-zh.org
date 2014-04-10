@@ -11,9 +11,9 @@
   :END:
 作者：陈斌(redguardtoo)
 
-版本号：20140329
+版本号：20140410
 
-更新时间：<2014-03-29 Sat>
+更新时间：<2014-04-10 Thu>
 
 原创时间：<2012-01-31 Tue>
 
@@ -178,7 +178,7 @@ google "emacs-related-keywords site:stackoverflow.com"
 
 我会定期搜索,同样的帖子反复精读.因为 stackoverflow 上的讨论质量很高.
 *** 使用 google 快讯
-每周一次给我邮箱发一次摘要,仅限最佳结果.这样的话信息质量可以得到保证.
+每周一次给我邮箱发一次摘要,仅限最佳结果.这样质量可以得到保证.
 *** 到 Youtube 上看 emacs 相关的视频
 例如,我就是看了 [[http://www.youtube.com/watch?feature=player_embedded&v=oJTwQvgfgMM][Google Tech Talks 上这个 Org-mode 作者的介绍]] 而爱上 org-mode.
 
@@ -392,3 +392,23 @@ Emacs Lisp又是一种只用于Emacs的语言,有大量的Emacs相关的术语�
 - 做跨平台 C++ 桌面开发,装了 cmake-mode.
 - 我要开发巨型项目 (需要在多个目录窗口间跳来跳去),所以装了 window-numbering.el.
 - 巨型项目需要我同时调试多种语言,所以我装了 evil-nerd-commenter,这样不用记住特定语言的语法就可以 comment/uncomment 代码.
+*** org-mode 该如何学习?
+[[http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html][Org-mode简明手册]] 是不错的中文教程.
+
+我认为最好的英文入门教程是Carsten Dominik(org-mode发明者)在[[http://orgmode.org/talks.html][google tech talks上的演讲]].其要点为org-mode本质是一个文本文件,你只要记住按TAB展开或者缩进条目就可以了.其他Advanced特性可以慢慢学.
+*** 对于"一切都用Emacs来完成"的观点你怎么看?
+我很欣赏这个理念.但是不要走火入魔.Emacs本质是个平台,给geek们提供了无限的可能性.
+
+但是从实用角度讲,Emacs和其他工具结合有时候能更快完成工作(不过菜鸟在没有一年的修炼之前千万不要猜Emacs*不能*做什么).
+
+以下是我认为不一定Emacs能够吃独食的地方:
+- 剪贴簿操作应结合命令行工具xsel(Linux)/pbpaste(OSX)/putclip(Cygwin)
+- Web浏览最好用Firefox结合插件如keysnail
+- 远程登录管理最好用screen/tmux
+- FTP最好用专门的FTP软件
+- 文件管理用专用软件
+
+原因多种多样,比如远程ssh登录使用Emacs的话,Emacs默认假定你是不能访问X clipboard的,但是这个假定现在不成立,如果你使用X11 forward over ssh技术(主流的Linux服务器默认都支持的),剪贴板是可以访问的.
+
+所以重点是保持头脑灵活,坚信Emacs无所不能的同时也要适当变通一下.
+* 
