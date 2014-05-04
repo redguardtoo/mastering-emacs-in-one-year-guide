@@ -3,7 +3,7 @@
 #+OPTIONS: toc:nil
   :PROPERTIES:
   :ID:       o2b:24796fba-6de7-4712-b83e-b86969c31335
-  :POST_DATE: [2012-01-31 周二 15:08]
+  :POST_DATE: 2012-01-31 15:08:00
   :POSTID:   268
   :ARCHIVE_TIME: 2012-12-26 三 19:21
   :ARCHIVE_FILE: ~/projs/mastering-emacs-in-one-year-guide/guide-zh.org
@@ -11,9 +11,9 @@
   :END:
 作者：陈斌(redguardtoo)
 
-版本号：20140410
+版本号：20140504
 
-更新时间：<2014-04-10 Thu>
+更新时间：<2014-05-04 Sun>
 
 原创时间：<2012-01-31 Tue>
 
@@ -57,6 +57,19 @@ Emacs 本质上是一个社区和平台,不断有新的有趣的人和技术出�
 - 最新的中英文纯文字版本会发布在 GitHub 上 ([[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide]])
 - 中文 HTML 版本会发布到我的官方博客 (http://blog.binchen.org/?p=268)
 - 考虑到中国大陆的网络情况,还有另一中文 HTML 版镜像 ([[http://blog.csdn.net/redguardtoo/article/details/7222501]])
+
+*** 我电脑方面完全是新手,该如何入手
+以下是我的建议:
+- 安装Emacs 24
+- 不要安装任何第三方插件
+- 掌握基本知识,什么是环境变量(比如PATH, HOME之类的变量),什么是stdin,什么是stdout,什么是pipe
+- 读官方教程,学会基本的文本操作(大概十几个快捷键)
+- 使用Emacs 24自带的org-mode作为你的个人时间管理软件.
+- org-mode关键是用起来,只要记住按TAB键是展开内容就可以了,其他都不用学.
+
+实际上我在后文已经把这个如何入手的问题说得很清楚了.
+
+比如我后文谈到,我就是从org-mode入手的,又谈到你应跟着高手学习而不要自己瞎摸索.如果能举一反三,你应想到如果你不确定从何处着手,那么跟着我做(用org-mode)应该是不会错的.
 
 ** 简介
 成为 Emacs 高手很容易.一年前我还在 Vi 阵营,偶尔用 Emacs 还忘记"退出"的快捷键,但一年后我跨入高手行列.
@@ -130,11 +143,15 @@ Emacs 本身并不能给你带来任何好处,这就决定了其社区成员都�
 
 以我为例,我急需 [[http://en.wikipedia.org/wiki/Getting_Things_Done][GTD]] 的工具,而 Emacs 的 [[http://orgmode.org/][org-mode]] 是世界上最好的 GTD 工具 (没有之一). 用 org-mode 大大节省了时间后,我对于 Emacs 爱屋及乌,兴趣高涨了 100 倍.
 
-让我再举个反面的例子说明,Emacs的email软件Gnus虽然某些特定功能强大(比如快速插入邮件附件,生成HTML表格),但是由于很长时间没有更新,其UI已相当落后于时代,对于一般用户来说其UI及其费解.我知道有资深的10年经验的Emacs用户也觉得Gnus太难用.即使你最终学会了Gnus,能做的事也和Gmail的Web版本有差距(比如搜索邮件,附件预览),而且Linux下也有许多同类软件.这就是典型的投资极大,回报很小.
+让我再举个反面的例子说明,Emacs的email软件Gnus虽然某些特定功能强大(比如快速插入邮件附件,生成HTML表格),但是由于很长时间没有更新,其UI已相当落后于时代,对于一般用户来说其UI及其费解.
+
+我知道有资深的10年经验的Emacs用户也觉得Gnus太难用.
+
+即使你最终学会了Gnus,能做的事也和Gmail的Web版本有差距(比如搜索邮件,附件预览),而且Linux下也有许多同类软件.这就是典型的投资极大,回报很小.
 
 所以对新手来说,从Gnus入手Emacs是很成问题的.
 
-** 站在巨人的肩膀上
+** <<站在巨人的肩膀上>>
 这方面我是个负面榜样.开始阶段我还是抱着玩的心态,喜欢到处找有趣的配置粘贴到我的 .emacs 中去.
 
 这是浪费时间!
@@ -221,12 +238,16 @@ Xah Lee 提供 [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费 
 我既没有能力把一个编辑器设计成一个人工智能语言 Lisp 的平台,也不可能花 30 多年的时间对一个软件精益求精.
 
 ** 精品 Emacs 第三方插件推荐
+Emacs第三方插件很多.初学者的问题是装了太多插件,以致插件的管理成了问题.最坏的情况下插件互相冲突,以至于Emacs不能正常启动.
+
+我建议一开始选择插件的原则应该少而精,当你被最优秀的插件培养出了品味后,就能自由挑选适合你自己的插件.
+
 我推荐插件标准如下：
 - 高品质
 - 经常更新
 - 功能强大
 
-所有插件都可以通过 Emacs 的 package manager 下载.
+所有插件都可以通过Emacs的包管理器下载.
 
 以下是插件清单：
 | 名称                | 说明                                                | 同类插件                           |
@@ -290,7 +311,7 @@ Emacs 的快捷键是经过几十年考验相当高效的,我建议你在未成�
 
 目前很多高手在用 [[http://www.emacswiki.org/Smex][Smex]],可以飞快输入命令,很多快捷键实际上不需要了.
 *** 使用牛人的 Emacs 的配置后,发觉界面有些奇怪的 bug,怎么改?
-不要改! 参考上文 [站在巨人的肩膀上] 一章,你觉得奇怪可能是因为缺乏经验,把某些特性误认为是 bug.请坚持至少一年.
+不要改! 参考上文 [[站在巨人的肩膀上]] 一章,你觉得奇怪可能是因为缺乏经验,把某些特性误认为是 bug.请坚持至少一年.
 
 例如,有人向我反映,在编辑任何文本的时候,会发觉右边约第 80 列处总有一竖线,希望能去掉.这实际上是一特性,提醒你每一行不要宽度不要超过第 80 列.这里是 [[http://www.emacswiki.org/emacs/EightyColumnRule][每行不要超过 80 列的原因]].
 
@@ -368,6 +389,11 @@ Emacs 下载软件包 (package) 是通过 http 方式,所以如果网络出问�
 #+BEGIN_SRC sh
 http_proxy=http://127.0.0.1:8000 emacs -nw
 #+END_SRC
+*** 有些软件包下载不下来,也不会用代理
+那么就只能使用[[https://github.com/redguardtoo/emacs.d][我的Emacs配置]].
+
+和我的配置配套的是我建立的独立的第三方包服务,请参考[[https://github.com/redguardtoo/myelpa][其主页上的README]]设置.
+
 *** 掌握 Emacs Lisp 是否是成为 Emacs 高手的必要条件?
 否.但 Emacs Lisp 是很强大的语言,其特点是一切皆可修改.当我说"一切"的时候,我就是指字面意义上的"一切",并不是修辞上的夸张.
 
@@ -400,7 +426,7 @@ Emacs Lisp又是一种只用于Emacs的语言,有大量的Emacs相关的术语�
 *** org-mode 该如何学习?
 [[http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html][Org-mode简明手册]] 是不错的中文教程.
 
-我认为最好的英文入门教程是Carsten Dominik(org-mode发明者)在[[http://orgmode.org/talks.html][google tech talks上的演讲]].其要点为org-mode本质是一个文本文件,你只要记住按TAB展开或者缩进条目就可以了.其他Advanced特性可以慢慢学.
+我认为最好的英文入门教程是Carsten Dominik(org-mode发明者)在[[http://orgmode.org/talks.html][google tech talks上的演讲]].其要点为org-mode本质是一个文本文件,你只要记住按TAB展开或者缩进条目就可以了.其他高级特性可以慢慢学.
 *** 对于"一切都用Emacs来完成"的观点你怎么看?
 我很欣赏这个理念.但是不要走火入魔.Emacs本质是个平台,给geek们提供了无限的可能性.
 
