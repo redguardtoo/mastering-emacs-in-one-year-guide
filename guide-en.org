@@ -105,7 +105,7 @@ Please don't repeat my mistake. Don't hesitate. Just follow Steven Purcell!
 
 Let me be blunt. You are a newbie, you'd better copy and study top geek's code. Don't try to be creative at this stage. You'll waste your time re-invent the wheel.
 
-For example, some readers tell me that Emacs has too many hot keys. They can't memorize all those hot keys. This is typical behavior in newbies. They assume that top geeks has good memory of hot keys. That assumpation is not correct. Memorizing hot keys are totally meaningless task for newbie. If you have studied any guru's set up, you will find he/she use "smex" to remember the frequently used command which is often more efficient than pressing hot keys. So masters don't remember hot keys intentionally.
+For example, some readers tell me that Emacs has too many hot keys. They can't memorize all those hot keys. This is typical behavior in newbies. They assume that top geeks has good memory of hot keys. That assumption is not correct. Memorizing hot keys are totally meaningless task for newbie. If you have studied any guru's set up, you will find he/she use "smex" to remember the frequently used command which is often more efficient than pressing hot keys. So masters don't remember hot keys intentionally.
 
 Please note Steve Purcell update his set up frequently. If you prefer more stable set up, you can use [[http://eschulte.github.io/emacs-starter-kit/][Eric Schulte's Emacs Starter Kit]].
 
