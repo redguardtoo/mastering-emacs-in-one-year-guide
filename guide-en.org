@@ -72,15 +72,13 @@ Use emacs instead. Focus on what benefit emacs can bring.
 
 For example, I'm interested in Emacs because I need time tracking my tasks. Emacs org-mode is the best tool in the world for that purpose.
 
-Spare time during one year is enough.
-
 *** What matters is Attitude
 How good you will be at Emacs is determined by your attitude,
 
 Points to be successful (mastering Emacs in one year):
 1. open minded
 2. better yourself is the purpose
-3. Half a tale is enough for a wise man. 
+3. Half a tale is enough for a wise man.
 ** Read the official tutorial
 Start Emacs, press ALT and X key together (M-x is used as abbreviation for Alt-X, C-x for Ctrl-X from now on). Input "help-with-tutorial", press ENTER. That's all you need to open the tutorial.
 
@@ -88,7 +86,7 @@ Reading this tutorial will take you about half an hour. It's not too much time t
 
 Reading tutorial is essential. Don't skip this step. For example, many Emacs newbies asked me how to open online help for some command which could be answered by reading the tutorial.
 
-** What's the first practical problem Emacs can solve
+** What's the *your* first practical problem Emacs can solve
 That's the most important question you need ask yourself before you start.
 
 The learning is like investment. If you can get huge benefit by investing a little time, you will be motivated and keep on the learning.
@@ -158,7 +156,9 @@ I strongly recommend [[http://www.amazon.com/Writing-GNU-Emacs-Extensions-Glicks
 
 Xah Lee [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][Emacs Lisp tutorial]] is also very good.
 ** Emacs is a way of life
-如果你照着我以上的做法做,就可以认识到Emacs牛人其他也很牛.Emacs实际上体现了牛人的一种生活方式.
+If you follow my suggestions you will finally realized that Emacs is actually a way of life.
+
+There are lots of text editors.
 
 像那些牛人一样思考,像那些牛人一样做事,不要怀疑,不要犹豫,很快你就会发觉自己也开始有些牛人的气质了.
 
