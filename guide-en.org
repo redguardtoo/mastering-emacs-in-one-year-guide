@@ -11,36 +11,30 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20130801
+Version: 20140722
 
-Updated: <2013-08-01 Thu>
+Updated: <2014-07-22 Tue>
 
 Created: [2012-01-31 Tue 15:08]
 
 Copyright: This work is licensed under the [[http://creativecommons.org/licenses/by-nc-nd/3.0/][Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License]].
 
-** Notes
-*** Report this guide's bug
-This article is placed at [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide]].
-
-Please use above URL to contact me instead of send my email for your own good because github notification mail is always in my first priority folder.
-
-*** I will provide long-term update
-Emacs is actually more a community than a software. Interesting geeks and addons emerge from time to time. I will update this article according to the latest status of community.
-
-*** If you don't agree some of my points
-Please contact through github.
-
 ** Introduction
-Becoming an Emacs master is easy. One year is totally enough! 
+I was a Microsoft fan for many years because I was born in China. There was no Unix culture when I was young. My professor knew as much as I knew about Unix. Zero knowledge. Nothing. I believed Microsoft Windows is was only platform worth to develop software. I believed Visual Studio was the best IDE in the world. I was so loyal to Microsoft that I used Visual Studio to edit code running on Linux server (using Samba) during my first job.
 
-I, for example, was a Emacs dummy who can never figure out how to exit Emacs (press Ctrl-X Ctrl-C) one year ago. Now I [[https://github.com/redguardtoo][am good at Emacs]].
+Besides, computers scared me to death. I'm ashamed to admit now that when I graduated from university I didn't know clipboard. If I need input duplicated texts, I typed them character by character. I choosed IT career simply for money. There was no other career path for talented young people in China then.
 
-So this guide is basically the summary of my experience on mastering emacs. It will focus on philosophy and methodology instead of technical details.
+The points,
+- This is a guide on using Emacs as a professional's tool to get job done. I will not show off Emacs as a geek's toy because I am NOT that type from the beginning. So I will focus on philosophy and methodology only. No technical details involved.
+- If a computer dummy like me can [[https://github.com/redguardtoo][be good at Emacs in one year]], you definitely can do better.
 
 ** Why Emacs (OPTIONAL)
-I will keep this part short because the focus of this article is on HOW instead WHY
-*** Emacs can get the job done more quickly and efficiently
+I will keep this section short because the focus is HOW instead WHY.
+*** The community behind Emacs is technically strong
+Emacs is developed by Lisp whose syntax is different from common programming languages. A developer who is curious enough to try Lisp is possibly more intelligent than average.  Lisp is often the third language he/she learns (Java/C/C# is the first, a script language like Bash/Python/Perl/Ruby is the second).
+
+No job ad will list Emacs as a required skill. That's actually a good thing. It ensures that only honest technical guys exist in Emacs community.
+*** Emacs can get job done more efficiently
 IDE is usually optimized for special programming language or application framework. But Emacs is much more powerful on general work flow.
 
 When people say IDE is good for programming. They are usually talking about code navigation, code completion and real time documentation lookup.
@@ -53,7 +47,7 @@ As a proof, check below video demos of Emacs operation:
 - [[http://www.youtube.com/watch?v=Ho6nMWGtepY][Writing PPT with org-mode and beamer in Emacs ]]
 - [[http://www.youtube.com/watch?v=EQAd41VAXWo][Emacs Power: Can your editor do THIS! ]]
 *** Emacs is maintained by Free Software Foundation (FSF)
-FSF has been around for almost 40 years. I assume it will exist for next 40 years. So Emacs will live for a very long time. My investment on Emacs will not be lost.
+FSF has been around for almost 40 years. I assume it will exist for next 40 years. So Emacs will live for a very long time. My investment on Emacs will never expire.
 *** No overhead
 Pro:
 - Emacs is open sourced 
@@ -64,36 +58,38 @@ So I can start work in any environment in 5 minutes with Emacs. For example, on 
 
 I used to work for a project which required me editing perl/java/C/bash/SQL code at the same time. The code is hosted on some remote sever far way from my office. We don't have the quickest network connection in the world so we do all the work in command line and shell. So Emacs is the only choice.
 
-If you have survive enough *huge* projects like I have, you will appreciate the "No overhead" advantage of Emacs. Emacs will never block your productivity. To help you understand a huge project means. Here is a true story, one month is needed for set up second develop environment because some advanced gadget required is on the ship crossing the pacific. So the team has to make do with the first development environment by remote ssh.
-*** Use your spare time during one year
-It's useless to study Emacs in academic way for one year.
-
-Use emacs instead. Focus on what benefit emacs can bring.
-
-For example, I'm interested in Emacs because I need time tracking my tasks. Emacs org-mode is the best tool in the world for that purpose.
-
+*** Use your spare time in one year
+When I say Emacs needs one year. I mean the spare time of one year. The key point is have fun and let Emacs solve your practical problem.
 *** What matters is Attitude
 How good you will be at Emacs is determined by your attitude,
 
-Points to be successful (mastering Emacs in one year):
-1. open minded
-2. better yourself is the purpose
-3. Half a tale is enough for a wise man.
-** Read the official tutorial
+Key tips:
+- open minded. For example, why not try Vim key binding after being familiar with Emacs default key binding. Or vice versa.
+- better yourself is the purpose. For example, there are several good plugins to do the sub-windows navigation. Spend some time to try them all to find the most efficient one.
+- Half a tale is enough for a wise man. For example, when a kid showed off [[http://www.sublimetext.com/][Sublime Text]] to me, I realized that there should exist [[https://github.com/alloy-d/color-theme-molokai][similar beautiful skin]] in Emacs and I immediately switched my Emacs color theme.
+** Step by Step Guide
+*** Quick guide for greenhands of Linux/Unix (optional) 
+- Install Emacs 24
+- Don't install any plugins
+- Learn basic knowledge about [[http://en.wikipedia.org/wiki/Environment_variable][environment variable]] and [[http://en.wikipedia.org/wiki/Redirection_%28computing%29][pipe]]
+- Read offical tutorial
+- Use org-mode
+- The only hot key you need learn in org-mode is TAB key
+*** Read the official tutorial
 Start Emacs, press ALT and X key together (M-x is used as abbreviation for Alt-X, C-x for Ctrl-X from now on). Input "help-with-tutorial", press ENTER. That's all you need to open the tutorial.
 
 Reading this tutorial will take you about half an hour. It's not too much time to learn a life time skill.
 
 Reading tutorial is essential. Don't skip this step. For example, many Emacs newbies asked me how to open online help for some command which could be answered by reading the tutorial.
 
-** What's the *your* first practical problem Emacs can solve
+*** Find *your first practical problem* Emacs can solve
 That's the most important question you need ask yourself before you start.
 
 The learning is like investment. If you can get huge benefit by investing a little time, you will be motivated and keep on the learning.
 
 Me, for example, have spent many years looking for some time-management tool until I find the [[http://orgmode.org/][org-mode]] (a Emacs plugin).
-** Standing on the shoulders of giants
-I learned this lesson the hard way. At the beginning, I regarded Emacs as some geek toy. I digged around the internet for the elisp code I can pasted into my ~/.emacs.
+*** Standing on the shoulders of giants
+I learned this lesson the hard way. At the beginning, I regarded Emacs as some geek's toy. I digged around the internet for the elisp code I can pasted into my ~/.emacs.
 
 That's totally waste of time if my goal is to become an Emacs master!
 
@@ -107,225 +103,171 @@ For example, some readers tell me that Emacs has too many hot keys. They can't m
 
 Please note Steve Purcell update his set up frequently. If you prefer more stable set up, you can use [[http://eschulte.github.io/emacs-starter-kit/][Eric Schulte's Emacs Starter Kit]].
 
-** Where to find Emacs geeks
+** Join the community
+I suggest be focused in order to take full advantage of communities.
+
+For example, although Quora.com has lots of interesting stuffs, *donot* read/subscribe/follow them unless it's highly releated to Emacs.
 *** Google Plus
 [[https://plus.google.com/communities/114815898697665598016][Emacs community on 
-Google Plus]] is the best Emacs community. The average qualiy of discuss on Google Plus is better than other communities.
+Google Plus]] is the best Emacs community. The average quality of discuss on Google Plus is better than other communities.
 
 BTW, the famous Emacs geek [[https://plus.google.com/113859563190964307534][Xah Lee]] hosts a Q/A session at Google Plus every Tuesday. His web site is [[http://xahlee.org/]]. His site is especially useful for elisp programming.
 
-*** Reddit
-[[http://www.reddit.com/r/emacs/][Reddit Emacs]] is more active than Google Plus but the quality of dicussion sometimes is less than Google Plus.
-
-*** github
+*** Github
 It's developer's social network.
 
 You can search [[https://github.com/languages/Emacs%20Lisp]] for latest Elisp code
+*** Emacs blogs
+[[http://planet.emacsen.org/][Planet Emacsen]] is the collection of several Emacs blogs.
+*** Quora.com
+I suggest follow the question on more specific topic instead general one. For example, "What's the best Emacs addon" is a more useful question than "How to learn Emacs".
+
+Everybody has something to say about a general question. But to answer a specific question, you need actual experience and knowledge.
+
+Even you are only interestd in general questions, start from more practical question is still better. You can find the real master from that question.
 *** Blogs
 [[http://planet.emacsen.org/][Planet Emacsen]] is the best collection of Emacs related blogs.
-** Emacs news
 *** Twitter
-I use keyword "emacs :en" to search latest news.
+I use keyword "emacs :en" to search latest news. The reason to search English only twitter is that there are lots of Japanese post and I don't know Japanese.
 *** StackOverflow
 google "emacs-related-keywords site:stackoverflow.com"
 
 The quality on stackoverflow discussion is good but there are not many new questions about Emacs there.
-*** Google Alert
-[[www.google.com/alerts][Google Alert]] will send me summary of Emacs news weekly.
-
 *** Youtube
 There are lots of wonderful Emacs videos on youtube. For example,
 [[http://www.youtube.com/watch?feature=player_embedded&v=oJTwQvgfgMM][Emacs Org-mode - a system for note-taking and project planning]] is the tutorial which enlighten me on using org-mode. Carsten Dominik make me realize that org-mode is simple, all I need remember is press "TAB" key to expand a text node. That's the kill feature of org-mode. All the other stuff could be regarded as bonus features and can be learned later.
 
-The issue of youtube is it will list the best matched search results. So will always see the same results on the top. I suggest you sorting the results by upload date.
-** Manage Emacs set up
+The issue of youtube is that the best matched search results are listed first. So you will always see the same results. I suggest sorting the results by upload date.
+** Readings
+*** EmacsWiki
+[[http://www.emacswiki.org/emacs/][EmacsWiki]] has all the tips you need for tweak the Emacs. It's actively maintained by the community.
+
+*** Emacs Lisp book
+The only paper book you need read is  [[http://www.amazon.com/Writing-GNU-Emacs-Extensions-Glickstein/dp/1565922611][<Writing GNU Emacs Extensions>]] by Bob Glickstein. I like his style and the way he organizes chapters.
+
+Xah Lee [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][Emacs Lisp tutorial]] is good and easy to read.
+
+Steve Yegge's [[http://steve-yegge.blogspot.com.au/2008/01/emergency-elisp.html][Emergency Elisp]] is great because it's short and includes all necessary knowledge for writing Emacs Lisp.
+** Knowledge management 
+*** Place your set up at Github, *publicly*
 I uploaded my set up onto [[https://github.com/redguardtoo/emacs.d]].
 
-I regard version control as a efficient way of knowledge management. The key point for long term knowledge management is to upload merge emacs set up ASAP.
+Version control is the most efficient way of knowledge management because you will never lose set up.
 
-For point of view of management, I also benefit by sharing my set up at github. Many people will review my set up and help me fix the bugs.
-** Dropbox
-I place all the Emacs related documents at Dropbox. Since dropbox will syncronize the documents into my mobile phone. I can study Emacs on the bus.
+I benefit a lot by sharing. People who use my set up are actually doing the QA for me.
+*** Dropbox
+I place all the Emacs related documents at Dropbox. Since dropbox will synchronize the documents into my mobile phone. I can study Emacs when commuting.
+** My favorite Emacs addons
+| Name                | Description                                  | Alternatives                      |
+|---------------------+----------------------------------------------+-----------------------------------|
+| [[http://www.emacswiki.org/emacs/Evil][Evil]]                | convert Emacs to vim                         | none                              |
+| Org                 | GTD                                          | none                              |
+| company-mode        | code completion                              | cedet, auto-complete              |
+| expand-region       | selection region efficiently                 | none                              |
+| smex                | Input command efficiently                    | none                              |
+| yasnippet           | text template                                | none                              |
+| flymake-xxxx        | addons whose prefix is flymake. Syntax check | flycheck                          |
+| helm                | a framework to select/search from candidates | ido                               |
+| ido                 | similar to helm                              | helm                              |
+| js2-mode            | everything for javascript                    | javascript-mode,js-mode,js3-mode  |
+| w3m                 | browser                                      | Eww                               |
+| elnode              | web server                                   | none                              |
+| smartparens         | auto insert matched parens                   | autopair                          |
+| [[https://github.com/nschum/window-numbering.el][window-numbering.el]] | jump focus between sub-windows               | switch-window.el                  |
+| [[https://github.com/fxbois/web-mode][web-mode]]            | everything for edit HTML templates           | nxml-mode、nxhtml-mode、html-mode |
 
-[[https://www.getdropbox.com/referrals/NTg1ODg2Mjk][Click here to register on dropbox]].
-** EmacsWiki
-[[http://www.emacswiki.org/emacs/][EmacsWik]] has all the tips you need for tweak the Emacs. It's actively maintained by the community.
-
-** Emacs Lisp book
-I strongly recommend [[http://www.amazon.com/Writing-GNU-Emacs-Extensions-Glickstein/dp/1565922611][<Writing GNU Emacs Extensions>]] by Bob Glickstein. I like his writing style and his way to organize the chapters.
-
-Xah Lee [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][Emacs Lisp tutorial]] is also very good.
 ** Emacs is a way of life
-If you follow my suggestions you will finally realized that Emacs is actually a way of life.
+Emacs guys have different ways of life. They are basically people who are hacking Lisp code for fun. Sometimes they will get the job done in a creative way. For example, [[http://sachachua.com/blog/][Sacha Chua]] mentioned that [[http://sachachua.com/blog/2012/07/transcript-emacs-chat-john-wiegley/][she let Emacs read the manual when cooking]].
 
-There are lots of text editors.
+** FAQ
+*** Any documentation on Steve Purcell's set up?
+Nope. Read its README and code comment. The header of the code file usually has some usage guide.
+*** Any simpler set up than Steve Pucell?
+Use [[https://github.com/redguardtoo/emacs.d][my set up]].
 
-像那些牛人一样思考,像那些牛人一样做事,不要怀疑,不要犹豫,很快你就会发觉自己也开始有些牛人的气质了.
+I do some desktop development. So my set up may has less web stuff than Purcell.
+*** As a Vi guy, why should I turn to Emacs?
+I was a Vi guy. I turn to Emacs because its power and it can be extended with Lisp.
 
-例如,[[http://sachachua.com/blog/][Sacha Chua]]就是这样一个有牛人气质的女孩,这是她的[[http://www.youtube.com/watch?v=eoyi2vrsWow][Youtube录像]]. 她学习Emacs的方式是[[http://sachachua.com/blog/2012/07/transcript-emacs-chat-john-wiegley/][让Emacs自动将手册语音合成]], 这样她在房间里走来走去的时候也可以听文档了.
+Vi is efficient in text editing because its model editing. In Emacs, you can use [[http://www.emacswiki.org/emacs/Evil][Evil]] to simulate Vim.
+*** I don't like Emacs key bindings
+[[http://ergoemacs.org/][ergoemacs]] if you prefer Microsoft's key bindings.
+*** Emacs has too many key bindings to memorise
+Use [[http://www.emacswiki.org/Smex][Smex]]. It's a myth that Emacs guru need remember lots of key bindings.
+*** I am not comfortable with other people's set up. Can I modify it?
+Try to understand master's set up. Don't make judgment too early. It's easy to make judgment. But understanding needs wisdom and hard work.
 
-想想看, 这些用Emacs的人都是什么样的Geek啊!所以,我认为Emacs不仅仅是一种工具,它是个社区,一种文化.
+For example, some people reported that there some weird character at column 80 in Emacs. That's actually a feature to remind you not to create line more than 80 columns. [[http://www.emacswiki.org/emacs/EightyColumnRule][Here is the reason]].
 
-对我而言,加入Emacs社区让我学会了谦卑.当我明白了Emacs的其朴素的设计思想和其强大的可拓展性后,我的感觉是敬畏,因为我做不出这样的软件.
+*** Copy the master's set up but the package is not updated/installed. No error message.
+Remove the file .emacs in your HOME directory. The .emacs.d/init.el has same functionality.
+*** Any specific question about Emacs
+Please,
+- read official tutorial
+- google
+For example, google "emacswiki init.el" to understand what's the init.el
+*** I got some error when start Emacs with master's set up
+Make sure you already installed third party command line tools which are OPTIONAL. Check [[https://github.com/redguardtoo/emacs.d][my README]] for the list.
 
-我既没有能力把一个编辑器设计成一个人工智能语言Lisp的平台,也不可能花30多年的时间对一个软件精益求精.
-** 精品Emacs第三方插件推荐
-我推荐插件标准如下:
-- 高品质
-- 经常更新
-- 功能强大
+Run "emacs -nw --debug-init" in terminal. Then send the error message to the author of the set up. Please use bug track tool if possible.
 
-所有插件都可以通过Emacs自带的package manager下载.
+*** My simple set up is more controllable
+That's what I thought at the beginning. After several months I realized that I could never be as good as master like Steve Purcell if keeping this way.
 
-以下是插件清单:
-| 名称          | 说明                                              | 同类插件                         |
-|---------------+---------------------------------------------------+----------------------------------|
-| evil          | 将Emacs变为vi                                     | viper                            |
-| org           | org-mode,全能的note工具                           | 不知道                           |
-| org2blog      | 给wordpress写博客                                 | 不知道                           |
-| company-mode  | 自动完成输入,支持各种语言和后端                   | cedet, auto-complete             |
-| expand-region | 按快捷键选中当前文本,可以将选择区域扩展或者收缩   | 不知道                           |
-| smex          | 让输入M-x command变得飞快                         | 不知道                           |
-| yasnippet     | 强大的文本模板输入工具                            | 不知道                           |
-| flymake-xxxx  | 以flymake开头的所有包,针对不同语言做语法检查      | flycheck                         |
-| helm          | 选择和自动完成的框架,在其上有很多插件完成具体功能 | ido                              |
-| ido           | 和helm类似,我是helm和ido同时用                    | helm                             |
-| js2-mode      | javascript的major-mode,自带javascript语法解释器   | javascript-mode,js-mode,js3-mode |
-| w3m           | Emacs的网络浏览器                                 | w3                               |
-| elnode        | elisp写的Web服务器                                | 不知道                           |
-| smartparens   | 自动输入需要成对输入的字符如右括号之类的字符      | autopair                         |
+While I spend serveral weeks to overcome some minor issues in Emacs set up, Purcell has already installed/developed dozens of cool plugins.
 
-** 小结
-看到这里你应该很清楚了,我的方法就是以兴趣作为切入点,以天才作为榜样,大量阅读,大量练习.
+If I cannot win, the only strategy is to join him, that's why I clone his set up and start to report bug for him. Here is [[https://github.com/purcell/emacs.d/issues/6][first issue I reported]]. Besides, reporting bugs also gives you the opportunity to talk with Master.
 
-如果你想获得真才实学,想变得更强,变得更优秀,这就是唯一的方法,唯一的捷径.
+So don't run away from the masters' huge set up. Regard it as a challenge to improve yourself.
+*** Why I cannot add my own plugins after using Master's set up
+Though the quality of Emacs plugins are generally good, they may have compatibility issues simply because plugins are developed by different people. For example, both [[https://github.com/auto-complete][auto-complete]] and [[https://github.com/capitaomorte/yasnippet][yasnippet]] will use TAB key to expand code. So there is confict if I use both plugins.
 
-这个方法不是我发明的,古往今来的杰出人士都是这么做的,如果你需要一点"更科学的"论证,请参考[[http://book.douban.com/subject/4726323/][一万小时天才理论]].
-** 联系我
-这是我的[[https://twitter.com/#!/chen_bin][twitter]]和[[https://plus.google.com/110954683162859211810][google plus]]以及[[http://www.weibo.com/u/2453581630][微博]],也可以通过我的email<chenbin DOT sh AT GMAIL DOT COM>联系我.我也在新浪weibo.com上开通账号emacsguru.
+That's another reason to stick to master's set up at the beginning.
+*** How to use Emacs on windows
+Install Cygwin!
 
-我的主力博客为[[http://blog.binchen.org]].
+When you have enough knowledge about environment variables and pipe. You can check [[http://stackoverflow.com/questions/3286723/emacs-cygwin-setup-under-windows/13245173#13245173][My answer at stackoverflow (redguardtoo's answer)]] to use native windows version.
 
-我不会回答Emacs配置的具体问题,因为如果你通读本文,应该知道哪里找答案更好.
-** 答疑
-*** Steve Purcell的配置是否有文档可以参考?
-除了README外没有,我主要是通过看EmacsWiki和源代码来了解.一个窍门是通常主源代码文件的头部有使用指南.
-*** Steve Pucell的Emacs配置需运行git和subversion,有没有更简单的配置?
-那么你可以用[[https://github.com/redguardtoo/emacs.d][我的配置]]:
-- 去掉了git和subversion的依赖. 你只要下载我的配置,确保网络OK(因第一次启动Emacs会自动下载安装软件包).
-- 已安装了拼音输入法eim
-- C++支持强大,因我还做一些桌面开发
-
-注意,Purcell是顶尖的Web开发者,他会试用各种最新的Web开发技术,如果你用了我的配置,Web开发插件更新会滞后一段时间.另外我的开发工具链和Purcell的不完全一致.你自己权衡了.
-*** 我已是Vi高手,为什么要转到Emacs来?
-嘿嘿,我也是Vi精通后转到Emacs的.我转换阵营的原因就是因为Emacs的强大(例如和gdb的完美结合)以及其脚本语言是lisp.
-
-当然Vi的多模式编辑和快捷键比Emacs要高效得多,所以最佳方案是Vi的快捷键加上Emacs的强大.
-
-目前我在用evil-mode,在Emacs下模拟Vim操作,结合了两者的优点.简单地说,现在我的运行模式"神用编辑器之神".
-
-*警告*,Steve Purcell和我默认都启用了Vim的快捷键,如果你不习惯的话,可以打开~/.emacs.d/init.el,将其中相应的一行注释掉,具体注释哪一行请参考README.
-*** 我对于Emacs的默认快捷键很不习惯,怎么办?
-Emacs的快捷键是经过几十年考验相当高效的,我建议你在未成为高手前还是学习Emacs的默认快捷键.
-
-如果一定要在Emacs下用Windows快捷键的,可以考虑[[http://ergoemacs.org/][ergoemacs]].
-*** Emacs快捷键太多记不住怎么办?
-没有必要记快捷键,我也只能记住常用的十几个快捷键.顺其自然,常用的命令你自然会记住快捷键,过一段时间不用了,又会忘掉,这很正常.
-
-目前很多高手在用[[http://www.emacswiki.org/Smex][Smex]],可以飞快输入命令,很多快捷键实际上不需要了.
-*** 使用牛人的Emacs的配置后,发觉界面有些奇怪的bug,怎么改?
-不要改!参考上文[站在巨人的肩膀上]一章,你觉得奇怪可能是因为缺乏经验,把某些特性误认为是bug.请坚持至少一年.
-
-例如,有人向我反映,在编辑任何文本的时候,会发觉右边约第80列处总有一竖线,希望能去掉.这实际上是一特性,提醒你每一行不要宽度不要超过第80列.这里是[[http://www.emacswiki.org/emacs/EightyColumnRule][每行不要超过80列的原因]].
-
-我建议你学习Emacs的第一年的原则应是,理解而不判断.
-
-*** 已按指示下载更新软件包,但是好象没有任何作用,也没有任何错误信息
-删除home目录下的.emacs,~/.emacs.d/init.el就是取代原来的.emacs.
-*** 我有任何关于如何配置Emacs的具体问题
-- 读官方教程
-- 善用google和我提供的信息
-例如,
-问: 在.emacs.d中的init.el文件起什么作用?
-答: google "emacswiki init.el".
-*** 使用牛人的配置后启动emacs报错,如何解决?
-首先确认你已装上了*你需要的*第三方命令行工具,这些工具是可选的,清单见[[https://github.com/redguardtoo/emacs.d][我的README]].
-
-如果排除了以上原因.重新启动emacs,带上"--debug-init"参数,然后将显示的错误信息及环境报告牛人,给我也行.报告bug的方式最好是用github的bug跟踪系统.
-
-报告bug应该给出所有细节.例如很多读者给我的bug都是由于第三方插件版本较新引起的,我拿到版本号后,才能下载特定版本的插件以重现bug.否则基本是无从下手,只能靠猜,来回邮件会浪费你很多时间.
-*** 牛人的Emacs配置太复杂,不容易掌控,还是我自己从一个简单的.emacs改起好控制
-那么你就是走我后悔莫及的老路,一个人在黑暗中摸索.开头兴致很高,但现实是残酷的,碰到复杂问题解决不了.于是选择逃避,最好的借口是Emacs太复杂,放弃Emacs.
-
-我最终醒悟过来,走上了光明大道,很多走上岐路的人恐怕就没有这个觉悟和毅力了.
-
-希望自己掌控坦率地说是一个非技术问题,因为没有自信心,所以有一种补偿心里.希望通过一种错误的方式来证明自己.结局无非是恶性循环.
-
-正确地方法是放下身段至少一年(我已反复强调这一点),打好基本功,读书,虚心地向高手学习.
-
-让我举一个例子说明:
-有一个读者向我反映他用了purcell的配置,但是Lisp的环境花了三天时间也搞不定.虽然我对除Elisp以外的其他Lisp方言毫无经验,还是花了15分钟帮他解决了这个问题.解决方法很简单,就是[[https://github.com/redguardtoo/emacs.d/commit/c903cfc48611252b791fcea9b8925cefde3121ae][指定一下用哪个Lisp解释器]].
-
-解决该问题需要的基本功很简单:
-- 知道管道(pipe), stdout,stderr是什么.这是Linux下做系统开发最最基本的知识.
-- 读文章一开头推荐的官方Emacs教程,知道如何使用在线帮助.我解决该问题的关键也就是把文档读了一下,文档中已经清楚地说明如何设置Lisp解释器
-- 知道如何Google.我知道要设置的变量名后,代码懒得写,直接以变量名搜到相应代码(一行而已),拷贝粘帖.
-*** 为什么我用了牛人的配置后自己额外添加的插件无效
-Emacs是个开放平台,其众多插件release之前并不一定有严格的测试.所以插件之间可能有冲突.
-
-这也是我为什么建议初学者直接使用牛人配置的原因,因为牛人已经解决了众多兼容性的问题,你只要直接享受他的服务就行了.
-
-即使你发觉了牛人尚未来得及处理的bug,最有效的方法是提交bug报告给牛人,而不是自己去钻研elisp.
-*** 我想用Windows版本的Emacs而不是Cygwin版本的Emacs,怎么做?
-需要对基本的命令行操作有一定的熟悉.关键知识点有两个:
-1. 设置HOME环境变量,因为.emacs.d中的某些elisp脚本假定.emacs.d在HOME所对应的路径中.
-2. Emacs的某些功能需要使用第三方的命令行工具,这些工具的路径应该添加至环境变量PATH中(可选,原因见后面).
-3. 替代步骤2的另一更好的方法是使用第三方插件将Windows版本的Emacs和Cygwin的工具和*文档*完美结合,参考[[http://stackoverflow.com/questions/3286723/emacs-cygwin-setup-under-windows/13245173#13245173][我(redguardtoo)在stackoverflow上的回答]].不过需要更多的配置.
-
-如果你不知道如何在Windows下添加修改环境变量,不知道如何安装第三方工具,建议还是先用cygwin中的Emacs,因为cygwin已自带某些工具,没有的话,安装也和方便.且在cygwin下环境变量HOME默认已有.
-
-第三方命令行工具清单请参考上文[[https://github.com/redguardtoo/emacs.d][我的.emacs.d]]中的README(Steve Purcell没有列出这些工具,因他只用OS X).
-*** Emacs在代码跳转上和商业的IDE还是有差距,有什么解决方案?
-这个差距说到底是后端语法解析引擎的问题.坦率地说通常人们问我这个问题都是以微软的Visual Studio和Eclipse作为参照对象的.
-
-就C++来说目前有使用苹果公司的clang的方案,效果还不错.就Java来说,有使用eclipse做为后端引擎的方案.具体使用什么emacs插件来调用这些引擎有很多选择,不展开了.
-
-实战中,我通常就是使用ctags或者etags作为后端引擎,因其所有语言通吃.虽然解析效果差一点,但是通过我遵循恰当的命名规范,对编程效率没有什么影响.
-
-使用ctags或者etags还可以帮助菜鸟程序员改掉一个很严重的毛病.菜鸟因为缺乏自信心和经验,所以变量和函数名的命名通常都过于通用,给自己是架构师在写一个大型的通用Framework的幻觉.这对于真实的产品研发来说是一个很严重的问题,想象你要修改某个接口的所有调用,定义,文档和测试案例,并且这个接口在多个语言中都有使用.这个接口如果有一个通用的名字如list,是会把维护人员气死的(我曾经碰到过一朵奇葩,他还有喜把变量名和函数名叫完全一样名字的"好习惯").叫ListMySpecificService则好的多.使用ctags/etags这类比较弱的解析引擎就会逼你起一个不那么普通的名字.
-*** 为什么Emacs启动时从服务器(elpa)安装第三方软件包(package)会失败?
-请启动Emacs后,运行`M-x package-refresh-contents`以从服务器更新最新的软件索引,然后重启Emacs即可.
-
-如果你没有使用Emacs 24,并且没有完全拷贝高手的配置(这是本文的中心思想),那么你需要安装配置package.el,细节请参考[[http://marmalade-repo.org/][这里]].
-
-Emacs下载软件包(package)是通过http方式,所以如果网络出问题的话你需要用http代理服务器,具体操作见后文.
-*** 有些网站Emacs访问不了(原因你懂得)
-在命令行中启动Emacs时加上"http_proxy=your-proxy-server-ip:port"前缀.
-
-例如,
-#+BEGIN_SRC sh
-http_proxy=http://127.0.0.1:8000 emacs -nw
+*** Is code-navigation and code-completion as good as commercial IDE?
+Thanks to [[http://clang.llvm.org/][clang]] && [[http://www.gnu.org/software/global/][GNU Global]], C++ is perfect now. Support for other languages are also good enough. 
+*** Why Emacs cannot download packages?
+If you are living in North Korea, Iran, China, you need below command line to start Emacs:
+#+BEGIN_SRC elisp
+http_proxy=your-proxy-server-ip:port emacs -nw
 #+END_SRC
-*** 掌握Emacs Lisp是否是成为Emacs高手的必要条件?
-否.但Emacs Lisp是很强大的语言,其特点是一切皆可修改.当我说"一切"的时候,我就是指字面意义上的"一切",并不是修辞上的夸张.
 
-我用过许多编辑器,除了Emacs外,没有一个能做到"一切都可修改"这点.vi也不行.
+How to set up proxy server is not covered here.
+*** As a greenhand of Emacs, should I learn Emacs lisp at first?
+NO. Most people will lose the interest in Lisp because there is not enough stimulus. You can finish the Java/C#/Javascript course because that's required by profitable jobs.
 
-所以学点Lisp对于你提高Emacs的使用水平没什么坏处.另外Lisp是种不错的语言,如果你的职业是IT的话,Lisp值得一学.
+That's why I stress that you need avoid tweaking Emacs and copy master's set up. Try to use Emacs asap.
+*** I know the basic operation. What should I learn next?
+Find your practical problem which only Emacs can do best. Trust me, Emacs is much more powerful than your wildest imagination.
 
-顺便说一下,Lisp是中很容易的学的语言,比VB容易多了,一旦你适应其语法后,就会发觉它其实对程序员蛮友好的,至少少打很多字.
-*** 早点学习Emacs Lisp是否有助于早日成为Emacs高手?
-否,只会起阻碍作用!
+Here is my example:
+- When I use wordpress blog, I use [[https://github.com/punchagan/org2blog][org2blog]] to post articles. It's ten times faster than any other client.
+- I installed cmake-mode to do the cross-platform development with [[http://www.cmake.org/Wiki/CMake/Editors/Emacs][cmake]].
+- window-numbering.el is useful when jumping focus between sub-windows.
+- When I work for some huge projects, I use [[https://github.com/redguardtoo/evil-nerd-commenter][evil-nerd-commenter]] to comment code lines because I need deal with too many programming languages. 
+** Contact me
+My [[https://twitter.com/#!/chen_bin][twitter]] and [[https://plus.google.com/110954683162859211810][google plus]].
 
-即使你只对Lisp语言本身感兴趣,熟练掌握Emacs也有很大帮助.在Emacs没有相当基础前学习Emacs Lisp是在浪费时间.
-*** Emacs基本操作我会了,下一步学些什么比较迷茫
-关键是你打算用Emacs这个强大的瑞士军刀做什么.
+My blog is [[http://blog.binchen.org]].
 
-我在前文中已经强调过以兴趣和解决实际问题作为切入点.
+Please donot ask me basic or general questions since I've already show you how to find answer.
+** Summary
+Start from fun, follow the best people, reading and practice.
 
-再举一些我自己的例子说明:
-- 我有写博客需要,懒得用wordpress那个破界面,所以用org2blog
-- 开发ruby on rails程序需要IDE,装了rinari
-- 做跨平台C++桌面开发,装了cmake-mode.
-- 我要开发巨型项目(需要在多个目录窗口间跳来跳去),所以装了window-numbering.el.
-- 巨型项目需要我同时调试多种语言,所以我装了evil-nerd-commenter,这样不用记住特定语言的语法就可以comment/uncomment代码.
+I recognize that all roads lead to Rome. So other methods may also work. But my method DID work on me.
+
+This whole article is basically the summary of how I figure out my way to Rome.
+
+My only suggestion is, it does not matter which way you take, what matters is to regard Emacs as professional's tools which deserve your highest respect.
+
+*** Report bug
+This article is published at [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide]].
+
+Please use github's bug tracker instead of sending me email for your own good. Github notification mail is always in my first priority folder.
+
+*** I will provide long-term update
+Emacs is actually more a community than a software. Interesting people and addons keep popping up. I will update this article frequently in the future.
