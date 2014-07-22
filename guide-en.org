@@ -99,10 +99,21 @@ Please don't repeat my mistake. Don't hesitate. Just follow Steven Purcell!
 
 Let me be blunt. You are a newbie, you'd better copy and study top geek's code. Don't try to be creative at this stage. You'll waste your time re-invent the wheel.
 
-For example, some readers tell me that Emacs has too many hot keys. They can't memorize all those hot keys. This is typical behavior in newbies. They assume that top geeks has good memory of hot keys. That assumption is not correct. Memorizing hot keys are totally meaningless task for newbie. If you have studied any guru's set up, you will find he/she use "smex" to remember the frequently used command which is often more efficient than pressing hot keys. So masters don't remember hot keys intentionally.
+For example, some readers tell me that Emacs has too many hot keys. They can't memorize all of them. This is typical behavior in newbies. They assume that top geeks can remember most key bindings.
+
+Wrong!
+
+If you have studied any guru's set up, you will find that he/she use "smex" to remember the frequently used command which is often more efficient than pressing hot keys. So masters don't remember hot keys intentionally.
 
 Please note Steve Purcell update his set up frequently. If you prefer more stable set up, you can use [[http://eschulte.github.io/emacs-starter-kit/][Eric Schulte's Emacs Starter Kit]].
 
+Please note *this is the most critical ponit* of the whole article!
+
+If you are still not convinced, please consider my reasons:
+- When I say mastering Emacs, I mean it. It's not OK at Emacs. It's not good at Emacs. It's actually among the best ones.
+- Let's consider those giants. They are more intelligent than me. They are more hard working than me. How can I reach their level asap?
+- The obvious way is join them.
+- If you can report a bug about master's set up. At least at that moment you has proved you are better at certain issue than master.
 ** Join the community
 I suggest be focused in order to take full advantage of communities.
 
@@ -187,7 +198,7 @@ Use [[https://github.com/redguardtoo/emacs.d][my set up]].
 
 I do some desktop development. So my set up may has less web stuff than Purcell.
 *** As a Vi guy, why should I turn to Emacs?
-I was a Vi guy. I turn to Emacs because its power and it can be extended with Lisp.
+I was a Vi guy. I turn to Emacs because it's powerful and it can be extended with Lisp.
 
 Vi is efficient in text editing because its model editing. In Emacs, you can use [[http://www.emacswiki.org/emacs/Evil][Evil]] to simulate Vim.
 *** I don't like Emacs key bindings
