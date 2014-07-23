@@ -11,17 +11,46 @@ URL: [[http://blog.binchen.org]]
 
 ** warning
 This is only a draft. I recorded my points here and will add more content later.
-** original discussion 
-https://plus.google.com/110954683162859211810/posts/ZSc9Dtu7Vpz
-** code auto complete
-- clang is must
-- I prefer company-mode
-- auto-complete and auto-complete-clang is also fine
-- I will avoid any packages from cedet because my computer is slow
-- the only meaningful difference between auto-complete and company-mode is UI, but that in real programming actually make huge difference
-- in reality, I found I use hippie-expand more often simply because it's more responsive
-** scm
-- I use git. No interest in other scm tools
+** Introduction
+Doing all the C++ development in Emacs is now at least as good as Visual Studio. Though some minor set up is still needed.
+** Project management
+Use cmake.
+** code completion
+*** [[http://en.wikipedia.org/wiki/Intelligent_code_completion][Intelligent code completion]]
+This feature is also called intellisense in Visual Studio.
+
+Here is an example how intellisense should work,
+#+BEGIN_SRC c++
+struct ClassA{
+    int valueA;
+    void functionB(int a) {
+        printf("a=%d",a);
+    }
+};
+
+int main(void) {
+    ClassA a;
+    a. // when input ".", the candidate "valueA"" and "functionB"" should be displayed in a popup
+    return 0;
+}
+#+END_SRC
+
+Currently I'm using [[https://github.com/company-mode/company-mode][company-mode]]. It's actively maintained and has everything in one bundle.
+
+There is also another addon [[https://github.com/auto-complete/auto-complete][auto-complete]]. It's as good as company-mode. But you need install auto-complete's own plugin auto-complete-clang.
+
+Addons like company-mode and auto-complete only provide the front end UI. The code parsing thing is done in backend command line tool.
+
+The most popular parsing tool is [[http://clang.llvm.org/][Clang]] or [[http://www.gnu.org/software/global/][GNU Global]]. [[http://ctags.sourceforge.net/][Ctags]] could also be used sometimes. But Ctags use only regular expression to analyze the code. So its result is not as precise as Clang or GNU Global.
+
+In real project, you need tell Clang or GNU Global where to scan the source files. We usually only scan the directory containing C++ header files.
+
+[[http://cedet.sourceforge.net/][Cedet]] is similar plugin and has been mentioned by many articles. But in my opinion it's out of scope now because it's hard to set up and slow.
+*** Other code completion
+In reality, I found I use hippie-expand more often simply because it's more responsive
+** Software configuration management (SCM)
+The best software is git.
+
 - the old commands in emacs is still convienent
 - Many people use magit. Maybe its most useful feature is you can interactively create new commits by marked hunks in git cache/index.
 - I don't use magit. Command line looks good enough for me.
