@@ -97,9 +97,9 @@ Please note *this section is the most important part* of the whole article!
 
 I learned this lesson the hard way. At the beginning, I regarded Emacs as some geek's toy. I digged around the internet for the elisp code I can pasted into my ~/.emacs.
 
-That's totally waste of time if my goal is to become an Emacs master!
+That's totally waste of time since my goal is to become a master!
 
-I should copy the master [[https://github.com/purcell/emacs.d][Steve Purcell]] set up at the beginning!
+I should copy the set up from [[https://github.com/purcell/emacs.d][Steve Purcell]] at the beginning!
 
 Please don't repeat my mistake. Don't hesitate. Just follow Steven Purcell!
 
@@ -111,13 +111,24 @@ Wrong!
 
 If you have studied any guru's set up, you will find that he/she use "smex" to remember the frequently used command which is often more efficient than pressing hot keys. So masters don't remember key bindings intentionally.
 
-Steve Purcell update his set up frequently. If you prefer more stable set up, you can use [[http://eschulte.github.io/emacs-starter-kit/][Eric Schulte's Emacs Starter Kit]].
+Since Steve Purcell loves new technologies and update his set up frequently, his set up may be a little bit harder to follow for beginners.
+
+That's actually great. I'm lucky to pick up his set up and stick to it. Simply pulling from his set up gets me updated with the latest cooling thing in community.
+
+When I say "on the shoulders of giants", I'm stressing that you need set your standard higher on your first set up. I'm NOT saying top guy's set up is "newbie friendly", not at all.
+
+This section is discussing *what's the most efficient way to be good, not the easiest way*.
+
+There is huge difference between efficient and easy. For example, a set up using Vim key bindings by default is absolutely NOT easy for newbie but definitely efficient.
 
 If you are still not convinced, consider my reasons:
 - When I say mastering Emacs, I mean it. It's not OK at Emacs. It's not good at Emacs. It's actually among the best ones.
 - Let's consider those giants. They are more intelligent than me. They are more hard working than me. How can I reach their level asap?
 - The obvious way is join them.
 - If you can report a bug about master's set up. At least at that moment you has proved you are better at certain issue than master.
+- You will get guidance from master when he/she analyze your bug report.
+
+Anyway, if you find Purcell is too technically challenging to follow (That's a pity, btw). There is more stable set up, like [[http://eschulte.github.io/emacs-starter-kit/][Eric Schulte's Emacs Starter Kit]].
 ** Join the community
 I suggest focusing on Emacs only in order to take full advantage of communities.
 
