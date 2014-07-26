@@ -207,9 +207,9 @@ Version control is the most efficient way of knowledge management because you wi
 
 I benefit a lot by sharing. People who use my set up are actually doing the QA for me.
 
-For example, people reported that I got some personal thing (my personal email, full path of my hobby project) into my set up. They expect my set up usable out of the box.
+For example, people reported that I mixed some personal stuff (my personal email, full path of my hobby project) into my set up which they need remove before usage. They expect my set up usable out of the box.
 
-So I re-organized my set up and place personal stuff into a independent file named "privacy.el". It's outside of my Emacs configuration. Then it occurred to me that in corporate environment it's not safe to store my privacy.el on a shared computer without encryption. After some research, I found Emacs provided [[http://www.emacswiki.org/emacs/EasyPG][a perfect solution]] for this issue since version 23.
+So I re-organized it and placed private stuff into a independent file named "privacy.el". It's outside of my Emacs configuration. Then it occurred to me that in corporate environment it was not safe to store plain privacy.el on a shared computer without encryption. After some research, I found Emacs provided [[http://www.emacswiki.org/emacs/EasyPG][a perfect solution]] for this issue since version 23.
 
 *** Dropbox
 I place all the Emacs related documents at Dropbox. Since dropbox will synchronize the documents into my mobile phone. I can study Emacs when commuting.
@@ -234,6 +234,16 @@ I place all the Emacs related documents at Dropbox. Since dropbox will synchroni
 
 ** Emacs is a way of life
 Emacs guys have different ways of life. They are basically people who are hacking Lisp code for fun. Sometimes they will get the job done in a creative way. For example, [[http://sachachua.com/blog/][Sacha Chua]] mentioned that [[http://sachachua.com/blog/2012/07/transcript-emacs-chat-john-wiegley/][she let Emacs read the manual when cooking]].
+
+So *what benefit* can I get if I understand the Emacs way?
+
+When I learned Emacs way, I could not endure the default key bindings of my browser Firefox. So I installed a Firefox addon [[https://github.com/mooz/keysnail/wiki][Keysnail]] to convert Firefox into Emacs. That basically double my speed on browser navigation. I am doing web development these days. Browser navigation is my daily job.
+
+Since I already know *the way*. I immediately realized that Keysnail is awesome because [[https://github.com/mooz][its developer mooz]] is awesome. I wanted to follow him and used whatever he used. Then I found his [[https://github.com/mooz/percol][percol]] which made all my operations under Bash shell ten times faster (git, [[http://blog.binchen.org/posts/how-to-do-the-file-navigation-efficiently.html][file navigation]], database management ...).
+
+When I know *the way*, things used to be important to me now becomes trivial. For example, the question which text editor has better file browser does not matter to me at all. Why should I use any file explorer if I can do it ten times faster in shell?
+
+I'm also more willing to share for selfish reasons. For example, some colleague asked me to share my file navigation snippet. I gave away the snippet without hesitation. If he regard technology as black magic and sharing knowledge makes him weak, then he have already lose in the competition. Because we are living in the world of science and engineering, I *better myself more quickly by sharing to the best, by learning from the best everyday*. He will still do me good by regarding knowledge sharing as a favor of sharing magic power, by doing QA of my snippet as a user.
 ** FAQ
 *** Any documentation on Steve Purcell's set up?
 Nope. Read its README and code comment. The header of the code file usually has some usage guide.
@@ -309,7 +319,7 @@ My [[https://twitter.com/#!/chen_bin][twitter]] and [[https://plus.google.com/11
 
 My blog is [[http://blog.binchen.org]].
 
-Please donot ask me basic or general questions since I've already show you how to find answer.
+Please don't ask me basic questions since I've already shown you how to find answer.
 ** Summary
 Start from fun, follow the best people, reading and practice.
 
