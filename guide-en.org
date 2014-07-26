@@ -323,6 +323,21 @@ Here is my example:
 - I installed cmake-mode to do the cross-platform development with [[http://www.cmake.org/Wiki/CMake/Editors/Emacs][cmake]].
 - window-numbering.el is useful when jumping focus between sub-windows.
 - When I work for some huge projects, I use [[https://github.com/redguardtoo/evil-nerd-commenter][evil-nerd-commenter]] to comment code lines because I need deal with too many programming languages. 
+
+*** What do you think "Emacs can do everything"?
+Yes, there are *demos* to prove Emacs can do everything.
+
+But I'm a practical guy. I only care what's the most efficient way to get the job done. The reason I stick to Emacs in most cases is simply because Emacs is the best solution.
+
+Sometimes Emacs might not be the best tool even its demo looks good.
+
+[[gnu.org/software/emacs/manual/html_node/emacs/Document-View.html][DocView mode]] is boasted as a proof that Emacs could be used as a PDF viewer. You can open two sub-windows in Emacs. One for viewing PDF. The other for coding.
+
+It's actually not a perfect solution because Emacs needs call some command line tool to convert the PDF into png image before displaying the PDF. It's slow and costs too much memory. Besides, it's impossible to extract text from the Emacs PDF viewer. That's a show stopper if I'm viewing a programming ebook because I cannot paste code from PDF.
+
+There are tons of other perfect PDF viewers. They are quick. They can handle huge PDF files. Text embedded in PDF can be extracted.
+
+Even if you want to display the PDF viewer and code editor side by side. Emacs is still not a better solution. Tile windows managers like [[http://i3wm.org/][i3]] is a professional tool to handle these things.
 ** Contact me
 My [[https://twitter.com/#!/chen_bin][twitter]] and [[https://plus.google.com/110954683162859211810][google plus]].
 
