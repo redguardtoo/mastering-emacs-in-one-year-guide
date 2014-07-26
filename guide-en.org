@@ -82,10 +82,10 @@ So I can work at any environment in five minutes with Emacs. For example, on win
 
 I used to work for a project which required me editing perl/java/C/bash/SQL code at the same time. The code is hosted on some remote sever far way from my office. We have the slowest connection in the world so we do all the work in command line and shell. Emacs is the only choice.
 
-*** Use your spare time in one year
-When I say Emacs needs your one year, I mean you only need *your spare time* of one year to master Emacs. The definition of mastery is as I described as above, "Once you have mastered Emacs, every other text editor is easy".
+*** Take advantage of your spare time in one year
+When I say Emacs takes you one year, I mean *your spare time* of one year to master Emacs. The definition of mastery is as described above, "Once you have mastered Emacs, every other text editor is easy".
 
-BTW, I encourage you to try other text editors after one year if you want to help unbelievers to understand the definition of the master.
+BTW, I encourage you using any other text editor after one year if you want to help unbelievers to understand the definition of "mastery".
 *** What matters is Attitude
 How good you will be at Emacs is determined by your attitude,
 
@@ -136,7 +136,7 @@ Wrong!
 
 If you have studied any guru's setup, you will find that she use "smex" to remember the frequently used command, as it is often more efficient than pressing hot keys. So masters don't remember key bindings intentionally.
 
-Since Steve Purcell loves new technologies and updats his setup frequently, it may be a little harder to follow him for beginners.
+Since Steve Purcell loves new technologies and update his setup frequently, it may be a little harder to follow him for beginners.
 
 That's actually great. I'm lucky to pick up his setup and stick to it. Simply pulling from his git branch gets me updated with the latest cool things in community.
 
@@ -144,12 +144,12 @@ When I say "on the shoulders of giants", I'm stressing that you need set your st
 
 This section is discussing *what's the most efficient way to be good, not the easiest way*.
 
-There is huge difference between efficient and easy. For example, a setup using Vim key bindings is absolutely NOT easy for newbie but definitely efficient.
+There is a huge difference between efficient and easy. For example, a setup using Vim key bindings is absolutely NOT easy for newbie but definitely efficient.
 
 If you are still not convinced, consider my reasons:
 - When I say mastering Emacs, I mean it. It's not OK at Emacs. It's not good at Emacs. It's actually among the best ones.
 - Those giants are more intelligent than me. They are harder working than me. How can I reach their level as quickly as possible?
-- The obvious way is join them.
+- The obvious way is to join them.
 - If you can report a bug about the master's setup, at least in that moment, you have proven you are better at a certain issue than the master.
 - You will get guidance from the master when she analyzes your bug report.
 
@@ -215,6 +215,10 @@ So I re-organized it and placed private stuff into a independent file named "pri
 *** Dropbox
 I place all the Emacs related documents at Dropbox. Since dropbox will synchronize the documents into my mobile phone. I can study Emacs when commuting.
 ** My favorite Emacs addons
+I'm not suggesting these addons are the best ones you must use. There are many other alternatives which are at least as good as in the list.
+
+Please try these addons at least once. You will understand what is my expectation on average quality of addons.
+
 | Name                | Description                                  | Alternatives                      |
 |---------------------+----------------------------------------------+-----------------------------------|
 | [[http://www.emacswiki.org/emacs/Evil][Evil]]                | convert Emacs to vim                         | none                              |
@@ -223,8 +227,8 @@ I place all the Emacs related documents at Dropbox. Since dropbox will synchroni
 | expand-region       | selection region efficiently                 | none                              |
 | smex                | Input command efficiently                    | none                              |
 | yasnippet           | text template                                | none                              |
-| flymake-xxxx        | addons whose prefix is flymake. Syntax check | flycheck                          |
-| helm                | a framework to select/search from candidates | ido                               |
+| flymake-xxxx        | addons whose prefix is flymake. Syntax check. | flycheck                          |
+| helm                | a framework to choose candidates             | ido                               |
 | ido                 | similar to helm                              | helm                              |
 | js2-mode            | everything for javascript                    | javascript-mode,js-mode,js3-mode  |
 | w3m                 | browser                                      | Eww                               |
@@ -238,22 +242,22 @@ Emacs guys have different ways of life. They are basically people who are hackin
 
 So *what benefit* can I get if I understand the Emacs way?
 
-When I learned Emacs way, I could not endure the default key bindings of my browser Firefox. So I installed a Firefox addon [[https://github.com/mooz/keysnail/wiki][Keysnail]] to convert Firefox into Emacs. That basically double my speed on browser navigation. I am doing web development these days. Browser navigation is my daily job.
+When I learned Emacs, I could not endure the default key bindings of my browser Firefox. So I installed a Firefox addon [[https://github.com/mooz/keysnail/wiki][Keysnail]] to convert Firefox into Emacs. That basically double my speed on browser navigation. I am doing web development these days. Browser navigation is my daily job.
 
-Since I already know *the way*. I immediately realized that Keysnail is awesome because [[https://github.com/mooz][its developer mooz]] is awesome. I wanted to follow him and used whatever he used. Then I found his [[https://github.com/mooz/percol][percol]] which made all my operations under Bash shell ten times faster (git, [[http://blog.binchen.org/posts/how-to-do-the-file-navigation-efficiently.html][file navigation]], database management ...).
+Since I already knew *the way*. I immediately realized that Keysnail was awesome because [[https://github.com/mooz][its developer mooz]] was awesome. I wanted to follow him and used whatever he used. Then I found his [[https://github.com/mooz/percol][percol]] which made all my operations  (git, [[http://blog.binchen.org/posts/how-to-do-the-file-navigation-efficiently.html][file navigation]], database management ...) under Bash shell ten times faster.
 
-When I know *the way*, things used to be important to me now becomes trivial. For example, the question which text editor has better file browser does not matter to me at all. Why should I use any file explorer if I can do it ten times faster in shell?
+When I know *the way*, things used to be important to me become trivial now. For example, which text editor has better file browser does not matter to me now. Why should I use any file explorer if I can do it ten times faster in shell?
 
-I'm also more willing to share for selfish reasons. For example, some colleague asked me to share my file navigation snippet. I gave away the snippet without hesitation. If he regard technology as black magic and sharing knowledge makes him weak, then he have already lose in the competition. Because we are living in the world of science and engineering, I *better myself more quickly by sharing to the best, by learning from the best everyday*. He will still do me good by regarding knowledge sharing as a favor of sharing magic power, by doing QA of my snippet as a user.
+I'm also more willing to share for selfish reasons. For example, some colleague asked me to share my file navigation snippet. I gave away the snippet without hesitation. If he regards the technology as some black magic and sharing knowledge means giving up power , then he have already lost in the competition, if there is any competition. Because we are living in the world of science and engineering, I *better myself more quickly by sharing to the best, by learning from the best everyday*. He just knows the static knowledge I have already known. That knowledge will be outdated soon.  Anyway, anyone used my shared snippet will still do me good by regarding knowledge sharing as a favor, by doing QA of my snippet as a user.
 ** FAQ
 *** Any documentation on Steve Purcell's setup?
 Nope. Read its README and code comment. The header of the code file usually has some usage guide.
 *** Any simpler setup than Steve Pucell?
-Use [[https://github.com/redguardtoo/emacs.d][my setup]].
+Check outCheck out  [[https://github.com/redguardtoo/emacs.d][my setup]].
 
 I do some desktop development. So it has less web stuff than Purcell.
 *** As a Vi guy, why should I turn to Emacs?
-I was a Vi guy. I turn to Emacs because it's powerful and it can be extended with Lisp.
+I am a Vi guy. I turn to Emacs because it's powerful and it can be extended with Lisp.
 
 Vi is efficient in text editing because its model editing. In Emacs, you can use [[http://www.emacswiki.org/emacs/Evil][Evil]] to simulate Vim.
 *** I don't like Emacs key bindings
@@ -261,13 +265,13 @@ Vi is efficient in text editing because its model editing. In Emacs, you can use
 *** Emacs has too many key bindings to memorise
 Use [[http://www.emacswiki.org/Smex][Smex]]. It's a myth that Emacs guru need remember lots of key bindings.
 *** I am not comfortable with other people's setup. Can I modify it?
-Try to understand master's setup. Don't make judgment too early. It's easy to make judgment. But understanding needs wisdom and hard work.
+Try to understand master's setup at first. Don't make judgment too early. It's easy to make judgment. But understanding needs wisdom and hard work.
 
-For example, some people reported that there some weird character at column 80 in Emacs. That's actually a feature to remind you not to create line more than 80 columns. [[http://www.emacswiki.org/emacs/EightyColumnRule][Here is the reason]].
+For example, some people reported that there is some weird character at column 80 when editing a file. That's actually a feature to remind you not to create line more than 80 columns. [[http://www.emacswiki.org/emacs/EightyColumnRule][Here is the reason]].
 
 *** Copy the master's setup but the package is not updated/installed. No error message.
 Remove the file .emacs in your HOME directory. The .emacs.d/init.el has same functionality.
-*** Any specific question about Emacs
+*** If you have any specific question about Emacs
 Please,
 - read official tutorial
 - google
@@ -282,11 +286,11 @@ That's what I thought at the beginning. After several months I realized that I c
 
 While I spend serveral weeks to overcome some minor issues in Emacs setup, Purcell has already installed/developed dozens of cool plugins.
 
-If I cannot win, the only strategy is to join him, that's why I clone his setup and start to report bug for him. Here is [[https://github.com/purcell/emacs.d/issues/6][first issue I reported]]. Besides, reporting bugs also gives you the opportunity to talk with the master.
+If I cannot win, the only strategy is to join him, that's why I clone his setup and start to report bug for him. Here is [[https://github.com/purcell/emacs.d/issues/6][first issue I reported]]. Besides, reporting bugs also gives me the opportunity to talk with the master.
 
-So don't run away from the masters' huge setup. Regard it as a challenge to improve yourself.
-# *** Why I cannot add my own plugins after using the master's setup
-Though the quality of Emacs plugins are generally good, they may have compatibility issues simply because plugins are developed by different people. For example, both [[https://github.com/auto-complete][auto-complete]] and [[https://github.com/capitaomorte/yasnippet][yasnippet]] will use TAB key to expand code. So there is confict if I use both plugins.
+So don't run away from the master's huge setup. Regard it as a challenge to improve yourself.
+*** Why I cannot add my own plugins after using the master's setup
+Though the quality of Emacs plugins are generally good, they may have compatibility issues. It's usually because plugins are developed by different people. For example, both [[https://github.com/auto-complete][auto-complete]] and [[https://github.com/capitaomorte/yasnippet][yasnippet]] will use TAB key to expand code. So there is confict if I use both plugins.
 
 That's another reason to stick to the master's setup at the beginning.
 *** How to use Emacs on windows
@@ -294,7 +298,7 @@ Install Cygwin!
 
 When you have enough knowledge about environment variables and pipe. You can check [[http://stackoverflow.com/questions/3286723/emacs-cygwin-setup-under-windows/13245173#13245173][My answer at stackoverflow]] to use native windows version.
 
-*** Is code-navigation and code-completion as good as commercial IDE?
+*** Is code-navigation and code-completion as good as IDE?
 Thanks to [[http://clang.llvm.org/][clang]] && [[http://www.gnu.org/software/global/][GNU Global]], C++ is perfect now. Support for other languages are also good enough. 
 *** Why Emacs cannot download packages?
 If you are living in North Korea, Iran, China, you need below command line to start Emacs:
@@ -306,8 +310,10 @@ How to configure proxy server is not covered here.
 *** As a greenhand of Emacs, should I learn Emacs lisp at first?
 NO. Most people will lose the interest in Lisp because there is not enough stimulus. You can finish the Java/C#/Javascript course because that's required by profitable jobs.
 
-That's why I stress that you need avoid tweaking Emacs and copy the master's setup. Try to use Emacs asap.
-*** I know the basic operation. What should I learn next?
+That's why I stress that you need avoid tweaking Emacs. Please copy the master's setup.
+
+Unless you have seen how the elisp code in Emacs get your job done, you will not have the enough stimulus to *finish* the lisp course.
+*** After knowing the basic operation Emacs, what should I learn next?
 Find your practical problem which only Emacs can do best. Trust me, Emacs is much more powerful than your wildest imagination.
 
 Here is my example:
@@ -320,15 +326,15 @@ My [[https://twitter.com/#!/chen_bin][twitter]] and [[https://plus.google.com/11
 
 My blog is [[http://blog.binchen.org]].
 
-Please don't ask me basic questions since I've already shown you how to find answer.
+Please don't ask me basic questions since I've already shown you how to find the answer.
 ** Summary
 Start from fun, follow the best people, reading and practice.
 
 I recognize that all roads lead to Rome. So other methods may also work. But my method DID work on me.
 
-This whole article is basically the summary of how I figure out my way to Rome.
+This article is basically the summary of how I figure out my way to Rome.
 
-My only suggestion is, it does not matter which way you take, what matters is to regard Emacs as professional's tools which deserve your highest respect.
+My only suggestion is, it does not matter which way you take, what matters is to regard Emacs as professional's tool. It deserves your highest respect.
 
 *** Report bug
 This article is published at [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide]].
@@ -336,4 +342,4 @@ This article is published at [[https://github.com/redguardtoo/mastering-emacs-in
 Please use github's bug tracker instead of sending me email for your own good. Github notification mail is always in my first priority folder.
 
 *** I will provide long-term update
-Emacs is actually more a community than a software. Interesting people and addons keep popping up. I will update this article from time to time in the future.
+Emacs is actually more a platform than a software. Interesting people and addons keep popping up on that platform. I will update this article from time to time in the future.
