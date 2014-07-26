@@ -100,10 +100,12 @@ Here are the steps:
 - Don't install any plugins
 - Learn basic knowledge about [[http://en.wikipedia.org/wiki/Environment_variable][environment variable]] and [[http://en.wikipedia.org/wiki/Redirection_%28computing%29][pipe]]
 - Read offical tutorial
-- Use org-mode
+- Use [[http://www.emacswiki.org/emacs/OrgMode][org-mode]]
 - The only hot key you need learn in org-mode is TAB key
 
-Use Emacs in this way for several days or several weeks.
+Use Emacs in this way for several days in order to understand:
+- Why people love Emacs
+- How Emacs interact with other programs
 *** Read the official tutorial
 Start Emacs, press ALT and X key together (M-x is used as abbreviation for Alt-X, C-x for Ctrl-X from now on). Input "help-with-tutorial", press ENTER. That's all you need to open the tutorial.
 
@@ -253,7 +255,7 @@ I'm also more willing to share for selfish reasons. For example, some colleague 
 *** Any documentation on Steve Purcell's setup?
 Nope. Read its README and code comment. The header of the code file usually has some usage guide.
 *** Any simpler setup than Steve Pucell?
-Check outCheck out  [[https://github.com/redguardtoo/emacs.d][my setup]].
+Check out  [[https://github.com/redguardtoo/emacs.d][my setup]].
 
 I do some desktop development. So it has less web stuff than Purcell.
 *** As a Vi guy, why should I turn to Emacs?
