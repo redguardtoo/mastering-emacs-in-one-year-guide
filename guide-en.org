@@ -20,9 +20,9 @@ Created: [2012-01-31 Tue 15:08]
 Copyright: This work is licensed under the [[http://creativecommons.org/licenses/by-nc-nd/3.0/][Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License]].
 
 ** Introduction
-I was a Microsoft fan for many years because I was born in China. There was no Unix culture when I was young. My professor knew as much as I knew about Unix. Zero knowledge. Nothing. I believed Microsoft Windows was only platform worth to develop software. I believed Visual Studio was the best IDE in the world. I was so loyal to Microsoft that I used Visual Studio to edit code running on Linux server during my first job.
+I was a Microsoft fan for many years because I was born in China. There was no Unix culture when I was young. My professor knew as much as I knew about Unix. Zero knowledge. Nothing. I believed Microsoft Windows was only platform worth developing software on. I believed Visual Studio was the best IDE in the world. I was so loyal to Microsoft that I used Visual Studio to edit code running on Linux server during my first job.
 
-Besides, computers scared me to death. I'm ashamed to admit now that when I graduated from university I didn't know clipboard. If I need input duplicated texts, I typed them character by character. I chose IT career simply for money. There was no other career path for talented young people in China then.
+Besides, computers scared me to death. I'm ashamed to admit now that when I graduated from university I didn't know clipboard. If I need input duplicated texts, I typed them character by character. I chose an IT career simply for money. There was no other career path for talented young people in China then.
 
 The points,
 - This guide is about using Emacs as a professional's tool. I will not show off Emacs as a geek's toy because as you can see I am NOT that type from the beginning. I will focus on philosophy and methodology only. No technical details involved.
@@ -67,7 +67,7 @@ For solving the hardest and general design problem, we usually spend more time o
 
 I have more than 10 year experience on commercial IDEs. Trust me, Emacs is better for most programming tasks.
 
-As a proof, check below video demos:
+As a proof, check out the video demos of Emacs operation below:
 - [[http://www.youtube.com/watch?v=Ho6nMWGtepY][Writing PPT with org-mode and beamer in Emacs ]]
 - [[http://www.youtube.com/watch?v=EQAd41VAXWo][Emacs Power: Can your editor do THIS! ]]
 *** Emacs is maintained by Free Software Foundation (FSF)
@@ -91,7 +91,7 @@ How good you will be at Emacs is determined by your attitude,
 
 Tips:
 - Be open minded. For example, why not try Vim key binding after being familiar with Emacs default key binding. Or vice versa.
-- Better yourself is the purpose. For example, there are several good plugins to do the sub-windows navigation. Spend some time to use them all to find the most efficient one though the difference the best and average is only one less key strike.
+- Bettering yourself is the purpose. For example, there are several good plugins to do the sub-windows navigation. Spend some time to use them all to find the most efficient one though the difference the best and average is only one less key strike.
 - Half a tale is enough for a wise man. For example, when a guy showed off [[http://www.sublimetext.com/][Sublime Text]] to me, I realized that there should exist [[https://github.com/alloy-d/color-theme-molokai][similar beautiful skin]] in Emacs and I immediately switched my Emacs color theme.
 ** Step by Step Guide
 *** Quick guide for greenhands of Linux/Unix (OPTIONAL) 
@@ -109,7 +109,7 @@ Start Emacs, press ALT and X key together (M-x is used as abbreviation for Alt-X
 
 Reading this tutorial will take you about half an hour. It's not too much time to learn a life time skill.
 
-Reading tutorial is essential. Don't skip this step. For example, many Emacs newbies asked me how to open online help for some command which could be answered by reading the tutorial.
+Reading tutorial is essential. Do not skip this step. For example, many Emacs newbies asked me how to open online help for some command which could be answered by reading the tutorial.
 
 *** Find *your first practical problem* Emacs can solve
 That's the most important question you need ask yourself before you start.
@@ -122,19 +122,19 @@ Please note *this section is the most important part* of the whole article!
 
 I learned this lesson the hard way. At the beginning, I regarded Emacs as some geek's toy. I digged around the internet for the elisp code I can pasted into my ~/.emacs.
 
-That's totally waste of time since my goal is to become a master!
+That's totally a waste of time if my goal is to become an Emacs master!
 
-I should copy the set up from [[https://github.com/purcell/emacs.d][Steve Purcell]] at the beginning!
+I should copy the master [[https://github.com/purcell/emacs.d][Steve Purcell]] setup at the beginning!
 
 Please don't repeat my mistake. Don't hesitate. Just follow Steven Purcell!
 
-Let me be blunt. You are a newbie, you'd better copy and study top geek's code. Don't try to be creative at this stage. You'll waste your time re-invent the wheel.
+Let me be blunt. You are a newbie, you'd better copy and study top geek's code. Don't try to be creative at this stage. You'll waste your time trying to re-invent the wheel.
 
 For example, some readers tell me that Emacs has too many hot keys. They can't memorize all of them. This is typical behavior in newbies. They assume that top geeks can remember more key bindings.
 
 Wrong!
 
-If you have studied any guru's set up, you will find that she use "smex" to remember the frequently used command which is often more efficient than pressing hot keys. So masters don't remember key bindings intentionally.
+If you have studied any guru's set up, you will find that she use "smex" to remember the frequently used command, as it is often more efficient than pressing hot keys. So masters don't remember key bindings intentionally.
 
 Since Steve Purcell loves new technologies and update his set up frequently, his set up may be a little bit harder to follow for beginners.
 
@@ -148,16 +148,16 @@ There is huge difference between efficient and easy. For example, a set up using
 
 If you are still not convinced, consider my reasons:
 - When I say mastering Emacs, I mean it. It's not OK at Emacs. It's not good at Emacs. It's actually among the best ones.
-- Let's consider those giants. They are more intelligent than me. They are more hard working than me. How can I reach their level asap?
+- Those giants are more intelligent than me. They are harder working than me. How can I reach their level as quickly as possible?
 - The obvious way is join them.
-- If you can report a bug about master's set up. At least at that moment you has proved you are better at certain issue than master.
-- You will get guidance from master when she analyze your bug report.
+- If you can report a bug about master's set up, at least in that moment, you have proven you are better at a certain issue than the master.
+- You will get guidance from master when she analyzes your bug report.
 
 Anyway, if you find Purcell is too technically challenging to follow (That's a pity, btw). There is more stable set up, like [[http://eschulte.github.io/emacs-starter-kit/][Eric Schulte's Emacs Starter Kit]].
 ** Join the community
 I suggest focusing on Emacs only in order to take full advantage of communities.
 
-For example, although Quora.com has lots of interesting stuffs, *donot* read/subscribe/follow them unless it's highly releated to Emacs.
+For example, although Quora.com has lots of interesting stuffs, *do not* read/subscribe/follow them unless it's highly releated to Emacs.
 *** Google Plus
 [[https://plus.google.com/communities/114815898697665598016][Emacs community on 
 Google Plus]] is the best Emacs community. The average quality of discuss on Google Plus is better than other communities.
@@ -165,23 +165,24 @@ Google Plus]] is the best Emacs community. The average quality of discuss on Goo
 BTW, the famous Emacs geek [[https://plus.google.com/113859563190964307534][Xah Lee]] hosts a Q/A session at Google Plus every Tuesday. His web site is [[http://xahlee.org/]]. His site is especially useful for elisp programming.
 
 *** Github
-It's developer's social network.
+It's a developer's social network.
 
 You can search [[https://github.com/languages/Emacs%20Lisp]] for latest Elisp code.
 *** Emacs blogs
 [[http://planet.emacsen.org/][Planet Emacsen]] is the collection of several Emacs blogs.
 *** Quora.com
-I suggest follow the question on more specific topic instead general one. For example, "What's the best Emacs addon" is a more useful question than "How to learn Emacs".
+I suggest following the question on more specific topic instead general one. For example, "What's the best Emacs addon" is a more useful question than "How to learn Emacs".
+
 
 Everybody has something to say about a general question. But to answer a specific question, you need actual experience and knowledge.
 
-Even you are only interestd in general questions, start from more practical question is still better. You can find the real master from that question.
+Even if you are only interestd in general questions, starting from more practical question is still better. You can find the real master from that question.
 *** Blogs
 [[http://planet.emacsen.org/][Planet Emacsen]] is the best collection of Emacs related blogs.
 *** Twitter
 I use keyword "emacs :en" to search latest news. The reason to search English only twitter is that there are lots of Japanese post and I don't know Japanese.
 *** StackOverflow
-google "emacs-related-keywords site:stackoverflow.com"
+google: "emacs-related-keywords site:stackoverflow.com"
 
 The quality on stackoverflow discussion is good but there are not many new questions about Emacs there.
 *** Youtube
