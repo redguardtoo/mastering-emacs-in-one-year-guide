@@ -217,9 +217,9 @@ So I re-organized it and placed private stuff into a independent file named "pri
 *** Dropbox
 I place all the Emacs related documents at Dropbox. Since dropbox will synchronize the documents into my mobile phone. I can study Emacs when commuting.
 ** My favorite Emacs addons
-I'm not suggesting these addons are the best ones you must use. There are many other alternatives which are at least as good as in the list.
+I'm not suggesting that you must use these addons. There are many other addons which are as good as the ones in the list.
 
-Please try these addons at least once. You will understand what is my expectation on average quality of addons.
+The purpose to try these addons is to get the idea that a typical Emacs user's expectation on addon quality is very high.
 
 | Name                | Description                                  | Alternatives                      |
 |---------------------+----------------------------------------------+-----------------------------------|
@@ -358,7 +358,7 @@ This article is basically the summary of how I figure out my way to Rome.
 
 My only suggestion is, it does not matter which way you take, what matters is to regard Emacs as professional's tool. It deserves your highest respect.
 
-*** Report bug
+*** Report a bug
 This article is published at [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide]].
 
 Please use github's bug tracker instead of sending me email for your own good. Github notification mail is always in my first priority folder.
