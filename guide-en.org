@@ -271,17 +271,22 @@ Try to understand master's setup at first. Don't make judgment too early. It's e
 
 For example, some people reported that there is some weird character at column 80 when editing a file. That's actually a feature to remind you not to create line more than 80 columns. [[http://www.emacswiki.org/emacs/EightyColumnRule][Here is the reason]].
 
-*** Copy the master's setup but the package is not updated/installed. No error message.
-Remove the file .emacs in your HOME directory. The .emacs.d/init.el has same functionality.
+*** I've cloned the master's setup but the package is not updated. No error message.
+Remove the file .emacs in your HOME directory. The ~/.emacs.d/init.el has same functionality.
 *** If you have any specific question about Emacs
 Please,
 - read official tutorial
 - google
 For example, google "emacswiki init.el" to understand what's the init.el
-*** I got some error when start Emacs with master's setup
-Make sure you already installed third party command line tools which are OPTIONAL. Check [[https://github.com/redguardtoo/emacs.d][my README]] for the list.
+*** I got some error message when starting Emacs with master's setup
+That message could be ignored. It's often just the warning message when Emacs can't find some OPTIONAL third party command line tool.
 
-Run "emacs -nw --debug-init" in terminal. Then send the error message to the author of the setup. Please use bug track tool if possible.
+If you need install that missing tool, search the list in [[https://github.com/redguardtoo/emacs.d][my readme]].
+
+If you are sure it's actually an error message instead of a warning message, 
+- Run "emacs -nw --debug-init" in terminal.
+- Send the output to the author of the setup.
+- Please use bug tracker if possible.
 
 *** My simple setup is more controllable
 That's what I thought at the beginning. After several months I realized that I could never be as good as a master like Steve Purcell if keeping this way.
@@ -310,12 +315,12 @@ http_proxy=your-proxy-server-ip:port emacs -nw
 
 How to configure proxy server is not covered here.
 *** As a greenhand of Emacs, should I learn Emacs lisp at first?
-NO. Most people will lose the interest in Lisp because there is not enough stimulus. You can finish the Java/C#/Javascript course because that's required by profitable jobs.
+NO. Most people lose the interest in Lisp because there is not enough stimulus. You can finish the Java/C#/Javascript course because that's required by profitable jobs.
 
-That's why I stress that you need avoid tweaking Emacs. Please copy the master's setup.
+That's why I stress that you need avoid tweaking Emacs. Please copy the master's setup at first.
 
-Unless you have seen how the elisp code in Emacs get your job done, you will not have the enough stimulus to *finish* the lisp course.
-*** After knowing the basic operation Emacs, what should I learn next?
+Unless you have seen how the Lisp code gets your job done, you will not have the enough stimulus to *finish* the lisp course.
+*** After knowing the basic operation of Emacs, what should I learn next?
 Find your practical problem which only Emacs can do best. Trust me, Emacs is much more powerful than your wildest imagination.
 
 Here is my example:
