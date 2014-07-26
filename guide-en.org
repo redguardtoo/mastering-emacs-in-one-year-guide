@@ -122,7 +122,7 @@ Me, for example, have spent many years looking for some time-management tool unt
 *** Standing on the shoulders of giants
 Please note *this section is the most important part* of the whole article!
 
-I learned this lesson the hard way. At the beginning, I regarded Emacs as some geek's toy. I digged around the internet for the elisp code I can pasted into my ~/.emacs.
+I learned this lesson the hard way. At the beginning, I regarded Emacs as some geek's toy. I digged around the internet for the Lisp code I can paste into my ~/.emacs.
 
 That's totally a waste of time if my goal is to become an Emacs master!
 
