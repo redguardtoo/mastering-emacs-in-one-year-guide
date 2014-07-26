@@ -11,9 +11,9 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20140722
+Version: 20140726
 
-Updated: <2014-07-22 Tue>
+Updated: <2014-07-26 Sat>
 
 Created: [2012-01-31 Tue 15:08]
 
@@ -25,26 +25,49 @@ I was a Microsoft fan for many years because I was born in China. There was no U
 Besides, computers scared me to death. I'm ashamed to admit now that when I graduated from university I didn't know clipboard. If I need input duplicated texts, I typed them character by character. I chose IT career simply for money. There was no other career path for talented young people in China then.
 
 The points,
-- This guide on using Emacs as a professional's tool to get job done. I will not show off Emacs as a geek's toy because as you can see I am NOT that type from the beginning. I will focus on philosophy and methodology only. No technical details involved.
+- This guide is about using Emacs as a professional's tool. I will not show off Emacs as a geek's toy because as you can see I am NOT that type from the beginning. I will focus on philosophy and methodology only. No technical details involved.
 - If a computer dummy like me can [[https://github.com/redguardtoo][be good at Emacs in one year]], you definitely can do better.
 
 ** Why Emacs (OPTIONAL)
 I keep this section short because the focus is HOW instead WHY.
 *** Once you have mastered Emacs, you are good at all other editors
-*** The community behind Emacs is technically strong
-Emacs is developed by Lisp whose syntax is different from common programming languages. A developer who is curious enough to try Lisp is possibly more intelligent than average.  Lisp is often the third language he/she learns (Java/C/C# is the first, a script language like Bash/Python/Perl/Ruby is the second).
+You have already tasted the best. You general expection on a decent text editor is higher than other editors actually implement.
+
+Advanced tips in non-emacs guy's eyes are regarded as common sense in Emacs master.
+
+Let's use package management as an example.
+
+Emacs master expect any decent text editor should have a package manager so she can install package easily. She is surprised that [[https://sublime.wbond.net/installation][package manager is NOT bundled in some editor]].
+
+If a package is broken, it could be [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][easily fixed by the package user]] without touching the package's original code.
+
+Sometimes bad things happen. The remote repository could be shut down. Emacs guy expects she can [[https://github.com/redguardtoo/myelpa][set up her own repository on my USB drive]] [[https://github.com/redguardtoo/elpa-mirror][in one minute]].
+
+In summary, a Emacs guy knows much more advanced tip than other popular editors can implement.
+*** Community behind Emacs is strong
+Emacs is written in Lisp. Here is an example of its syntax:
+#+BEGIN_SRC elisp
+(+ (/ 4 5 ) 9)
+(concat "hello" "world")
+#+END_SRC
+
+A developer who picks up Lisp is possibly more intelligent. Lisp's syntax is not similar to other languages, as I have shown. The fact that she can get out of her comfort zone of "if/for/while" and try to love parentheses proves that she is more curious than average people. Great curiosity is certainly first-ever linked to great intelligence.
+
+Average developer can learn new languages (even non-mainsteam languages), but he will stay close to his comfort zone. A PHP guy will learn Python because they are both interpreted language. That PHP guy will not try Java because he is afraid of compiled language.
+
+A Lisp developer may also be more experienced because Lisp could be the third language she learns (Java/C/C# to pay the bill. Bash/Python/Perl/Ruby to glue the system. Lisp is the third).
 
 No job ad will list Emacs as a required skill. That's actually a good thing. It ensures that only honest technical guys exist in Emacs community.
-*** Emacs can get job done more efficiently
+*** Emacs can get job done quickly
 IDE is usually optimized for special programming language or application framework. But Emacs is much more powerful on general work flow.
 
 When people say IDE is good for programming. They are usually talking about code navigation, code completion and real time documentation lookup.
 
 For solving the hardest and general design problem, we usually spend more time on reading, investigation and communication. A typical workflow is like paste prototype code into [[http://pastebin.com/]] or [[https://gist.github.com/]], ask people in IRC, search in stackoverflow and paste the code back. Emacs has support for IRC and browser (w3m). So the workflow could be followed easily.
 
-I have more than 10 year experience on most commercial IDEs. Trust me, Emacs is better for most programming tasks.
+I have more than 10 year experience on commercial IDEs. Trust me, Emacs is better for most programming tasks.
 
-As a proof, check below video demos of Emacs operation:
+As a proof, check below video demos:
 - [[http://www.youtube.com/watch?v=Ho6nMWGtepY][Writing PPT with org-mode and beamer in Emacs ]]
 - [[http://www.youtube.com/watch?v=EQAd41VAXWo][Emacs Power: Can your editor do THIS! ]]
 *** Emacs is maintained by Free Software Foundation (FSF)
@@ -55,18 +78,20 @@ Pro:
 - it supports all platforms.
 - it's configuration is simple text
 
-So I can start work in any environment in 5 minutes with Emacs. On windows, I only need download portable Emacs executable. Done! My set up is only a folder containing some text files.
+So I can work at any environment in five minutes with Emacs. For example, on windows I only need download one portable Emacs executable.
 
-For example, I used to work for a project which required me editing perl/java/C/bash/SQL code at the same time. The code is hosted on some remote sever far way from my office. We don't have the quickest network connection in the world so we do all the work in command line and shell. So Emacs is the only choice.
+I used to work for a project which required me editing perl/java/C/bash/SQL code at the same time. The code is hosted on some remote sever far way from my office. We have the slowest connection in the world so we do all the work in command line and shell. Emacs is the only choice.
 
 *** Use your spare time in one year
-When I say Emacs needs one year. I mean the spare time of one year. The key point is have fun and let Emacs solve your practical problem.
+When I say Emacs needs your one year, I mean you only need *your spare time* of one year to master Emacs. The definition of mastery is as I described as above, "Once you have mastered Emacs, every other text editor is easy".
+
+BTW, I encourage you to try other text editors after one year if you want to help unbelievers to understand the definition of Master.
 *** What matters is Attitude
 How good you will be at Emacs is determined by your attitude,
 
-Key tips:
+Tips:
 - Be open minded. For example, why not try Vim key binding after being familiar with Emacs default key binding. Or vice versa.
-- Better yourself is the purpose. For example, there are several good plugins to do the sub-windows navigation. Spend some time to try them all to find the most efficient one.
+- Better yourself is the purpose. For example, there are several good plugins to do the sub-windows navigation. Spend some time to use them all to find the most efficient one though the difference the best and average is only one less key strike.
 - Half a tale is enough for a wise man. For example, when a guy showed off [[http://www.sublimetext.com/][Sublime Text]] to me, I realized that there should exist [[https://github.com/alloy-d/color-theme-molokai][similar beautiful skin]] in Emacs and I immediately switched my Emacs color theme.
 ** Step by Step Guide
 *** Quick guide for greenhands of Linux/Unix (OPTIONAL) 
@@ -109,24 +134,24 @@ For example, some readers tell me that Emacs has too many hot keys. They can't m
 
 Wrong!
 
-If you have studied any guru's set up, you will find that he/she use "smex" to remember the frequently used command which is often more efficient than pressing hot keys. So masters don't remember key bindings intentionally.
+If you have studied any guru's set up, you will find that she use "smex" to remember the frequently used command which is often more efficient than pressing hot keys. So masters don't remember key bindings intentionally.
 
 Since Steve Purcell loves new technologies and update his set up frequently, his set up may be a little bit harder to follow for beginners.
 
 That's actually great. I'm lucky to pick up his set up and stick to it. Simply pulling from his set up gets me updated with the latest cooling thing in community.
 
-When I say "on the shoulders of giants", I'm stressing that you need set your standard higher on your first set up. I'm NOT saying top guy's set up is "newbie friendly", not at all.
+When I say "on the shoulders of giants", I'm stressing that you need set your standard higher on your first set up. I'm NOT saying top guy's set up is "newbie friendly", not at all. If it happens to be "friendly", it's just the coincidence.
 
 This section is discussing *what's the most efficient way to be good, not the easiest way*.
 
-There is huge difference between efficient and easy. For example, a set up using Vim key bindings by default is absolutely NOT easy for newbie but definitely efficient.
+There is huge difference between efficient and easy. For example, a set up using Vim key bindings is absolutely NOT easy for newbie but definitely efficient.
 
 If you are still not convinced, consider my reasons:
 - When I say mastering Emacs, I mean it. It's not OK at Emacs. It's not good at Emacs. It's actually among the best ones.
 - Let's consider those giants. They are more intelligent than me. They are more hard working than me. How can I reach their level asap?
 - The obvious way is join them.
 - If you can report a bug about master's set up. At least at that moment you has proved you are better at certain issue than master.
-- You will get guidance from master when he/she analyze your bug report.
+- You will get guidance from master when she analyze your bug report.
 
 Anyway, if you find Purcell is too technically challenging to follow (That's a pity, btw). There is more stable set up, like [[http://eschulte.github.io/emacs-starter-kit/][Eric Schulte's Emacs Starter Kit]].
 ** Join the community
