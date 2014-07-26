@@ -155,7 +155,7 @@ If you are still not convinced, consider my reasons:
 - If you can report a bug about the master's setup, at least in that moment, you have proven you are better at a certain issue than the master.
 - You will get guidance from the master when she analyzes your bug report.
 
-Anyway, if you find Purcell is too technically challenging to follow (That's a pity, btw). There is more stable setup, like [[http://eschulte.github.io/emacs-starter-kit/][Eric Schulte's Emacs Starter Kit]].
+Anyway, if you find Purcell is too technically challenging to follow (What a pity, BTW), there is more stable setup like [[http://eschulte.github.io/emacs-starter-kit/][Eric Schulte's Emacs Starter Kit]].
 ** Join the community
 I suggest focusing on Emacs only in order to take full advantage of communities.
 
@@ -189,9 +189,9 @@ google: "emacs-related-keywords site:stackoverflow.com"
 The quality on stackoverflow discussion is good but there are not many new questions about Emacs there.
 *** Youtube
 There are lots of wonderful Emacs videos on youtube. For example,
-[[http://www.youtube.com/watch?feature=player_embedded&v=oJTwQvgfgMM][Emacs Org-mode - a system for note-taking and project planning]] is the tutorial which enlighten me on using org-mode. Carsten Dominik make me realize that org-mode is simple, all I need remember is press "TAB" key to expand a text node. That's the kill feature of org-mode. All the other stuff could be regarded as bonus features and can be learned later.
+[[http://www.youtube.com/watch?feature=player_embedded&v=oJTwQvgfgMM][Emacs Org-mode - a system for note-taking and project planning]] is the tutorial which enlighten me on using org-mode. Carsten Dominik makes me realize that org-mode is simple. All I need remember is pressing "TAB" key to expand a text node. That's the killer feature of org-mode. All the other stuff could be regarded as bonus and can be postponed.
 
-The issue of youtube is that the best matched search results are listed first. So you will always see the same results. I suggest sorting the results by upload date.
+The issue of youtube is that the best matched are listed first. So you will always see the same results. I suggest sorting the results by upload date.
 ** Readings
 *** EmacsWiki
 [[http://www.emacswiki.org/emacs/][EmacsWiki]] has all the tips you need for tweak the Emacs. It's actively maintained by the community.
