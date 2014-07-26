@@ -210,9 +210,9 @@ Version control is the most efficient way of knowledge management because you wi
 
 I benefit a lot by sharing. People who use my setup are actually doing the QA for me.
 
-For example, people reported that I mixed some personal stuff (my personal email, full path of my hobby project) into my setup which they need remove before usage. They expect it usable out of the box.
+For example, people reported that I mixed some personal stuff (my personal email, full path of my hobby project) into my setup which they need remove before usage. They expected it usable out of the box.
 
-So I re-organized it and placed private stuff into a independent file named "privacy.el". It's outside of my Emacs configuration. Then it occurred to me that in corporate environment it was not safe to store plain privacy.el on a shared computer without encryption. After some research, I found Emacs provided [[http://www.emacswiki.org/emacs/EasyPG][a perfect solution]] for this issue since version 23.
+So I re-organized it and placed private stuff into a independent file named "privacy.el". That file is outside of my Emacs configuration. Then it occurred to me that in corporate environment it was not safe to store plain privacy.el on a shared computer without encryption. After some research, I found Emacs already provided [[http://www.emacswiki.org/emacs/EasyPG][a perfect solution]] for this issue since version 23.
 
 *** Dropbox
 I place all the Emacs related documents at Dropbox. Since dropbox will synchronize the documents into my mobile phone. I can study Emacs when commuting.
@@ -248,7 +248,7 @@ When I learned Emacs, I could not endure the default key bindings of my browser 
 
 Since I already knew *the way*. I immediately realized that Keysnail was awesome because [[https://github.com/mooz][its developer mooz]] was awesome. I wanted to follow him and used whatever he used. Then I found his [[https://github.com/mooz/percol][percol]] which made all my operations  (git, [[http://blog.binchen.org/posts/how-to-do-the-file-navigation-efficiently.html][file navigation]], database management ...) under Bash shell ten times faster.
 
-When I know *the way*, things used to be important to me become trivial now. For example, which text editor has better file browser does not matter to me now. Why should I use any file explorer if I can do it ten times faster in shell?
+When I know *the way*, things used to be important become trivial now. For example, which text editor has better file browser does not matter to me now. Why should I use any file explorer if I can do it ten times faster in shell?
 
 I'm also more willing to share for selfish reasons. For example, some colleague asked me to share my file navigation snippet. I gave away the snippet without hesitation. If he regards the technology as some black magic and sharing knowledge means giving up power , then he have already lost in the competition, if there is any competition. Because we are living in the world of science and engineering, I *better myself more quickly by sharing to the best, by learning from the best everyday*. He just knows the static knowledge I have already known. That knowledge will be outdated soon.  Anyway, anyone used my shared snippet will still do me good by regarding knowledge sharing as a favor, by doing QA of my snippet as a user.
 ** FAQ
