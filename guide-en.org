@@ -136,9 +136,9 @@ Wrong!
 
 If you have studied any guru's setup, you will find that she use "smex" to remember the frequently used command, as it is often more efficient than pressing hot keys. So masters don't remember key bindings intentionally.
 
-Since Steve Purcell loves new technologies and update his setup frequently, it may be a little harder to follow him for beginners.
+Since Steve Purcell loves new technologies and updats his setup frequently, it may be a little harder to follow him for beginners.
 
-That's actually great. I'm lucky to pick up his setup and stick to it. Simply pulling from his git branch gets me updated with the latest cooling thing in community.
+That's actually great. I'm lucky to pick up his setup and stick to it. Simply pulling from his git branch gets me updated with the latest cool things in community.
 
 When I say "on the shoulders of giants", I'm stressing that you need set your standard higher on your first setup. I'm NOT saying top guy's setup is "newbie friendly", not at all. If it happens to be "friendly", it's just the coincidence.
 
