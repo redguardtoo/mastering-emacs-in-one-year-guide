@@ -41,9 +41,9 @@ The Emacs master expect any decent text editor should have a package manager so 
 
 If a package is broken, it could be [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][easily fixed by the package user]] without touching the package's original code.
 
-Sometimes bad things happen. The remote repository could be shut down. Emacs guy expects she can [[https://github.com/redguardtoo/myelpa][create her own repository on my USB drive]] [[https://github.com/redguardtoo/elpa-mirror][in one minute]].
+Sometimes bad things happen. The remote repository could be shut down. Emacs people expects she can [[https://github.com/redguardtoo/myelpa][create her own repository on her USB drive]] [[https://github.com/redguardtoo/elpa-mirror][in one minute]].
 
-In summary, a Emacs guy knows much more advanced tip than other popular editors can implement.
+In summary, a Emacs people knows much more advanced tip than other popular editors can implement.
 *** Community behind Emacs is strong
 Emacs is written in Lisp. Here is an example of its syntax:
 #+BEGIN_SRC elisp
