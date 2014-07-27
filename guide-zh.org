@@ -238,10 +238,9 @@ Emacs第三方插件很多.初学者的问题是装了太多插件,插件的管�
 |---------------------+-----------------------------------------------------+------------------------------------|
 | [[https://gitorious.org/evil/][evil]]                | 将 Emacs 变为 vi                                    | viper                              |
 | [[http://orgmode.org/][org]]                 | org-mode,全能的 note 工具                           | 不知道                             |
-| [[https://github.com/punchagan/org2blog][org2blog]]            | 给 wordpress 写博客                                 | 不知道                             |
 | [[https://github.com/company-mode/company-mode][company-mode]]        | 自动完成输入,支持各种语言和后端                     | cedet,auto-complete                |
 | [[https://github.com/magnars/expand-region.el][expand-region]]       | 按快捷键选中当前文本,可以将选择区域扩展或者收缩     | 不知道                             |
-| [[https://github.com/nonsequitur/smex][smex]]                | 让输入 M-x command 变得飞快                         | anything-complete                                |
+| [[https://github.com/nonsequitur/smex][smex]]                | 让输入 M-x command 变得飞快                         | anything-complete                  |
 | [[https://github.com/capitaomorte/yasnippet][yasnippet]]           | 强大的文本模板输入工具                              | 不知道                             |
 | [[http://www.emacswiki.org/emacs/FlyMake][flymake-xxxx]]        | 以 flymake 开头的所有包,针对不同语言做语法检查      | flycheck                           |
 | [[https://github.com/emacs-helm/helm][helm]]                | 选择和自动完成的框架,在其上有很多插件完成具体功能   | ido                                |
@@ -252,8 +251,6 @@ Emacs第三方插件很多.初学者的问题是装了太多插件,插件的管�
 | [[https://github.com/Fuco1/smartparens][smartparens]]         | 自动输入需要成对输入的字符如右括号之类的字符        | autopair                           |
 | [[https://github.com/nschum/window-numbering.el][window-numbering.el]] | 跳转到不同的子窗口                                  | 不知道                             |
 | [[https://github.com/fxbois/web-mode][web-mode]]            | 支持各种 HTML 文件                                  | nxml-mode、nxhtml-mode、html-mode  |
-| [[https://github.com/bbatsov/projectile][projectile]]          | 工程管理，快速查找工程里相关文件 |     eproject               |
-| [[https://github.com/magit/magit][magit]]               | Git相关操作的                                     |  不知道|
 
 ** Emacs 是一种生活方式
 如果你照着我以上的做法做,就可以认识到 Emacs 牛人其他也很牛.Emacs 实际上体现了牛人的一种生活方式.
