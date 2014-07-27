@@ -41,9 +41,9 @@ Emacs 用 Lisp 开发,Lisp 的不同寻常的语法决定了其开发者都是�
 
 Emacs 本身并不能给你带来任何好处,这就决定了其社区成员都是纯粹的技术人员,投机取巧的功利主义者对其是没有兴趣.
 *** 和单纯的 IDE 比较,Emacs 可以做的更多更快
-这里的更多并不是和 IDE 比支持某编程语言的特性更多,而是指 Emacs 内可完成的通用任务比较多更快捷.
+这里的更多并不是和 IDE 比支持某编程语言的特性更多,而是指 Emacs 内可完成的通用任务比较多, 而且更快捷.
 
-例如,我做开发时碰到难题,需要实时上 IRC 请教国外高手 (工作流包括粘贴我的代码到 pastebin 或者 gist,在 irc 内提问,看网页,将解决方案粘贴回来),emacs 集成了 IRC 工具和浏览器 (w3m),操作就很方便.
+例如,我做开发时碰到难题,需要实时上 IRC 请教国外高手 (工作流包括粘贴我的代码到 pastebin 或者 gist,在 irc 内提问,看网页,将解决方案粘贴回来),Emacs 集成了 IRC 工具和浏览器 (w3m),操作就很方便.
 
 我使用 Visual Studio 多年了,Firefox 使用我也是高手,相信我,大多数情况下还是 Emacs 更快.
 
@@ -58,7 +58,7 @@ Emacs 本身并不能给你带来任何好处,这就决定了其社区成员都�
 这在大项目中特别明显,例如,某项目我需要同时编辑 perl、java、C、bash、SQL,需要远程编辑在美国服务器上的代码,网速也不是很快.Emacs 的优势就体现出来了.
 
 *** 一年指的是充分利用空闲时间,一年后自然水到渠成
-我没说一年内必须什么事也不干专门学 Emacs,悬梁刺股没有短期利益回报的学习方法是我最反对的.
+我没说一年内必须什么事都不干专门学 Emacs, 没有短期利益回报的悬梁刺股式学习方法是我最反对的.
 
 我赞成的方法是,开始阶段花极少的时间得到巨大的回报 (如下文谈到的 Org-mode),以兴趣做导向.
 
@@ -82,7 +82,7 @@ Emacs 本身并不能给你带来任何好处,这就决定了其社区成员都�
 
 或者有人说输入代码效率只是软件开发流程中很小一部分,重要的是 "XXXX(编程思想,架构,框架...)".此所谓顾左右而言它.如果你能举一反三,自然可以猜到同样的方法和原则也适用于软件开发的任何一部分," 但是..." 只是不做的借口罢了.
 
-** 具体步骤 
+** 具体步骤
 Emacs本质上是给geek(热爱技术,追求高效的人)使用的软件.所以使用它需要一点点Linux的基本知识.如果你没有这方面的经验,那么下一节"无Linux经验新手快速指南"就是为你准备的.否则可跳过.
 
 步骤的要点在于起点要高,照抄高手的配置,尽量理解高手的配置,不要修改,除非你要给高手报bug.
@@ -92,7 +92,7 @@ Emacs本质上是给geek(热爱技术,追求高效的人)使用的软件.所以�
 以下是我的建议:
 - 安装Emacs 24
 - 不要安装任何第三方插件
-- 掌握基本知识,什么是环境变量(比如PATH, HOME之类的变量),什么是stdin, stdout, pipe. 
+- 掌握基本知识,什么是环境变量(比如PATH, HOME之类的变量),什么是stdin, stdout, pipe.
 - 读官方教程,学会基本的文本操作(大概十几个快捷键)
 - 使用Emacs 24自带的org-mode作为你的个人时间管理软件.
 - org-mode关键是用起来,只要记住按TAB键是展开内容就可以了,其他都不用学.
@@ -129,7 +129,7 @@ Emacs本质上是给geek(热爱技术,追求高效的人)使用的软件.所以�
 
 这是浪费时间!
 
-我应该一开始就照抄 [[http://www.sanityinc.com/][世界级大师 Steve Purcell]] 的 [[https://github.com/purcell/emacs.d][emacs 配置]].
+我应该一开始就照抄 [[http://www.sanityinc.com/][世界级大师 Steve Purcell]] 的 [[https://github.com/purcell/emacs.d][Emacs 配置]].
 
 *警告,Purcell 总爱试用最新的 Web 开发的新技术,对他而言稳定性不是第一位的,如果你有足够的热情和能力,愿意和他一起折腾,那么你的 Emacs 水平会提高得很快*
 
@@ -207,15 +207,15 @@ Xah Lee 提供 [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费 
 你的技巧是成指数增长的,知识积累的越多,这些知识之间的联系就会越多.这些联系增长的速度是以指数的方式增长的.把你emacs配置从头来过,意味着你的积累的知识书面记录丢失了.损失是很大的.
 
 所以我建议决不要丢弃你的Emacs配置.
- 
+
 这也是后文我谈到的为什么要用工具保存emacs配置和相关知识.
-*** emacs 配置纳入 github 的版本控制
+*** Emacs 配置纳入 github 的版本控制
 我的配置见 [[https://github.com/redguardtoo/emacs.d]].
 
 版本控制可以是认为一个集中式的知识管理,任何时刻任何地点对 Emacs 配置的修改都要及时上传和合并 (merge).这点对于个人能力的长期积累很重要.
 
 共享Emacs实际也是一种利己的行为,有很多人使用我的配置,等于帮我测试.
-*** 将 emacs 相关资料 (如电子图书,博客文章) 备份
+*** 将 Emacs 相关资料 (如电子图书,博客文章) 备份
 我将所有 Emacs 相关资讯都放在 dropbox 的服务器上,这样资料就同步到我的智能手机和我的平板电脑上,我可以充分利用空闲时间学习.
 
 请 [[https://www.getdropbox.com/referrals/NTg1ODg2Mjk][点击这里注册 dropbox 帐号]].注意,dropbox 客户端完全可以在国内使用,虽然访问其首页可能有点问题.
@@ -238,10 +238,9 @@ Emacs第三方插件很多.初学者的问题是装了太多插件,插件的管�
 |---------------------+-----------------------------------------------------+------------------------------------|
 | [[https://gitorious.org/evil/][evil]]                | 将 Emacs 变为 vi                                    | viper                              |
 | [[http://orgmode.org/][org]]                 | org-mode,全能的 note 工具                           | 不知道                             |
-| [[https://github.com/punchagan/org2blog][org2blog]]            | 给 wordpress 写博客                                 | 不知道                             |
 | [[https://github.com/company-mode/company-mode][company-mode]]        | 自动完成输入,支持各种语言和后端                     | cedet,auto-complete                |
 | [[https://github.com/magnars/expand-region.el][expand-region]]       | 按快捷键选中当前文本,可以将选择区域扩展或者收缩     | 不知道                             |
-| [[https://github.com/nonsequitur/smex][smex]]                | 让输入 M-x command 变得飞快                         | 不知道                             |
+| [[https://github.com/nonsequitur/smex][smex]]                | 让输入 M-x command 变得飞快                         | anything-complete                  |
 | [[https://github.com/capitaomorte/yasnippet][yasnippet]]           | 强大的文本模板输入工具                              | 不知道                             |
 | [[http://www.emacswiki.org/emacs/FlyMake][flymake-xxxx]]        | 以 flymake 开头的所有包,针对不同语言做语法检查      | flycheck                           |
 | [[https://github.com/emacs-helm/helm][helm]]                | 选择和自动完成的框架,在其上有很多插件完成具体功能   | ido                                |
@@ -413,7 +412,7 @@ Emacs Lisp又是一种只用于Emacs的语言,有大量的Emacs相关的术语�
 
 我认为最好的英文入门教程是Carsten Dominik(org-mode发明者)在[[http://orgmode.org/talks.html][google tech talks上的演讲]].其要点为org-mode本质是一个文本文件,你只要记住按TAB展开或者缩进条目就可以了.其他高级特性可以慢慢学.
 *** 对于"一切都用Emacs来完成"的观点你怎么看?
-我很欣赏这个理念.但是不要走火入魔.Emacs本质是个平台,给geek们提供了无限的可能性.
+我很欣赏这个理念.但是不要走火入魔.Emacs本质是个平台,给Geek们提供了无限的可能性.
 
 但是从实用角度讲,Emacs和其他工具结合有时候能更快完成工作(不过菜鸟在没有一年的修炼之前千万不要猜Emacs*不能*做什么).
 
@@ -436,12 +435,12 @@ Emacs Lisp又是一种只用于Emacs的语言,有大量的Emacs相关的术语�
 
 ** 结语
 在本文结束时,我再强调一下本文最重要的观点.
- 
+
 要点是:
 - 以*基于解决实际问题*产生的兴趣引导
 - 完全照抄*世界顶尖高手*如Steve Purcell的配置,尽量避免研究自己如何配置Emacs,当然也尽可能少写Elisp代码.
-- 学习Emacs和学习任何一种专业技能(拉小提琴,解数学题)的方法论都是一样的,请参考 [[http://book.douban.com/subject/4726323/][一万小时天才理论]]. 
- 
+- 学习Emacs和学习任何一种专业技能(拉小提琴,解数学题)的方法论都是一样的,请参考 [[http://book.douban.com/subject/4726323/][一万小时天才理论]].
+
 关键是你以严肃的态度把其当作专业技能学习. 很多人之所以不赞同我的核心观点可能是因为在他们的内心深处还是有把Emacs用来炫耀"我有多酷"的意识.
 
 Emacs当然很强大,可以作为一种另类娱乐工具来博得眼球.但是它的本质是为专业人士使用的神器.
@@ -451,7 +450,7 @@ Emacs当然很强大,可以作为一种另类娱乐工具来博得眼球.但是�
 2. 任何环境下都可靠
 
 刀的装饰是否漂亮或者用刀技巧是否是自己原创的对职业杀手并不重要.
- 
+
 Emacs就是那把刀.
 *** 如何报bug
 本文已放在 GitHub 上,网址为 [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide]].
