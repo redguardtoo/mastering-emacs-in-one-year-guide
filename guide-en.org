@@ -144,13 +144,13 @@ For example, some readers tell me that Emacs has too many hot keys. They can't m
 
 Wrong!
 
-If you have studied any guru's setup, you will find that she use "smex" to remember the frequently used command, as it is often more efficient than pressing hot keys. So masters don't remember key bindings intentionally.
+If you have studied any master's setup, you will find that she uses [[http://www.emacswiki.org/emacs/Smex][Smex]] to remember the frequently used command, as it is often more efficient than pressing hot keys. So masters don't remember key bindings intentionally.
 
 Since Steve Purcell loves new technologies and update his setup frequently, it may be a little harder to follow him for beginners.
 
 That's actually great. I'm lucky to pick up his setup and stick to it. Simply pulling from his git branch gets me updated with the latest cool things in community.
 
-When I say "on the shoulders of giants", I'm stressing that you need set your standard higher on your first setup. I'm NOT saying top guy's setup is "newbie friendly", not at all. If it happens to be "friendly", it's just the coincidence.
+When I say "on the shoulders of giants", I'm stressing that you need set your standard higher on your first setup. I'm NOT saying the top guy's setup is "newbie friendly". If it happens to be "friendly", it's just the coincidence.
 
 This section is discussing *what's the most efficient way to be good, not the easiest way*.
 
@@ -158,7 +158,7 @@ There is a huge difference between efficient and easy. For example, a setup usin
 
 If you are still not convinced, consider my reasons:
 - When I say mastering Emacs, I mean it. It's not OK at Emacs. It's not good at Emacs. It's actually among the best ones.
-- Those giants are more intelligent than me. They are harder working than me. How can I reach their level as quickly as possible?
+- Those giants are more intelligent than me. They are more harder working than me. How can I reach their level as quickly as possible?
 - The obvious way is to join them.
 - If you can report a bug about the master's setup, at least in that moment, you have proven you are better at a certain issue than the master.
 - You will get guidance from the master when she analyzes your bug report.
@@ -201,14 +201,14 @@ For example, [[http://www.youtube.com/watch?feature=player_embedded&v=oJTwQvgfgM
 The issue of youtube is that the best matched are listed first. So you will always see the same results. I suggest sorting the results by upload date.
 ** Readings
 *** EmacsWiki
-[[http://www.emacswiki.org/emacs/][EmacsWiki]] has all the tips you need for tweak the Emacs. It's actively maintained by the community.
+[[http://www.emacswiki.org/emacs/][EmacsWiki]] has all the tips you need for tweaking the Emacs. It's actively maintained by the community.
 
 *** Emacs Lisp book
-The only paper book you need read is [[http://www.amazon.com/Writing-GNU-Emacs-Extensions-Glickstein/dp/1565922611][Writing GNU Emacs Extensions]] by Bob Glickstein. I like his style and the way he organizes chapters.
+The only paper book you need read is [[http://www.amazon.com/Writing-GNU-Emacs-Extensions-Glickstein/dp/1565922611][Writing GNU Emacs Extensions]] by Bob Glickstein. I like his writing style and the way he organizes chapters.
 
-Xah Lee [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][Emacs Lisp tutorial]] is good and easy to read.
+Xah Lee's [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][Emacs Lisp tutorial]] is pratical and easy to read.
 
-Steve Yegge's [[http://steve-yegge.blogspot.com.au/2008/01/emergency-elisp.html][Emergency Elisp]] is great because it's short and includes all necessary knowledge for writing Emacs Lisp.
+Steve Yegge's [[http://steve-yegge.blogspot.com.au/2008/01/emergency-elisp.html][Emergency Elisp]] is short but includes the necessary information for writing Emacs Lisp.
 ** Knowledge management 
 *** Place your setup at Github, *publicly*
 I uploaded my setup onto [[https://github.com/redguardtoo/emacs.d]].
