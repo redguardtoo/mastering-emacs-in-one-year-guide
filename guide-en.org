@@ -169,13 +169,12 @@ I suggest focusing on Emacs only in order to take full advantage of communities.
 
 For example, although Quora.com has lots of interesting stuffs, *do not* read/subscribe/follow them unless it's highly releated to Emacs.
 *** Google Plus
-[[https://plus.google.com/communities/114815898697665598016][Emacs community on 
-Google Plus]] is the best Emacs community. The average quality of discuss on Google Plus is better than other communities.
+[[https://plus.google.com/communities/114815898697665598016][Emacs community on Google Plus]] is the best. The average quality of discussion on Google Plus is better.
 
-BTW, the famous Emacs geek [[https://plus.google.com/113859563190964307534][Xah Lee]] hosts a Q/A session at Google Plus every Tuesday. His web site is [[http://xahlee.org/]]. His site is especially useful for elisp programming.
+BTW, the Emacs geek [[https://plus.google.com/113859563190964307534][Xah Lee]] hosts a Q/A session at Google Plus every Tuesday. His web site is [[http://xahlee.org/]].
 
 *** Github
-It's a developer's social network.
+It's a social network for developers.
 
 You can search [[https://github.com/languages/Emacs%20Lisp]] for latest Elisp code.
 *** Emacs blogs
@@ -183,10 +182,9 @@ You can search [[https://github.com/languages/Emacs%20Lisp]] for latest Elisp co
 *** Quora.com
 I suggest following the question on more specific topic instead general one. For example, "What's the best Emacs addon" is a more useful question than "How to learn Emacs".
 
+Everybody can say something about a general question. But to answer a specific question, you need first-hand experience.
 
-Everybody has something to say about a general question. But to answer a specific question, you need actual experience and knowledge.
-
-Even if you are only interestd in general questions, starting from more practical question is still better. You can find the real master from that question.
+Even if you are only interestd in general questions, starting from more practical question is still better. Find the people who provides the best and the shortest answer and follow her.
 *** Blogs
 [[http://planet.emacsen.org/][Planet Emacsen]] is the best collection of Emacs related blogs.
 *** Twitter
@@ -196,8 +194,9 @@ google: "emacs-related-keywords site:stackoverflow.com"
 
 The quality on stackoverflow discussion is good but there are not many new questions about Emacs there.
 *** Youtube
-There are lots of wonderful Emacs videos on youtube. For example,
-[[http://www.youtube.com/watch?feature=player_embedded&v=oJTwQvgfgMM][Emacs Org-mode - a system for note-taking and project planning]] is the tutorial which enlighten me on using org-mode. Carsten Dominik makes me realize that org-mode is simple. All I need remember is pressing "TAB" key to expand a text node. That's the killer feature of org-mode. All the other stuff could be regarded as bonus and can be postponed.
+There are lots of wonderful Emacs videos on youtube.
+
+For example, [[http://www.youtube.com/watch?feature=player_embedded&v=oJTwQvgfgMM][Emacs Org-mode - a system for note-taking and project planning]] is the tutorial which enlighten me on using org-mode. Carsten Dominik makes me realize that org-mode is simple. All I need remember is pressing "TAB" key to expand a text node. That's the killer feature of org-mode. All the other stuff could be regarded as bonus and can be postponed.
 
 The issue of youtube is that the best matched are listed first. So you will always see the same results. I suggest sorting the results by upload date.
 ** Readings
