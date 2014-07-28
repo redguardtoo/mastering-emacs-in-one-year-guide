@@ -20,7 +20,7 @@ Created: [2012-01-31 Tue 15:08]
 Copyright: This work is licensed under the [[http://creativecommons.org/licenses/by-nc-nd/3.0/][Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License]].
 
 ** Introduction
-I was a Microsoft fan for many years because I was born in China. There was no Unix culture when I was young. My professor knew as much as I knew about Unix. Zero knowledge. Nothing. I believed Microsoft Windows was the only platform worth developing software on. I believed Visual Studio was the best IDE in the world. I was so loyal to Microsoft that I used Visual Studio to edit code running on Linux server during my first job.
+I was a Microsoft fan for many years because I was born in China. There was no Unix culture when I was young. My professor knew as much as I knew about Unix. Zero knowledge. Nothing. I believed Microsoft Windows was the only platform worth developing software on. I believed Visual Studio was the best IDE in the world. I was so loyal to Microsoft that I used Visual Studio to edit the code running on Linux server during my first job.
 
 Besides, computers scared me to death. I'm ashamed to admit now that when I graduated from university I didn't know clipboard. If I need input duplicated texts, I typed them character by character. I chose an IT career simply for money. There was no other career path for talented young people in China then.
 
@@ -31,21 +31,21 @@ The points,
 ** Why Emacs (OPTIONAL)
 I keep this section short because the focus is HOW instead WHY.
 *** Once you have mastered Emacs, you are good at all other editors
-You have already tasted the best. You general expection on a decent text editor is higher than other editors actually implement.
+You have already tasted the best. You general expection on a decent text editor is higher.
 
-Advanced tips in non-emacs guy's eyes are regarded as common sense in the Emacs master's eyes.
+Advanced tips in a non-emacs guy's eyes are regarded as common sense by a Emacs guy.
 
 Let's use package management as an example.
 
-The Emacs master expect any decent text editor should have a package manager so she can install package easily. She is surprised that [[https://sublime.wbond.net/installation][package manager is NOT bundled in some editor]].
+The Emacs people expects any decent text editor should have a package manager so she can install package easily. She is surprised that [[https://sublime.wbond.net/installation][package manager is NOT bundled in some editor]].
 
-If a package is broken, it could be [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][easily fixed by the package user]] without touching the package's original code.
+If a package is broken, it could be [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][fixed by the package user]] without touching the package's original code.
 
-Sometimes bad things happen. The remote repository could be shut down. Emacs people expects she can [[https://github.com/redguardtoo/myelpa][create her own repository on her USB drive]] [[https://github.com/redguardtoo/elpa-mirror][in one minute]].
+If the remote repository is shut down, Emacs people expects she can [[https://github.com/redguardtoo/myelpa][create her own repository on her USB drive]] [[https://github.com/redguardtoo/elpa-mirror][in one minute]].
 
-In summary, a Emacs people knows much more advanced tip than other popular editors can implement.
+In summary, a Emacs guy knows much more advanced tip than other popular editors can implement.
 *** Community behind Emacs is strong
-Emacs is written in Lisp. Here is an example of its syntax:
+Emacs is written in Lisp. Its syntax is like:
 #+BEGIN_SRC elisp
 (+ (/ 4 5 ) 9)
 (concat "hello" "world")
@@ -53,17 +53,19 @@ Emacs is written in Lisp. Here is an example of its syntax:
 
 A developer who picks up Lisp is possibly more intelligent. Lisp's syntax is not similar to other languages, as I have shown. The fact that she can get out of her comfort zone of "if/for/while" and try to love parentheses proves that she is more curious than average people. Great curiosity is certainly first-ever linked to great intelligence.
 
-Average developer can learn new languages (even non-mainsteam languages), but he will stay close to his comfort zone. A PHP guy will learn Python because they are both interpreted language. That PHP guy will not try Java because he is afraid of compiled language.
+Average developer can learn new languages (even non-mainsteam languages), but he will stay close to his comfort zone. A PHP guy will learn Python because PYTHON and PHP are both interpreted language. That PHP guy will not try Java because he is afraid of compiled language.
 
 A Lisp developer may also be more experienced because Lisp could be the third language she learns (Java/C/C# to pay the bill. Bash/Python/Perl/Ruby to glue the system. Lisp is the third).
 
 No job ad will list Emacs as a required skill. That's actually a good thing. It ensures that only honest technical guys exist in Emacs community.
 *** Emacs can get job done quickly
-IDE is usually optimized for special programming language or application framework. But Emacs is much more powerful on general work flow.
+IDE is usually optimized for certain programming language or application framework. But Emacs is much more powerful on general work flow.
 
-When people say IDE is good for programming. They are usually talking about code navigation, code completion and real time documentation lookup.
+When people say IDE is good for programming. They are usually talking about code navigation, code completion and real time documentation lookup. Emacs can do these things as good as the IDE.
 
-For solving the hardest and general design problem, we usually spend more time on reading, investigation and communication. A typical workflow is like paste prototype code into [[http://pastebin.com/]] or [[https://gist.github.com/]], ask people in IRC, search in stackoverflow and paste the code back. Emacs has support for IRC and browser (w3m). So the workflow could be followed easily.
+But Emacs can do more.
+
+For solving the hardest and general design problem, developers usually spend more time on reading, investigation and communication. A typical workflow is like paste prototype code into [[http://pastebin.com/]] or [[https://gist.github.com/]], ask people in IRC, search in stackoverflow and paste the code back. Emacs has support for IRC and browser (w3m). So the workflow could be followed easily.
 
 I have more than 10 year experience on commercial IDEs. Trust me, Emacs is better for most programming tasks.
 
@@ -72,13 +74,19 @@ As a proof, check out the video demos of Emacs operation below:
 - [[http://www.youtube.com/watch?v=EQAd41VAXWo][Emacs Power: Can your editor do THIS! ]]
 *** Emacs is maintained by Free Software Foundation (FSF)
 FSF has been around for almost 40 years. I assume it will exist for next 40 years. So Emacs will live for a very long time. My investment on Emacs will never expire.
-*** No overhead
+
+A negative example is Microsoft Visual Studio:
+- I extended Visual Studio 6 with my own VBA script. The script did not work after I upgraded to Visual Studio .NET.
+- All the key bindings in Visual Studio 6 were dumped in next version.
+- Visual Studio 6 Professional was bundled the performance profiling tool. That feature was removed in .NET version.
+- Microsoft can never get UX right for *a professional developer*. Consider a simple feature like listing the functions in current file. The hot key for that command is shit. You have to pay tens of bucks to [[http://www.wholetomato.com/][get the right solution]].
+*** no overhead
 Pro:
 - Emacs is open sourced 
-- it supports all platforms.
+- it supports all the platforms.
 - it's configuration is simple text
 
-So I can work at any environment in five minutes with Emacs. For example, on windows I only need download one portable Emacs executable.
+So I can work in any environment in five minutes with Emacs. For example, on windows I only need download one portable Emacs executable.
 
 I used to work for a project which required me editing perl/java/C/bash/SQL code at the same time. The code is hosted on some remote sever far way from my office. We have the slowest connection in the world so we do all the work in command line and shell. Emacs is the only choice.
 
@@ -90,7 +98,7 @@ BTW, I encourage you using any other text editor after one year if you want to h
 How good you will be at Emacs is determined by your attitude,
 
 Tips:
-- Be open minded. For example, why not try Vim key binding after being familiar with Emacs default key binding. Or vice versa.
+- Be open minded. For example, why not try Vim key bindings after being familiar with Emacs default key bindings. Or vice versa.
 - Bettering yourself is the purpose. For example, there are several good plugins to do the sub-windows navigation. Spend some time to use them all to find the most efficient one though the difference the best and average is only one less key strike.
 - Half a tale is enough for a wise man. For example, when a guy showed off [[http://www.sublimetext.com/][Sublime Text]] to me, I realized that there should exist [[https://github.com/alloy-d/color-theme-molokai][similar beautiful skin]] in Emacs and I immediately switched my Emacs color theme.
 ** Step by Step Guide
@@ -111,14 +119,14 @@ Start Emacs, press ALT and X key together (M-x is used as abbreviation for Alt-X
 
 Reading this tutorial will take you about half an hour. It's not too much time to learn a life time skill.
 
-Reading tutorial is essential. Do not skip this step. For example, many Emacs newbies asked me how to open online help for some command which could be answered by reading the tutorial.
+Reading tutorial is essential. Do not skip this step. For example, many Emacs newbies asked me how to look up online manual for some command. This has already been answered in the tutorial.
 
 *** Find *your first practical problem* Emacs can solve
 That's the most important question you need ask yourself before you start.
 
 The learning is like investment. If you can get huge benefit by investing a little time, you will be motivated and keep on the learning.
 
-Me, for example, have spent many years looking for some time-management tool until I find the [[http://orgmode.org/][org-mode]] (a Emacs plugin).
+Me, for example, have spent many years looking for some time-management tool until I find the [[http://orgmode.org/][Org-mode]].
 *** Standing on the shoulders of giants
 Please note *this section is the most important part* of the whole article!
 
@@ -126,7 +134,7 @@ I learned this lesson the hard way. At the beginning, I regarded Emacs as some g
 
 That's totally a waste of time if my goal is to become an Emacs master!
 
-I should copy the master [[https://github.com/purcell/emacs.d][Steve Purcell's]] setup at the beginning!
+I should copy [[https://github.com/purcell/emacs.d][Steve Purcell's]] setup at the beginning!
 
 Please don't repeat my mistake. Don't hesitate. Just follow Steven Purcell!
 
@@ -315,7 +323,9 @@ http_proxy=your-proxy-server-ip:port emacs -nw
 
 How to configure proxy server is not covered here.
 *** As a greenhand of Emacs, should I learn Emacs lisp at first?
-NO. Most people lose the interest in Lisp because there is not enough stimulus. You can finish the Java/C#/Javascript course because that's required by profitable jobs.
+NO.
+
+Most people lose the interest in Lisp because there is not enough stimulus. You can finish the Java/C#/Javascript course because that's required by profitable jobs.
 
 That's why I stress that you need avoid tweaking Emacs. Please copy the master's setup at first.
 
@@ -332,9 +342,9 @@ Here is my example:
 *** What do you think "Emacs can do everything"?
 Yes, there are *demos* to prove Emacs can do everything.
 
-But I'm a practical guy. I only care what's the most efficient way to get the job done. The reason I stick to Emacs in most cases is simply because Emacs is the best solution.
+But I'm a practical guy. I only care what's the most efficient way to get the job done. The reason I stick to Emacs is simply because Emacs is the best solution.
 
-Sometimes Emacs might not be the best tool even its demo looks good.
+Sometimes Emacs might not be the best solution even its demo looks good.
 
 [[gnu.org/software/emacs/manual/html_node/emacs/Document-View.html][DocView mode]] is boasted as a proof that Emacs could be used as a PDF viewer. You can open two sub-windows in Emacs. One for viewing PDF. The other for coding.
 
