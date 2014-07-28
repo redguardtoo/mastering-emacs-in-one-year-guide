@@ -255,7 +255,7 @@ When I learned Emacs, I could not endure the default key bindings of my browser 
 
 Since I already knew *the way*. I immediately realized that Keysnail was awesome because [[https://github.com/mooz][its developer mooz]] was awesome. I followed him and used whatever he used. His [[https://github.com/mooz/percol][percol]] made all my operations (git, [[http://blog.binchen.org/posts/how-to-do-the-file-navigation-efficiently.html][file navigation]], database management ...) under shell ten times faster.
 
-After knowing *the way*, things that was important become trivial now. For example, I don't care which text editor has better file browser. Why should I use any file explorer if I am ten times faster in shell?
+After knowing *the way*, things that was important become trivial now. For example, I don't care which text editor has better file explorer. Why should I use any file explorer if I am ten times faster in shell?
 
 I'm also more willing to share. For example, some colleague asked me to share my file navigation snippet. I gave it away without hesitation.
 
