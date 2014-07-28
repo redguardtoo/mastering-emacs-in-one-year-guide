@@ -219,7 +219,7 @@ I benefit a lot by sharing. People who use my setup are actually making my setup
 
 For example, people reported that I mixed some personal stuff (my personal email, full path of my hobby project) into my setup which they need remove before usage. They expected it usable out of the box.
 
-So I re-organized it and placed private stuff into a independent file named "privacy.el". That file is outside of my Emacs configuration. Then it occurred to me that in corporate environment it was not safe to store plain privacy.el on a shared computer without encryption. After some research, I found Emacs already provided [[http://www.emacswiki.org/emacs/EasyPG][a perfect solution]] for this issue since version 23.
+So I re-organized it and placed private stuff into a independent file named "privacy.el". That file is outside of my Emacs configuration. Then it occurred to me that in corporate environment it was not safe to store plain privacy.el on a shared computer without encryption. After some research, I found that Emacs already provided [[http://www.emacswiki.org/emacs/EasyPG][a perfect solution]] for this issue since version 23.
 
 *** Dropbox
 I place all the Emacs related documents at Dropbox. Since dropbox will synchronize the documents into my mobile phone. I can study Emacs when commuting.
@@ -274,13 +274,14 @@ Because I do some desktop development. it has less web stuff than Purcell.
 *** As a Vi guy, why should I turn to Emacs?
 I am a Vi guy. I turn to Emacs because it's powerful and it can be extended with Lisp.
 
-Vi is efficient in text editing because its model editing. In Emacs, you can use [[http://www.emacswiki.org/emacs/Evil][Evil]] to simulate Vim.
-*** I don't like Emacs key bindings
+Vi is efficient in text editing because its model editing. In Emacs, I use [[http://www.emacswiki.org/emacs/Evil][Evil]] to simulate Vim.
+
+*** I don't like Emacs default key bindings
 [[http://ergoemacs.org/][ergoemacs]] if you prefer Microsoft's key bindings.
 *** Emacs has too many key bindings to memorise
 Use [[http://www.emacswiki.org/Smex][Smex]]. It's a myth that a Emacs guru must remember many key bindings.
 *** I am not comfortable with other people's setup. Can I modify it?
-Try to understand master's setup at first. Don't make judgment too early. It's easy to make judgment. But understanding needs wisdom and hard work.
+Try to understand the master's setup at first. Don't make judgment too early. It's easy to make judgment. But understanding needs wisdom and hard work.
 
 For example, some people reported that there was some weird character at column 80 when editing a file. That's actually a feature to remind the user not to create any line with width more than 80 columns. [[http://www.emacswiki.org/emacs/EightyColumnRule][Here is the reason]].
 
