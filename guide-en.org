@@ -278,11 +278,11 @@ Vi is efficient in text editing because its model editing. In Emacs, you can use
 *** I don't like Emacs key bindings
 [[http://ergoemacs.org/][ergoemacs]] if you prefer Microsoft's key bindings.
 *** Emacs has too many key bindings to memorise
-Use [[http://www.emacswiki.org/Smex][Smex]]. It's a myth that Emacs guru need remember lots of key bindings.
+Use [[http://www.emacswiki.org/Smex][Smex]]. It's a myth that a Emacs guru must remember many key bindings.
 *** I am not comfortable with other people's setup. Can I modify it?
 Try to understand master's setup at first. Don't make judgment too early. It's easy to make judgment. But understanding needs wisdom and hard work.
 
-For example, some people reported that there is some weird character at column 80 when editing a file. That's actually a feature to remind you not to create line more than 80 columns. [[http://www.emacswiki.org/emacs/EightyColumnRule][Here is the reason]].
+For example, some people reported that there was some weird character at column 80 when editing a file. That's actually a feature to remind the user not to create any line with width more than 80 columns. [[http://www.emacswiki.org/emacs/EightyColumnRule][Here is the reason]].
 
 *** I've cloned the master's setup but the package is not updated. No error message.
 Remove the file .emacs in your HOME directory. The ~/.emacs.d/init.el has same functionality.
