@@ -215,7 +215,7 @@ I uploaded my setup onto [[https://github.com/redguardtoo/emacs.d]].
 
 Version control is the most efficient way of knowledge management because you will never lose the setup.
 
-I benefit a lot by sharing. People who use my setup are actually doing the QA for me.
+I benefit a lot by sharing. People who use my setup are actually making my setup perfect. I am the first guy who benefits from a perfect setup.
 
 For example, people reported that I mixed some personal stuff (my personal email, full path of my hobby project) into my setup which they need remove before usage. They expected it usable out of the box.
 
@@ -251,20 +251,26 @@ Emacs guys have different ways of life. They are basically people who are hackin
 
 So *what benefit* can I get if I understand the Emacs way?
 
-When I learned Emacs, I could not endure the default key bindings of my browser Firefox. So I installed a Firefox addon [[https://github.com/mooz/keysnail/wiki][Keysnail]] to convert Firefox into Emacs. That basically double my speed on browser navigation. I am doing web development these days. Browser navigation is my daily job.
+When I learned Emacs, I could not endure the default key bindings of my browser Firefox. So I installed a Firefox addon [[https://github.com/mooz/keysnail/wiki][Keysnail]] to convert Firefox into Emacs. That doubled my speed in browser navigation. As a web developer, I am doing the browser navigation thing everyday.
 
-Since I already knew *the way*. I immediately realized that Keysnail was awesome because [[https://github.com/mooz][its developer mooz]] was awesome. I wanted to follow him and used whatever he used. Then I found his [[https://github.com/mooz/percol][percol]] which made all my operations  (git, [[http://blog.binchen.org/posts/how-to-do-the-file-navigation-efficiently.html][file navigation]], database management ...) under Bash shell ten times faster.
+Since I already knew *the way*. I immediately realized that Keysnail was awesome because [[https://github.com/mooz][its developer mooz]] was awesome. I followed him and used whatever he used. His [[https://github.com/mooz/percol][percol]] made all my operations (git, [[http://blog.binchen.org/posts/how-to-do-the-file-navigation-efficiently.html][file navigation]], database management ...) under shell ten times faster.
 
-After knowing *the way*, things used to be important become trivial now. For example, I don't care which text editor has better file browser now. Why should I use any file explorer if I can be ten times faster in shell?
+After knowing *the way*, things that was important become trivial now. For example, I don't care which text editor has better file browser. Why should I use any file explorer if I am ten times faster in shell?
 
-I'm also more willing to share my code. For example, some colleague asked me to share my file navigation snippet. I gave away the snippet without hesitation. If he regarded the technology as some black magic and sharing knowledge means giving up power, then he had already lost in the competition, if there was any competition. Because we are living in the world of science and engineering, I improve myself *more quickly* by sharing to the best, by learning from the best everyday. He just knew the static knowledge I had already knew. That knowledge would be outdated soon. Anyway, anyone used my shared snippet would still do me good by regarding knowledge sharing as a favor, by doing QA of my snippet as a user.
+I'm also more willing to share. For example, some colleague asked me to share my file navigation snippet. I gave it away without hesitation.
+
+If he would equal sharing knowledge to giving up power, he had already lost in the competition to be more powerful.
+
+We are living in the world of science and engineering. I improve myself *more quickly* by sharing to the best, by learning from the best. Knowledge is not black magic. Hiding knowledge will make it stale.
+
+Anyway, people who use my shared snippet are still doing me good by regarding the snippet as a favor, by doing QA as users.
 ** FAQ
 *** Any documentation on Steve Purcell's setup?
 Nope. Read its README and code comment. The header of the code file usually has some usage guide.
 *** Any simpler setup than Steve Pucell?
-Check out  [[https://github.com/redguardtoo/emacs.d][my setup]].
+Check out [[https://github.com/redguardtoo/emacs.d][my setup]].
 
-I do some desktop development. So it has less web stuff than Purcell.
+Because I do some desktop development. it has less web stuff than Purcell.
 *** As a Vi guy, why should I turn to Emacs?
 I am a Vi guy. I turn to Emacs because it's powerful and it can be extended with Lisp.
 
@@ -280,7 +286,7 @@ For example, some people reported that there is some weird character at column 8
 
 *** I've cloned the master's setup but the package is not updated. No error message.
 Remove the file .emacs in your HOME directory. The ~/.emacs.d/init.el has same functionality.
-*** If you have any specific question about Emacs
+*** I have some specific question about Emacs
 Please,
 - read official tutorial
 - google
@@ -365,7 +371,7 @@ I recognize that all roads lead to Rome. So other methods may also work. But my 
 
 This article is basically the summary of how I figure out my way to Rome.
 
-My only suggestion is, it does not matter which way you take, what matters is to regard Emacs as professional's tool. It deserves your highest respect.
+It doesn't matter which way you take. What matters is your attitude. Please regard Emacs as professional's tool. It deserves your highest respect.
 
 *** Report a bug
 This article is published at [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide]].
