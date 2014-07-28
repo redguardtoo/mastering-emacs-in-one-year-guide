@@ -72,8 +72,8 @@ I have more than 10 year experience on commercial IDEs. Trust me, Emacs is bette
 As a proof, check out the video demos of Emacs operation below:
 - [[http://www.youtube.com/watch?v=Ho6nMWGtepY][Writing PPT with org-mode and beamer in Emacs ]]
 - [[http://www.youtube.com/watch?v=EQAd41VAXWo][Emacs Power: Can your editor do THIS! ]]
-*** Emacs is maintained by Free Software Foundation (FSF)
-FSF has been around for almost 40 years. I assume it will exist for next 40 years. So Emacs will live for a very long time. My investment on Emacs will never expire.
+*** Your investment on Emacs will never expire
+Emacs is maintained by a non-profit organization named Free Software Foundation (FSF). FSF has been around for almost 40 years. I assume it will exist for next 40 years. Emacs will live for a very long time.
 
 A negative example is Microsoft Visual Studio:
 - I extended Visual Studio 6 with my own VBA script. The script did not work after I upgraded to Visual Studio .NET.
