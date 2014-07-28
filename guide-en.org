@@ -78,8 +78,8 @@ Emacs is maintained by a non-profit organization named Free Software Foundation 
 A negative example is Microsoft Visual Studio:
 - I extended Visual Studio 6 with my own VBA script. The script did not work after I upgraded to Visual Studio .NET.
 - All the key bindings in Visual Studio 6 were dumped in next version.
-- Visual Studio 6 Professional was bundled the performance profiling tool. That feature was removed in .NET version.
-- Microsoft can never get UX right for *a professional developer*. Consider a simple feature like listing the functions in current file. The hot key for that command is shit. You have to pay tens of bucks to [[http://www.wholetomato.com/][get the right solution]].
+- Visual Studio 6 Professional had the performance profiling tool. That useful tool was removed in .NET version.
+- Microsoft can never get UX right for *a professional developer*. Consider the simple feature like listing the functions in current file. The hot key for that command is shit. You have to pay tens of bucks to [[http://www.wholetomato.com/][get the right solution]].
 *** no overhead
 Pro:
 - Emacs is open sourced 
