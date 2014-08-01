@@ -11,9 +11,9 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20140726
+Version: 20140801
 
-Updated: <2014-07-26 Sat>
+Updated: <2014-08-01 Fri>
 
 Created: [2012-01-31 Tue 15:08]
 
@@ -29,7 +29,7 @@ The points,
 - If a computer dummy like me can [[https://github.com/redguardtoo][be good at Emacs in one year]], you definitely can do better.
 
 ** Why Emacs (OPTIONAL)
-I keep this section short because the focus is HOW instead WHY.
+I keep this section short because the focus is HOW instead of WHY.
 *** Once you have mastered Emacs, you are good at all other editors
 You have already tasted the best. You general expection on a decent text editor is higher.
 
@@ -37,11 +37,11 @@ Advanced tips in a non-emacs guy's eyes are regarded as common sense by a Emacs 
 
 Let's use package management as an example.
 
-The Emacs people expects any decent text editor should have a package manager so she can install package easily. She is surprised that [[https://sublime.wbond.net/installation][package manager is NOT bundled in some editor]].
+A Emacs person expects any decent text editor should have a package manager so she can install package easily. She is surprised that [[https://sublime.wbond.net/installation][package manager is NOT bundled in some editor]].
 
-If a package is broken, it could be [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][fixed by the package user]] without touching the package's original code.
+If a package is broken, it could be [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][fixed by a package user]] without touching the package's original code.
 
-If the remote repository is shut down, Emacs people expects she can [[https://github.com/redguardtoo/myelpa][create her own repository on her USB drive]] [[https://github.com/redguardtoo/elpa-mirror][in one minute]].
+If the remote repository is shut down, she can [[https://github.com/redguardtoo/myelpa][create a repository]] in her memory stick [[https://github.com/redguardtoo/elpa-mirror][in one minute]].
 
 In summary, a Emacs guy knows much more advanced tip than other popular editors can implement.
 *** Community behind Emacs is strong
@@ -215,11 +215,11 @@ I uploaded my setup onto [[https://github.com/redguardtoo/emacs.d]].
 
 Version control is the most efficient way of knowledge management because you will never lose the setup.
 
-I benefit a lot by sharing. People who use my setup are actually making my setup perfect. I am the first guy who benefits from a perfect setup.
+I benefit a lot by sharing. People who use my setup are actually making my setup perfect. I am the first guy who benefits from a better setup.
 
-For example, people reported that I mixed some personal stuff (my personal email, full path of my hobby project) into my setup which they need remove before usage. They expected it usable out of the box.
+For example, people reported that I mixed my personal stuff (email address, full path of my hobby project) into my setup which they need remove before usage. They expected it usable out of the box.
 
-So I re-organized it and placed private stuff into a independent file named "privacy.el". That file is outside of my Emacs configuration. Then it occurred to me that in corporate environment it was not safe to store plain privacy.el on a shared computer without encryption. After some research, I found that Emacs already provided [[http://www.emacswiki.org/emacs/EasyPG][a perfect solution]] for this issue since version 23.
+So I re-organized it and placed private stuff into a independent file named "privacy.el". That file is outside of my Emacs configuration. Then it occurred to me that in corporate environment it was not safe to store plain privacy.el on a shared computer without encryption. After some research, I found Emacs already provided [[http://www.emacswiki.org/emacs/EasyPG][a perfect solution]] since version 23.
 
 *** Dropbox
 I place all the Emacs related documents at Dropbox. Since dropbox will synchronize the documents into my mobile phone. I can study Emacs when commuting.
@@ -228,23 +228,23 @@ I'm not suggesting that you must use these addons. There are many other addons w
 
 The purpose to try these addons is to get the idea that a typical Emacs user's expectation on addon quality is very high.
 
-| Name                | Description                                  | Alternatives                      |
-|---------------------+----------------------------------------------+-----------------------------------|
-| [[http://www.emacswiki.org/emacs/Evil][Evil]]                | convert Emacs to vim                         | none                              |
-| Org                 | GTD                                          | none                              |
-| company-mode        | code completion                              | cedet, auto-complete              |
-| expand-region       | selection region efficiently                 | none                              |
-| smex                | Input command efficiently                    | none                              |
-| yasnippet           | text template                                | none                              |
-| flymake-xxxx        | addons whose prefix is flymake. Syntax check. | flycheck                          |
-| helm                | a framework to choose candidates             | ido                               |
-| ido                 | similar to helm                              | helm                              |
-| js2-mode            | everything for javascript                    | javascript-mode,js-mode,js3-mode  |
-| w3m                 | browser                                      | Eww                               |
-| elnode              | web server                                   | none                              |
-| smartparens         | auto insert matched parens                   | autopair                          |
-| [[https://github.com/nschum/window-numbering.el][window-numbering.el]] | jump focus between sub-windows               | switch-window.el                  |
-| [[https://github.com/fxbois/web-mode][web-mode]]            | everything for edit HTML templates           | nxml-mode、nxhtml-mode、html-mode |
+| Name                | Description                        | Alternatives                      |
+|---------------------+------------------------------------+-----------------------------------|
+| [[http://www.emacswiki.org/emacs/Evil][Evil]]                | convert Emacs into vim             | none                              |
+| [[http://orgmode.org][org-mode]]            | [[http://en.wikipedia.org/wiki/Getting_Things_Done][Get Things Done (GTD)]]              | none                              |
+| [[https://github.com/company-mode/company-mode][company-mode]]        | code completion                    | cedet, auto-complete              |
+| [[https://github.com/magnars/expand-region.el][expand-region]]       | selection region efficiently       | none                              |
+| [[https://github.com/nonsequitur/smex][smex]]                | Input command efficiently          | none                              |
+| [[https://github.com/capitaomorte/yasnippet][yasnippet]]           | text template                      | none                              |
+| [[http://www.emacswiki.org/emacs/FlyMake][flymake]]             | syntax check.                      | flycheck                          |
+| [[https://github.com/emacs-helm/helm][helm]]                | a framework to choose candidates   | ido                               |
+| [[http://www.emacswiki.org/emacs/InteractivelyDoThings][ido]]                 | similar to helm                    | helm                              |
+| [[https://github.com/mooz/js2-mode][js2-mode]]            | everything for javascript          | javascript-mode,js-mode,js3-mode  |
+| [[http://www.emacswiki.org/emacs/emacs-w3m][w3m]]                 | browser                            | Eww                               |
+| [[https://github.com/nicferrier/elnode][elnode]]              | web server                         | none                              |
+| [[https://github.com/Fuco1/smartparens][smartparens]]         | auto insert matched parens         | autopair                          |
+| [[https://github.com/nschum/window-numbering.el][window-numbering.el]] | jump focus between sub-windows     | switch-window.el                  |
+| [[https://github.com/fxbois/web-mode][web-mode]]            | everything for edit HTML templates | nxml-mode、nxhtml-mode、html-mode |
 
 ** Emacs is a way of life
 Emacs guys have different ways of life. They are basically people who are hacking Lisp code for fun. Sometimes they will get the job done in a creative way. For example, [[http://sachachua.com/blog/][Sacha Chua]] mentioned that [[http://sachachua.com/blog/2012/07/transcript-emacs-chat-john-wiegley/][she let Emacs read the manual when cooking]].
