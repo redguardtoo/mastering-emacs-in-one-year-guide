@@ -6,6 +6,8 @@ Web版本也会发布在我的[[http://blog.csdn.net/redguardtoo/article/details
 [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org][点击这里查看]].
 
 * [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org][English version]]
-Text guide on how to master Emacs in one year. It's *NOT* a beginner's guide. Focus on *methodology and philosophy* instead of technical details.
+Guide on how to master Emacs in one year.
 
-Click [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org][HERE]] to view it now.
+It's *NOT* for a beginner. It will focus on *methodology and philosophy* instead of technical details.
+
+Click [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org][HERE]] to read it.
