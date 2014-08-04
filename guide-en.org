@@ -25,7 +25,7 @@ I was a Microsoft fan for many years because I was born in China. There was no U
 Besides, computers scared me to death. I'm ashamed to admit now that when I graduated from university I didn't know clipboard. If I need input duplicated texts, I typed them character by character. I chose an IT career simply for money. There was no other career path for talented young people in China then.
 
 The points,
-- This guide is about using Emacs as a professional's tool. I will not show off Emacs as a geek's toy because as you can see I am NOT that type from the beginning. I will focus on philosophy and methodology only. No technical details involved.
+- This guide is about using Emacs as a professional's tool. I will not show off Emacs as a geek's toy because I am NOT that type from the beginning. I will focus on philosophy and methodology only. No technical details involved.
 - If a computer dummy like me can [[https://github.com/redguardtoo][be good at Emacs in one year]], you definitely can do better.
 
 ** Why Emacs (OPTIONAL)
@@ -97,10 +97,10 @@ BTW, I encourage you using any other text editor after one year if you want to h
 *** What matters is Attitude
 How good you will be at Emacs is determined by your attitude,
 
-Tips:
+Here are my suggestions,
 - Be open minded. For example, why not try Vim key bindings after being familiar with Emacs default key bindings. Or vice versa.
-- Bettering yourself is the purpose. For example, there are several good plugins to do the sub-windows navigation. Spend some time to use them all to find the most efficient one though the difference the best and average is only one less key strike.
-- Half a tale is enough for a wise man. For example, when a guy showed off [[http://www.sublimetext.com/][Sublime Text]] to me, I realized that there should exist [[https://github.com/alloy-d/color-theme-molokai][similar beautiful skin]] in Emacs and I immediately switched my Emacs color theme.
+- Bettering yourself is the purpose. For example, there are several good plugins to do the sub-windows navigation. Spend some time to use them all to find the most efficient one though the difference between the best and average is minor.
+- Half a tale is enough for a wise man. For example, when a guy showed off [[http://www.sublimetext.com/][Sublime Text]] to me, I realized that there should exist [[https://github.com/alloy-d/color-theme-molokai][similar beautiful color theme]] in Emacs and I immediately switched my Emacs color theme.
 ** Step by Step Guide
 *** Quick guide for greenhands of Linux/Unix (OPTIONAL) 
 Here are the steps:
@@ -126,7 +126,7 @@ That's the most important question you need ask yourself before you start.
 
 The learning is like investment. If you can get huge benefit by investing a little time, you will be motivated and keep on the learning.
 
-Me, for example, have spent many years looking for some time-management tool until I find the [[http://orgmode.org/][Org-mode]].
+I, for example, [[http://orgmode.org/][Org-mode]] is the best time-management tool I can find.
 *** Standing on the shoulders of giants
 Please note *this section is the most important part* of the whole article!
 
@@ -134,7 +134,7 @@ I learned this lesson the hard way. At the beginning, I regarded Emacs as some g
 
 That's totally a waste of time if my goal is to become an Emacs master!
 
-I should copy [[https://github.com/purcell/emacs.d][Steve Purcell's]] setup at the beginning!
+I should copy [[https://github.com/purcell/emacs.d][Steve Purcell's]] setup!
 
 Please don't repeat my mistake. Don't hesitate. Just follow Steven Purcell!
 
@@ -206,9 +206,11 @@ The issue of youtube is that the best matched are listed first. So you will alwa
 *** Emacs Lisp book
 The only paper book you need read is [[http://www.amazon.com/Writing-GNU-Emacs-Extensions-Glickstein/dp/1565922611][Writing GNU Emacs Extensions]] by Bob Glickstein. I like his writing style and the way he organizes chapters.
 
-Xah Lee's [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][Emacs Lisp tutorial]] is pratical and easy to read.
+Xah Lee's [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][Emacs Lisp tutorial]] is practical and easy to read.
 
-Steve Yegge's [[http://steve-yegge.blogspot.com.au/2008/01/emergency-elisp.html][Emergency Elisp]] is short but includes the necessary information for writing Emacs Lisp.
+Steve Yegge's [[http://steve-yegge.blogspot.com.au/2008/01/emergency-elisp.html][Emergency Elisp]] is short but it includes the necessary information for writing Emacs Lisp.
+
+I don't recommend studying the Lisp at the early stage unless you are confident about your Emacs mastery.
 ** Knowledge management 
 *** Place your setup at Github, *publicly*
 I uploaded my setup onto [[https://github.com/redguardtoo/emacs.d]].
