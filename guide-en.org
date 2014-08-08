@@ -20,7 +20,7 @@ Created: [2012-01-31 Tue 15:08]
 Copyright: This work is licensed under the [[http://creativecommons.org/licenses/by-nc-nd/3.0/][Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License]].
 
 ** Introduction
-I was a Microsoft fan for many years because I was born in China. There was no Unix culture when I was young. My professor knew as much as I knew about Unix. Zero knowledge. Nothing. I believed Microsoft Windows was the only platform worth developing software on. I believed Visual Studio was the best IDE in the world. I was so loyal to Microsoft that I used Visual Studio to edit the code running on Linux server during my first job.
+I was a Microsoft fan because I was born in China. There was no Unix culture when I was young. My professor knew as much as I knew about Unix. Zero knowledge. Nothing. I believed Microsoft Windows was the only platform worth developing software on. I believed Visual Studio was the best IDE in the world. I was so loyal to Microsoft that I used Visual Studio to edit the code running on Linux server during my first job.
 
 Besides, computers scared me to death. I'm ashamed to admit now that when I graduated from university I didn't know clipboard. If I need input duplicated texts, I typed them character by character. I chose an IT career simply for money. There was no other career path for talented young people in China then.
 
@@ -29,8 +29,8 @@ The points,
 - If a computer dummy like me can [[https://github.com/redguardtoo][be good at Emacs in one year]], you definitely can do better.
 
 ** Why Emacs (OPTIONAL)
-I keep this section short because the focus is HOW instead of WHY.
-*** Once you have mastered Emacs, you are good at all other editors
+I intend to keep this section short because the focus is HOW instead of WHY.
+*** Once you masters Emacs, you are good at all other editors
 You have already tasted the best. You general expection on a decent text editor is higher.
 
 Advanced tips in a non-emacs guy's eyes are regarded as common sense by a Emacs guy.
@@ -80,15 +80,15 @@ A negative example is Microsoft Visual Studio:
 - All the key bindings in Visual Studio 6 were dumped in next version.
 - Visual Studio 6 Professional had the performance profiling tool. That useful tool was removed in .NET version.
 - Microsoft can never get UX right for *a professional developer*. Consider the simple feature like listing the functions in current file. The hot key for that command is shit. You have to pay tens of bucks to [[http://www.wholetomato.com/][get the right solution]].
-*** no overhead
+*** No overhead
 Pro:
 - Emacs is open sourced 
 - it supports all the platforms.
-- it's configuration is simple text
+- its configuration is simple text
 
-So I can work in any environment in five minutes with Emacs. For example, on windows I only need download one portable Emacs executable.
+So I can work in any environment with Emacs. For example, on windows I only need download one portable Emacs executable.
 
-I used to work for a project which required me editing perl/java/C/bash/SQL code at the same time. The code is hosted on some remote sever far way from my office. We have the slowest connection in the world so we do all the work in command line and shell. Emacs is the only choice.
+One project required me editing perl/java/C/bash/SQL code at the same time. The code is hosted on some remote sever in another country. The network connection is the slowest. I have work in command line and shell. Emacs is the only choice.
 
 *** Take advantage of your spare time in one year
 When I say Emacs takes you one year, I mean *your spare time* of one year to master Emacs. The definition of mastery is as described above, "Once you have mastered Emacs, every other text editor is easy".
@@ -107,7 +107,7 @@ Here are the steps:
 - Install Emacs 24
 - Don't install any plugins
 - Learn basic knowledge about [[http://en.wikipedia.org/wiki/Environment_variable][environment variable]] and [[http://en.wikipedia.org/wiki/Redirection_%28computing%29][pipe]]
-- Read offical tutorial
+- Read the official tutorial
 - Use [[http://www.emacswiki.org/emacs/OrgMode][org-mode]]
 - The only hot key you need learn in org-mode is TAB key
 
@@ -126,7 +126,7 @@ That's the most important question you need ask yourself before you start.
 
 The learning is like investment. If you can get huge benefit by investing a little time, you will be motivated and keep on the learning.
 
-I, for example, [[http://orgmode.org/][Org-mode]] is the best time-management tool I can find.
+For example, [[http://orgmode.org/][Org-mode]] is the best time-management tool I can find.
 *** Standing on the shoulders of giants
 Please note *this section is the most important part* of the whole article!
 
@@ -228,7 +228,8 @@ I place all the Emacs related documents at Dropbox. Since dropbox will synchroni
 ** My favorite Emacs addons
 I'm not suggesting that you must use these addons. There are many other addons which are as good as the ones in the list.
 
-The purpose to try these addons is to get the idea that a typical Emacs user's expectation on addon quality is very high.
+The purpose to try these addons is to get the idea that a typical Emacs user's expectation on quality is very high.
+
 
 | Name                | Description                        | Alternatives                      |
 |---------------------+------------------------------------+-----------------------------------|
@@ -269,7 +270,7 @@ Anyway, people who use my shared snippet are still doing me good by regarding th
 ** FAQ
 *** Any documentation on Steve Purcell's setup?
 Nope. Read its README and code comment. The header of the code file usually has some usage guide.
-*** Any simpler setup than Steve Pucell?
+*** Any simpler setup than Steve Pucell's setup?
 Check out [[https://github.com/redguardtoo/emacs.d][my setup]].
 
 Because I do some desktop development. it has less web stuff than Purcell.
