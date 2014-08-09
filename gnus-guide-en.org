@@ -28,8 +28,7 @@ So here is my guide. It will help you focus on that useful 5% features only.
 - Less hardware resource required
 - Email search and filter is good
 - Bundled with Emacs, no extra installing overhead if you have Emacs
-- Support different environments. For example, if I want to see html email in Linux shell without X windows, Gnus can do it
-- Gnus is alway usable if there is no internet connection. Check the "offline" part in the section "Advanced tips"
+- Gnus is usable when there is no internet connection. Check the "offline" part in the section "Advanced tips"
 - I can use other powerful Emacs plugin. For example, I use yasnippet to reply job agents' emails
 
 ** A quick guide
