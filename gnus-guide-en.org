@@ -24,11 +24,13 @@ Many people complain that Gnus is hard. I don't agree with them. It's easy to us
 
 So here is my guide. It will help you focus on that useful 5% features only.
 
-** Why Gnus
-- less hardware resource required
-- email search and filter is good
-- bundled with Emacs, no extra installing overhead if you have Emacs.
-- support different environments. For example, if I want to see html email in Linux shell without X windows, Gnus can do it.
+** Why (OPTIONAL)
+- Less hardware resource required
+- Email search and filter is good
+- Bundled with Emacs, no extra installing overhead if you have Emacs
+- Support different environments. For example, if I want to see html email in Linux shell without X windows, Gnus can do it
+- Gnus is alway usable if there is no internet connection. Check the "offline" part in the section "Advanced tips"
+- I can use other powerful Emacs plugin. For example, I use yasnippet to reply job agents' emails
 
 ** A quick guide
 In the rest of the article,  "C" means "Ctrl"" key and "M" means "Alt"" key. For example, "M-x" means pressing "Alt" and "x" key together.
@@ -43,7 +45,9 @@ If the Gnus properly set up, you will come to the "Group Buffer" window. The "Gr
 You need subscribe the groups to make it visible. For example, my Gmail folder "Inbox" is a group named "nnimap+gmail:INBOX" in "Group Buffer" and *it's invisible by default*!. If I don't subscribe that group, I can't read email in my INBOX. I know this is confusing. But this is the way of Gnus.
 
 Check section "Subscribe groups" for details.
-After subscribing the group INBOX, the INBOX could still be *invisible* if INBOX does not contain unread emails. That makes no sense for an email client (It does make sense for a stone age news reader)! Anyway, the solution is simple, `C-u 5 gnus-group-list-all-groups` will get desired result. I assigned hotkey "o" to it. Here is my elisp code you could paste into your .emacs. See the [[http://www.gnu.org/software/emacs/manual/html_node/gnus/Listing-Groups.html][Gnus Manual on Listing Groups]] for more details.
+After subscribing the group INBOX, the INBOX is still *invisible* if INBOX does not contain unread emails. That makes no sense for an email client (It does make sense for a stone age news reader)!
+
+Anyway, the solution is simple, `C-u 5 gnus-group-list-all-groups` will get desired result. I assigned hotkey "o" to it. Here is my elisp code you could paste into your .emacs,
 
 #+BEGIN_SRC elisp
 (defun my-gnus-group-list-subscribed-groups ()
@@ -198,7 +202,12 @@ Key points:
 - You need [[http://support.google.com/a/bin/answer.py?hl=en&answer=22370][verify]] your email address in "From" field at Gmail's web interface if you are using google's SMTP server
 
 *** How to tag email
-Gmail's own system annoys me. I use a third party software [[http://getpopfile.org/][Popfile]].
+I use a independent open-sourced software [[http://getpopfile.org/][Popfile]]. It's a million times better than Gmail's own tagging system.
+
+The best part of Popfile is *the freedom*. The statistics on how you tag the email is *stored locally*, not on any third party server. You have full control of that data.
+
+So popfile will still work out of the box when you switch the email service provider.
+
 *** How to send HTML mail
 Check [[http://orgmode.org/worg/org-contrib/org-mime.html][org-mime]].
 *** How to read HTML mail
@@ -217,12 +226,12 @@ The marked article will enter the disk cache.
 
 You can remove the article from the disk cache by "M-x gnus-summary-put-mark-as-read".
 
-The disk cache is actually the directory "~/News/cache/". I suggest backing up it with Github's private repository.
-
 You also need insert below code into ~/.emacs,
 #+BEGIN_SRC elisp
 (setq gnus-use-cache t)
 #+END_SRC
+
+BTW, the disk cache is actually the directory "~/News/cache/". I suggest backing it up with Github's private repository.
 *** How to use multiple Gmail accounts
 As you can see from my Gmail configuration.
 
