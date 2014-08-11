@@ -403,7 +403,6 @@ The ~/.gnus.el
       smtpmail-local-domain "homepc")
 ;http://www.gnu.org/software/emacs/manual/html_node/gnus/_005b9_002e2_005d.html
 (setq gnus-use-correct-string-widths nil)
-(gnus-compile)
 #+END_SRC
 
 The ~/.authinfo.gpg
