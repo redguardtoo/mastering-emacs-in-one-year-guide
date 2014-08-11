@@ -201,11 +201,9 @@ Key points:
 - You need [[http://support.google.com/a/bin/answer.py?hl=en&answer=22370][verify]] your email address in "From" field at Gmail's web interface if you are using google's SMTP server
 
 *** How to tag email
-I use a independent open-sourced software [[http://getpopfile.org/][Popfile]]. It's a million times better than Gmail's own tagging system.
+I use an independent open-sourced software [[http://getpopfile.org/][Popfile]]. It's a million times better than Gmail's own tagging system.
 
-The best part of Popfile is *the freedom*. The statistics on how you tag the email is *stored locally*, not on any third party server. You have full control of that data.
-
-So popfile will still work out of the box when you switch the email service provider.
+The best part of Popfile is *the freedom*. The statistics on how you tag the email is *stored locally*, not on any third party server. You have full control of that data. So popfile will still work out of the box when you switch the email service provider.
 
 *** How to send HTML mail
 Check [[http://orgmode.org/worg/org-contrib/org-mime.html][org-mime]].
@@ -260,7 +258,7 @@ The content of ~/.gnus.el,
 (require 'nnir)
 
 ;;@see http://www.emacswiki.org/emacs/GnusGmail#toc1
-(setq gnus-select-method '(nntp "news.gmane.org"))
+(setq gnus-select-method '(nntp "news.gmane.org")) ;; if you read news groups 
 
 ;; ask encyption password once
 (setq epa-file-cache-passphrase-for-symmetric-encryption t)
@@ -278,76 +276,25 @@ The content of ~/.gnus.el,
                       ; @see http://www.gnu.org/software/emacs/manual/html_node/gnus/Expiring-Mail.html
                       ;; press 'E' to expire email
                       (nnmail-expiry-target "nnimap+gmail:[Gmail]/Trash")
-                      (nnmail-expiry-wait 90)
-                      )
-             )
-
-(setq-default
-  gnus-summary-line-format "%U%R%z %(%&user-date;  %-15,15f  %B%s%)\n"
-  gnus-user-date-format-alist '((t . "%Y-%m-%d %H:%M"))
-  gnus-summary-thread-gathering-function 'gnus-gather-threads-by-references
-  gnus-sum-thread-tree-false-root ""
-  gnus-sum-thread-tree-indent ""
-  gnus-sum-thread-tree-leaf-with-other "-> "
-  gnus-sum-thread-tree-root ""
-  gnus-sum-thread-tree-single-leaf "|_ "
-  gnus-sum-thread-tree-vertical "|")
+                      (nnmail-expiry-wait 90)))
 
 (setq gnus-thread-sort-functions
-      '(
-        (not gnus-thread-sort-by-date)
-        (not gnus-thread-sort-by-number)
-        ))
+      '((not gnus-thread-sort-by-date)
+        (not gnus-thread-sort-by-number)))
 
 ; NO 'passive
 (setq gnus-use-cache t)
-(setq gnus-use-adaptive-scoring t)
-(setq gnus-save-score t)
-(add-hook 'mail-citation-hook 'sc-cite-original)
-(add-hook 'message-sent-hook 'gnus-score-followup-article)
-(add-hook 'message-sent-hook 'gnus-score-followup-thread)
-; @see http://stackoverflow.com/questions/945419/how-dont-use-gnus-adaptive-scoring-in-some-newsgroups
-(setq gnus-parameters
-      '(("nnimap.*"
-         (gnus-use-scoring nil))
-        ))
-
-(defvar gnus-default-adaptive-score-alist
-  '((gnus-kill-file-mark (from -10))
-    (gnus-unread-mark)
-    (gnus-read-mark (from 10) (subject 30))
-    (gnus-catchup-mark (subject -10))
-    (gnus-killed-mark (from -1) (subject -30))
-    (gnus-del-mark (from -2) (subject -15))
-    (gnus-ticked-mark (from 10))
-    (gnus-dormant-mark (from 5))))
-
-(setq  gnus-score-find-score-files-function
-       '(gnus-score-find-hierarchical gnus-score-find-bnews bbdb/gnus-score)
-       )
 
 ;; BBDB: Address list
-(when (file-exists-p "/usr/share/emacs/site-lisp/bbdb")
-  (add-to-list 'load-path "/usr/share/emacs/site-lisp/bbdb")
-  (require 'bbdb)
-  (bbdb-initialize 'message 'gnus 'sendmail)
-  (setq bbdb-file "~/.bbdb")
-  (add-hook 'gnus-startup-hook 'bbdb-insinuate-gnus)
-  (setq bbdb/mail-auto-create-p t
-        bbdb/news-auto-create-p t)
-  (defvar bbdb-time-internal-format "%Y-%m-%d"
-    "The internal date format.")
-  ;;;###autoload
-  (defun bbdb-timestamp-hook (record)
-    "For use as a `bbdb-change-hook'; maintains a notes-field called `timestamp'
-    for the given record which contains the time when it was last modified.  If
-    there is such a field there already, it is changed, otherwise it is added."
-    (bbdb-record-putprop record 'timestamp (format-time-string
-                                             bbdb-time-internal-format
-                                             (current-time))))
-    )
+(add-to-list 'load-path "/where/you/place/bdbb/")
+(require 'bbdb)
+(bbdb-initialize 'message 'gnus 'sendmail)
+(setq bbdb-file "~/.bbdb") ;; OPTIONAL, because I'm sharing my ~/.emacs.d
+(add-hook 'gnus-startup-hook 'bbdb-insinuate-gnus)
+(setq bbdb/mail-auto-create-p t
+      bbdb/news-auto-create-p t)
 
-
+;; auto-complete emacs address using bbdb's own UI
 (add-hook 'message-mode-hook
           '(lambda ()
              (flyspell-mode t)
@@ -362,8 +309,7 @@ The content of ~/.gnus.el,
 
 ;; Threads!  I hate reading un-threaded email -- especially mailing
 ;; lists.  This helps a ton!
-(setq gnus-summary-thread-gathering-function
-      'gnus-gather-threads-by-subject)
+(setq gnus-summary-thread-gathering-function 'gnus-gather-threads-by-subject)
 
 ;; Also, I prefer to see only the top level message.  If a message has
 ;; several replies or is part of a thread, only show the first
@@ -372,26 +318,11 @@ The content of ~/.gnus.el,
 (setq gnus-thread-hide-subtree t)
 (setq gnus-thread-ignore-subject t)
 
-; Personal Information
+;; Personal Information
 (setq user-full-name "My Name"
-      user-mail-address "username@gmail.com"
-      ;message-generate-headers-first t
-      )
+      user-mail-address "username@gmail.com")
 
-;; Change email address for work folder.  This is one of the most
-;; interesting features of Gnus.  I plan on adding custom .sigs soon
-;; for different mailing lists.
-;; Usage, FROM: My Name <work>
-(setq gnus-posting-styles
-      '((".*"
-	 (name "My Name"
-          (address "username@gmail.com"
-                   (organization "")
-                   (signature-file "~/.signature")
-                   ("X-Troll" "Emacs is better than Vi")
-                   )))))
-
-; You need install the command line brower 'w3m' and Emacs plugin 'w3m'
+;; You need install the command line brower 'w3m' and Emacs plugin 'w3m'
 (setq mm-text-html-renderer 'w3m)
 
 (setq message-send-mail-function 'smtpmail-send-it
@@ -401,7 +332,7 @@ The content of ~/.gnus.el,
       smtpmail-smtp-server "smtp.gmail.com"
       smtpmail-smtp-service 587
       smtpmail-local-domain "homepc")
-;http://www.gnu.org/software/emacs/manual/html_node/gnus/_005b9_002e2_005d.html
+;; http://www.gnu.org/software/emacs/manual/html_node/gnus/_005b9_002e2_005d.html
 (setq gnus-use-correct-string-widths nil)
 #+END_SRC
 
@@ -411,4 +342,4 @@ machine imap.gmail.com login username@gmail.com password my-secret-password port
 machine smtp.gmail.com login username@gmail.com password my-secret-password port 587
 #+END_SRC
 
-Please note .authinfo.gpg is a encrypted file. You must use Emacs to edit it. Emacs will do the encryption/descryption automatically. See [[http://emacswiki.org/emacs/EasyPG]] for technical details.
+Please note .authinfo.gpg is an encrypted file. You must use Emacs to edit it. Emacs will do the encryption/descryption automatically. See [[http://emacswiki.org/emacs/EasyPG]] for technical details.
