@@ -159,9 +159,9 @@ Here are the steps,
 - Go to [[https://contacts.google.com]]
 - Click "More -> Export -> vCard Format -> Export".
 - Install [[https://github.com/redguardtoo/gmail2bbdb]] and run its command "gmail2bbdb-import-file". The contacts will be output into ~/.bbdb.el
-- Move ~/.bbdb.el into ~/.emacs.d/.bbdb, The file ".bbdb" is defined in variable bbdb-file
+- Move ~/.bbdb.el into ~/.emacs.d/.bbdb, "~/.emacs.d/.bbdb" is the default value of the variable bbdb-file. You can assign it any value. I use ""~/.bbdb" because I'm sharing my ~/.emacs.d at github.
 
-There are other plugins which can do the similar thing. But they are dependent on certain version of BBDB. So if you install in-compatible version of BBDB, they won't work.
+There are other similar plugins. But they are dependent on certain version of BBDB. So if you install in-compatible version of BBDB, they won't work.
 
 gmail2bbdb has no dependency.
 *** How to set up email "From" field for home and office
@@ -254,7 +254,7 @@ Here is a sample,
 
 "gnus-secondary-select-methods" means the list of your email accounts.
 ** My Gnus configuration (for Gmail)
-The ~/.gnus.el
+The content of ~/.gnus.el,
 #+BEGIN_SRC elisp
 ; -*- Lisp -*-
 (require 'nnir)
@@ -331,7 +331,7 @@ The ~/.gnus.el
   (add-to-list 'load-path "/usr/share/emacs/site-lisp/bbdb")
   (require 'bbdb)
   (bbdb-initialize 'message 'gnus 'sendmail)
-  (setq bbdb-file "~/bbdb.db")
+  (setq bbdb-file "~/.bbdb")
   (add-hook 'gnus-startup-hook 'bbdb-insinuate-gnus)
   (setq bbdb/mail-auto-create-p t
         bbdb/news-auto-create-p t)
@@ -405,7 +405,7 @@ The ~/.gnus.el
 (setq gnus-use-correct-string-widths nil)
 #+END_SRC
 
-The ~/.authinfo.gpg
+The content of ~/.authinfo.gpg,
 #+BEGIN_SRC conf
 machine imap.gmail.com login username@gmail.com password my-secret-password port 993
 machine smtp.gmail.com login username@gmail.com password my-secret-password port 587
