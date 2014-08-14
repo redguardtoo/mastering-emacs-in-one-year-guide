@@ -69,7 +69,7 @@ Now everything is simple, you can press "RET" to see the email and use normail E
 In summary, you only need remember "Group Buffer" is the list of mail folders and "Summary Buffer" is the list of mails.
 
 That's all you need to know about Gnus. If you want to start use Gnus for Gmail right now. Please check section [[My Gnus configuration (for Gmail)]] and copy my minimum set up for Gmail.
-** Essentail 5 percent of Gnus
+** Essential 5 percent of Gnus
 Don't try to memorize all the key bindings here. Pick up the commands you actually use only.
 *** Search emails
 "G G" to search email at *server side* in "Group Buffer". You can use "#" ("M-#" to unmark)to mark the group you want to search. If you don't mark the groups, the curent group under cursor is searched. If you put the cursor at the first line above any group, all the groups will be searched. You could use [[http://tools.ietf.org/html/rfc3501#section-6.4.4][more advanced syntax]] instead of simple keyword. I suggest not doing so.
