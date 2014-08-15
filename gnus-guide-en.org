@@ -9,27 +9,28 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20140809
+Version: 20140815
 
-Updated:  <2014-08-09 Sat>
+Updated:  <2014-08-15 Fri>
 
 Created: <2012-10-12 Mon>
 
 Copyright: This work is licensed under the [[http://creativecommons.org/licenses/by-nc-nd/3.0/][Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License]].
 
 ** Introduction
-Gnus is a good email client. Sometimes I find it's more user friendly than Gmail's own UI.
+Gnus is a good email client. Sometimes I found it more friendly than Gmail's own UI.
 
-Many people complain that Gnus is hard. I don't agree with them. It's easy to use if you know how to *locate the essential 5% features and ignore the other 95%*..
+Those people who think it hard simply get lost in its countless features. It will be much easier if they only *learn only the essential 5% of Gnus and ignore the other 95%*.
 
-So here is my guide. It will help you focus on that useful 5% features only.
+So here is my guide which focus only on that 5%.
 
 ** Why (OPTIONAL)
+- *Gnus is as reliable as other email client*
 - Less hardware resource required
-- Email search and filter is good
+- Email search and filter is good, even compared to Gmail's native UI
 - Bundled with Emacs, no extra installing overhead if you have Emacs
 - Gnus is usable when there is no internet connection. Check the "offline" part in the section "Advanced tips"
-- I can use other powerful Emacs plugin. For example, I use yasnippet to reply job agents' emails
+- I can use other Emacs plugin like yasnippet
 
 ** A quick guide
 In the rest of the article,  "C" means "Ctrl"" key and "M" means "Alt"" key. For example, "M-x" means pressing "Alt" and "x" key together.
@@ -64,15 +65,15 @@ In the "Group Buffer", you can select a group (email folder) by pressing "RET" t
 
 After selecting a group and pressing "RET", you reach the "Summary Buffer" which is, as I said before, a list of your emails.
 
-Now everything is simple, you can press "RET" to see the email and use normail Emacs hotkeys for navigation. Hotkey "q" is for quitting "Summary Buffer".
+Now everything is simple, you can press "RET" to see the email and use normal Emacs hotkeys for navigation. Hotkey "q" is for quitting "Summary Buffer".
 
 In summary, you only need remember "Group Buffer" is the list of mail folders and "Summary Buffer" is the list of mails.
 
-That's all you need to know about Gnus. If you want to start use Gnus for Gmail right now. Please check section [[My Gnus configuration (for Gmail)]] and copy my minimum set up for Gmail.
-** Essential 5 percent of Gnus
-Don't try to memorize all the key bindings here. Pick up the commands you actually use only.
+That's all you need to know about Gnus. If you want to start use Gnus for Gmail right now. Please check section [[My Gnus configuration (for Gmail)]] and copy my minimum setup for Gmail.
+** Essential five percentage of Gnus
+Don't try to memorize all the key bindings here. Pick up the commands you actually use.
 *** Search emails
-"G G" to search email at *server side* in "Group Buffer". You can use "#" ("M-#" to unmark)to mark the group you want to search. If you don't mark the groups, the curent group under cursor is searched. If you put the cursor at the first line above any group, all the groups will be searched. You could use [[http://tools.ietf.org/html/rfc3501#section-6.4.4][more advanced syntax]] instead of simple keyword. I suggest not doing so.
+"G G" to search email at *server side* in "Group Buffer". You can use "#" to mark the group you want to search (BTW, use "M-#" to unmark). If you don't mark the groups, the curent group under cursor is searched. If you put the cursor at the first line above any group, all the groups will be searched. You could use [[http://tools.ietf.org/html/rfc3501#section-6.4.4][more advanced syntax]] instead of simple keyword. I suggest not doing so.
 
 "/ /" to limit the emails by subject at "Summary Buffer". "Limiting" is means searching mail *locally*.
 
@@ -164,10 +165,10 @@ Here are the steps,
 There are other similar plugins. But they are dependent on certain version of BBDB. So if you install in-compatible version of BBDB, they won't work.
 
 gmail2bbdb has no dependency.
-*** How to set up email "From" field for home and office
-What I want to do is, if I send emails from office "From" will be my company's email address. But in the email sent from my home pc, the "From" is my personal address.
+*** How to configure email "From" field for home and office
+Emails sent from my office will use my company's email address in the "From" field. But email from home use my personal address.
 
-My solution is use $HOSTNAME to detect which computer I am using.
+I use $HOSTNAME to detect which computer I am using.
 
 Here is the code to be inserted into ~/.emacs:
 #+BEGIN_SRC lisp
@@ -227,6 +228,7 @@ You also need insert below code into ~/.emacs,
 #+BEGIN_SRC elisp
 (setq gnus-use-cache t)
 #+END_SRC
+We set gnus-use-cache to true to use the disk cache to the full extent without considering saving the disk space.
 
 BTW, the disk cache is actually the directory "~/News/cache/". I suggest backing it up with Github's private repository.
 *** How to use multiple Gmail accounts
@@ -251,6 +253,8 @@ Here is a sample,
 #+END_SRC
 
 "gnus-secondary-select-methods" means the list of your email accounts.
+*** Why the number of mails in Gnus is bigger than Gmail
+Gnus counts by the individual mail. Gmail count by the mail thread.
 ** My Gnus configuration (for Gmail)
 The content of ~/.gnus.el,
 #+BEGIN_SRC elisp
