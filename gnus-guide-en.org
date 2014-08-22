@@ -255,6 +255,11 @@ Here is a sample,
 "gnus-secondary-select-methods" means the list of your email accounts.
 *** Why the number of mails in Gnus is bigger than Gmail
 Gnus counts by the individual mail. Gmail count by the mail thread.
+*** Subscribe "[Gmail]/Sent Mail" folder
+Gnus will track your sent emails *by Gnus* in your local folder. If you are use Gmails' SMTP server, Gmail will also back up the mails in "[Gmail]/Sent Mail" folder at Google's *remote* server.
+
+If you subscribe that folder with Gnus, you can always manage *all* your sent mails.
+
 ** My Gnus configuration (for Gmail)
 The content of ~/.gnus.el,
 #+BEGIN_SRC elisp
