@@ -11,9 +11,9 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20140801
+Version: 20140911
 
-Updated: <2014-08-01 Fri>
+Updated: [2014-09-11 Thu 23:30]
 
 Created: [2012-01-31 Tue 15:08]
 
@@ -24,26 +24,26 @@ I was a Microsoft fan because I was born in China. There was no Unix culture whe
 
 Besides, computers scared me to death. I'm ashamed to admit now that when I graduated from university I didn't know clipboard. If I need input duplicated texts, I typed them character by character. I chose an IT career simply for money. There was no other career path for talented young people in China then.
 
-The points,
+So,
 - This guide is about using Emacs as a professional's tool. I will not show off Emacs as a geek's toy because I am NOT that type from the beginning. I will focus on philosophy and methodology only. No technical details involved.
 - If a computer dummy like me can [[https://github.com/redguardtoo][be good at Emacs in one year]], you definitely can do better.
 
 ** Why Emacs (OPTIONAL)
-I intend to keep this section short because the focus is HOW instead of WHY.
-*** Once you masters Emacs, you are good at all other editors
-You have already tasted the best. You general expection on a decent text editor is higher.
+This section is short because my focus is HOW instead of WHY.
+*** Emacs master is good at other editors naturally
+You have already tasted the best. Your general expectation is higher.
 
-Advanced tips in a non-emacs guy's eyes are regarded as common sense by a Emacs guy.
+Advanced tips in the eyes of a non-emacs guy are common sense in Emacs guy's eyes.
 
-Let's use package management as an example.
+Allow me use package management as an example.
 
-A Emacs person expects any decent text editor should have a package manager so she can install package easily. She is surprised that [[https://sublime.wbond.net/installation][package manager is NOT bundled in some editor]].
+The Emacs person expects any decent text editor should have a package manager so she can install package easily. She is surprised that [[https://sublime.wbond.net/installation][package manager is NOT bundled in some editor]].
 
-If a package is broken, it could be [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][fixed by a package user]] without touching the package's original code.
+If a package is broken, it could be [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][fixed by the user]] without touching the package's code.
 
 If the remote repository is shut down, she can [[https://github.com/redguardtoo/myelpa][create a repository]] in her memory stick [[https://github.com/redguardtoo/elpa-mirror][in one minute]].
 
-In summary, a Emacs guy knows much more advanced tip than other popular editors can implement.
+In summary, she knows more than other modern text editors can implement.
 *** Community behind Emacs is strong
 Emacs is written in Lisp. Its syntax is like:
 #+BEGIN_SRC elisp
@@ -51,56 +51,53 @@ Emacs is written in Lisp. Its syntax is like:
 (concat "hello" "world")
 #+END_SRC
 
-A developer who picks up Lisp is possibly more intelligent. Lisp's syntax is not similar to other languages, as I have shown. The fact that she can get out of her comfort zone of "if/for/while" and try to love parentheses proves that she is more curious than average people. Great curiosity is certainly first-ever linked to great intelligence.
+# A developer who picks up Lisp is possibly more intelligent. The fact that she can get out of her comfort zone to love Lisp's unusual syntax proves that she is more curious than the average. Great curiosity is certainly first-ever linked to great intelligence.
 
-Average developer can learn new languages (even non-mainsteam languages), but he will stay close to his comfort zone. A PHP guy will learn Python because PYTHON and PHP are both interpreted language. That PHP guy will not try Java because he is afraid of compiled language.
+Average developer can learn new languages (even non-mainsteam languages), but he will stay close to his comfort zone. A PHP guy learns Python because PYTHON and PHP are both interpreted language. That PHP guy avoid Java because he is afraid of compiled language.
 
 A Lisp developer may also be more experienced because Lisp could be the third language she learns (Java/C/C# to pay the bill. Bash/Python/Perl/Ruby to glue the system. Lisp is the third).
 
 No job ad will list Emacs as a required skill. That's actually a good thing. It ensures that only honest technical guys exist in Emacs community.
-*** Emacs can get job done quickly
-IDE is usually optimized for certain programming language or application framework. But Emacs is much more powerful on general work flow.
+*** Emacs is more powerful
+IDE is optimized for certain application framework. Emacs is more powerful on general development.
 
-When people say IDE is good for programming. They are usually talking about code navigation, code completion and real time documentation lookup. Emacs can do these things as good as the IDE.
+When people say IDE is good, they actually mean that [[http://en.wikipedia.org/wiki/Intelligent_code_completion][intelligent code completion]] is good.
 
-But Emacs can do more.
+Emacs can help a professional developer on every task she need handle, including code completion.
 
-For solving the hardest and general design problem, developers usually spend more time on reading, investigation and communication. A typical workflow is like paste prototype code into [[http://pastebin.com/]] or [[https://gist.github.com/]], ask people in IRC, search in stackoverflow and paste the code back. Emacs has support for IRC and browser (w3m). So the workflow could be followed easily.
+For example, as a freelancer, I spend most time on communication. I use [[http://gist.github.com]] to share prototype with other developers. Emacs has a [[https://github.com/defunkt/gist.el][plugin]] to do this thing efficiently. I also writes many emails to my agents to discuss my next contract. Emacs has a email client which can get the job done [[http://blog.binchen.org/posts/why-gnus-is-better-than-gmail.html][in crazy speed]].
 
-I have more than 10 year experience on commercial IDEs. Trust me, Emacs is better for most programming tasks.
-
-As a proof, check out the video demos of Emacs operation below:
-- [[http://www.youtube.com/watch?v=Ho6nMWGtepY][Writing PPT with org-mode and beamer in Emacs ]]
-- [[http://www.youtube.com/watch?v=EQAd41VAXWo][Emacs Power: Can your editor do THIS! ]]
-*** Your investment on Emacs will never expire
+Well, maybe you don't buy my story because you don't use github and you don't write email. Why not check other geek's live video demo: [[http://www.youtube.com/watch?v=EQAd41VAXWo][Emacs Power: Can your editor do THIS!]]
+*** Investment will never expire
 Emacs is maintained by a non-profit organization named Free Software Foundation (FSF). FSF has been around for almost 40 years. I assume it will exist for next 40 years. Emacs will live for a very long time.
 
 A negative example is Microsoft Visual Studio:
-- I extended Visual Studio 6 with my own VBA script. The script did not work after I upgraded to Visual Studio .NET.
-- All the key bindings in Visual Studio 6 were dumped in next version.
-- Visual Studio 6 Professional had the performance profiling tool. That useful tool was removed in .NET version.
-- Microsoft can never get UX right for *a professional developer*. Consider the simple feature like listing the functions in current file. The hot key for that command is shit. You have to pay tens of bucks to [[http://www.wholetomato.com/][get the right solution]].
+- I extended Visual Studio 6 with my own VBA script. The script stop working after I upgraded to Visual Studio .NET.
+- Key bindings in Visual Studio 6 were dumped in next version.
+- Visual Studio 6 Professional had a nice profiling tool. That tool was removed in next Professional version because some MBA in Microsoft want me to pay more money to buy so-called Ultimate version.
+- Sometimes Microsoft cannot get the UX right. Consider a feature like listing the functions in current file. The hot key for that command is shit. You have to pay tens of bucks to [[http://www.wholetomato.com/][get the right solution]]. I know you have enough cash to burn, but consider the trouble to update that plugin every year (it may be not free). In Emacs, it's just [[http://www.emacswiki.org/emacs/ImenuMode][a few lines of code]] in your plain text file ".emacs" which support all the programming languages *forever*.
 *** No overhead
-Pro:
-- Emacs is open sourced 
-- it supports all the platforms.
-- its configuration is simple text
+The Emacs installer is a [[http://ftp.gnu.org/gnu/emacs/windows/][50M bytes zip file]]. The zip file contains a portable program which you could place anywhere.
 
-So I can work in any environment with Emacs. For example, on windows I only need download one portable Emacs executable.
+My configuration of Emacs is powerful. It can handle most popular languages (Java/C/C++/Ruby/Javascript/PHP/CSS/LUA/SQL/...). Yet it's just another [[https://github.com/redguardtoo/emacs.d/archive/master.zip][5M bytes zip]]. It can be extract to any folder.
 
-One project required me editing perl/java/C/bash/SQL code at the same time. The code is hosted on some remote sever in another country. The network connection is the slowest. I have work in command line and shell. Emacs is the only choice.
+So in order to set up my fully functional develop environment I just need handle two zip files. 10 minutes job at maximum.
 
-*** Take advantage of your spare time in one year
-When I say Emacs takes you one year, I mean *your spare time* of one year to master Emacs. The definition of mastery is as described above, "Once you have mastered Emacs, every other text editor is easy".
+Compare this with the pain of installing latest Visual Studio!
+*** Use your spare time
+*Your spare time* of one year is enough to master Emacs. As a freelancer, I'm the last one in the world willing to sacrifice my work day to learn Emacs. 15 minutes per day is enough.
 
-BTW, I encourage you using any other text editor after one year if you want to help unbelievers to understand the definition of "mastery".
 *** What matters is Attitude
-How good you will be at Emacs is determined by your attitude,
+If I could only give one piece of advice to the beginner, it would be *being open minded*. 
 
-Here are my suggestions,
-- Be open minded. For example, why not try Vim key bindings after being familiar with Emacs default key bindings. Or vice versa.
-- Bettering yourself is the purpose. For example, there are several good plugins to do the sub-windows navigation. Spend some time to use them all to find the most efficient one though the difference between the best and average is minor.
-- Half a tale is enough for a wise man. For example, when a guy showed off [[http://www.sublimetext.com/][Sublime Text]] to me, I realized that there should exist [[https://github.com/alloy-d/color-theme-molokai][similar beautiful color theme]] in Emacs and I immediately switched my Emacs color theme.
+For example, newbies usually assume that the key binding is an important skill. They spend too much time to remember key bindings. Some vi users would rather give up vi muscle memory when using Emacs. Wrong, Wrong, Wrong!
+
+Actually, key binding is the most trivial thing in Emacs. Emacs is powerful enough to let you choose [[http://www.emacswiki.org/emacs/Evil][another way]]. Even you want to memorize Emacs key bindings, you'd better start by inserting the complete command into the [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Minibuffer.html][MiniBuffer]].
+
+Trust me, don't remember any key biding at all. Some tutorial lists the "Basic Commands" in Emacs. You may think those commands is *required* to memorize. I don't agree. For example, "Alt-<" (go to the beginning of file) and "Alt->" (go to the end of file) are listed as basic commands, I don't know now those basic commands at all, even now. I have not used these two commands for at least 12 months. "Alt-G Alt-G" (go to the line) is a more useful, though it's not listed at all.
+
+Many people failed because they had such *wrong* assumptions before plunging into Emacs. They wasted precious time on meaningless things.
+
 ** Step by Step Guide
 *** Quick guide for greenhands of Linux/Unix (OPTIONAL) 
 Here are the steps:
@@ -121,20 +118,20 @@ Reading this tutorial will take you about half an hour. It's not too much time t
 
 Reading tutorial is essential. Do not skip this step. For example, many Emacs newbies asked me how to look up online manual for some command. This has already been answered in the tutorial.
 
-*** Find *your first practical problem* Emacs can solve
-That's the most important question you need ask yourself before you start.
+*** Find a real world problem to solve
+That's the most important question you need ask yourself at the beginning.
 
 The learning is like investment. If you can get huge benefit by investing a little time, you will be motivated and keep on the learning.
 
 For example, [[http://orgmode.org/][Org-mode]] is the best time-management tool I can find.
-*** Standing on the shoulders of giants
-Please note *this section is the most important part* of the whole article!
+*** Stand on the shoulders of giants
+This section is *the most important section* of the whole article!
 
 I learned this lesson the hard way. At the beginning, I regarded Emacs as some geek's toy. I digged around the internet for the Lisp code I can paste into my ~/.emacs.
 
 That's totally a waste of time if my goal is to become an Emacs master!
 
-I should copy [[https://github.com/purcell/emacs.d][Steve Purcell's]] setup!
+I should copy [[https://github.com/purcell/emacs.d][Steve Purcell's]] setup at the beginning!
 
 Please don't repeat my mistake. Don't hesitate. Just follow Steven Purcell!
 
@@ -144,17 +141,17 @@ For example, some readers tell me that Emacs has too many hot keys. They can't m
 
 Wrong!
 
-If you have studied any master's setup, you will find that she uses [[http://www.emacswiki.org/emacs/Smex][Smex]] to remember the frequently used command, as it is often more efficient than pressing hot keys. So masters don't remember key bindings intentionally.
+If you have studied any master's setup, you will find that she uses [[http://www.emacswiki.org/emacs/Smex][Smex]] to remember the frequently used command, as it is often more efficient than pressing hot keys. So the master don't remember key bindings intentionally.
 
 Since Steve Purcell loves new technologies and update his setup frequently, it may be a little harder to follow him for beginners.
 
 That's actually great. I'm lucky to pick up his setup and stick to it. Simply pulling from his git branch gets me updated with the latest cool things in community.
 
-When I say "on the shoulders of giants", I'm stressing that you need set your standard higher on your first setup. I'm NOT saying the top guy's setup is "newbie friendly". If it happens to be "friendly", it's just the coincidence.
+When I say "on the shoulders of giants", I'm stressing that you need set your standard higher. I'm NOT saying the top guy's setup is "newbie friendly". If it happens to be "friendly", it's just the coincidence.
 
-This section is discussing *what's the most efficient way to be good, not the easiest way*.
+This section is discussing *what's the best way to be good, not the easiest way*.
 
-There is a huge difference between efficient and easy. For example, a setup using Vim key bindings is absolutely NOT easy for newbie but definitely efficient.
+There is a huge difference between best and easiest. For example, a setup using Vim key bindings is absolutely NOT easy for newbie but definitely efficient.
 
 If you are still not convinced, consider my reasons:
 - When I say mastering Emacs, I mean it. It's not OK at Emacs. It's not good at Emacs. It's actually among the best ones.
@@ -163,42 +160,60 @@ If you are still not convinced, consider my reasons:
 - If you can report a bug about the master's setup, at least in that moment, you have proven you are better at a certain issue than the master.
 - You will get guidance from the master when she analyzes your bug report.
 
-Anyway, if you find Purcell is too technically challenging to follow (What a pity, BTW), there is more stable setup like [[http://eschulte.github.io/emacs-starter-kit/][Eric Schulte's Emacs Starter Kit]].
-** Join the community
+Anyway, if Purcell is too challenging to follow (What a pity, BTW), there is more stable one like [[http://eschulte.github.io/emacs-starter-kit/][Eric Schulte's Emacs Starter Kit]].
+*** Report bugs
+The best way to learn Emacs is to become the padawan of the master.
+
+In real world, the master won't waste any time on you unless you report bugs to her. By reporting bugs, you have made visible contribution. That's only sure way to get the guidance from the master.
+
+For example, I learned [[phttp://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][some advanced Lisp skill]] by [[https://github.com/capitaomorte/yasnippet/issues/256][reporting a bug]]. The extra bonus of learning by bug report is that knowledge learned from practical case study is hard to forget.
+
+*** Better yourself everyday
+I started from [[https://sites.google.com/site/steveyegge2/tour-de-babel][Steve Yegges' article]]. The most inspiring text in the article is as below,
+#+BEGIN_EXAMPLE
+Go look over Paul Nordstrom's shoulder while he works sometime, if you don't believe me. It's a real eye-opener for someone who's used Visual Blub .NET-like IDEs their whole career.
+#+END_EXAMPLE
+
+After reading the text, I decided to be as good as Paul Nordstrom. It's mission impossible considering [[http://www.linkedin.com/in/paulnpcom][who Paul Nordstrom is]]. The reason to set a goal I can never reach is to make me not to stop improve. Whatever minor task I takes, I always ask myself how Paul Nordstrom will handle it. Is my operation efficient enough that Steve Yegge will be surprised?
+
+For example, switch focus between sub-windows in Emacs is not efficient by default. I need press "Ctrl-x O" several times to jump to a sub-window. After some investigation,I found [[https://github.com/dimitri/switch-window][switch-window]]. Press "Ctr-x O" plus number key to finish the operation. I kept searching and found [[https://github.com/nschum/window-numbering.el][window-numbering]]. ALT key plus number key is enough. That's 60% productivity improvement. Alt key is still a little bit far away from my fingers. Another improvement is to use [[https://gitorious.org/evil/pages/Home][Evil-mode]] and [[https://github.com/cofi/evil-leader][evil-leader]], I need only [[https://github.com/redguardtoo/emacs.d/blob/master/init-evil.el][press comma key and number key to switch window]].
+
+For example, when a guy showed off [[http://www.sublimetext.com/][Sublime Text]] to me, I realized that there should exist [[https://github.com/alloy-d/color-theme-molokai][similar beautiful color theme]] in Emacs and I immediately switched my Emacs color theme.
+*** Join the community
 I suggest focusing on Emacs only in order to take full advantage of communities.
 
-For example, although Quora.com has lots of interesting stuffs, *do not* read/subscribe/follow them unless it's highly releated to Emacs.
-*** Google Plus
+For example, although Quora.com has lots of interesting stuffs, *do not* read/subscribe/follow them unless it's releated to Emacs.
+**** Google Plus
 [[https://plus.google.com/communities/114815898697665598016][Emacs community on Google Plus]] is the best. The average quality of discussion on Google Plus is better.
 
 BTW, the Emacs geek [[https://plus.google.com/113859563190964307534][Xah Lee]] hosts a Q/A session at Google Plus every Tuesday. His web site is [[http://xahlee.org/]].
 
-*** Github
-It's a social network for developers.
-
-You can search [[https://github.com/languages/Emacs%20Lisp]] for latest Elisp code.
-*** Emacs blogs
-[[http://planet.emacsen.org/][Planet Emacsen]] is the collection of several Emacs blogs.
-*** Quora.com
-I suggest following the question on more specific topic instead general one. For example, "What's the best Emacs addon" is a more useful question than "How to learn Emacs".
+**** Github
+It'*s a social network for developers.
+   *
+You* can search [[https://github.com/languages/Emacs%20Lisp]] for latest Elisp code.
+**** Emacs blogs
+[[h*ttp://planet.emacsen.org/][Planet Emacsen]] is the hub best Emacs blogs.
+**** Quora.com
+Follow the question on specific topic instead general one. For example, "What's the best Emacs addon" is more useful than "How to learn Emacs".
 
 Everybody can say something about a general question. But to answer a specific question, you need first-hand experience.
 
 Even if you are only interestd in general questions, starting from more practical question is still better. Find the people who provides the best and the shortest answer and follow her.
-*** Blogs
+**** Blogs
 [[http://planet.emacsen.org/][Planet Emacsen]] is the best collection of Emacs related blogs.
-*** Twitter
+**** Twitter
 I use keyword "emacs :en" to search latest news. The reason to search English only twitter is that there are lots of Japanese post and I don't know Japanese.
-*** StackOverflow
-google: "emacs-related-keywords site:stackoverflow.com"
+**** StackOverflow
+Insert "emacs-related-keywords site:stackoverflow.com" in Google search engine.
 
-The quality on stackoverflow discussion is good but there are not many new questions about Emacs there.
-*** Youtube
-There are lots of wonderful Emacs videos on youtube.
+The quality on stackoverflow discussion is good but there are not many new questions there.
+**** Youtube
+Some videos are great.
 
-For example, [[http://www.youtube.com/watch?feature=player_embedded&v=oJTwQvgfgMM][Emacs Org-mode - a system for note-taking and project planning]] is the tutorial which enlighten me on using org-mode. Carsten Dominik makes me realize that org-mode is simple. All I need remember is pressing "TAB" key to expand a text node. That's the killer feature of org-mode. All the other stuff could be regarded as bonus and can be postponed.
+For example, [[http://www.youtube.com/watch?feature=player_embedded&v=oJTwQvgfgMM][Emacs Org-mode - a system for note-taking and project planning]] is the best tutorial on org-mode. Carsten Dominik makes me realize that org-mode is simple. The only thing I need remember is pressing "TAB" key to expand a text node. That's the killer feature of org-mode. Other stuff are bonus.
 
-The issue of youtube is that the best matched are listed first. So you will always see the same results. I suggest sorting the results by upload date.
+Youtube lists the best matched results at the top. So you will always see the same things. I suggest sorting the results by upload date.
 ** Readings
 *** EmacsWiki
 [[http://www.emacswiki.org/emacs/][EmacsWiki]] has all the tips you need for tweaking the Emacs. It's actively maintained by the community.
@@ -210,12 +225,12 @@ Xah Lee's [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][Emacs Lisp t
 
 Steve Yegge's [[http://steve-yegge.blogspot.com.au/2008/01/emergency-elisp.html][Emergency Elisp]] is short but it includes the necessary information for writing Emacs Lisp.
 
-I don't recommend studying the Lisp at the early stage unless you are confident about your Emacs mastery.
+I don't recommend studying the Lisp at the beginning unless you are confident about your Emacs mastery.
 ** Knowledge management 
 *** Place your setup at Github, *publicly*
 I uploaded my setup onto [[https://github.com/redguardtoo/emacs.d]].
 
-Version control is the most efficient way of knowledge management because you will never lose the setup.
+Github is the most efficient way of knowledge management because you will never lose the setup.
 
 I benefit a lot by sharing. People who use my setup are actually making my setup perfect. I am the first guy who benefits from a better setup.
 
@@ -223,13 +238,13 @@ For example, people reported that I mixed my personal stuff (email address, full
 
 So I re-organized it and placed private stuff into a independent file named "privacy.el". That file is outside of my Emacs configuration. Then it occurred to me that in corporate environment it was not safe to store plain privacy.el on a shared computer without encryption. After some research, I found Emacs already provided [[http://www.emacswiki.org/emacs/EasyPG][a perfect solution]] since version 23.
 
+In order to get the most benefit of sharing, you need make sure your setup is qualified to share publicly. I hate those guys who hardcode their name like "/home/john/.emacs.d/" in their setup. Unless I happen to be John, I have to waste my time to fix all those stupid names. I suggest ignore any setup with hardcoded things. There are plenty of superiors at github.
 *** Dropbox
-I place all the Emacs related documents at Dropbox. Since dropbox will synchronize the documents into my mobile phone. I can study Emacs when commuting.
+Place all the Emacs related documents at Dropbox. Since dropbox will synchronize the documents into the mobile devices, you can study Emacs when commuting.
 ** My favorite Emacs addons
 I'm not suggesting that you must use these addons. There are many other addons which are as good as the ones in the list.
 
 The purpose to try these addons is to get the idea that a typical Emacs user's expectation on quality is very high.
-
 
 | Name                | Description                        | Alternatives                      |
 |---------------------+------------------------------------+-----------------------------------|
@@ -249,16 +264,16 @@ The purpose to try these addons is to get the idea that a typical Emacs user's e
 | [[https://github.com/nschum/window-numbering.el][window-numbering.el]] | jump focus between sub-windows     | switch-window.el                  |
 | [[https://github.com/fxbois/web-mode][web-mode]]            | everything for edit HTML templates | nxml-mode、nxhtml-mode、html-mode |
 
-** Emacs is a way of life
+** Emacs is way of life
 Emacs guys have different ways of life. They are basically people who are hacking Lisp code for fun. Sometimes they will get the job done in a creative way. For example, [[http://sachachua.com/blog/][Sacha Chua]] mentioned that [[http://sachachua.com/blog/2012/07/transcript-emacs-chat-john-wiegley/][she let Emacs read the manual when cooking]].
 
-So *what benefit* can I get if I understand the Emacs way?
+So *what benefit* can I get after knowing the Emacs way?
 
 When I learned Emacs, I could not endure the default key bindings of my browser Firefox. So I installed a Firefox addon [[https://github.com/mooz/keysnail/wiki][Keysnail]] to convert Firefox into Emacs. That doubled my speed in browser navigation. As a web developer, I am doing the browser navigation thing everyday.
 
-Since I already knew *the way*. I immediately realized that Keysnail was awesome because [[https://github.com/mooz][its developer mooz]] was awesome. I followed him and used whatever he used. His [[https://github.com/mooz/percol][percol]] made all my operations (git, [[http://blog.binchen.org/posts/how-to-do-the-file-navigation-efficiently.html][file navigation]], database management ...) under shell ten times faster.
+Then I realized that Keysnail was awesome because [[https://github.com/mooz][its developer mooz]] was awesome. I followed him and used whatever he used. His [[https://github.com/mooz/percol][percol]] made all my operations (git, [[http://blog.binchen.org/posts/how-to-do-the-file-navigation-efficiently.html][file navigation]], database management ...) under shell ten times faster.
 
-After knowing *the way*, things that was important become trivial now. For example, I don't care which text editor has better file explorer. Why should I use any file explorer if I am ten times faster in shell?
+After knowing the Emacs way, things that was important become trivial now. For example, I don't care which text editor has better file explorer. Why should I use any file explorer if I am ten times faster in shell?
 
 I'm also more willing to share. For example, some colleague asked me to share my file navigation snippet. I gave it away without hesitation.
 
@@ -266,11 +281,10 @@ If he would equal sharing knowledge to giving up power, he had already lost in t
 
 We are living in the world of science and engineering. I improve myself *more quickly* by sharing to the best, by learning from the best. Knowledge is not black magic. Hiding knowledge will make it stale.
 
-Anyway, people who use my shared snippet are still doing me good by regarding the snippet as a favor, by doing QA as users.
 ** FAQ
 *** Any documentation on Steve Purcell's setup?
 Nope. Read its README and code comment. The header of the code file usually has some usage guide.
-*** Any simpler setup than Steve Pucell's setup?
+*** Any simpler setup than Steve Pucell's?
 Check out [[https://github.com/redguardtoo/emacs.d][my setup]].
 
 Because I do some desktop development. it has less web stuff than Purcell.
@@ -349,11 +363,11 @@ Here is my example:
 - When I work for some huge projects, I use [[https://github.com/redguardtoo/evil-nerd-commenter][evil-nerd-commenter]] to comment code lines because I need deal with too many programming languages. 
 
 *** What do you think "Emacs can do everything"?
+"Can do" does not equals "Do in the best way".
+
 Yes, there are *demos* to prove Emacs can do everything.
 
-But I'm a practical guy. I only care what's the most efficient way to get the job done. The reason I stick to Emacs is simply because Emacs is the best solution.
-
-Sometimes Emacs might not be the best solution even its demo looks good.
+But sometimes Emacs might not be the best solution even its demo looks good.
 
 [[gnu.org/software/emacs/manual/html_node/emacs/Document-View.html][DocView mode]] is boasted as a proof that Emacs could be used as a PDF viewer. You can open two sub-windows in Emacs. One for viewing PDF. The other for coding.
 
@@ -362,25 +376,26 @@ It's actually not a perfect solution because Emacs needs call some command line 
 There are tons of other perfect PDF viewers. They are quick. They can handle huge PDF files. Text embedded in PDF can be extracted.
 
 Even if you want to display the PDF viewer and code editor side by side. Emacs is still not a better solution. Tile windows managers like [[http://i3wm.org/][i3]] is a professional tool to handle these things.
+
+So be practical. [[http://en.wikipedia.org/wiki/Richard_Stallman][Richard Stallman]] created whole GNU echosystem for you. Emacs is only one component. Why not take full advantage of the system?
+
 ** Contact me
 My [[https://twitter.com/#!/chen_bin][twitter]] and [[https://plus.google.com/110954683162859211810][google plus]].
 
 My blog is [[http://blog.binchen.org]].
 
-Please don't ask me basic questions since I've already shown you how to find the answer.
+Please don't ask basic questions. I've already shown you how to find the answer by yourself.
 ** Summary
 Start from fun, follow the best people, reading and practice.
 
-I recognize that all roads lead to Rome. So other methods may also work. But my method DID work on me.
+I recognize that all roads lead to Rome. So other methods may also work. But my method did work on me.
 
-This article is basically the summary of how I figure out my way to Rome.
+This article is basically the summary of my own journey to Rome.
 
-It doesn't matter which way you take. What matters is your attitude. Please regard Emacs as professional's tool. It deserves your highest respect.
+Whichever way you take, please regard Emacs as professional's tool. It deserves your respect.
 
-*** Report a bug
 This article is published at [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide]].
 
 Please use github's bug tracker instead of sending me email for your own good. Github notification mail is always in my first priority folder.
 
-*** I will provide long-term update
 Emacs is actually more a platform than a software. Interesting people and addons keep popping up on that platform. I will update this article from time to time in the future.
