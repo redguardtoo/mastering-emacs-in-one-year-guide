@@ -1,6 +1,5 @@
 #+OPTIONS: ^:{}
 * 一年成为Emacs高手(像神一样使用编辑器)                                         :emacs:zh:
-#+OPTIONS: toc:nil
   :PROPERTIES:
   :ID:       o2b:24796fba-6de7-4712-b83e-b86969c31335
   :POST_DATE: 2012-01-31 15:08:00
@@ -8,12 +7,14 @@
   :ARCHIVE_TIME: 2012-12-26 三 19:21
   :ARCHIVE_FILE: ~/projs/mastering-emacs-in-one-year-guide/guide-zh.org
   :ARCHIVE_CATEGORY: emacs
+  :UPDATE_DATE: 2014-09-14 12:09:44
+  :POST_SLUG: yi-nian-cheng-wei-emacs-gao-shou-xiang-shen-yi-yang-shi-yong-bian-ji-qi
   :END:
 作者：陈斌(redguardtoo)
 
-版本号：20140722
+版本号：20140914
 
-更新时间：<2014-07-22 Tue>
+更新时间：<2014-09-14 Sun>
 
 原创时间：<2012-01-31 Tue>
 
@@ -24,19 +25,27 @@
 
 很多文章都是强调 Emacs 有多牛,以激发你的兴趣.最有名的大概是[[http://docs.huihoo.com/homepage/shredderyin/][王垠]]的[[http://www.pconline.com.cn/pcedu/soft/gj/photo/0609/865628_1.html][Emacs 是一种信仰！世界最强编辑器介绍]].
 
-这些好文章让你激动,你因此定下一个伟大目标 (掌握神一样的编辑器 Emacs),接下来就是执行了 (如何高效地学习 Emacs).
+但关于"如何做"则语焉不详,即使涉及到"如何做",谈细节多而方法论少,所以本文就是侧重方法论.
 
-网上关于"如何做"的文章不多,那些涉及到 "如何做" 的文章,涉及细节多而谈方法论少,所以本文的重点就是谈谈一般方法.
-
-全文结构大致如下:
-- 首先会介绍为什么Emacs值得学习,如果你对开源文化相当熟悉认同可跳过这一章,否则至少应读一下态度一节.
+全文结构如下:
+- 首先介绍为什么Emacs值得学习,如果你对开源文化熟悉可跳过这一章,否则至少读一下态度一节.
 - 然后就是本文最核心的观点,尽快掌握Emacs的关键步骤.
-- 后面几章是进一步提高技巧的方法提示(社区,阅读,知识管理)
-- 当你提高到一定阶段,你应该能跳出具体Emacs技巧,欣赏Emacs的品味和其使用者的气质
-- 最后是答疑和小结
+- 进一步提高技巧的方法提示(社区,阅读,知识管理)
+- 跳出具体Emacs技巧,充分利用Emacs背后的人.用不用Emacs以不重要了.
+- 答疑和小结
 ** 为什么要用Emacs(可选)
 简单谈谈,因为我本文的重点是"怎么做",而不是"为什么".
-*** Emacs 的特点决定了其社区的平均技术水准都不低
+*** 真正精通后Emacs,其他编辑器自然精通
+一旦你尝过最好的,你自然了解好的编辑器应该有哪些功能.
+
+比如一个内嵌的插件管理器是最基本的.
+
+又比如下载了第三方插件,如果发觉其有问题,可以在[[http://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][不碰该插件原始代码的情况下修复]].
+
+如果下载第三方插件的服务器的关闭了,应该可以在[[https://github.com/redguardtoo/elpa-mirror][自带的U盘上快速建立镜像服务器]].
+
+目前最流行的编辑器如[[http://www.sublimetext.com/][Sublime Text]]还做不到以上几点.
+*** Emacs 的特点决定了其社区的平均水准不低
 Emacs 用 Lisp 开发,Lisp 的不同寻常的语法决定了其开发者都是资深开发者,掌握了多门语言.
 
 Emacs 本身并不能给你带来任何好处,这就决定了其社区成员都是纯粹的技术人员,投机取巧的功利主义者对其是没有兴趣.
@@ -47,22 +56,21 @@ Emacs 本身并不能给你带来任何好处,这就决定了其社区成员都�
 
 我使用 Visual Studio 多年了,Firefox 使用我也是高手,相信我,大多数情况下还是 Emacs 更快.
 
-当然口说无凭,请看以下两段高手操作的 youtube 视频：
-- [[http://www.youtube.com/watch?v=Ho6nMWGtepY][Writing PPT with org-mode and beamer in Emacs ]]
-- [[http://www.youtube.com/watch?v=EQAd41VAXWo][Emacs Power: Can your editor do THIS! ]]
+当然口说无凭,请看以下高手操作的 youtube 视频, [[http://www.youtube.com/watch?v=EQAd41VAXWo][Emacs Power: Can your editor do THIS! ]]
+
+顺便说一下,很多初学者关心的代码自动完成,我可以说除了Java以外的几门主流语言,支持都很不错了.
+
 *** Emacs 是自由软件基金会开发的招牌开源软件
 个人会丧失开发软件的兴趣,公司会倒闭而停止维护软件.但是自由软件基金会会一直存在下去.Emacs 作为其招牌软件也会一直维护下去,我在其上投资永远不会贬值.
 *** 使用 Emacs 可以立刻开始工作.
-软件是开源的,配置是纯文本,而且软件的资源消耗较小,安装包很小 (命令行版本的安装包 30M 左右),所以在任何环境下我都可以用 Emacs 开始工作,overhead 很小.
+软件是开源的,配置是纯文本,而且软件的资源消耗较小,安装包很小 (命令行版本的安装包 30M 左右),所以在任何环境下我都可以用 Emacs 开始工作.
 
-这在大项目中特别明显,例如,某项目我需要同时编辑 perl、java、C、bash、SQL,需要远程编辑在美国服务器上的代码,网速也不是很快.Emacs 的优势就体现出来了.
+这在大项目中特别明显,例如,某项目我需要同时编辑 perl、java、C、bash、SQL,需要远程编辑在美国服务器上的代码,网速也快.Emacs 的优势就体现出来了.
 
 *** 一年指的是充分利用空闲时间,一年后自然水到渠成
 我没说一年内必须什么事都不干专门学 Emacs, 没有短期利益回报的悬梁刺股式学习方法是我最反对的.
 
-我赞成的方法是,开始阶段花极少的时间得到巨大的回报 (如下文谈到的 Org-mode),以兴趣做导向.
-
-每天花多少时间取决于个人需要和如何管理,以我为例,每天八小时上班时间中有很多零碎时间可以利用,上下班通勤时间有一个小时可以利用.
+以我为例,每天八小时上班时间中有很多零碎时间可以利用,上下班通勤时间有一个小时可以利用.
 
 *** 态度决定一切
 长期来说你能取得的成就是由态度决定的.
@@ -124,7 +132,7 @@ Emacs本质上是给geek(热爱技术,追求高效的人)使用的软件.所以�
 
 所以对新手来说,从Gnus入手Emacs是很成问题的.
 
-*** <<站在巨人的肩膀上>>
+*** 站在巨人的肩膀上
 这方面我是个负面榜样.一开始我还是抱着玩的心态,喜欢到处找有趣的配置粘贴到我的 .emacs 中去.
 
 这是浪费时间!
@@ -148,38 +156,54 @@ Emacs本质上是给geek(热爱技术,追求高效的人)使用的软件.所以�
 - 说到底是态度问题,如果你真正下定决心了,考虑到Purcell的天赋和勤奋,追赶他的最好办法显然只有加入他.
 - 要超越世界级高手就必须了解高手的标杆在哪里,你需要一年的时间去模仿去学习.
 - 你基于Purcell的配置给他报bug(甚至是提交补丁),那你就是考虑到了他没有考虑到的问题,至少在这个问题上你就超过他了,日积月累成果就很可观了.
-** 加入社区更上一层楼
+*** 报bug
+要像武侠小说里那样拜高手为师简直是白日做梦.唯一能让高手指点你的办法是先付出.最可靠的付出就是给高手报bug.
+
+我就是这样[[https://github.com/capitaomorte/yasnippet/issues/256][学到一些高级Lisp编程技巧的]].
+
+不要有报告bug是低级活的想法.我看到很多高手都是乐于而且善于报告bug的.到是很多菜鸟喜欢重新发明轮子胜于帮助别人改善轮子.
+
+帮助高手,你的起点就高,还有得到高手指点的好处.
+*** 持续改进
+前提是起点要高,要在高手已有的工作上继续改善.即使是微小的改善,如果坚持一段时间,就是巨大的进步了,然后你可以在这一点上笑傲江湖.
+
+然后找出另一点高手需要改善的地方,使用同样的方法.
+
+例如,默认的Emacs移动子窗口焦点不是很方便.你需要按"C-x O"多次.我找到了emacs插件[[https://github.com/dimitri/switch-window][switch-window]],只要按"C-x O"一次,会有提示子窗口编号,接下来只要输入子窗口编号就可以了.但是还是有改善空间,我又找到了[[https://github.com/nschum/window-numbering.el][window-number.el]],只要按"M-NUM"就可以了.
+
+window-number.el已很完美,但是我又想到了Alt键还是有点慢,我结合[[https://gitorious.org/evil/pages/Home][evil]]和[[https://github.com/cofi/evil-leader][evil-leader]],我可以按逗号和数字就可以切换子窗口了.
+*** 加入社区更上一层楼
 如果要充分利用社区,最重要的是专一.
 
 例如在Quora.com上有很多有趣的话题.我会克制自己的兴趣,不去定阅和Emacs无关的话题.
 
-*** google plus 的 Emacs 社区
+**** Google plus 的 Emacs 社区
 Google Plus 的 [[https://plus.google.com/communities/114815898697665598016][Emacs 社区]] 在此时Geek 的气场非常强,讨论的贴子质量非常高.我上过很多大众和小众的 Emacs 社区,这是我的经验之谈.例如,我加入了 Linkedin 和 Facebook 的 Emacs 社区,目前都退出了.并不是这些社区不够专业,只是 Google Plus 讨论问题的技术层次比较高.
 
 如果你只能加入一个网络社区的话,那么就是 Google Plus 了.
 
-*** GitHub 是 geek 云集的地方
+**** GitHub 是 geek 云集的地方
 GitHub 的版本控制服务很好.现在它的社区化倾向越来越强了,我喜欢.
 
 例如,可以看一下 [[https://github.com/search?p=1&q=stars%3A%3E20+extension%3Ael+language%3Aelisp&ref=searchresults&type=Repositories]] 上最酷的 Emacs 插件.
 
-*** Emacs牛人的博客
+**** Emacs牛人的博客
 最好的是[[http://planet.emacsen.org/][Planet Emacsen]],多个Emacs博客的集合.
 
-*** Quora.com
+**** Quora.com
 我偏爱的是"列举Emacs中最有用的命令"之类的具体问题.很多回答拓宽了我的眼界.即使我已相当精通Emacs.
 
 那种"如何掌握Emacs"的问题,人人都能插上一脚.即使有些高水平的的回答,也淹没在众多平庸的回答中.
 
 即使你的问题是比较泛泛而谈的,从一个能够测量的水准的具体问题入手找到高手,然后看高手是如何回答那些比较泛泛而谈的问题的.
 
-*** 在 twitter 上以 "emacs :en" 定期搜索
+**** 在 twitter 上以 "emacs :en" 定期搜索
 twitter 人多,更新结果快.之所以加上":en"是因为有很多日文内容,我不懂日文.
-*** 在 stackoverflow 上搜索 emacs 相关的讨论
+**** 在 stackoverflow 上搜索 emacs 相关的讨论
 google "emacs-related-keywords site:stackoverflow.com"
 
 我会定期搜索,同样的帖子反复精读.因为 stackoverflow 上的讨论质量很高.
-*** 到 Youtube 上看 emacs 相关的视频
+**** 到 Youtube 上看 emacs 相关的视频
 例如,我就是看了 [[http://www.youtube.com/watch?feature=player_embedded&v=oJTwQvgfgMM][Google Tech Talks 上这个 Org-mode 作者的介绍]] 而爱上 org-mode.
 
 注意,Youtube 搜索的结果是最佳匹配的.问题是关于 Emacs 的视频并不太多,如果按照 Youtube 的算法,我每次搜索看到的总是那几个录像.所以如果关注重点是看看 Emacs 社区有些什么新东西的话,默认搜索结果应以时间排序.
@@ -255,15 +279,15 @@ Emacs第三方插件很多.初学者的问题是装了太多插件,插件的管�
 ** Emacs 是一种生活方式
 如果你照着我以上的做法做,就可以认识到 Emacs 牛人其他也很牛.Emacs 实际上体现了牛人的一种生活方式.
 
-像那些牛人一样思考,像那些牛人一样做事,不要怀疑,不要犹豫,很快你就会发觉自己也开始有些牛人的气质了.
-
 例如,[[http://sachachua.com/blog/][Sacha Chua]] 就是这样一个有牛人气质的女孩,这是她的 [[http://www.youtube.com/watch?v=eoyi2vrsWow][Youtube 录像]]. 她学习 Emacs 的方式是 [[http://sachachua.com/blog/2012/07/transcript-emacs-chat-john-wiegley/][让 Emacs 自动将手册语音合成]],这样她在房间里走来走去的时候也可以听文档了.
 
-想想看,这些用 Emacs 的人都是什么样的 Geek 啊！所以,我认为 Emacs 不仅仅是一种工具,它是个社区,一种文化.
+Emacs之所以强大是因为Emacs后面有许多牛人.
 
-对我而言,加入 Emacs 社区让我学会了谦卑.当我明白了 Emacs 的其朴素的设计思想和其强大的可拓展性后,我的感觉是敬畏,因为我做不出这样的软件.
+我认识到这一点后开始有意识的整理Emacs高手名单,观察高手是用什么工具的,这使我收益良多.
 
-我既没有能力把一个编辑器设计成一个人工智能语言 Lisp 的平台,也不可能花 30 多年的时间对一个软件精益求精.
+例如, [[https://github.com/mooz/js2-mode][js2-mode]] 的维护者Masafumi Oyamada(网名mooz)也开发了[[https://github.com/mooz/keysnail][keysnail]]和[[https://github.com/mooz/percol][percol]]. 特别使percol,使我命令行操作效率提高了10倍.
+
+这个阶段可以称之为心中有剑,手中无剑.是否使用Emacs不重要了,我可以随心所欲使用合适的工具.例如,很多人争论哪个编辑器自带的文件管理较好.我[[http://blog.binchen.org/posts/how-to-do-the-file-navigation-efficiently.html][从mooz那样的高手学到终级方案后]],对这些争论就跳出五行外,不在三界中了.
 ** 答疑
 *** Steve Purcell 的配置是否有文档可以参考？
 除了 README 外没有,我主要是通过看 EmacsWiki 和源代码来了解.一个窍门是通常主源代码文件的头部有使用指南.
