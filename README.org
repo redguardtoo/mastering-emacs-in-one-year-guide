@@ -1,14 +1,21 @@
-* [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org][中文版本]]
+* Emacs guide
+** [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org][中文版本]] (Chinese version)
 关于如何在一年内成为高手的指导.
 
 Web版本也会发布在我的[[http://blog.csdn.net/redguardtoo/article/details/7222501][CSND博客]]和[[http://blog.binchen.org/?p=268][个人博客]].
 
 [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org][点击这里查看]].
 
-* [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org][English version]]
+** [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org][English version]]
 Guide on how to master Emacs in one year.
 
-It's *NOT* for a beginner. It will focus on *methodology and philosophy* instead of technical details.
+The critical question is, how you use one year *most efficiently* to become a master?
+
+My answer,
+- set the standard to the highest at the beginning
+- do NOT write your own setup at the beginning
+
+There other useful practical tips.
 
 Click [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org][HERE]] to read it.
 
