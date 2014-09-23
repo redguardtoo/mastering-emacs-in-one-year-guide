@@ -55,10 +55,9 @@ Anyway, the solution is simple, `C-u 5 gnus-group-list-all-groups` will get desi
   (interactive)
   (gnus-group-list-all-groups 5)
   )
- (add-hook 'gnus-group-mode-hook
-           ;; list all the subscribed groups even they contain zero un-read messages
-           (lambda () (local-set-key "o" 'my-gnus-group-list-subscribed-groups ))
-           )
+(define-key gnus-group-mode-map 
+  ;; list all the subscribed groups even they contain zero un-read messages
+  (kbd "o") 'my-gnus-group-list-subscribed-groups)
 #+END_SRC
 
 In the "Group Buffer", you can select a group (email folder) by pressing "RET" to check emails in that folder. But I strongly suggest pressing "C-u RET" instead because your true intention is to see ALL the emails instead of the emails filtered by "smart" Gnus.
