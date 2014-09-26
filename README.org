@@ -1,25 +1,29 @@
-* Emacs guide
-** [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org][中文版本]] (Chinese version)
+* Master Emacs in One Year
+** 中文版本 (Chinese version)
 关于如何在一年内成为高手的指导.
 
 Web版本也会发布在我的[[http://blog.csdn.net/redguardtoo/article/details/7222501][CSND博客]]和[[http://blog.binchen.org/?p=268][个人博客]].
 
 [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org][点击这里查看]].
 
-** [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org][English version]]
+** English version
 Guide on how to master Emacs in one year.
 
-The critical question is, how you use one year *most efficiently* to become a master?
+The critical question is whether ne year is enough.
 
-My answer,
-- set the standard to the highest at the beginning
-- do NOT write your own setup at the beginning
+My answer is a big YES, if you know how to do it efficiently!
 
-There other useful practical tips.
+Here are the tips:
+- Set the standard to the highest
+- DON'T create your own setup
+- Report bugs to the master
+- DON'T learn Lisp
+- DON'T remember key bindings
 
 Click [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org][HERE]] to read it.
 
-* Gnus guide ([[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/gnus-guide-en.org][English version]])
-Gnus is the default Email client of Emacs. This guide focus on practical side. It won't bother you with technical details.
+* Practical guide to use Gnus with Gmail
+** English version
+Gnus is the default Email client of Emacs. No technical details involved.
 
 Click [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/gnus-guide-en.org][HERE]] to read it.
