@@ -94,7 +94,7 @@ I learned this lesson the hard way. At the beginning, I regarded Emacs as a toy.
 
 That's totally a waste of time if my goal is to become an Emacs master!
 
-I should use [[https://github.com/purcell/emacs.d][Steve Purcell's]] setup at the beginning!
+I should have used [[https://github.com/purcell/emacs.d][Steve Purcell's]] setup at the beginning!
 
 Please don't repeat my mistake. Just follow Steven Purcell!
 
@@ -129,25 +129,25 @@ That's only way to become the padawan of the master.
 For example, I learned [[phttp://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][some advanced Lisp skill]] by [[https://github.com/capitaomorte/yasnippet/issues/256][reporting a bug]]. The bonus is that  bug report is actually a case study. Knowledge from it is hard to forget.
 
 *** Better yourself everyday
-I was inspired by [[https://sites.google.com/site/steveyegge2/tour-de-babel][Steve Yegges' article]]. Here is text quoted from itHere is text quoted from it:
+I was inspired by [[https://sites.google.com/site/steveyegge2/tour-de-babel][Steve Yegges' article]]. Here is text quoted from it:
 #+BEGIN_EXAMPLE
 Go look over Paul Nordstrom's shoulder while he works sometime, if you don't believe me. It's a real eye-opener for someone who's used Visual Blub .NET-like IDEs their whole career.
 #+END_EXAMPLE
 
 After reading the text, I decided to be as good as Paul Nordstrom. It's mission impossible considering [[http://www.linkedin.com/in/paulnpcom][who Paul Nordstrom is]]. The reason to set a goal I can never reach is to make me not to stop. Whatever minor task I takes, I always ask myself how Paul Nordstrom will handle it. Is my operation efficient enough that Steve Yegge will be surprised?
 
-For example, switch focus between sub-windows in Emacs is not efficient by default. I need press "Ctrl-x O" several times to jump to a sub-window. After some investigation,I found [[https://github.com/dimitri/switch-window][switch-window]]. Press "Ctrl-x O" plus number key to finish the operation. I kept searching and found [[https://github.com/nschum/window-numbering.el][window-numbering]]. ALT key plus number key is enough. That's 60% productivity improvement. Alt key is still a little bit far away from my fingers. Another improvement is to use [[https://gitorious.org/evil/pages/Home][Evil-mode]] and [[https://github.com/cofi/evil-leader][evil-leader]], I need only [[https://github.com/redguardtoo/emacs.d/blob/master/init-evil.el][press comma key and number key to switch window]].
+For example, switch focus between sub-windows in Emacs is not efficient by default. I need press "Ctrl-x O" several times to jump to a sub-window. After some investigation, I found [[https://github.com/dimitri/switch-window][switch-window]]. Press "Ctrl-x O" plus number key to finish the operation. I kept searching and found [[https://github.com/nschum/window-numbering.el][window-numbering]]. ALT key plus number key is enough. That's 60% productivity improvement. Alt key is still a little bit far away from my fingers. Another improvement is to use [[https://gitorious.org/evil/pages/Home][Evil-mode]] and [[https://github.com/cofi/evil-leader][evil-leader]], I need only [[https://github.com/redguardtoo/emacs.d/blob/master/init-evil.el][press comma key and number key to switch window]].
 *** Join the community
 I suggest focusing on Emacs only in order to take full advantage of communities.
 
-For example, although Quora.com has lots of interesting stuffs, *do not* read/subscribe/follow them unless it's releated to Emacs.
+For example, although Quora.com has lots of interesting stuff, *do not* read/subscribe/follow them unless it's related to Emacs.
 **** Google Plus
 [[https://plus.google.com/communities/114815898697665598016][Emacs community on Google Plus]] is the best. The average quality of discussion on Google Plus is better.
 
 BTW, the Emacs geek [[https://plus.google.com/113859563190964307534][Xah Lee]] hosts a Q/A session at Google Plus every Tuesday. His web site is [[http://xahlee.org/]].
 
 **** Github
-It'*s a social network for developers.
+It's a social network for developers.
    *
 You* can search [[https://github.com/languages/Emacs%20Lisp]] for latest Elisp code.
 **** Emacs blogs
