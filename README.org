@@ -6,7 +6,7 @@ The critical question is whether one year is enough.
 
 My answer is a big YES, if you know how to do it efficiently!
 
-Here are the tips:
+Here are the tips *for your first year*:
 - Set the standard to the highest
 - DON'T create your own setup
 - Report bugs to the master

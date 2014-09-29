@@ -79,14 +79,14 @@ This tutorial takes half an hour. Not too much time for a life time skill.
 
 Please do not skip it.
 
-At minimum, you need learn key bindings on help
-- "C-h v", look up variable
-- "C-h f", look up function
-- "C-h k", look up key binding
+At minimum, you need learn help commands:
+- "M-x describe-variable", hot key "C-h v", display documentation of variable
+- "M-x describe-function", hot key "C-h f", display documentation of function
+- "M-x describe-key", hot key "C-h k", display documentation of function invoke by key
 *** What's your practical problem
-Most newbies' answer is they need a notes taking tool. So [[http://orgmode.org/][Org-mode]] is the answer.
+Most newbies need a notes taking tool. So [[http://orgmode.org/][Org-mode]] is the answer.
 
-If you learn Emacs for fun instead of solving real world problem you will stay on the journey at last.
+If you don't start by solving real world problem you will lose interest soon. Many people start the journey by learning Lisp, most of them give up in the midway.
 *** On the shoulders of giants
 This section is *the most important section* of the whole article!
 
