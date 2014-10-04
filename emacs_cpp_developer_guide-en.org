@@ -1,30 +1,51 @@
 #+OPTIONS: ^:{}
-* Emacs for C++ developers
+* Practical Emacs Guide for C++ developers                                      :emacs:en:c:cpp:
   :PROPERTIES:
   :ID:       o2b:d260ed4e-b55b-46b5-9fcd-6d5a6bca36c7
   :END:
 #+OPTIONS: toc:nil
 
 Author: Chen Bin <chenbin DOT sh AT gmail DOT com>
-Created: <2013-07-06>
-URL: [[http://blog.binchen.org]]
 
-** warning
-This is only a draft. I recorded my points here and will add more content later.
+Created: <2013-07-06>
+
+** Introduction
+This guide focus on practical side. I'm already an expert of IDEs (Visual Studio, Eclipse, IntelliJ, Qt Creator ....) before turning to Emacs. So I will introduce you the features that is equals to the quality of professional IDEs.
+
 ** original discussion 
 https://plus.google.com/110954683162859211810/posts/ZSc9Dtu7Vpz
-** code auto complete
-- clang is must
-- I prefer company-mode
-- auto-complete and auto-complete-clang is also fine
-- I will avoid any packages from cedet because my computer is slow
-- the only meaningful difference between auto-complete and company-mode is UI, but that in real programming actually make huge difference
-- in reality, I found I use hippie-expand more often simply because it's more responsive
-** scm
-- I use git. No interest in other scm tools
-- the old commands in emacs is still convienent
-- Many people use magit. Maybe its most useful feature is you can interactively create new commits by marked hunks in git cache/index.
-- I don't use magit. Command line looks good enough for me.
+** Intellisense (smart code completion)
+It's called intellisense in Visual Studio. It means when you insert a object name and dot character, the object's method or member is automatically completed.
+
+Many people say [[http://cedet.sourceforge.net/][Cedet]] is a complete solution. I don't use it because it's too slow and hard to setup.
+
+There are two alternatives, 
+- [[https://github.com/auto-complete][auto-complete]]
+- [[https://github.com/company-mode/company-mode][company-mode]]
+
+To make auto-complete work in C++ code, you need also install another plugin [[https://github.com/brianjcj/auto-complete-clang][auto-complete-clang]].
+
+company-mode don't need any other plugin. I use company-mode because it's actively maintained.
+
+Both auto-complete and company-mode require [[http://clang.llvm.org/][Clang]] installed if you use Clang as a parser.
+
+Clang is just one of many backend command line tool which can extract useful meta information from C/C++ headers.
+
+[[http://www.gnu.org/software/global/][GNU Global]] is the alternative of Clang which I highly recommended. company-mode support it out of the box. 
+
+Pick up either Clang or GNU Global as backend tool.
+
+Both company-mode and auto-complete can complete lots of *other* things like file name, line, dicitionary. I suggest turning of those features when coding in C++ because too many candidates for code completion will distract you.
+
+Whatever you use as backend parser, it will fail if you over-engineered your code. For example, multiple inheritance plus some C++ template? Don't complain that Emacs sucks in your bloated C++ code. It's your code sucks. Write the simplest code just works.
+
+I recommend two books for anyone whose code Clang or GNU Global cannot handle,
+- [[http://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670][Code Complete]]
+- [[http://www.amazon.com/Writing-Solid-Microsoft-Programming-Series/dp/1556155514][Writing Solid Code]]
+
+** Git
+Command line version is good enough for me. I don't use any Emacs plugins.
+
 ** code editing
 - I use evil-mode, vim key binding, end of story
 - complete line in evil-mode is actually very useful
@@ -33,7 +54,7 @@ https://plus.google.com/110954683162859211810/posts/ZSc9Dtu7Vpz
 ** code navigation
 - for navigation in current file, I use imenu
 - for navigation between files, you can use cscope or gtags
-- both are good enough for me. I use gtags simply because it's udpated more often
+- both are good enough for me. I use gtags simply because it's updated more often
 - ctags is good for C and simple C++ code. Avoid writing complex C++ code could be a better idea. Then you can use ctags.
 ** flymake (real time syntax check)
 - I found it a huge boost to my productivity
