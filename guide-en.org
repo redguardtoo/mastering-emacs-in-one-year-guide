@@ -36,15 +36,15 @@ She has already known the best, so she has higher expectation.
 For example, the Emacs master expects:
 - a good editor should have a package manager bundled. She is surprised that [[https://sublime.wbond.net/installation][package manager is NOT bundled in some editor]].
 - Broken package could be [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][fixed]] without touching the package's original code.
-- When remote repository is down, she can [[https://github.com/redguardtoo/myelpa][create a repository]] in her memory stick [[https://github.com/redguardtoo/elpa-mirror][in one minute]].
+- When remote repository is down, she can [[https://github.com/redguardtoo/myelpa][create a repository]] in the memory stick [[https://github.com/redguardtoo/elpa-mirror][in one minute]].
 
 In summary, she knows more than Emacs' competitors can implement.
-*** Community behind Emacs is strong
-Emacs use Lisp. Its [[http://en.wikipedia.org/wiki/Lisp_%28programming_language%29][compact and "unusual" syntax]] scares off the weak minds.
+*** Community is strong
+Emacs uses [[http://www.gnu.org/software/emacs/manual/html_node/eintr/index.html][Lisp]]. Its [[http://en.wikipedia.org/wiki/Lisp_%28programming_language%29][compact and "unusual" syntax]] scares off the weak minds.
 *** Emacs is powerful
-IDE is fine for one framework. [[http://www.youtube.com/watch?v=EQAd41VAXWo][Emacs can do everything in great way]].
+IDE is optimized for one framework. [[http://www.youtube.com/watch?v=EQAd41VAXWo][Emacs can do everything in great way]].
 *** Email lives forever
-Emacs is maintained by a [[http://www.gnu.org/][non-profit organization]]. Many competitors die while Emacs stays [[http://en.wikipedia.org/wiki/Emacs#History][during 40 years]].
+Emacs is maintained by a [[http://www.gnu.org/][non-profit organization]]. Competitors die while Emacs stays [[http://en.wikipedia.org/wiki/Emacs#History][during 40 years]].
 *** No overhead
 The installer is a [[http://ftp.gnu.org/gnu/emacs/windows/][50M bytes zip file]]. The program is portable.
 *** What matters is Attitude
@@ -83,14 +83,14 @@ At minimum, you need learn help commands:
 - "M-x describe-variable", hot key "C-h v", display documentation of variable
 - "M-x describe-function", hot key "C-h f", display documentation of function
 - "M-x describe-key", hot key "C-h k", display documentation of function invoke by key
-*** What's your practical problem
+*** Start from practical problem
 Most newbies need a notes taking tool. So [[http://orgmode.org/][Org-mode]] is the answer.
 
-If you don't start by solving real world problem you will lose interest soon. Many people start the journey by learning Lisp, most of them give up in the midway.
+If you don't start by solving real world problem you will lose interest soon. Many people started the journey by learning Lisp. They gave up in the midway.
 *** On the shoulders of giants
-This section is *the most important section* of the whole article!
+This is *the most important section* of the whole article!
 
-I learned this lesson the hard way. At the beginning, I regarded Emacs as a toy. I digged around the internet for cool code I can copy.
+I learned the lesson the hard way. At the beginning, I regarded Emacs as a toy. I digged around the internet for cool code I can copy.
 
 That's totally a waste of time if my goal is to become an Emacs master!
 
@@ -346,7 +346,7 @@ My blog is [[http://blog.binchen.org]].
 
 Please don't ask basic questions, since I've already shown you how to find the answer.
 ** Summary
-Start from pratical problem, follow the best people, reading and practice.
+Start from real world problem, follow the best people, reading and practice.
 
 While I admit that all roads lead to Rome, I need stress that my road does lead to Rome.
 
@@ -354,4 +354,4 @@ This article is published at [[https://github.com/redguardtoo/mastering-emacs-in
 
 Please use github's bug tracker instead of email me. Github notification mail is always in my first priority folder.
 
-Emacs is actually a platform where cool people and addons keep appear. I will update this article from time to time in the future.
+Emacs is actually a platform. Cool people keep appearing. I will update this article from time to time in the future.
