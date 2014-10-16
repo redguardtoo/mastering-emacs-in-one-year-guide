@@ -11,9 +11,9 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20140926
+Version: 20141018
 
-Updated: <2014-09-26 Fri>
+Updated: <2014-10-18 Sat>
 
 Created: [2012-01-31 Tue 15:08]
 
@@ -58,7 +58,7 @@ Newbies may be surprised by following facts:
 
 ** Step by Step Guide
 Some conventions: 
-- "C" means "Ctrl" and "M" means "Alt". 
+- "C" means "Ctrl" and "M" means "Alt"
 - "M-x my-command" means press "Alt" and "x" together, enter "my-command"
 *** Quick start for greenhands of Linux/Unix (OPTIONAL) 
 Here are the steps:
@@ -129,7 +129,7 @@ That's only way to become the padawan of the master.
 For example, I learned [[phttp://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][some advanced Lisp skill]] by [[https://github.com/capitaomorte/yasnippet/issues/256][reporting a bug]]. The bonus is that  bug report is actually a case study. Knowledge from it is hard to forget.
 
 *** Better yourself everyday
-I was inspired by [[https://sites.google.com/site/steveyegge2/tour-de-babel][Steve Yegges' article]]. Here is text quoted from it:
+I was inspired by [[https://sites.google.com/site/steveyegge2/tour-de-babel][Steve Yegges' article]]. Here is the text quoted:
 #+BEGIN_EXAMPLE
 Go look over Paul Nordstrom's shoulder while he works sometime, if you don't believe me. It's a real eye-opener for someone who's used Visual Blub .NET-like IDEs their whole career.
 #+END_EXAMPLE
@@ -178,6 +178,9 @@ Youtube lists the best matched results at the top. So you will always see the sa
 *** EmacsWiki
 [[http://www.emacswiki.org/emacs/][EmacsWiki]] has all the tips you need for tweaking the Emacs. It's actively maintained by the community.
 
+People complains that it's not properly organized so it's hard to find the valuable information.
+
+Actually, *most documents* on EmacsWiki is still far better than any other resources. Please be patient and read *the full content* at specific page.
 *** Emacs Lisp book
 I recommend [[http://www.amazon.com/Writing-GNU-Emacs-Extensions-Glickstein/dp/1565922611][Writing GNU Emacs Extensions]] by Bob Glickstein. I like his writing style and the way he organizes chapters.
 
@@ -198,7 +201,7 @@ For example, people reported that I mixed my personal stuff (email address, full
 
 So I re-organized it and placed private stuff into a independent file named "privacy.el". That file is outside of my Emacs configuration. Then it occurred to me that in corporate environment it was not safe to store plain privacy.el on a shared computer without encryption. After some research, I found Emacs already provided [[http://www.emacswiki.org/emacs/EasyPG][a perfect solution]] since version 23.
 
-In order to get the most benefit of sharing, you need make sure your setup is qualified to share publicly. I hate those guys who hardcode their name like "/home/john/.emacs.d/" in their setup. Unless I happen to be John, I have to waste my time to fix all those stupid names. I suggest ignore any setup with hardcoded things. There are plenty of superiors at github.
+In order to get the most benefit of sharing, you need make sure your setup is qualified to share publicly. I hate those guys who hardcode their family names like "/home/john/.emacs.d/" into their setup. Unless I happen to be John, I have to waste my time to remove all those stupid names. I suggest ignore any setup with hardcoded things. There are plenty of superiors at github.
 *** Dropbox
 Place the documents at Dropbox. Since dropbox will synchronize the documents into the mobile devices, you can study Emacs when commuting.
 ** My favorite Emacs addons
@@ -206,23 +209,23 @@ Not must-have addons. There are many other alternative which are as good as the 
 
 The purpose of the list is to cultivate your taste.
 
-| Name                | Description                        | Alternatives                      |
-|---------------------+------------------------------------+-----------------------------------|
-| [[http://www.emacswiki.org/emacs/Evil][Evil]]                | convert Emacs into vim             | none                              |
-| [[http://orgmode.org][org-mode]]            | [[http://en.wikipedia.org/wiki/Getting_Things_Done][Get Things Done (GTD)]]              | none                              |
-| [[https://github.com/company-mode/company-mode][company-mode]]        | code completion                    | cedet, auto-complete              |
-| [[https://github.com/magnars/expand-region.el][expand-region]]       | selection region efficiently       | none                              |
-| [[https://github.com/nonsequitur/smex][smex]]                | Input command efficiently          | none                              |
-| [[https://github.com/capitaomorte/yasnippet][yasnippet]]           | text template                      | none                              |
-| [[http://www.emacswiki.org/emacs/FlyMake][flymake]]             | syntax check.                      | flycheck                          |
-| [[https://github.com/emacs-helm/helm][helm]]                | a framework to choose candidates   | ido                               |
-| [[http://www.emacswiki.org/emacs/InteractivelyDoThings][ido]]                 | similar to helm                    | helm                              |
-| [[https://github.com/mooz/js2-mode][js2-mode]]            | everything for javascript          | javascript-mode,js-mode,js3-mode  |
-| [[http://www.emacswiki.org/emacs/emacs-w3m][w3m]]                 | web browser                        | Eww                               |
-| [[https://github.com/nicferrier/elnode][elnode]]              | web server                         | none                              |
-| [[https://github.com/Fuco1/smartparens][smartparens]]         | auto insert matched parens         | autopair                          |
-| [[https://github.com/nschum/window-numbering.el][window-numbering.el]] | jump focus between sub-windows     | switch-window.el                  |
-| [[https://github.com/fxbois/web-mode][web-mode]]            | everything for edit HTML templates | nxml-mode、nxhtml-mode、html-mode |
+| Name                | Description                        | Alternatives         |
+|---------------------+------------------------------------+----------------------|
+| [[http://www.emacswiki.org/emacs/Evil][Evil]]                | convert Emacs into vim             | none                 |
+| [[http://orgmode.org][org-mode]]            | [[http://en.wikipedia.org/wiki/Getting_Things_Done][Get Things Done (GTD)]]              | none                 |
+| [[https://github.com/company-mode/company-mode][company-mode]]        | code completion                    | auto-complete        |
+| [[https://github.com/magnars/expand-region.el][expand-region]]       | selection region efficiently       | none                 |
+| [[https://github.com/nonsequitur/smex][smex]]                | Input command efficiently          | none                 |
+| [[https://github.com/capitaomorte/yasnippet][yasnippet]]           | text template                      | none                 |
+| [[http://www.emacswiki.org/emacs/FlyMake][flymake]]             | syntax check.                      | flycheck             |
+| [[https://github.com/emacs-helm/helm][helm]]                | a framework to choose candidates   | ido                  |
+| [[http://www.emacswiki.org/emacs/InteractivelyDoThings][ido]]                 | similar to helm                    | helm                 |
+| [[https://github.com/mooz/js2-mode][js2-mode]]            | everything for javascript          | js-mode              |
+| [[http://www.emacswiki.org/emacs/emacs-w3m][w3m]]                 | web browser                        | Eww                  |
+| [[https://github.com/nicferrier/elnode][elnode]]              | web server                         | none                 |
+| [[https://github.com/Fuco1/smartparens][smartparens]]         | auto insert matched parens         | autopair             |
+| [[https://github.com/nschum/window-numbering.el][window-numbering.el]] | jump focus between sub-windows     | switch-window.el     |
+| [[https://github.com/fxbois/web-mode][web-mode]]            | everything for edit HTML templates | nxml-mode, html-mode |
 
 ** Emacs is way of life
 Emacs guys are basically people who are hacking Lisp code for fun. They get the job done in a creative way. For example, [[http://sachachua.com/blog/][Sacha Chua]] mentioned that [[http://sachachua.com/blog/2012/07/transcript-emacs-chat-john-wiegley/][she let Emacs read the manual when cooking]].
@@ -248,10 +251,12 @@ Nope. Read its README and code comment. The header of the code file usually has 
 Check out [[https://github.com/redguardtoo/emacs.d][my setup]].
 
 Because I do some desktop development. it has less web stuff than Purcell.
-*** As a Vi guy, why should I turn to Emacs?
-I am a Vi guy. I turn to Emacs because it's powerful and it can be extended with Lisp.
+*** Which version I should use?
+v24.3.1 is the latest stable version, it has been released for more than one year without any big issue. It can be installed easily on any platform.
 
-Vi is efficient in text editing because its model editing. In Emacs, I use [[http://www.emacswiki.org/emacs/Evil][Evil]] to simulate Vim.
+I've watched too many people failed because they started from un-stable version!
+*** As a Vi guy, why should I turn to Emacs?
+[[http://www.emacswiki.org/emacs/Evil][Evil]], the best of the best! 
 
 *** I don't like Emacs default key bindings
 [[http://ergoemacs.org/][ergoemacs]] if you prefer Microsoft's key bindings.
@@ -279,7 +284,7 @@ If you are sure it's actually an error message instead of a warning message,
 - Send the output to the author of the setup.
 - Please use bug tracker if possible.
 
-*** My simple setup is more controllable
+*** My own setup is more controllable
 That's what I thought at the beginning. After several months I realized that I could never be as good as a master like Steve Purcell if keeping this way.
 
 While I spend serveral weeks to overcome some minor issues in Emacs setup, Purcell has already installed/developed dozens of cool plugins.
@@ -287,7 +292,7 @@ While I spend serveral weeks to overcome some minor issues in Emacs setup, Purce
 If I cannot win, the only strategy is to join him, that's why I clone his setup and start to report bug for him. Here is [[https://github.com/purcell/emacs.d/issues/6][first issue I reported]]. Besides, reporting bugs also gives me the opportunity to talk with the master.
 
 So don't run away from the master's huge setup. Regard it as a challenge to improve yourself.
-*** Why I cannot add my own plugins after using the master's setup
+*** Why I cannot add my own plugins into master's setup
 Though the quality of Emacs plugins are generally good, they may have compatibility issues. It's usually because plugins are developed by different people. For example, both [[https://github.com/auto-complete][auto-complete]] and [[https://github.com/capitaomorte/yasnippet][yasnippet]] will use TAB key to expand code. So there is confict if I use both plugins.
 
 That's another reason to stick to the master's setup at the beginning.
@@ -313,7 +318,7 @@ Most people lose the interest in Lisp because there is not enough stimulus. You 
 That's why I stress that you need avoid tweaking Emacs. Please copy the master's setup at first.
 
 Unless you have seen how the Lisp code gets your job done, you will not have the enough stimulus to *finish* the lisp course.
-*** After knowing the basic operation of Emacs, what should I learn next?
+*** After knowing the basics, what should I learn next?
 Find your practical problem which only Emacs can do best. Trust me, Emacs is much more powerful than your wildest imagination.
 
 Here is my example:
