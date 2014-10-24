@@ -41,9 +41,9 @@ For example, the Emacs master expects:
 In summary, she knows more than Emacs' competitors can implement.
 *** Community is strong
 Emacs uses [[http://www.gnu.org/software/emacs/manual/html_node/eintr/index.html][Lisp]]. Its [[http://en.wikipedia.org/wiki/Lisp_%28programming_language%29][compact and "unusual" syntax]] scares off the weak minds.
-*** Emacs is powerful
+*** It's powerful
 IDE is optimized for one framework. [[http://www.youtube.com/watch?v=EQAd41VAXWo][Emacs can do everything in great way]].
-*** Email lives forever
+*** It lives forever
 Emacs is maintained by a [[http://www.gnu.org/][non-profit organization]]. Competitors die while Emacs stays [[http://en.wikipedia.org/wiki/Emacs#History][during 40 years]].
 *** No overhead
 The installer is a [[http://ftp.gnu.org/gnu/emacs/windows/][50M bytes zip file]]. The program is portable.
@@ -201,14 +201,17 @@ For example, people reported that I mixed my personal stuff (email address, full
 
 So I re-organized it and placed private stuff into a independent file named "privacy.el". That file is outside of my Emacs configuration. Then it occurred to me that in corporate environment it was not safe to store plain privacy.el on a shared computer without encryption. After some research, I found Emacs already provided [[http://www.emacswiki.org/emacs/EasyPG][a perfect solution]] since version 23.
 
-In order to get the most benefit of sharing, you need make sure your setup is qualified to share publicly. I hate those guys who hardcode their family names like "/home/john/.emacs.d/" into their setup. Unless I happen to be John, I have to waste my time to remove all those stupid names. I suggest ignore any setup with hardcoded things. There are plenty of superiors at github.
+In order to get the most benefit of sharing, you need make sure your setup is *qualified to share publicly*. Never mix your personal things into it.
 *** Dropbox
-Place the documents at Dropbox. Since dropbox will synchronize the documents into the mobile devices, you can study Emacs when commuting.
+I use [[https://www.dropbox.com][Dropbox]] to back up documents. Since dropbox will synchronize the documents into the mobile devices, I can study Emacs when commuting.
 ** My favorite Emacs addons
-Not must-have addons. There are many other alternative which are as good as the ones in the list.
+Not must-have addons. There are many other alternative which are as good as the listed.
 
-The purpose of the list is to cultivate your taste.
+My purpose here is to solve help new guys on two problems on choose plugins:
+1. use plugins out of maintenance
+2. use not-the-best plugins
 
+So here is the list:
 | Name                | Description                        | Alternatives         |
 |---------------------+------------------------------------+----------------------|
 | [[http://www.emacswiki.org/emacs/Evil][Evil]]                | convert Emacs into vim             | none                 |
