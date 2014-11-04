@@ -12,9 +12,9 @@
   :END:
 作者：陈斌(redguardtoo)
 
-版本号：20141018
+版本号：20141104
 
-更新时间：<2014-10-18 Sat>
+更新时间：<2014-11-04 Tue>
 
 原创时间：<2012-01-31 Tue>
 
@@ -203,7 +203,7 @@ google "emacs-related-keywords site:stackoverflow.com"
 读EmacsWiki的最佳方法是,选定一个特定主题,从头读到尾.这样你对特定主题的最新进展都了解了.是否要采用EmacsWiki的建议另当别论.
 
 *** Emacs Lisp 书籍推荐(可选)
-[[http://www.amazon.com/Writing-GNU-Emacs-Extensions-Glickstein/dp/1565922611][<Writing GNU Emacs Extensions]] by Bob Glickstein是Emacs Lisp编程书籍中最好的.生动,例子丰富.作者用心安排了书的结构.例如,他很早就介绍了 defadvice 的用法.我很认同这点,defadvice 是 Emacs Lisp 语言的精华.
+[[http://www.amazon.com/Writing-GNU-Emacs-Extensions-Glickstein/dp/1565922611][Writing GNU Emacs Extensions]] by Bob Glickstein是Emacs Lisp编程书籍中最好的.生动,例子丰富.作者用心安排了书的结构.例如,他很早就介绍了 defadvice 的用法.我很认同这点,defadvice 是 Emacs Lisp 语言的精华.
 
 Xah Lee 提供 [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费 Emacs Lisp 教程]] 也相当不错.
 
@@ -366,6 +366,17 @@ Emacs 是个开放平台,其众多插件 release 之前并不一定有严格的�
 以上讨论的都是后端引擎.
 
 就前端界面来说,做的比较好的是[[https://github.com/company-mode/company-mode][company-mode]],维护也很活跃,你可以就特定语言如何配置company-mode咨询其开发者.
+*** 网页浏览
+强烈建议使用[[https://github.com/mooz/keysnail/][Keysnail]].
+
+这是最佳的,我已试用过*所有*可选项.
+*** 邮件
+我用[[http://www.gnus.org/][Gnus]].
+但是有很多其他方案.
+
+如你必须访问Microsoft Exchange Servers, 用[[http://davmail.sourceforge.net/][Davmail]].
+
+用了Davmail后, 还可以用[[http://getpopfile.org/][Popfile]] 来分捡邮件. Davmail+Popfile让我生活在天堂,如果你在那种每天要收到几百电邮的公司工作,你就懂我的意思了.
 *** 为什么 Emacs 启动时从服务器 (elpa) 安装第三方软件包 (package) 会失败?
 请启动 Emacs 后,运行 `M-x package-refresh-contents` 以从服务器更新最新的软件索引,然后重启 Emacs 即可.
 

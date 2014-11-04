@@ -11,9 +11,9 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20141018
+Version: 20141104
 
-Updated: <2014-10-18 Sat>
+Updated: <2014-11-04 Tue>
 
 Created: [2012-01-31 Tue 15:08]
 
@@ -305,6 +305,16 @@ When you have enough knowledge about environment variables and pipe. You can che
 
 *** Is code-navigation and code-completion as good as IDE?
 Thanks to [[http://clang.llvm.org/][Clang]] && [[http://www.gnu.org/software/global/][GNU Global]], C++ is perfect now. Support for other languages are also good enough. 
+*** What about web browsing?
+I strongly recommend Firefox plus [[https://github.com/mooz/keysnail/][Keysnail]].
+
+This is the perfect solution for Emacs fans. Trust me, I've already tried every possible solution before giving this answer.
+
+*** Email in Emacs?
+I use [[http://www.gnus.org/][Gnus]]. But there are many alternatives. If you have to fetch email from Microsoft Exchange Servers, please use [[http://davmail.sourceforge.net/][Davmail]].
+
+If you use Davmail, you can also use [[http://getpopfile.org/][Popfile]] to sort emails. Davmail+Popfile is the best solution in the world!
+
 *** Why Emacs cannot download packages?
 If you are living in North Korea, Iran, China, you need below command line to start Emacs:
 #+BEGIN_SRC elisp
