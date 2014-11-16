@@ -191,17 +191,15 @@ The code to be inserted into ~/.emacs:
         (shell-command "hostname" t)
         (goto-char (point-max))
         (delete-char -1)
-        (buffer-string))
-      )
+        (buffer-string)))
 
 (defun at-office ()
   (interactive)
   (and (string= my-hostname "my-sydney-workpc")
        (not (or (string= my-hostname "homepc")
                 (string= my-hostname "eee")
-                ))
-       )
-  )
+                ))))
+
 (setq user-full-name "My Name"
       user-mail-address (if (at-office) "me@mycompany.com" "me@gmail.com")
       )
@@ -215,13 +213,13 @@ Key points:
 *** Classify email
 I use [[http://getpopfile.org/][Popfile]]. A million times better than Gmail's own filter.
 
-You may think [[http://www.google.com/inbox/][Google's Inbox]] is dfferent. Trust me, it's not worth your time. You only need Popfile!
+You may think [[http://www.google.com/inbox/][Google's Inbox]] equals to Popfile.. Trust me, it's not worth your time. You only need Popfile!
 
-Popfile is open sourced. The data is stored *locally* with my full control. For example, popfile still works when I switch the mail server.
+Popfile is open sourced. The data is stored *locally* with my full control. Popfile still works if I switch the mail server.
 
-For example, after being trained by your Gmail date, Popfile becomes *smarter*. You can switch the smarter Popfile into your office's Exchange Mail Server. Popfile will *classify your work mails* properly.
+For example, after being trained by your Gmail data, Popfile becomes *smarter*. You can use the smarter Popfile to classify mails from your office's Exchange Mail Server.
 
-I'm 99% sure this solution will work because I've been using it for a very long time. I take pity on my colleagues who know only Outlooks.
+I'm 100% sure this solution will work because I've been using it for a very long time. I take pity on my colleagues who know only Outlooks.
 
 Check [[http://blog.binchen.org/posts/use-popfile-at-linux.html]] for details.
 *** Send HTML mail
