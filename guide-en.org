@@ -60,7 +60,7 @@ Newbies may be surprised by following facts:
 Some conventions: 
 - "C" means "Ctrl" and "M" means "Alt"
 - "M-x my-command" means press "Alt" and "x" together, enter "my-command"
-*** Quick start for greenhands of Linux/Unix (OPTIONAL) 
+*** Quick start for greenhorns of Linux/Unix (OPTIONAL) 
 Here are the steps:
 - Install Emacs 24
 - Don't install any plugins
