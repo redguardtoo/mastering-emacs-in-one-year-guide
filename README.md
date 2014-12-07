@@ -1,0 +1,2 @@
+# mastering-emacs-in-one-year-guide
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/redguardtoo/mastering-emacs-in-one-year-guide?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
