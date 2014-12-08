@@ -262,6 +262,8 @@ Because I do some desktop development. it has less web stuff than Purcell.
 v24.3.1 is the latest stable version, it has been released for more than one year without any big issue. It can be installed easily on any platform.
 
 I've watched too many people failed because they started from un-stable version!
+
+Though v24.4 is released, it has some compatibility issues with third party plugins. I suggest you wait at least half a year before switching to the new version.
 *** As a Vi guy, why should I turn to Emacs?
 [[http://www.emacswiki.org/emacs/Evil][Evil]], the best of the best! 
 
@@ -309,6 +311,8 @@ Install Cygwin!
 
 When you have enough knowledge about environment variables and pipe. You can check [[http://stackoverflow.com/questions/3286723/emacs-cygwin-setup-under-windows/13245173#13245173][My answer at stackoverflow]] to use native windows version.
 
+At minimum, you need set the environment variables HOME and PATH if you prefer non-cygwin way.
+
 *** Is code-navigation and code-completion as good as IDE?
 Thanks to [[http://clang.llvm.org/][Clang]] && [[http://www.gnu.org/software/global/][GNU Global]], C++ is perfect now. Support for other languages are also good enough. 
 *** What about web browsing?
@@ -319,7 +323,7 @@ This is the perfect solution for Emacs fans. Trust me, I've already tried every 
 *** Email in Emacs?
 I use [[http://www.gnus.org/][Gnus]]. But there are many alternatives. If you have to fetch email from Microsoft Exchange Servers, please use [[http://davmail.sourceforge.net/][Davmail]].
 
-If you use Davmail, you can also use [[http://getpopfile.org/][Popfile]] to sort emails. Davmail+Popfile is the best solution in the world!
+If you use Davmail, you can also use [[http://getpopfile.org/][Popfile]] to sort emails. Davmail+Popfile is the best solution!
 
 *** Why Emacs cannot download packages?
 If you are living in North Korea, Iran, China, you need below command line to start Emacs:
@@ -328,19 +332,19 @@ http_proxy=your-proxy-server-ip:port emacs -nw
 #+END_SRC
 
 How to configure proxy server is not covered here.
-*** As a greenhand of Emacs, should I learn Emacs lisp at first?
+*** As a greenhorn of Emacs, should I learn Emacs Lisp at first?
 NO.
 
-Most people lose the interest in Lisp because there is not enough stimulus. You can finish the Java/C#/Javascript course because that's required by profitable jobs.
+Most people lose the interest in Lisp because there its strange syntax and there not many Lisp jobs.
 
-That's why I stress that you need avoid tweaking Emacs. Please copy the master's setup at first.
+That's why I stress that you need avoid tweaking Emacs at the beginning. Please copy the master's setup at first.
 
-Unless you have seen how the Lisp code gets your job done, you will not have the enough stimulus to *finish* the lisp course.
+Unless you have seen how the Lisp gets your job done, you will not have the *enough stimulus to finish the Lisp course*.
 *** After knowing the basics, what should I learn next?
 Find your practical problem which only Emacs can do best. Trust me, Emacs is much more powerful than your wildest imagination.
 
 Here is my example:
-- When I use wordpress blog, I use [[https://github.com/punchagan/org2blog][org2blog]] to post articles. It's ten times faster than any other client.
+- When I use Wordpress blog, I use [[https://github.com/punchagan/org2blog][org2blog]] to post articles. It's ten times faster than any other client.
 - I installed cmake-mode to do the cross-platform development with [[http://www.cmake.org/Wiki/CMake/Editors/Emacs][cmake]].
 - window-numbering.el is useful when jumping focus between sub-windows.
 - When I work for some huge projects, I use [[https://github.com/redguardtoo/evil-nerd-commenter][evil-nerd-commenter]] to comment code lines because I need deal with too many programming languages. 

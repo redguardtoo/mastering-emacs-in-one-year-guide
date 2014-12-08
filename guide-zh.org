@@ -162,13 +162,13 @@ IDE针对特定语言或框架优化,而Emacs完成通用任务更有效.
 
 帮助高手,你的起点就高,还有得到指点的好处.
 *** 持续改进
-前提是起点要高,要在高手已有工作上改善.即使是微小的改善,如果坚持一段时间,就是巨大的进步了,然后你可以在这一点上笑傲江湖.
+前提是起点高,要在高手已有工作上改善.即使是微小的改善,如果坚持一段时间,就是巨大的进步了,你就可以在这一点上笑傲江湖.
 
-然后找出另一点高手需要改善的地方,使用同样的方法.
+再找出另一高手需要改善的地方,使用同样的方法.
 
-例如,默认的Emacs移动子窗口焦点不是很方便.需按"C-x O"多次.我找到了emacs插件[[https://github.com/dimitri/switch-window][switch-window]],只要按"C-x O"一次,会有提示子窗口编号,接下来只要输入编号就可以了.但还有改善空间,我又找到了[[https://github.com/nschum/window-numbering.el][window-number.el]],只要按"M-NUM"就可以了.
+例如,默认在Emacs中移动子窗口焦点不是很方便.需按"C-x O"多次.我找到了emacs插件[[https://github.com/dimitri/switch-window][switch-window]],只要按"C-x O"一次,会有提示子窗口编号,接下来只要输入编号就可以了.但还有改善空间,我又找到了[[https://github.com/nschum/window-numbering.el][window-number.el]],只要按"M-NUM"就可以了.
 
-window-number.el已完美,但我又想到了Alt键还是有点慢,我结合[[https://gitorious.org/evil/pages/Home][evil]]和[[https://github.com/cofi/evil-leader][evil-leader]],可以按逗号和数字飞速切换子窗口了.
+window-number.el已完美,但Alt键还是有点慢,我结合[[https://gitorious.org/evil/pages/Home][evil]]和[[https://github.com/cofi/evil-leader][evil-leader]],可以按逗号和数字飞速切换子窗口了.
 *** 加入社区更上一层楼
 最重要的是专一.
 
@@ -188,7 +188,7 @@ GitHub 的版本控制服务很好.现在它的社区化倾向越来越强了,�
 最好的是[[http://planet.emacsen.org/][Planet Emacsen]],多个Emacs博客的集合.
 
 **** Quora.com
-我偏爱的是"列举最有用的命令"之类的具体问题.很多回答大开眼界.即使我已相当精通Emacs.
+我偏爱的是"列举最有用的命令"之类的具体问题.很多回答大开眼界.即使我已精通Emacs.
 
 那种"如何入门"的问题,人人都能插上一脚.即使有高水平的回答,也淹没在众多平庸回答中.
 
@@ -305,10 +305,11 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 - 已安装了拼音输入法
 - C++ 支持强大
 
-注意,Purcell是顶尖Web开发者,他会试用各种最新的Web技术,如果你用了我的配置,Web类插件更新会滞后一段时间.另外我的工具链和Purcell不完全一致.你自己权衡了.
+注意,Purcell作为顶尖Web开发者,会试用各种最新的Web技术,而我的配置Web类插件更新会滞后一段时间.另外我的工具链和Purcell不完全一致.你自己权衡了.
 *** 该使用Emacs的哪个版本
-目前最新稳定版是Emacs 24.3.1,建议不要用高于此版本的Emacs.通常不用担心版本问题.主流的Linux发行版会处理.
+目前稳定版是Emacs 24.3.1,建议不要用高于此版本的Emacs.通常不用担心版本问题.主流的Linux发行版会处理.
 
+24.4虽然已发布,但还有些小问题,我建议再等半年左右.
 *** 我已是Vi高手,为什么要转阵营?
 嘿嘿,我也是Vi精通后转到Emacs的.原因就是因为Emacs的强大(例如和 gdb 的完美结合)以及其脚本语言是Lisp.
 
