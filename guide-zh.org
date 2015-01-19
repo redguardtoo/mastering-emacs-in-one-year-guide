@@ -261,7 +261,7 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 以下是清单：
 | 名称                | 说明                                                | 同类插件             |
 |---------------------+-----------------------------------------------------+----------------------|
-| [[https://gitorious.org/evil/][Evil]]                | 将 Emacs 变为 vi                                    | viper                |
+| [[https://gitorious.org/evil/][Evil]]                | 将 Emacs 变为 vim                                   | viper                |
 | [[http://orgmode.org/][Org]]                 | org-mode,全能的 note 工具                           | 没有                 |
 | [[https://github.com/company-mode/company-mode][company-mode]]        | 自动完成输入,支持各种语言和后端                     | auto-complete        |
 | [[https://github.com/magnars/expand-region.el][expand-region]]       | 按快捷键选中当前文本,可以将选择区域扩展或者收缩     | 不知道               |
