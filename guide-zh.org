@@ -12,9 +12,9 @@
   :END:
 作者：陈斌(redguardtoo)
 
-版本号：20141202
+版本号：20150122
 
-更新时间：<2014-12-02 Tue>
+更新时间：<2015-01-22 Thu>
 
 原创时间：<2012-01-31 Tue>
 
@@ -124,7 +124,7 @@ IDE针对特定语言或框架优化,而Emacs完成通用任务更有效.
 
 虽然Emacs无所不能,但是饭也要一口一口吃.有时候退一步进两步.
 
-例如,我一直以为Emacs的中文显示很完美,所以搞不懂为什么有人会在字体配置上花那么多时间.在陆续接到反馈后,我才搞明白原来是因为我一直在终端下使用Emacs,终端软件可以完美显示中文字体,所以就没Emacs什么事了.需要配置字体的人用的是图形界面Emacs.
+例如,我一直以为Emacs的中文显示很完美,所以搞不懂为什么有人会在字体配置上花那么多时间.在陆续接到反馈后,我才明白原来是因为我一直在终端下使用Emacs,终端软件可以完美显示中文字体,所以就没Emacs什么事了.需要配置字体的人用的是图形界面Emacs.
 
 当初只在终端下使用Emacs是因为需连接到远程服务器.我认为这是重点.甚至为此放弃了漂亮的配色主题(后来发觉此牺牲毫无必要).
 
@@ -298,8 +298,13 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 *** Steve Purcell 的配置是否有文档可以参考？
 除了 README 外没有,我主要是通过看 EmacsWiki 和源代码来了解.窍门是源代码文件的头部有使用指南.
 
+*** 高手的配置是否太重量级?
+从性能和资源消耗的角度来讲,高手的配置都是轻量级的.因为他们知道如何优化.
+
+比如Emacs有一种叫[[http://www.gnu.org/software/emacs/manual/html_node/elisp/Autoload.html][Autoload]]的技术. 只有当你用到模块的某一功能时那个模块才会被载入内存. 我推荐的高手都知道这类技巧.
+
 *** 有没有更简单的配置？
-那你可用 [[https://github.com/redguardtoo/emacs.d][我的配置]]：
+可用 [[https://github.com/redguardtoo/emacs.d][我的配置]]：
 - 去掉了Git依赖.
 - 网络也不是必须的
 - 已安装了拼音输入法
@@ -309,9 +314,9 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 *** 该使用Emacs的哪个版本
 目前稳定版是Emacs 24.3.1,建议不要用高于此版本的Emacs.通常不用担心版本问题.主流的Linux发行版会处理.
 
-24.4虽然已发布,但还有些小问题,我建议再等半年左右.
+24.4虽然已发布,但还有些小问题,我建议再等半年左右.也也就是说,2015年下半年可以考虑升级.
 *** 我已是Vi高手,为什么要转阵营?
-嘿嘿,我也是Vi精通后转到Emacs的.原因就是因为Emacs的强大(例如和 gdb 的完美结合)以及其脚本语言是Lisp.
+嘿嘿,我也是Vi精通后转到Emacs的.就是因为Emacs的强大(例如和 gdb 的完美结合)以及其脚本语言是Lisp.
 
 当然Vi的多模式编辑和快捷键比Emacs要高效得多,所以最佳方案是Vi+Emacs.
 
@@ -331,14 +336,16 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 
 目前很多高手在用 [[http://www.emacswiki.org/Smex][Smex]],可飞快输入命令,快捷键实际上不需要了.
 *** 使用牛人配置后,界面有些奇怪的 bug,怎么改?
-不要改! 参考上文 [[站在巨人的肩膀上]] 一章,你觉得奇怪是因为缺乏经验,把某些特性误认为是 bug.请坚持至少一年.
+不要改! 参考上文[[站在巨人的肩膀上]]一章,你觉得奇怪是因为缺乏经验,把某些特性误认为是bug.请坚持至少一年.
 
-例如,有人向我反映,在编辑任何文本的时候,会发觉右边约第 80 列处总有一竖线,希望能去掉.这实际上是一特性,提醒用户每一行宽度不要超过第80列.这是 [[http://www.emacswiki.org/emacs/EightyColumnRule][每行不要超过 80 列的原因]].
+例如,有人反映右边第80列处总有一竖线,希望能去掉.
 
-我建议你第一年的原则应 *尽量理解而不妄加判断*.
+实际上这是一特性,提醒用户一行宽度不要超过第80列. 这是 [[http://www.emacswiki.org/emacs/EightyColumnRule][每行不要超过 80 列的原因]].
+
+我建议第一年应 *尽量理解而不妄加判断*.
 
 *** 已下载更新软件包,但是没有任何作用,也没有任何错误信息
-删除 home 目录下的 .emacs、~/.emacs.d/init.el 就是取代原来的 .emacs.
+删除HOME目录下的".emacs", "~/.emacs.d/init.el"就是取代原来的".emacs".
 *** 任何关于如何配置的问题
 - 读官方教程
 - 善用 google 和我提供的信息
@@ -347,7 +354,7 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 问：在 .emacs.d 中的 init.el 文件起什么作用？
 答：google "emacswiki init.el".
 *** 使用牛人配置后启动报错,如何解决？
-首先确认你已装上了 *你需要的* 第三方命令行工具,这些工具是可选的,清单见[[https://github.com/redguardtoo/emacs.d][我的README]].
+先确认已装上了 *你需要的* 第三方命令行工具,这些工具是可选的,清单见[[https://github.com/redguardtoo/emacs.d][我的README]].
 
 如排除了以上原因,带上"--debug-init"参数重新启动,然后将错误信息及环境报告到对应的开发者.
 
@@ -394,9 +401,9 @@ Emacs 是个开放平台,其众多插件 release 之前并不一定有严格的�
 
 这是最佳的,我已试过 *所有* 可选项.
 *** 邮件
-我用[[http://www.gnus.org/][Gnus]]. 但是有很多其他方案.
+我用[[http://www.gnus.org/][Gnus]]. 但有很多其他方案.
 
-如你必须访问Microsoft Exchange Servers, 用[[http://davmail.sourceforge.net/][Davmail]].
+如你必须访问Microsoft Exchange Servers, 还要用[[http://davmail.sourceforge.net/][Davmail]].
 
 用了Davmail后, 还可以用[[http://getpopfile.org/][Popfile]] 来分捡邮件. Davmail+Popfile让我生活在天堂,如果你在那种每天要收到几百电邮的公司工作,你就懂我的意思了.
 *** 为什么 Emacs 启动时从服务器 (elpa) 安装第三方软件包 (package) 会失败?
@@ -454,7 +461,7 @@ Emacs Lisp又是一种只用于Emacs的语言,有大量术语需要掌握.如"Bu
 - 做跨平台C++桌面开发,装了cmake-mode
 - 需在多个子窗口间跳来跳去,所以装了[[https://github.com/nschum/window-numbering.el][window-numbering.el]]
 - 大项目需同时调试多种语言,所以装了[[https://github.com/redguardtoo/evil-nerd-commenter][evil-nerd-commenter]],这样不用记特定语言的语法就可注释掉代码.
-***  如何学习org-mode?
+*** 如何学习org-mode?
 [[http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html][Org-mode简明手册]] 是不错的中文教程.
 
 最好的英文教程是Carsten Dominik(Org-mode发明者)在[[http://orgmode.org/talks.html][google tech talks上的演讲]].其要点为org-mode本质是一个文本文件,只要记住按TAB展开或者缩进条目就可以了.其他特性可慢慢学.

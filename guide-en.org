@@ -11,9 +11,9 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20141202
+Version: 20150122
 
-Updated: <2014-12-02 Tue>
+Updated: <2015-01-22 Thu>
 
 Created: [2012-01-31 Tue 15:08]
 
@@ -106,7 +106,7 @@ Please don't repeat my mistake. Just follow Steven Purcell!
 
 Let me be blunt. You are a newbie, you'd better study top geek's code. Don't try to be "creative" at this stage. You won't *create anything* when re-inventing the wheel.
 
-For example, some readers tell me that Emacs has too many hotkeys. They can't memorize all of them. This is typical behavior in newbies. They assume that top geeks can remember more key bindings.
+For example, some readers tell me that Emacs has too many hotkeys. They can't memorize all of them. This is typical in newbies. They assume that top geeks can remember more key bindings.
 
 Wrong!
 
@@ -120,7 +120,7 @@ When I say "on the shoulders of giants", I'm stressing that you need set your st
 
 This section is discussing *the best way to be good, not the easiest way*.
 
-There is a difference between best and easiest. For example, a setup using Vim key bindings is NOT easy but definitely efficient.
+There is a difference between best and easiest. For example, a setup using Vim key bindings is NOT easy but definitely best.
 
 If you are still not convinced, consider my reasons:
 - Those giants are more intelligent than me. They are more harder working than me. How can I reach their level as quickly as possible?
@@ -234,7 +234,7 @@ So I list the actively-maintained-and-high-quality plugins to help new people st
 | [[https://github.com/nschum/window-numbering.el][window-numbering.el]] | jump focus between sub-windows     | switch-window.el     |
 | [[https://github.com/fxbois/web-mode][web-mode]]            | everything for edit HTML templates | nxml-mode, html-mode |
 
-** Emacs is way of life
+** Emacs is a way of life
 Emacs guys are basically people who are hacking Lisp code for fun. They get the job done in a creative way. For example, [[http://sachachua.com/blog/][Sacha Chua]] mentioned that [[http://sachachua.com/blog/2012/07/transcript-emacs-chat-john-wiegley/][she let Emacs read the manual when cooking]].
 
 So *what benefit* can I get after knowing the Emacs way?
@@ -254,6 +254,11 @@ Go to [[https://github.com/redguardtoo/emacs.d]] and check the section "Install 
 Then follow the steps at [[https://github.com/redguardtoo/emacs.d/blob/master/BETA.org]].
 *** Any documentation on Steve Purcell's setup?
 Nope. Read its README and code comment. The header of the code file usually has some usage guide.
+*** Is Master's setup too heavy weight?
+No. It must be lightweight. Only newbies' setup is heavy weight because they don't know how to optimize their Elisp code.
+
+There is a technique called [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Autoload.html][Autoload]]. It will load a module when and only when user actually use it. I'm 100% sure all the setup I mentioned has applied this technique.
+
 *** Any simpler setup than Steve Pucell's?
 Check out [[https://github.com/redguardtoo/emacs.d][my setup]].
 
