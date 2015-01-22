@@ -20,7 +20,7 @@ Copyright: This work is licensed under the [[http://creativecommons.org/licenses
 ** Introduction
 Gnus is a nice email client.
 
-People think it hard because they get lost in its features. It would be much easier if they learned the *essential 5% features* and ignore the remaining 95%.
+People think it is hard because they get lost in its features. It would be much easier if they learned the *essential 5% features* and ignore the remaining 95%.
 
 So here is my guide on that 5%.
 
