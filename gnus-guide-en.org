@@ -275,6 +275,10 @@ Here is a sample setup,
 Gnus counts by individual mail. Gmail count by mail thread.
 *** Subscribe "[Gmail]/Sent Mail" folder
 So Gnus can track *all your sent mails*. Since Gmail backs up sent mails in "[Gmail]/Sent Mail" folder, subscribe it in Gnus.
+*** Reconnect mail server
+"M-x gnus-group-enter-server-mode" to go into server list.
+
+Move the cursor to "offline" server then "M-x gnus-server-open-server".
 ** My setup
 The content of ~/.gnus.el,
 #+BEGIN_SRC elisp
