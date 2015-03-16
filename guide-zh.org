@@ -99,9 +99,11 @@ IDE针对特定语言或框架优化,而Emacs完成通用任务更有效.
 - 理解Emacs可爱之处
 - 知道Emacs如何和其他软件交互
 *** 读官方教程
-打开 Emacs 后,同时按下 Alt 和 X 健,输入 help-with-tutorial(后文中,类似快捷键以简写 `M-x help-with-tutorial` 代替),回车.
+按以下步骤阅读教程:
+- 不安装任何插件打开Emacs, 比如在Shell中运行命令"emacs -nw -Q"
+- 同时按下 Alt 和 X 健,输入 help-with-tutorial(类似快捷键后文简写为`M-x help-with-tutorial` 代替),回车.
 
-仅需半小时.关于 Emacs 的多难学的谬论可以休矣,因为半小时的代价微不足道.想想你去年有多少小时白白虚度了吧.
+仅需半小时.关于Emacs多难学的谬论可以休矣.半小时的代价微不足道.想想你去年了多少个半小时吧.
 
 这步是必须的,不要跳过!
 
@@ -325,14 +327,18 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 现在我是 *神用编辑器之神*!
 
 *警告*,Steve Purcell和我默认都启用了Vim的快捷键,不习惯可打开~/.emacs.d/init.el,将其中一行代码注释掉,细节参考README.
+*** 为什么很多Vim高手不能接受Evil?
+因为他们对Vim快捷键做了深度配置.Emacs默认要经常按Ctrl键,如自定义的Vim快捷键也用Ctrl键,难免有冲突.
+
+解决办法是大家都使[[http://stackoverflow.com/questions/1764263/what-is-the-leader-in-a-vimrc][Leader]](Vim间建支持,Emacs需要[[https://github.com/cofi/evil-leader][安裝第三方插件]]).
 *** 不习惯默认快捷键,怎么办？
 *忍*!
 
-默认快捷键经过几十年考验,相当高效,未成为高手前还是用默认快捷键.
+默认快捷键经过几十年考验,相当高效,未成为高手前还是要忍.
 
 如一定要在用 Windows 快捷键的,可考虑 [[http://ergoemacs.org/][ergoemacs]].
 *** 快捷键太多记不住怎么办?
-没必要记,我也只记常用的十几个快捷键.顺其自然,多用自然记住,不用就忘掉,很正常.
+没必要记,我也只记常用的十几个快捷键.顺其自然,多用自然记住,不用就忘,很正常.
 
 目前很多高手在用 [[http://www.emacswiki.org/Smex][Smex]],可飞快输入命令,快捷键实际上不需要了.
 *** 使用牛人配置后,界面有些奇怪的 bug,怎么改?

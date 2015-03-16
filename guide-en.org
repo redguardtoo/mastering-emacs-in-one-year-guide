@@ -73,7 +73,9 @@ Use Emacs in this way for several days in order to understand:
 - Why people love Emacs
 - How Emacs interact with other programs
 *** Read the official tutorial
-Start Emacs, "M-x help-with-tutorial".
+Steps to read tutorial
+- Start Emacs with minimum setup. I suggest running command "emacs -nw -Q" in shell
+- "M-x help-with-tutorial"
 
 This tutorial takes half an hour. Not too much time for a life time skill.
 
@@ -272,6 +274,12 @@ Though v24.4 is released, it has some compatibility issues with third party plug
 *** As a Vi guy, why should I turn to Emacs?
 [[http://www.emacswiki.org/emacs/Evil][Evil]], the best of the best! 
 
+*** Why some Vim guys cannot accept Evil?
+It's because their customized key bindings conflict with Emacs/Evil default key bindings.
+
+The solution is to use [[http://stackoverflow.com/questions/1764263/what-is-the-leader-in-a-vimrc][Leader Key]] in both Emacs and Vim.
+
+Please note in Emacs you need install a [[https://github.com/cofi/evil-leader][third party plugin]] for this solution.
 *** I don't like default key bindings
 [[http://ergoemacs.org/][ergoemacs]] if you prefer Microsoft's key bindings.
 *** Too many key bindings to memorise
