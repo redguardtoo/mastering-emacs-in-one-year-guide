@@ -11,9 +11,9 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20150122
+Version: 20150317
 
-Updated: <2015-01-22 Thu>
+Updated: <2015-03-17 Tue>
 
 Created: [2012-01-31 Tue 15:08]
 
@@ -47,7 +47,7 @@ IDE is optimized for one framework. [[http://www.youtube.com/watch?v=EQAd41VAXWo
 Emacs is maintained by a [[http://www.gnu.org/][non-profit organization]]. Competitors die while Emacs stays [[http://en.wikipedia.org/wiki/Emacs#History][during 40 years]].
 *** No overhead
 The installer is a [[http://ftp.gnu.org/gnu/emacs/windows/][50M bytes zip file]]. The program is portable.
-*** What matters is Attitude
+*** What matters is attitude
 If I could only give one piece of advice, it would be *being open minded*. 
 
 Newbies may be surprised by following facts:
@@ -134,7 +134,7 @@ Anyway, if Purcell is too challenging to follow (What a pity, BTW), there is mor
 *** Report bugs
 That's only way to become the padawan of the master.
 
-For example, I learned [[phttp://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][some advanced Lisp skill]] by [[https://github.com/capitaomorte/yasnippet/issues/256][reporting a bug]]. The bonus is that  bug report is actually a case study. Knowledge from it is hard to forget.
+For example, I learned [[phttp://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][some advanced Lisp skill]] by [[https://github.com/capitaomorte/yasnippet/issues/256][reporting a bug]]. The bonus is that bug report is actually a case study. Knowledge from such a case study is hard to forget.
 
 *** Better yourself everyday
 I was inspired by [[https://sites.google.com/site/steveyegge2/tour-de-babel][Steve Yegges' article]]. Here is the text quoted:
@@ -280,6 +280,12 @@ It's because their customized key bindings conflict with Emacs/Evil default key 
 The solution is to use [[http://stackoverflow.com/questions/1764263/what-is-the-leader-in-a-vimrc][Leader Key]] in both Emacs and Vim.
 
 Please note in Emacs you need install a [[https://github.com/cofi/evil-leader][third party plugin]] for this solution.
+
+The other solution is to stay inside the comfort zone of vim.
+
+That's totally fine if you are OK without Org-mode and Lisp.
+
+Or else maybe you can read the above section "What matters is attitude"?
 *** I don't like default key bindings
 [[http://ergoemacs.org/][ergoemacs]] if you prefer Microsoft's key bindings.
 *** Too many key bindings to memorise
@@ -327,16 +333,18 @@ When you have enough knowledge about environment variables and pipe. You can che
 At minimum, you need set the environment variables HOME and PATH if you prefer non-cygwin way.
 
 *** Is code-navigation and code-completion as good as IDE?
-Thanks to [[http://clang.llvm.org/][Clang]] && [[http://www.gnu.org/software/global/][GNU Global]], C++ is perfect now. Support for other languages are also good enough. 
+Thanks to [[http://clang.llvm.org/][Clang]] && [[http://www.gnu.org/software/global/][GNU Global]], C++ is perfect now. Support for other languages are also good enough except Java and C#.
+
+I suggesting you using IDE when dealing with Java and C# in big projects.
 *** What about web browsing?
 I strongly recommend Firefox plus [[https://github.com/mooz/keysnail/][Keysnail]].
 
-This is the perfect solution for Emacs fans. Trust me, I've already tried every possible solution before giving this answer.
+This is the perfect solution for Emacs fans. Trust me, I've already investigated every solution.
 
 *** Email in Emacs?
-I use [[http://www.gnus.org/][Gnus]]. But there are many alternatives. If you have to fetch email from Microsoft Exchange Servers, please use [[http://davmail.sourceforge.net/][Davmail]].
+I use [[http://www.gnus.org/][Gnus]]. But there are many alternatives. If you have to fetch email from Microsoft Exchange Servers, you need [[http://davmail.sourceforge.net/][Davmail]].
 
-If you use Davmail, you can also use [[http://getpopfile.org/][Popfile]] to sort emails. Davmail+Popfile is the best solution!
+I also use [[http://getpopfile.org/][Popfile]] to sort emails. Davmail+Popfile is the best solution!
 
 *** Why Emacs cannot download packages?
 If you are living in North Korea, Iran, China, you need below command line to start Emacs:
@@ -363,19 +371,19 @@ Here is my example:
 - When I work for some huge projects, I use [[https://github.com/redguardtoo/evil-nerd-commenter][evil-nerd-commenter]] to comment code lines because I need deal with too many programming languages. 
 
 *** Do I need learn keyboard macros?
-No necessary, if you know Emacs Lisp.
+No. Emacs Lisp is enough.
 *** What do you think "Emacs can do everything"?
-"Can do" does not equals "Do in the best way".
+"Can do" does not equal "Do in the best way".
 
 Yes, there are *demos* to prove Emacs can do everything.
 
-But sometimes Emacs might not be the best solution even its demo looks good.
+But sometimes Emacs might not be the best solution even the demo looks good.
 
 [[gnu.org/software/emacs/manual/html_node/emacs/Document-View.html][DocView mode]] is boasted as a proof that Emacs could be used as a PDF viewer. You can open two sub-windows in Emacs. One for viewing PDF. The other for coding.
 
-It's actually not a perfect solution because Emacs needs call some command line tool to convert the PDF into png image before displaying the PDF. It's slow and costs too much memory. Besides, it's impossible to extract text from the Emacs PDF viewer. That's a show stopper if I'm viewing a programming ebook because I cannot copy code from PDF.
+It's actually not a perfect solution because Emacs needs call some command line tool to convert the PDF into png image before displaying the PDF. It's slow and costs too much memory. Besides, it's impossible to extract text from the viewer. That's a show stopper if I'm viewing a programming ebook because I cannot copy code from PDF.
 
-There are tons of other perfect PDF viewers. They are quick. They can handle huge PDF files. Text embedded in PDF can be extracted.
+There are tons of other better PDF viewers. They are quick. They can handle huge PDF files. Text embedded in PDF can be extracted.
 
 Even if you want to display the PDF viewer and code editor side by side. Emacs is still not a better solution. Tile windows managers like [[http://i3wm.org/][i3]] is simply better.
 
@@ -388,9 +396,12 @@ My blog is [[http://blog.binchen.org]].
 
 Please don't ask basic questions, since I've already shown you how to find the answer.
 ** Summary
-Start from real world problem, follow the best people, reading and practice.
+- Start from real world problem
+- Follow the master
+- Report bugs to the master you follow
+- Read and practice while following master
 
-While I admit that all roads lead to Rome, I need stress that my road does lead to Rome.
+I admit that all roads lead to Rome, but my road is *proved*.
 
 This article is published at [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide]].
 
