@@ -1,4 +1,4 @@
-#+OPTIONS: ^:{} toc:nil H:2
+#+OPTIONS: ^:{} toc:nil H:5 num:0
 * 一年成为Emacs高手(像神一样使用编辑器)                                         :emacs:zh:
   :PROPERTIES:
   :ID:       o2b:24796fba-6de7-4712-b83e-b86969c31335
@@ -12,21 +12,21 @@
   :END:
 作者：陈斌(redguardtoo)
 
-版本号：20150317
+版本号：20150411
 
-更新时间：<2015-03-17 Tue>
+更新时间：<2015-04-11 Sat>
 
 原创时间：<2012-01-31 Tue>
 
 版权：本文采用以下协议进行授权,[[http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh][自由转载 - 非商用 - 非衍生 - 保持署名 | Creative Commons BY-NC-ND 3.0]],转载请注明作者及出处.
 
 ** 简介
-成为高手很容易.当初我在Vi阵营,偶尔用Emacs还忘记"退出"的快捷键,但一年后我[[https://github.com/redguardtoo][跨入高手行列]].
+成为高手很容易.当初我在Vi阵营,偶尔用Emacs还忘记"退出"的快捷键,一年后我[[https://github.com/redguardtoo][跨入高手行列]].
 
-很多文章强调Emacs有多牛,但关于"如何做"则语焉不详,即使涉及到"如何做",谈细节多而方法论少,所以本文就侧重方法论.
+很多文章强调Emacs有多牛,但关于"如何做"则语焉不详.即使涉及到"如何做",谈细节多而方法论少,所以本文就侧重方法论.
 
 全文结构如下:
-- 为什么Emacs值得学习,如你对开源文化熟悉可跳过这一章,否则至少读一下态度一节
+- 为什么Emacs值得学习,如对开源文化熟悉可跳过这一章,否则至少读一下态度一节
 - 本文最核心观点,要充分利用高手成果,不要重新发明轮子
 - 尽快掌握Emacs的步骤
 - 进一步提高的提示(社区,阅读,知识管理)
@@ -51,7 +51,7 @@ Lisp 并不能给你带来任何好处,所以其社区成员都是纯粹的技�
 *** 和IDE比较,Emacs 做的更多更快
 IDE针对特定语言或框架优化,而Emacs完成通用任务更有效.
 
-例如,我碰到难题,需要上 IRC 请教国外高手 (工作流是,粘贴代码到[[http://gist.github.com]], 在irc提问,看网页,将解决方案粘贴回来),Emacs 集成了 IRC 工具和浏览器 (w3m),操作就很方便.
+例如,我碰到难题,需要上IRC请教国外高手(工作流是,粘贴代码到[[http://gist.github.com]], 在irc提问,看网页,将解决方案粘贴回来),Emacs 集成了IRC工具和浏览器 (例如),操作就很方便.
 
 我使用 Visual Studio 多年,Firefox 也是高手,相信我,大多数情况下 Emacs 更快.
 
@@ -95,7 +95,7 @@ IDE针对特定语言或框架优化,而Emacs完成通用任务更有效.
 - 使用Emacs 24自带的[[http://www.orgmode.org][org-mode]]作个人管理
 - org-mode关键是用起来,只要记住按TAB键是展开内容就可以了,其他都不用学
 
-这个阶段的目的是:
+这步的目的是:
 - 理解Emacs可爱之处
 - 知道Emacs如何和其他软件交互
 *** 读官方教程
@@ -105,7 +105,7 @@ IDE针对特定语言或框架优化,而Emacs完成通用任务更有效.
 
 仅需半小时.关于Emacs多难学的谬论可以休矣.半小时的代价微不足道.想想你去年了多少个半小时吧.
 
-这步是必须的,不要跳过!
+这是必须的,不要跳过!
 
 最起码要知道以下命令,
 - "M-x describe-variable", 快捷键"C-h v", 查看变量的文档
@@ -235,11 +235,11 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 
 所以决不要重置配置!
 
-这也是后文谈到为什么要用工具保存配置和知识.
+这也是后文谈到为什么要用工具保存配置和知识的原因.
 *** 配置纳入 github 的版本控制
 我的配置见 [[https://github.com/redguardtoo/emacs.d]].
 
-版本控制可以是认为一个集中式的知识管理,任何时刻任何地点对配置的修改都要及时上传合并 (merge).这点是积累能力的关键.
+版本控制可以认为是一个集中式的知识管理,任何时刻任何地点对配置的修改都要及时上传合并 (merge).这是积累能力的关键.
 
 共享实际也是一种利己行为,有很多人使用我的配置,等于帮我测试.
 *** 将相关资料 (如电子图书,博客文章) 备份
@@ -261,26 +261,26 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 所有插件都可通过包管理器下载.
 
 以下是清单：
-| 名称                | 说明                                                | 同类插件         |
-|---------------------+-----------------------------------------------------+------------------|
-| [[https://gitorious.org/evil/][Evil]]                | 将 Emacs 变为 vim                                   | 没有             |
-| [[http://orgmode.org/][Org]]                 | org-mode,全能的 note 工具                           | 没有             |
-| [[https://github.com/company-mode/company-mode][company-mode]]        | 自动完成输入,支持各种语言和后端                     | auto-complete    |
-| [[https://github.com/magnars/expand-region.el][expand-region]]       | 按快捷键选中当前文本,可以将选择区域扩展或者收缩     | 没有             |
-| [[https://github.com/nonsequitur/smex][smex]]                | 让输入 M-x command 变得飞快                         | 没有             |
-| [[https://github.com/capitaomorte/yasnippet][yasnippet]]           | 强大的文本模板输入工具                              | 没有             |
-| [[http://www.emacswiki.org/emacs/FlyMake][flymake-xxxx]]        | 以 flymake 开头的所有包,针对不同语言做语法检查      | flycheck         |
-| [[https://github.com/emacs-helm/helm][helm]]                | 选择和自动完成的框架,在其上有很多插件完成具体功能   | ido              |
-| [[http://www.emacswiki.org/emacs/InteractivelyDoThings][ido]]                 | 和 helm 类似,我是 helm 和 ido 同时用                | helm             |
-| [[https://github.com/mooz/js2-mode][js2-mode]]            | javascript 的 major-mode,自带 javascript 语法解释器 | js-mode          |
-| [[http://www.emacswiki.org/emacs/emacs-w3m][w3m]]                 | Emacs 的网络浏览器(需安装命令行工具w3m)             | Eww              |
-| [[https://github.com/nicferrier/elnode][elnode]]              | elisp 写的 Web 服务器                               | 不知道           |
-| [[https://github.com/Fuco1/smartparens][smartparens]]         | 自动输入需要成对输入的字符如右括号之类的字符        | autopair         |
-| [[https://github.com/nschum/window-numbering.el][window-numbering.el]] | 跳转到不同的子窗口                                  | switch-window.el |
-| [[https://github.com/fxbois/web-mode][web-mode]]            | 支持各种 HTML 文件                                  | nxml-mode        |
+| 名称                | 说明                                              | 同类插件         |
+|---------------------+---------------------------------------------------+------------------|
+| [[https://gitorious.org/evil/][Evil]]                | 将 Emacs变为Vim                                   | 没有             |
+| [[http://orgmode.org/][Org]]                 | org-mode,全能的笔记工具                           | 没有             |
+| [[https://github.com/company-mode/company-mode][company-mode]]        | 自动完成输入,支持各种语言和后端                   | auto-complete    |
+| [[https://github.com/magnars/expand-region.el][expand-region]]       | 按快捷键选中当前文本,可以将选择区域扩展或者收缩   | 没有             |
+| [[https://github.com/nonsequitur/smex][smex]]                | 让输入命令变得飞快                                | 没有             |
+| [[https://github.com/capitaomorte/yasnippet][yasnippet]]           | 强大的文本模板输入工具                            | 没有             |
+| [[http://www.emacswiki.org/emacs/FlyMake][flymake-xxxx]]        | 以flymake开头的所有包,针对不同语言做语法检查      | flycheck         |
+| [[https://github.com/emacs-helm/helm][helm]]                | 自动完成的框架,在其上有很多插件完成具体功能       | ido              |
+| [[http://www.emacswiki.org/emacs/InteractivelyDoThings][ido]]                 | 和 helm 类似,我是 helm 和 ido 同时用              | helm             |
+| [[https://github.com/mooz/js2-mode][js2-mode]]            | javascript的major-mode,自带 javascript 语法解释器 | js-mode          |
+| [[http://www.emacswiki.org/emacs/emacs-w3m][w3m]]                 | Emacs 的网络浏览器(需安装命令行工具w3m)           | Eww              |
+| [[https://github.com/nicferrier/elnode][elnode]]              | elisp 写的 Web 服务器                             | 不知道           |
+| [[https://github.com/Fuco1/smartparens][smartparens]]         | 自动输入需要成对输入的字符如括号                  | autopair         |
+| [[https://github.com/nschum/window-numbering.el][window-numbering.el]] | 跳转到不同的子窗口                                | switch-window.el |
+| [[https://github.com/fxbois/web-mode][web-mode]]            | 支持各种 HTML 文件                                | nxml-mode        |
 
 ** Emacs 是一种生活方式
-意思是说,牛人其他也很牛.举一反三你收获会很多.
+牛人其他方面也很牛.举一反三你收获会很多.
 
 [[http://sachachua.com/blog/][Sacha Chua]] 就是这样一个有牛人气质的女孩,这是她的 [[http://www.youtube.com/watch?v=eoyi2vrsWow][Youtube 录像]]. 她学习的方式是 [[http://sachachua.com/blog/2012/07/transcript-emacs-chat-john-wiegley/][让 Emacs 自动将手册语音合成]],这样她在房间里走来走去的时候也可以听文档了.
 
@@ -295,24 +295,29 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 *** 我是绝对菜鸟,该怎么开始
 到[[https://github.com/redguardtoo/emacs.d]] 参考"Install stable version in easiest way"一节.
 
-你只要点击下载两个zip文件就可以了,不需要git的任何知识.
+只要点击下载两个zip文件就可以了,不需要git的任何知识.
 
-*** Steve Purcell 的配置是否有文档可以参考？
-除了 README 外没有,我主要是通过看 EmacsWiki 和源代码来了解.窍门是源代码文件的头部有使用指南.
+*** Steve Purcell 的配置是否有文档可以参考?
+除了 README 外没有,我主要是通过看 EmacsWiki 和源代码来了解.窍门是源代码文件的头部有使用指南和作者的联系方式.
 
 *** 高手的配置是否太重量级?
 从性能和资源消耗的角度来讲,高手的配置都是轻量级的.因为他们知道如何优化.
 
 比如Emacs有一种叫[[http://www.gnu.org/software/emacs/manual/html_node/elisp/Autoload.html][Autoload]]的技术. 只有当你用到模块的某一功能时那个模块才会被载入内存. 我推荐的高手都知道这类技巧.
 
+*** 除了Purcell的配置,还有其他高手的设置吗?
+我[[https://github.com/search?o=desc&q=emacs&ref=searchresults&s=stars&type=Repositories&utf8=%E2%9C%93][搜了下github]], 这是首页的结果:
+- [[http://eschulte.github.io/emacs-starter-kit/][Eric Schulte's Emacs Starter Kit]].
+- [[https://github.com/bbatsov/prelude][Bozhidar Batsov's emacs.d]]
+- [[https://github.com/syl20bnr/spacemacs][Sylvain Benner's spacemacs]] (Spacemacs是针对Vim用户优化的，所以非Vim用户不用试了)
 *** 有没有更简单的配置？
 可用 [[https://github.com/redguardtoo/emacs.d][我的配置]]：
 - 去掉了Git依赖.
-- 网络也不是必须的
-- 已安装了拼音输入法
-- C++ 支持强大
+- 网络不是必须的
+- 安装了拼音输入法
+- C++支持强大
 
-注意,Purcell作为顶尖Web开发者,会试用各种最新的Web技术,而我的配置Web类插件更新会滞后一段时间.另外我的工具链和Purcell不完全一致.你自己权衡了.
+注意,Purcell作为顶尖Web开发者,会试用最新的Web技术,而我的配置Web类插件更新会滞后一段时间.另外我的工具链和Purcell不完全一致.你自己权衡了.
 *** 该使用Emacs的哪个版本
 目前稳定版是Emacs 24.3.1,建议不要用高于此版本的Emacs.通常不用担心版本问题.主流的Linux发行版会处理.
 
@@ -326,11 +331,11 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 
 现在我是 *神用编辑器之神*!
 
-*警告*,Steve Purcell和我默认都启用了Vim的快捷键,不习惯可打开~/.emacs.d/init.el,将其中一行代码注释掉,细节参考README.
+*警告*,我默认启用了Vim的快捷键,不习惯可打开~/.emacs.d/init.el,将其中一行代码注释掉,细节参考README.
 *** 为什么很多Vim高手不能接受Evil?
 因为他们对Vim快捷键做了深度配置.Emacs默认要经常按Ctrl键,如自定义的Vim快捷键也用Ctrl键,难免有冲突.
 
-解决办法是大家都使[[http://stackoverflow.com/questions/1764263/what-is-the-leader-in-a-vimrc][Leader]](Vim间建支持,Emacs需要[[https://github.com/cofi/evil-leader][安裝第三方插件]]).
+解决办法是大家都使[[http://stackoverflow.com/questions/1764263/what-is-the-leader-in-a-vimrc][Leader]](Vim直接支持,Emacs需[[https://github.com/cofi/evil-leader][第三方插件]]).
 
 还有一个办法是呆在Vim的舒适区里.如果你能忍受没有org-mode和lisp的生活,那么不会有其他问题的.
 
@@ -342,7 +347,7 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 
 如一定要在用 Windows 快捷键的,可考虑 [[http://ergoemacs.org/][ergoemacs]].
 *** 快捷键太多记不住怎么办?
-没必要记,我也只记常用的十几个快捷键.顺其自然,多用自然记住,不用就忘,很正常.
+没必要记,我也只记常用的十几个快捷键.顺其自然,多用记住,不用就忘,很正常.
 
 目前很多高手在用 [[http://www.emacswiki.org/Smex][Smex]],可飞快输入命令,快捷键实际上不需要了.
 *** 使用牛人配置后,界面有些奇怪的 bug,怎么改?
@@ -376,10 +381,10 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 
 希望自己掌控坦率地说是一个非技术问题,因为没有自信心,所以有补偿心态. 希望通过一种错误的方式来证明自己.结局无非是恶性循环.
 
-正确地方法是放下身段至少一年 (我已反复强调这一点),打好基本功,读书,虚心地向高手学习.
+正确地方法是放下身段至少一年 (我已反复强调这一点),打好基本功,读书,虚心向高手学习.
 
 *** 为什么我用了牛人配置后自己额外添加的插件无效
-Emacs 是个开放平台,其众多插件 release 之前并不一定有严格的测试.所以插件之间可能有冲突.
+Emacs 是个开放平台,其众多插件发布前并不一定有严格的测试.所以插件之间可能有冲突.
 
 这也是我为什么建议初学者直接使用牛人配置的原因,因为牛人已经解决了众多兼容性的问题,你只要直接享受他的服务就行了.
 
@@ -391,7 +396,7 @@ Emacs 是个开放平台,其众多插件 release 之前并不一定有严格的�
 
 如你不知道如何在 Windows 下添加修改环境变量,不知道如何安装第三方工具,建议还是先用Cygwin中的Emacs,因它已自带工具,没有的话安装也方便.且在 Cygwin 下环境变量 HOME 默认已设.
 
-第三方命令行工具清单请参考[[https://github.com/redguardtoo/emacs.d][我的.emacs.d]] 中的 README(Steve Purcell 没有列这些工具,因他只用Mac).
+第三方命令行工具清单请参考[[https://github.com/redguardtoo/emacs.d][我的.emacs.d]] 中的 README.
 *** Emacs 在代码跳转和自动完成上和商业IDE有差距,怎么办?
 这个差距说到底是后端语法解析引擎的问题.通常这个问题都是以微软的Visual Studio和IBM的Eclipse作参照.
 
@@ -416,15 +421,13 @@ Java和C#语言的主力开发工具最好用IDE而不是Emacs.C#又比Java更�
 如你必须访问Microsoft Exchange Servers, 还要用[[http://davmail.sourceforge.net/][Davmail]].
 
 用了Davmail后, 还可以用[[http://getpopfile.org/][Popfile]] 来分捡邮件. Davmail+Popfile让我生活在天堂.
-
-如果你在那种每天要收到几百电邮的公司工作,你就懂我的意思了.
 *** 为什么 Emacs 启动时从服务器 (elpa) 安装第三方软件包 (package) 会失败?
 请启动 Emacs 后,运行 `M-x package-refresh-contents` 以从服务器更新软件索引,然后重启 Emacs 即可.
 
-如果你没有使用 Emacs 24,并且没有完全拷贝高手的配置 (这是本文的中心思想),那么你需要安package.el,细节参考[[http://marmalade-repo.org/][这里]].
+如果你没有用Emacs24,没有完全拷贝高手的配置 (这是本文的中心思想),那么你需要安装package.el,细节参考[[http://marmalade-repo.org/][这里]].
 
 Emacs 下载软件包 (package) 是通过 http 方式,所以如果网络出问题的话你需要用 http 代理服务器,具体操作见后文.
-*** 有些网站 Emacs 访问不了 (原因你懂得)
+*** 有些网站 Emacs 访问不了
 在命令行中启动 Emacs 时加上 "http_proxy=your-proxy-server-ip:port" 前缀.
 
 例如,
@@ -459,9 +462,11 @@ Emacs Lisp又是一种只用于Emacs的语言,有大量术语需要掌握.如"Bu
 
 所以学点Lisp对提高Emacs水平没坏处.另外Lisp语法不错,值得程序员一学.
 
-顺便说一下,Lisp很简单,比VB容易多了,一旦你适应其语法,就会发觉它其实对程序员蛮友好的,至少少打很多字.
+顺便说一下,Lisp很简单,比VB容易多了,一旦你适应其语法,就会发觉它其实蛮友好的,至少少打很多字.
 *** 有必要学习键盘宏(Keyboard Macros)吗?
 没必要,Lisp足够了.
+
+但是键盘宏生成的Lisp代码有时候比较有趣,建议你精通Lisp后再来玩玩键盘宏.
 *** 基本操作我会了,下一步学什么迷茫中
 关键是你打算用这把瑞士军刀做什么.
 
@@ -520,9 +525,9 @@ Emacs就是那把刀.
 *** 如何报bug
 本文官方网址为 [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide]].
 
-如有任何疑问,请在以上网址报bug.这比Email快.因GitHub会以邮件通知我,GitHub邮件永远归类至我的最优先文件夹下.
+有任何疑问,请在以上网址报bug.这比Email快.因GitHub会以邮件通知我,GitHub邮件永远归类至我的最优先文件夹下.
 
-如直接给我发Email,会淹没于垃圾邮件中.
+如给我发Email,会淹没于垃圾邮件中.
 
 *** 不要复制粘帖本文
 Emacs 本质上是一个社区和平台,不断有新的有趣的人和技术出现.我会定期更新本文.

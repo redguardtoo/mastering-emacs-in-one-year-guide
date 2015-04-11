@@ -1,4 +1,4 @@
-#+OPTIONS: ^:{}
+#+OPTIONS: ^:{} toc:nil H:5 num:0
 * Master Emacs in one year                                                      :emacs:en:
 #+OPTIONS: toc:nil
   :PROPERTIES:
@@ -11,9 +11,9 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20150317
+Version: 20150411
 
-Updated: <2015-03-17 Tue>
+Updated: <2015-04-11 Sat>
 
 Created: [2012-01-31 Tue 15:08]
 
@@ -108,7 +108,7 @@ Please don't repeat my mistake. Just follow Steven Purcell!
 
 Let me be blunt. You are a newbie, you'd better study top geek's code. Don't try to be "creative" at this stage. You won't *create anything* when re-inventing the wheel.
 
-For example, some readers tell me that Emacs has too many hotkeys. They can't memorize all of them. This is typical in newbies. They assume that top geeks can remember more key bindings.
+For example, some readers tell me that Emacs has too many hotkeys. They can't memorize all of them. This is typical in newbies who assume that top geeks can remember more key bindings.
 
 Wrong!
 
@@ -130,7 +130,6 @@ If you are still not convinced, consider my reasons:
 - If you can report a bug about the master's setup, at least in that moment, you have proven you are better at a certain issue than the master.
 - You will get guidance from the master when he/she analyzes your bug report.
 
-Anyway, if Purcell is too challenging to follow (What a pity, BTW), there is more stable one like [[http://eschulte.github.io/emacs-starter-kit/][Eric Schulte's Emacs Starter Kit]].
 *** Report bugs
 That's only way to become the padawan of the master.
 
@@ -201,9 +200,9 @@ I uploaded my setup onto [[https://github.com/redguardtoo/emacs.d]].
 
 Github is the most efficient way of knowledge management because you will never lose the setup.
 
-I benefit a lot by sharing. People who use my setup are actually making my setup perfect. I am the first guy who benefits from a better setup.
+Github is also a wonderful tool for sharing. I benefit a lot by sharing. People who use my setup are actually helping me perfect my setup. I am the first guy who benefits from a better setup.
 
-For example, people reported that I mixed my personal stuff (email address, full path of my hobby project) into my setup which they need remove before usage. They expected it usable out of the box.
+For example, people reported that I mixed my personal stuff (email address, full path of my hobby project) into my setup which they need remove. They expected it usable out of the box.
 
 So I re-organized it and placed private stuff into a independent file named "privacy.el". That file is outside of my Emacs configuration. Then it occurred to me that in corporate environment it was not safe to store plain privacy.el on a shared computer without encryption. After some research, I found Emacs already provided [[http://www.emacswiki.org/emacs/EasyPG][a perfect solution]] since version 23.
 
@@ -218,24 +217,25 @@ New guys have two problems on choose plugins:
 2. use not-the-best plugins
 
 So I list the actively-maintained-and-high-quality plugins to help new people start:
-| Name                | Description                        | Alternatives         |
-|---------------------+------------------------------------+----------------------|
-| [[http://www.emacswiki.org/emacs/Evil][Evil]]                | convert Emacs into vim             | none                 |
-| [[http://orgmode.org][org-mode]]            | [[http://en.wikipedia.org/wiki/Getting_Things_Done][Get Things Done (GTD)]]              | none                 |
-| [[https://github.com/company-mode/company-mode][company-mode]]        | code completion                    | auto-complete        |
-| [[https://github.com/magnars/expand-region.el][expand-region]]       | selection region efficiently       | none                 |
-| [[https://github.com/nonsequitur/smex][smex]]                | Input command efficiently          | none                 |
-| [[https://github.com/capitaomorte/yasnippet][yasnippet]]           | text template                      | none                 |
-| [[http://www.emacswiki.org/emacs/FlyMake][flymake]]             | syntax check.                      | flycheck             |
-| [[https://github.com/emacs-helm/helm][helm]]                | a framework to choose candidates   | ido                  |
-| [[http://www.emacswiki.org/emacs/InteractivelyDoThings][ido]]                 | similar to helm                    | helm                 |
-| [[https://github.com/mooz/js2-mode][js2-mode]]            | everything for javascript          | js-mode              |
-| [[http://www.emacswiki.org/emacs/emacs-w3m][w3m]]                 | web browser                        | Eww                  |
-| [[https://github.com/nicferrier/elnode][elnode]]              | web server                         | none                 |
-| [[https://github.com/Fuco1/smartparens][smartparens]]         | auto insert matched parens         | autopair             |
-| [[https://github.com/nschum/window-numbering.el][window-numbering.el]] | jump focus between sub-windows     | switch-window.el     |
-| [[https://github.com/fxbois/web-mode][web-mode]]            | everything for edit HTML templates | nxml-mode, html-mode |
+| Name                | Description                        | Alternatives     |
+|---------------------+------------------------------------+------------------|
+| [[http://www.emacswiki.org/emacs/Evil][Evil]]                | convert Emacs into vim             | none             |
+| [[http://orgmode.org][org-mode]]            | [[http://en.wikipedia.org/wiki/Getting_Things_Done][Get Things Done (GTD)]]              | none             |
+| [[https://github.com/company-mode/company-mode][company-mode]]        | code completion                    | auto-complete    |
+| [[https://github.com/magnars/expand-region.el][expand-region]]       | selection region efficiently       | none             |
+| [[https://github.com/nonsequitur/smex][smex]]                | Input command efficiently          | none             |
+| [[https://github.com/capitaomorte/yasnippet][yasnippet]]           | text template                      | none             |
+| [[http://www.emacswiki.org/emacs/FlyMake][flymake]]             | syntax check.                      | flycheck         |
+| [[https://github.com/emacs-helm/helm][helm]]                | a framework to choose candidates   | ido              |
+| [[http://www.emacswiki.org/emacs/InteractivelyDoThings][ido]]                 | similar to helm                    | helm             |
+| [[https://github.com/mooz/js2-mode][js2-mode]]            | everything for javascript          | js-mode          |
+| [[http://www.emacswiki.org/emacs/emacs-w3m][w3m]]                 | web browser                        | Eww              |
+| [[https://github.com/nicferrier/elnode][elnode]]              | web server                         | none             |
+| [[https://github.com/Fuco1/smartparens][smartparens]]         | auto insert matched parens         | autopair         |
+| [[https://github.com/nschum/window-numbering.el][window-numbering.el]] | jump focus between sub-windows     | switch-window.el |
+| [[https://github.com/fxbois/web-mode][web-mode]]            | everything for edit HTML templates | nxml-mode        |
 
+If you preferred plugin are not included into above list and you are not sure its quality, please go to [[http://melpa.org][MELPA's website]] to check the its number of downloads.
 ** Emacs is a way of life
 Emacs guys are basically people who are hacking Lisp code for fun. They get the job done in a creative way. For example, [[http://sachachua.com/blog/][Sacha Chua]] mentioned that [[http://sachachua.com/blog/2012/07/transcript-emacs-chat-john-wiegley/][she let Emacs read the manual when cooking]].
 
@@ -255,16 +255,17 @@ Go to [[https://github.com/redguardtoo/emacs.d]] and check the section "Install 
 
 Then follow the steps at [[https://github.com/redguardtoo/emacs.d/blob/master/BETA.org]].
 *** Any documentation on Steve Purcell's setup?
-Nope. Read its README and code comment. The header of the code file usually has some usage guide.
+Nope. Read its README and code comment. The header of the code file usually has some guide and the developer's email.
 *** Is Master's setup too heavy weight?
-No. It must be lightweight. Only newbies' setup is heavy weight because they don't know how to optimize their Elisp code.
+No. It is lightweight actually. Masters know how to optimize their Elisp code.
 
-There is a technique called [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Autoload.html][Autoload]]. It will load a module when and only when user actually use it. I'm 100% sure all the setup I mentioned has applied this technique.
+For example, they use a technique called [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Autoload.html][Autoload]]. It will load a module when and only when module is actually used. I'm 100% sure all the setup I mentioned has applied this technique.
 
-*** Any simpler setup than Steve Pucell's?
-Check out [[https://github.com/redguardtoo/emacs.d][my setup]].
-
-Because I do some desktop development. it has less web stuff than Purcell.
+*** Any other setup you can recommend *except* Purcell's?
+I did [[https://github.com/search?o=desc&q=emacs&ref=searchresults&s=stars&type=Repositories&utf8=%E2%9C%93][search at github]], here is the list of top ones at first page:
+- [[http://eschulte.github.io/emacs-starter-kit/][Eric Schulte's Emacs Starter Kit]].
+- [[https://github.com/bbatsov/prelude][Bozhidar Batsov's emacs.d]]
+- [[https://github.com/syl20bnr/spacemacs][Sylvain Benner's spacemacs]] (Spacemacs focus on [[http://www.emacswiki.org/emacs/Evil][Evil]], so it might not be good for non-vim users)
 *** Which version I should use?
 v24.3.1 is the latest stable version, it has been released for more than one year without any big issue. It can be installed easily on any platform.
 
@@ -283,9 +284,9 @@ Please note in Emacs you need install a [[https://github.com/cofi/evil-leader][t
 
 The other solution is to stay inside the comfort zone of vim.
 
-That's totally fine if you are OK without Org-mode and Lisp.
+That's totally fine if you are OK with the life without Org-mode and Lisp. ;)
 
-Or else maybe you can read the above section "What matters is attitude"?
+Or maybe you can read the section "What matters is attitude"?
 *** I don't like default key bindings
 [[http://ergoemacs.org/][ergoemacs]] if you prefer Microsoft's key bindings.
 *** Too many key bindings to memorise
@@ -304,14 +305,14 @@ Please,
 
 For example, google "emacswiki init.el" to understand what's the init.el.
 *** I got some error message when starting Emacs with master's setup
-That message could be ignored. It's often just the warning message when Emacs can't find some OPTIONAL third party command line tool.
+That message could be ignored. It's just the *warning* message when Emacs can't find some OPTIONAL command line tool.
 
 If you need install that missing tool, search the list in [[https://github.com/redguardtoo/emacs.d][my readme]].
 
-If you are sure it's actually an error message instead of a warning message, 
-- Run "emacs -nw --debug-init" in terminal.
-- Send the output to the author of the setup.
-- Please use bug tracker if possible.
+If you are sure it's actually an *error* message, 
+- Run "emacs -nw --debug-init" in terminal
+- Send the output to the author of the setup
+- Please use bug tracker if possible
 
 *** My own setup is more controllable
 That's what I thought at the beginning. After several months I realized that I could never be as good as a master like Steve Purcell if keeping this way.
@@ -332,16 +333,16 @@ When you have enough knowledge about environment variables and pipe. You can che
 
 At minimum, you need set the environment variables HOME and PATH if you prefer non-cygwin way.
 
-*** Is code-navigation and code-completion as good as IDE?
+*** What about code-navigation and code-completion?
 Thanks to [[http://clang.llvm.org/][Clang]] && [[http://www.gnu.org/software/global/][GNU Global]], C++ is perfect now. Support for other languages are also good enough except Java and C#.
 
 I suggesting you using IDE when dealing with Java and C# in big projects.
 *** What about web browsing?
 I strongly recommend Firefox plus [[https://github.com/mooz/keysnail/][Keysnail]].
 
-This is the perfect solution for Emacs fans. Trust me, I've already investigated every solution.
+This is the perfect solution for Emacs fans. Trust me, I've already investigated *every* solution.
 
-*** Email in Emacs?
+*** Email?
 I use [[http://www.gnus.org/][Gnus]]. But there are many alternatives. If you have to fetch email from Microsoft Exchange Servers, you need [[http://davmail.sourceforge.net/][Davmail]].
 
 I also use [[http://getpopfile.org/][Popfile]] to sort emails. Davmail+Popfile is the best solution!
@@ -360,8 +361,13 @@ Most people lose the interest in Lisp because there its strange syntax and there
 
 That's why I stress that you need avoid tweaking Emacs at the beginning. Please copy the master's setup at first.
 
-Unless you have seen how the Lisp gets your job done, you will not have the *enough stimulus to finish the Lisp course*.
-*** After knowing the basics, what should I learn next?
+Unless you have seen how Lisp gets your job done, you will not have the *enough stimulus* to finish the its course.
+
+Me, for example, never feel pressued to learning Lisp. Actually, my initial plan is being great *without* touching Lisp.
+
+As a *proof*, please visit [[https://github.com/redguardtoo/][my github account]]. Check all the issues I reported at the beginning. As you can see, I know little about Emacs Lisp for a very long time.
+
+*** After knowing the basics, what to do next?
 Find your practical problem which only Emacs can do best. Trust me, Emacs is much more powerful than your wildest imagination.
 
 Here is my example:
@@ -371,13 +377,15 @@ Here is my example:
 - When I work for some huge projects, I use [[https://github.com/redguardtoo/evil-nerd-commenter][evil-nerd-commenter]] to comment code lines because I need deal with too many programming languages. 
 
 *** Do I need learn keyboard macros?
-No. Emacs Lisp is enough.
+No. Emacs Lisp is enough. 
+
+But, studying the Lisp code created by macro does help to understand some interesting Emacs Lisp related problems. So I suggest you learn keyboard macro *after* mastering Lisp.
 *** What do you think "Emacs can do everything"?
 "Can do" does not equal "Do in the best way".
 
 Yes, there are *demos* to prove Emacs can do everything.
 
-But sometimes Emacs might not be the best solution even the demo looks good.
+But sometimes Emacs might not be the best solution.
 
 [[gnu.org/software/emacs/manual/html_node/emacs/Document-View.html][DocView mode]] is boasted as a proof that Emacs could be used as a PDF viewer. You can open two sub-windows in Emacs. One for viewing PDF. The other for coding.
 
@@ -385,7 +393,7 @@ It's actually not a perfect solution because Emacs needs call some command line 
 
 There are tons of other better PDF viewers. They are quick. They can handle huge PDF files. Text embedded in PDF can be extracted.
 
-Even if you want to display the PDF viewer and code editor side by side. Emacs is still not a better solution. Tile windows managers like [[http://i3wm.org/][i3]] is simply better.
+Even if you intend to display the PDF viewer and code editor side by side. Emacs is still not a better solution. Tile windows managers like [[http://i3wm.org/][i3]] is simply better.
 
 So be practical. [[http://en.wikipedia.org/wiki/Richard_Stallman][Richard Stallman]] created whole GNU echosystem for you. Emacs is only one component. Why not take full advantage of the system?
 
