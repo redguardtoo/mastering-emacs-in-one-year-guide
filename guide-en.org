@@ -38,14 +38,14 @@ Here is the structure of the article:
 ** Why Emacs (OPTIONAL)
 I intend to keep this section short because my focus is HOW instead of WHY.
 *** Emacs master is good at other editors naturally
-She has already known the best, so she has higher expectation.
+Master has already known the best, so she/he has higher expectation.
 
 For example, the master expects:
-- a good editor should have a package manager bundled. She is surprised that [[https://sublime.wbond.net/installation][package manager is NOT bundled in some editor]].
+- a good editor should have a package manager bundled. She/He is surprised that [[https://sublime.wbond.net/installation][package manager is NOT bundled in some editor]].
 - Broken package could be [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][fixed]] without touching the package's original code.
-- When remote repository is down, she can [[https://github.com/redguardtoo/myelpa][create a repository]] in the memory stick [[https://github.com/redguardtoo/elpa-mirror][in one minute]].
+- When remote repository is down, she/he can [[https://github.com/redguardtoo/myelpa][create a repository]] in the memory stick [[https://github.com/redguardtoo/elpa-mirror][in one minute]].
 
-In summary, she knows more than Emacs' competitors can implement.
+In summary, she/he knows more than Emacs' competitors can implement.
 *** Community is strong
 Emacs uses [[http://www.gnu.org/software/emacs/manual/html_node/eintr/index.html][Lisp]]. Its [[http://en.wikipedia.org/wiki/Lisp_%28programming_language%29][compact and "unusual" syntax]] scares off the weak minds.
 *** It's powerful
@@ -155,16 +155,16 @@ For example, switch focus between sub-windows in Emacs is not efficient by defau
 I suggest focusing on Emacs only in order to take full advantage of communities.
 
 For example, although Quora.com has lots of interesting stuff, *do not* read/subscribe/follow them unless it's related to Emacs.
-**** Google Plus
-[[https://plus.google.com/communities/114815898697665598016][Emacs community on Google Plus]] is the best. The average quality of discussion on Google Plus is better.
+**** Google+
+[[https://plus.google.com/communities/114815898697665598016][Emacs community on Google+]] is the best. The average quality of discussion on Google+ is better.
 
 BTW, the Emacs geek [[https://plus.google.com/113859563190964307534][Xah Lee]] hosts a Q/A session at Google Plus every Tuesday. His web site is [[http://xahlee.org/]].
 **** Reddit
-[[http://www.reddit.com/r/emacs/][Reddit]] is as good as Google plus. The advantage of Reddit is that it's seldom blocked by the corporate firewall.
+[[http://www.reddit.com/r/emacs/][Reddit]] is as good as Google+. The advantage of Reddit is that it's seldom blocked by the corporate firewall.
 **** Github
 It's a social network for developers.
 
-You can search [[https://github.com/languages/Emacs%20Lisp]] for latest Elisp code.
+You can search [[https://github.com/languages/Emacs%20Lisp]] for latest Emacs Lisp code.
 
 If you agrees with my "follow master" strategy, you may like following tip.
 
@@ -205,7 +205,7 @@ Xah Lee's [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][Emacs Lisp t
 
 Steve Yegge's [[http://steve-yegge.blogspot.com.au/2008/01/emergency-elisp.html][Emergency Elisp]] is short but it includes the necessary information for writing Emacs Lisp.
 
-I don't recommend studying the Lisp at the beginning unless you are confident about your Emacs mastery.
+Don't study the Lisp at the beginning until you are confident about your Emacs mastery.
 ** Knowledge management 
 *** Place your setup at Github, *publicly*
 I uploaded my setup onto [[https://github.com/redguardtoo/emacs.d]].
@@ -222,13 +222,13 @@ In order to get the most benefit of sharing, you need make sure your setup is *q
 *** Dropbox
 I use [[https://www.dropbox.com][Dropbox]] to back up documents. Since dropbox will synchronize the documents into the mobile devices, I can study Emacs when commuting.
 ** My favorite Emacs addons
-Not must-have addons. There are many other alternatives which are as good as the listed.
+They are not must-have addons. There are many other alternatives which are as good as the listed.
 
 New users have two problems on plugins:
 1. use plugins out of maintenance
 2. use not-the-best plugins
 
-So I list the actively-maintained-and-high-quality plugins to help new people start:
+So I list the actively-maintained-and-high-quality plugins to help newbies start:
 | Name                | Description                        | Alternatives     |
 |---------------------+------------------------------------+------------------|
 | [[http://www.emacswiki.org/emacs/Evil][Evil]]                | convert Emacs into vim             | none             |
@@ -247,7 +247,7 @@ So I list the actively-maintained-and-high-quality plugins to help new people st
 | [[https://github.com/nschum/window-numbering.el][window-numbering.el]] | jump focus between sub-windows     | switch-window.el |
 | [[https://github.com/fxbois/web-mode][web-mode]]            | everything for edit HTML templates | nxml-mode        |
 
-If you preferred plugin are not included into above list and you are not sure its quality, please go to [[http://melpa.org][MELPA's website]] to check the its number of downloads.
+If you preferred plugin are not included in above list and you are not sure about its quality, please go to [[http://melpa.org][MELPA's website]] to check its number of downloads.
 ** Emacs is a way of life
 Emacs people are basically people who are hacking Lisp code for fun. They get the job done in a creative way. For example, [[http://sachachua.com/blog/][Sacha Chua]] mentioned that [[http://sachachua.com/blog/2012/07/transcript-emacs-chat-john-wiegley/][she let Emacs read the manual when cooking]].
 
@@ -257,17 +257,17 @@ After mastering Emacs, I could not endure the default key bindings of Firefox. S
 
 Then I realized that Keysnail was awesome because [[https://github.com/mooz][its developer mooz]] was awesome. I followed him and used whatever he used. His [[https://github.com/mooz/percol][percol]] made all my operations (git, [[http://blog.binchen.org/posts/how-to-do-the-file-navigation-efficiently.html][file navigation]], database management ...) under shell ten times faster.
 
-After knowing the Emacs way, things that was important become trivial now. For example, I don't care which text editor has better file explorer. Why should I use any file explorer if I am *ten times faster* in shell?
+Things that used to be important become trivial now. For example, I don't care which text editor has better file explorer. Why should I use any file explorer if I am *ten times faster* in shell?
 
 We are living in the world of science and engineering. I improve myself *more quickly* by sharing to the best, by learning from the best. Knowledge is not black magic. Hiding knowledge will *make it stale*.
 
 ** Take action
-I admit that all roads lead to Rome. So it doesn't matter which road you choose. What matters is walking on the road right now. 
+All roads lead to Rome. It doesn't matter which road you choose. What matters is walking on the road right now. 
 
 But please make sure you *actually* understand the key points of this article at first.
 
 For example, do you realize that previous sections imply following actions:
-- Find all the people behind the list of Emacs plugins
+- Find all the developers of the Emacs plugins I listed
 - Follow them on Quora/Twitter/Github/Reddit/Google+
 - Read all their old posts on Quora/Reddit/Google+
 ** FAQ
@@ -408,15 +408,15 @@ But, studying the Lisp code created by macro does help to understand some intere
 *** What do you think "Emacs can do everything"?
 I suggest being practical. Sometimes other tools are simply better in real world.
 
-One developer has problem to sort a big dictionary file with *pure* Emacs Lisp. It's too slow.
+For example, a developer had difficulties to sort a big dictionary file with *pure* Emacs Lisp. It's too slow.
 
-After consulting me, he found that the [[https://github.com/tumashu/chinese-pyim/commit/90519d3f][GNU Sort is much better]] in this case.
+After consulting with me, he found that the [[https://github.com/tumashu/chinese-pyim/commit/90519d3f][GNU Sort is much better]] in this case.
 
 So be practical. [[http://en.wikipedia.org/wiki/Richard_Stallman][Richard Stallman]] created a whole GNU echosystem for you. Emacs is only one component. Why not take full advantage of the system?
 ** Contact me
-My [[https://twitter.com/#!/chen_bin][twitter]] and [[https://plus.google.com/110954683162859211810][google plus]].
+Here is my [[https://twitter.com/#!/chen_bin][twitter]] and [[https://plus.google.com/110954683162859211810][google+]].
 
-My blog is [[http://blog.binchen.org]].
+My blog is at [[http://blog.binchen.org]].
 
 Please don't ask basic questions, since I've already shown you how to find the answer.
 ** Summary
