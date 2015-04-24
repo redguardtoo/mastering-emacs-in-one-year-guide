@@ -10,15 +10,15 @@
   :UPDATE_DATE: 2014-10-18 03:04:56
   :POST_SLUG: yi-nian-cheng-wei-emacs-gao-shou-xiang-shen-yi-yang-shi-yong-bian-ji-qi
   :END:
-作者：陈斌(redguardtoo)
+作者: 陈斌(redguardtoo)
 
-版本号：20150411
+版本号: 20150424
 
-更新时间：<2015-04-11 Sat>
+更新时间: <2015-04-24 Fri>
 
-原创时间：<2012-01-31 Tue>
+原创时间: <2012-01-31 Tue>
 
-版权：本文采用以下协议进行授权,[[http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh][自由转载 - 非商用 - 非衍生 - 保持署名 | Creative Commons BY-NC-ND 3.0]],转载请注明作者及出处.
+版权: 本文采用以下协议进行授权,[[http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh][自由转载 - 非商用 - 非衍生 - 保持署名 | Creative Commons BY-NC-ND 3.0]],转载请注明作者及出处.
 
 ** 简介
 成为高手很容易.当初我在Vi阵营,偶尔用Emacs还忘记"退出"的快捷键,一年后我[[https://github.com/redguardtoo][跨入高手行列]].
@@ -181,6 +181,8 @@ window-number.el已完美,但Alt键还是有点慢,我结合[[https://gitorious.
 
 如你只能加入一个社区,那就是Google Plus了.
 
+**** Reddit
+[[http://www.reddit.com/r/emacs/][Reddit]]基本上和G+同样质量.优点是一直能访问.
 **** GitHub 是 geek 云集的地方
 GitHub 的版本控制服务很好.现在它的社区化倾向越来越强了,我喜欢.
 
@@ -279,7 +281,7 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 | [[https://github.com/nschum/window-numbering.el][window-numbering.el]] | 跳转到不同的子窗口                                | switch-window.el |
 | [[https://github.com/fxbois/web-mode][web-mode]]            | 支持各种 HTML 文件                                | nxml-mode        |
 
-** Emacs 是一种生活方式
+** Emacs是一种生活方式
 牛人其他方面也很牛.举一反三你收获会很多.
 
 [[http://sachachua.com/blog/][Sacha Chua]] 就是这样一个有牛人气质的女孩,这是她的 [[http://www.youtube.com/watch?v=eoyi2vrsWow][Youtube 录像]]. 她学习的方式是 [[http://sachachua.com/blog/2012/07/transcript-emacs-chat-john-wiegley/][让 Emacs 自动将手册语音合成]],这样她在房间里走来走去的时候也可以听文档了.
@@ -291,6 +293,15 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 这个阶段可称之为 *心中有剑,手中无剑*.
 
 是否用Emacs不重要了,重要的是随心所欲.例如,很多人争论哪个编辑器自带的文件管理较好.我[[http://blog.binchen.org/posts/how-to-do-the-file-navigation-efficiently.html][从mooz那学到大招后]],就跳出五行外,不在三界中了.
+** 付之于行动
+具体如何行动因人而异.
+
+关键是真正理解本文要点.
+
+例如，你是否意识到之前的章节如你能举一反三，意味着采取以下行动:
+- 找出所有插件的作者
+- 在Quora/Twitter/Github/Reddit/Google+上跟随他们
+- 通读他们所有已发表的贴子
 ** 答疑
 *** 我是绝对菜鸟,该怎么开始
 到[[https://github.com/redguardtoo/emacs.d]] 参考"Install stable version in easiest way"一节.
@@ -340,6 +351,10 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 还有一个办法是呆在Vim的舒适区里.如果你能忍受没有org-mode和lisp的生活,那么不会有其他问题的.
 
 如果你犹豫不决,请重读"态度决定一切"一节.
+
+我就是一旦认识到Evil和Evil-leader的潜力,立刻把我Vim的设置按Emacs的重设了一遍。
+
+更光辉灿烂的例子就是spacemacs的作者了,无数的github星星代表了他的成功.
 *** 不习惯默认快捷键,怎么办？
 *忍*!
 
@@ -483,7 +498,7 @@ Emacs Lisp又是一种只用于Emacs的语言,有大量术语需要掌握.如"Bu
 
 最好的英文教程是Carsten Dominik(Org-mode发明者)在[[http://orgmode.org/talks.html][google tech talks上的演讲]].其要点为org-mode本质是一个文本文件,只要记住按TAB展开或者缩进条目就可以了.其他特性可慢慢学.
 *** 对于"一切都用Emacs来完成"的观点你怎么看?
-我欣赏这个理念.但是不要走火入魔.Emacs本质是个平台,提供了无限可能性.
+不要走火入魔.Emacs本质是个平台,提供了无限可能性.
 
 从实用角度讲,Emacs和其他工具结合有时能更快完成工作(不过在没有一年的修炼之前 *千万不要猜Emacs不能做什么*).
 
@@ -493,6 +508,7 @@ Emacs Lisp又是一种只用于Emacs的语言,有大量术语需要掌握.如"Bu
 - 远程登录管理: 最好用screen/tmux
 - FTP: 最好用专门的FTP软件
 - 文件管理: 用专用软件
+- Lisp速度比较慢，如果有大计算量的工作,最好交给第三方工具来作.
 
 重点是头脑灵活,坚信Emacs无所不能,偶尔也适当变通.
 ** 联系我
