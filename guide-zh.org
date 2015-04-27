@@ -136,15 +136,13 @@ IDE针对特定语言或框架优化,而Emacs完成通用任务更有效.
 
 这是浪费时间!
 
-我应一开始就照抄 [[http://www.sanityinc.com/][世界级大师 Steve Purcell]] 的 [[https://github.com/purcell/emacs.d][Emacs 配置]].
+我应一开始就照抄[[http://www.sanityinc.com/][世界级大师 Steve Purcell]]的[[https://github.com/purcell/emacs.d][Emacs 配置]].
 
 *警告,Purcell 总爱试用最新的 Web 开发的新技术,对他而言稳定性不是第一位的,如果你有热情和能力,愿意一起折腾,那么水平会提高很快.*
 
-这个如果是很重要的前提,当我上了 Purcell 的贼船时,我已有 10 年开发经验,精通多种开发语言.
+这个如果是很重要的前提,当我上了Purcell的船时,我已有10年开发经验,精通多种语言.
 
-如你不愿折腾,那至少不要重复我的错误,不要质疑,不要创新,跟着高手做.比如 [[https://github.com/eschulte/emacs24-starter-kit][Eric Schulte 的 Emacs-starter-kit]] 很适合初学者.[[https://github.com/bbatsov/prelude][Bozhidar Batsov 的配置]] 也不错 (不一定适合初学者).也可用 [[https://github.com/redguardtoo/emacs.d][我的配置]].
-
-直说了把,你是初学者,开始阶段应以模仿为主.这点怎么强调也不过分！
+如你不愿折腾,那至少不要重复我的错误,不要质疑,不要创新,跟着高手做.直说了把,你是初学者,开始阶段应以模仿为主.这点怎么强调也不过分！
 
 为了加深印象,让我再举一例.有人向我反映,Emacs 快捷键太多,背起来压力很大.我的建议是,拿高手配置来用,而不是强加给自己背快捷键这样无聊的任务.你会发觉高手已安装了名为[[https://github.com/nonsequitur/smex][smex]] 的插件,使直接输入命令比快捷键还快.
 
