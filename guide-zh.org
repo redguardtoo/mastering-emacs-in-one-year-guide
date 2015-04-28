@@ -315,10 +315,10 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 比如Emacs有一种叫[[http://www.gnu.org/software/emacs/manual/html_node/elisp/Autoload.html][Autoload]]的技术. 只有当你用到模块的某一功能时那个模块才会被载入内存. 我推荐的高手都知道这类技巧.
 
 *** 除了Purcell的配置,还有其他高手的设置吗?
-我[[https://github.com/search?o=desc&q=emacs&ref=searchresults&s=stars&type=Repositories&utf8=%E2%9C%93][搜了下github]]:
-- [[https://github.com/eschulte/emacs24-starter-kit/][Eric Schulte's Emacs Starter Kit]].
+我[[https://github.com/search?l=Emacs+Lisp&o=desc&q=emacs&ref=searchresults&s=stars&type=Repositories][搜了下github]]:
 - [[https://github.com/bbatsov/prelude][Bozhidar Batsov's emacs.d]]
 - [[https://github.com/syl20bnr/spacemacs][Sylvain Benner's spacemacs]] (Spacemacs是针对Vim用户优化的，所以非Vim用户不用试了)
+- [[https://github.com/eschulte/emacs24-starter-kit/][Eric Schulte's Emacs Starter Kit]].
 *** 有没有更简单的配置？
 可用 [[https://github.com/redguardtoo/emacs.d][我的配置]]：
 - 去掉了Git依赖.
