@@ -283,8 +283,8 @@ No. It is lightweight actually. Masters know how to optimize their Elisp code.
 For example, they use a technique called [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Autoload.html][Autoload]]. It will load a module when and only when module is actually used. I'm 100% sure all the setup I mentioned has applied this technique.
 
 *** Any other setup you can recommend *except* Purcell's?
-I did [[https://github.com/search?o=desc&q=emacs&ref=searchresults&s=stars&type=Repositories&utf8=%E2%9C%93][search at github]], here is the list of top ones at first page:
-- [[http://eschulte.github.io/emacs-starter-kit/][Eric Schulte's Emacs Starter Kit]].
+I did [[https://github.com/search?o=desc&q=emacs&ref=searchresults&s=stars&type=Repositories&utf8=%E2%9C%93][search at github]], here is the list of top ones:
+- [[https://github.com/eschulte/emacs24-starter-kit/][Eric Schulte's Emacs Starter Kit]].
 - [[https://github.com/bbatsov/prelude][Bozhidar Batsov's emacs.d]]
 - [[https://github.com/syl20bnr/spacemacs][Sylvain Benner's spacemacs]] (Spacemacs focus on [[http://www.emacswiki.org/emacs/Evil][Evil]], so it might not be good for non-vim users)
 *** Which version I should use?
