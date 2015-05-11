@@ -229,25 +229,27 @@ New users have two problems on plugins:
 2. use not-the-best plugins
 
 So I list the actively-maintained-and-high-quality plugins to help newbies start:
-| Name                | Description                        | Alternatives     |
-|---------------------+------------------------------------+------------------|
-| [[http://www.emacswiki.org/emacs/Evil][Evil]]                | convert Emacs into vim             | none             |
-| [[http://orgmode.org][org-mode]]            | [[http://en.wikipedia.org/wiki/Getting_Things_Done][Get Things Done (GTD)]]              | none             |
-| [[https://github.com/company-mode/company-mode][company-mode]]        | code completion                    | auto-complete    |
-| [[https://github.com/magnars/expand-region.el][expand-region]]       | selection region efficiently       | none             |
-| [[https://github.com/nonsequitur/smex][smex]]                | Input command efficiently          | none             |
-| [[https://github.com/capitaomorte/yasnippet][yasnippet]]           | text template                      | none             |
-| [[http://www.emacswiki.org/emacs/FlyMake][flymake]]             | syntax check.                      | flycheck         |
-| [[https://github.com/emacs-helm/helm][helm]]                | a framework to choose candidates   | ido              |
-| [[http://www.emacswiki.org/emacs/InteractivelyDoThings][ido]]                 | similar to helm                    | helm             |
-| [[https://github.com/mooz/js2-mode][js2-mode]]            | everything for javascript          | js-mode          |
-| [[http://www.emacswiki.org/emacs/emacs-w3m][w3m]]                 | web browser                        | Eww              |
-| [[https://github.com/nicferrier/elnode][elnode]]              | web server                         | none             |
-| [[https://github.com/Fuco1/smartparens][smartparens]]         | auto insert matched parens         | autopair         |
-| [[https://github.com/nschum/window-numbering.el][window-numbering.el]] | jump focus between sub-windows     | switch-window.el |
-| [[https://github.com/fxbois/web-mode][web-mode]]            | everything for edit HTML templates | nxml-mode        |
+| Name                | Description                             | Alternatives     |
+|---------------------+-----------------------------------------+------------------|
+| [[http://www.emacswiki.org/emacs/Evil][Evil]]                | convert Emacs into vim                  | none             |
+| [[http://orgmode.org][Org]]                 | [[http://en.wikipedia.org/wiki/Getting_Things_Done][Get Things Done (GTD)]]                   | none             |
+| [[https://github.com/company-mode/company-mode][company-mode]]        | code completion                         | auto-complete    |
+| [[https://github.com/magnars/expand-region.el][expand-region]]       | selection region efficiently            | none             |
+| [[https://github.com/nonsequitur/smex][smex]]                | Input command efficiently               | none             |
+| [[https://github.com/capitaomorte/yasnippet][yasnippet]]           | text template                           | none             |
+| [[http://www.emacswiki.org/emacs/FlyMake][flymake]]             | syntax check.                           | flycheck         |
+| [[https://github.com/emacs-helm/helm][helm]]                | a framework to choose candidates        | ido              |
+| [[http://www.emacswiki.org/emacs/InteractivelyDoThings][ido]]                 | similar to helm                         | helm             |
+| [[https://github.com/mooz/js2-mode][js2-mode]]            | everything for javascript               | js-mode          |
+| [[http://www.emacswiki.org/emacs/emacs-w3m][w3m]]                 | web browser                             | Eww              |
+| [[https://github.com/skeeto/emacs-web-server][simple-httpd]]        | web server                              | [[https://github.com/nicferrier/elnode][elnode]]           |
+| [[https://github.com/Fuco1/smartparens][smartparens]]         | auto insert matched parens              | autopair         |
+| [[https://github.com/nschum/window-numbering.el][window-numbering.el]] | jump focus between sub-windows          | switch-window.el |
+| [[https://github.com/fxbois/web-mode][web-mode]]            | everything for edit HTML templates      | nxml-mode        |
+| [[https://github.com/magit/magit][magit]]               | Everything about git                    | None             |
+| [[https://github.com/syohex/emacs-git-gutter][git-gutter.el]]       | Mark the VCS (git, subversion ...) diff | None             |
 
-If you preferred plugin are not included in above list and you are not sure about its quality, please go to [[http://melpa.org][MELPA's website]] to check its number of downloads.
+If some plugin is not included in above list and you are not sure about its quality, please go to [[http://melpa.org][MELPA's website]] to check its number of downloads.
 ** Emacs is a way of life
 Emacs people are basically people who are hacking Lisp code for fun. They get the job done in a creative way. For example, [[http://sachachua.com/blog/][Sacha Chua]] mentioned that [[http://sachachua.com/blog/2012/07/transcript-emacs-chat-john-wiegley/][she let Emacs read the manual when cooking]].
 
