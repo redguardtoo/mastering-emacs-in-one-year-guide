@@ -9,9 +9,9 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20150122
+Version: 20150526
 
-Updated: <2015-01-22 Thu>
+Updated: <2015-05-26 Tue>
 
 Created: <2012-10-12 Mon>
 
@@ -77,16 +77,23 @@ That's all you need to know. If you are impatient, check the section [[My Gnus c
 ** Essential 5%
 Don't memorize all the key bindings. Only pick up what you actually use.
 *** Search mails
-"G G" to search mails at *server side* in "Group Buffer".
+**** Search mails on Server
+"G G" or "M-x gnus-group-make-nnir-group" to search mails at *server side* in "Group Buffer".
 
-You can use "#" to mark the group where you want to search mails (BTW, use "M-#" to unmark).
+You can use "#" to mark the groups where to search mails(BTW, use "M-#" to unmark).
 
 If you don't mark the groups, the curent group under cursor is searched.
 
 If you put the cursor above any group, all the groups will be searched.
 
-You could use [[http://tools.ietf.org/html/rfc3501#section-6.4.4][more advanced syntax]] instead of simple keyword. I suggest *not doing so*.
+If you want to search certain fields, press "C-u G G" or "C-u M-x gnus-group-make-nnir-group" instead. This is a very useful technique.
 
+If you want to use [[http://tools.ietf.org/html/rfc3501#section-6.4.4][more advanced syntax]],
+- Press "C-u G G" or "C-u M-x gnus-group-make-nnir-group"
+- Input query statements, press Enter
+- Input "imap", press enter
+
+**** Filter mails locally
 "/ /" to limit the mails by subject at "Summary Buffer". "Limiting" means *filtering mails locally*.
 
 "/ a" to limit the mails by author at "Summary Buffer".
@@ -143,18 +150,18 @@ BTW, you can mark several mails you want to forward (hotkey is "#") and then for
 
 After the forwarded email is created, you may copy the body of that email without sending it. The copied content could be inserted into any other email.
 *** Mark mails as read
-Press "c" either in summary buffer or group buffer. This is *my most frequently used command*! Gmail's own key binding is very hard to press.
+Press "c" either in summary buffer or group buffer. This is *my most frequently used command*! Gmail's own key binding is hard to use.
 ** Advanced tips
 *** Windows?
 It's *100% usable* if you install [[https://www.cygwin.com/][Cygwin]] at first.
 
-Gnus from Cygwin verion of Emacs works out of the box.
+Gnus from Cygwin version of Emacs works out of the box.
 
 Native [[https://ftp.gnu.org/gnu/emacs/windows/][Emacs for Windows]] need a little bit setup:
 - Right-click "My Computer" and go to Properties->Advanced->Environmental Variables
 - set up *user variables* is good enough. You DON'T need be a Administrator to do the setup.
 - set the variable "HOME" to the parent directory of your ".emacs.d".
-- set the varialbe "PATH" to the "C:/cygwin/bin" because Gnus use the executable "openssh.exe". I supposed you install cygwin at C driver.
+- set the variable "PATH" to the "C:/cygwin/bin" because Gnus use the executable "openssh.exe". I supposed you install cygwin at C driver.
 *** Outlook?
 Exchange/Outlook users could visit [[http://blog.binchen.org/posts/how-to-get-email-from-exchange-server-without-outlook.html]] instead.
 
