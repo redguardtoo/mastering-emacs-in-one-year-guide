@@ -97,7 +97,7 @@ Most newbies need a notes taking tool. So [[http://orgmode.org/][Org-mode]] is t
 
 If you don't start by solving real world problem you will lose interest soon. Many people started the journey by learning Lisp. They gave up in the midway.
 *** Set the priorities
-Focus on your most critical issue only. Ingore other issues temporarily. Sometimes compromise is a better strategy.
+Focus on your most critical issue only. Ignore other issues temporarily. Sometimes compromise is a better strategy.
 
 For example, I always use Emacs in terminal because at the beginning my most urgent problem is to edit the file on the remote server.
 
@@ -132,7 +132,7 @@ This section is discussing *the best way to be good, not the easiest way*.
 There is a difference between best and easiest. For example, a setup using Vim key bindings is NOT easy but definitely best.
 
 If you are still not convinced, consider my reasons:
-- Those giants are more intelligent than me. They are more harder working than me. How can I reach their level as quickly as possible?
+- Those giants are more intelligent than me. They are harder working than me. How can I reach their level as quickly as possible?
 - The obvious way is to join them.
 - If you can report a bug about the master's setup, at least in that moment, you have proven you are better at a certain issue than the master.
 - You will get guidance from the master when he/she analyzes your bug report.
@@ -148,7 +148,7 @@ I was inspired by [[https://sites.google.com/site/steveyegge2/tour-de-babel][Ste
 Go look over Paul Nordstrom's shoulder while he works sometime, if you don't believe me. It's a real eye-opener for someone who's used Visual Blub .NET-like IDEs their whole career.
 #+END_EXAMPLE
 
-After reading the text, I decided to be as good as Paul Nordstrom. It's mission impossible considering [[http://www.linkedin.com/in/paulnpcom][who Paul Nordstrom is]]. The reason to set a goal I can never reach is to make me not to stop. Whatever minor task I takes, I always ask myself how Paul Nordstrom will handle it. Is my operation efficient enough that Steve Yegge will be surprised?
+After reading the text, I decided to be as good as Paul Nordstrom. It's mission impossible considering [[http://www.linkedin.com/in/paulnpcom][who Paul Nordstrom is]]. The reason to set a goal I can never reach is to make me not to stop. Whatever minor task I take, I always ask myself how Paul Nordstrom will handle it. Is my operation efficient enough that Steve Yegge will be surprised?
 
 For example, switch focus between sub-windows in Emacs is not efficient by default. I need press "Ctrl-x O" several times to jump to a sub-window. After some investigation, I found [[https://github.com/dimitri/switch-window][switch-window]]. Press "Ctrl-x O" plus number key to finish the operation. I kept searching and found [[https://github.com/nschum/window-numbering.el][window-numbering]]. ALT key plus number key is enough. That's 60% productivity improvement. Alt key is still a little bit far away from my fingers. Another improvement is to use [[https://gitorious.org/evil/pages/Home][Evil-mode]] and [[https://github.com/cofi/evil-leader][evil-leader]], I need only [[https://github.com/redguardtoo/emacs.d/blob/master/init-evil.el][press comma key and number key to switch window]].
 *** Join the community
