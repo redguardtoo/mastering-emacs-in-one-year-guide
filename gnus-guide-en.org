@@ -54,7 +54,7 @@ Check section "Subscribe groups" for details.
 After subscribing the group INBOX, the INBOX is still *invisible* if INBOX contains only read mails. That makes no sense for a modern email client!
 
 There is a simple solution. `C-u 5 gnus-group-list-all-groups` will get desired result. I assigned hotkey "o" to it:
-#+BEGIN_SRC elisp
+#+BEGIN_SRC emacs-lisp
 (defun my-gnus-group-list-subscribed-groups ()
   "List all subscribed groups with or without un-read messages"
   (interactive)
@@ -115,7 +115,7 @@ In order to see all the mails in "INBOX" folder/group, you need *MANUALLY* subsc
 
 "l" to navigate back the default view of group buffer which is kind of confusing, as I mentioned before. You'd better *never* use this hotkey.
 
-Pressing "o" is *much better* if you uses my elisp code to show all the subscribed groups.
+Pressing "o" is *much better* if you uses my emacs-lisp code to show all the subscribed groups.
 
 "g" to refresh groups list.
 
@@ -170,7 +170,7 @@ Hint, all you need is one portable program [[http://davmail.sourceforge.net/][Da
 Install [[http://bbdb.sourceforge.net/][BBDB]]  through [[http://melpa.milkbox.net/#/bbdb][melpa]]. It is a database to store email address.
 
 Then insert below code into ~/.emacs,
-#+BEGIN_SRC elisp
+#+BEGIN_SRC emacs-lisp
 (add-hook 'message-mode-hook
           '(lambda ()
              (bbdb-initialize 'message)
@@ -195,7 +195,7 @@ gmail2bbdb has no dependency. It always *works out of the box*.
 I want to change "From" according to the computers I'm using *automatically*.
 
 The code to be inserted into ~/.emacs:
-#+BEGIN_SRC lisp
+#+BEGIN_SRC emacs-lisp
 ;; (getenv "HOSTNAME") won't work because $HOSTNAME is not an env variable
 ;; (system-name) won't work because my /etc/hosts has some weird setup in office
 (setq my-hostname (with-temp-buffer
@@ -239,7 +239,7 @@ Check [[http://blog.binchen.org/posts/use-popfile-at-linux.html]] for details.
 Install [[http://w3m.sourceforge.net/][w3m]] and [[http://www.emacswiki.org/emacs/emacs-w3m][emacs-w3m]].
 
 Then insert below code into ~/.emacs,
-#+BEGIN_SRC elisp
+#+BEGIN_SRC emacs-lisp
 (setq mm-text-html-renderer 'w3m)
 #+END_SRC
 *** Read mail offline
@@ -252,7 +252,7 @@ The marked mails enter the disk cache. So they can be read offline.
 You may remove it from the disk cache by "M-x gnus-summary-put-mark-as-read".
 
 You also need insert below code into ~/.emacs,
-#+BEGIN_SRC elisp
+#+BEGIN_SRC emacs-lisp
 (setq gnus-use-cache t)
 #+END_SRC
 We set gnus-use-cache to true to use the cache to the full extent without considering saving the disk space.
@@ -262,7 +262,7 @@ BTW, the disk cache is actually the directory "~/News/cache/". Back it up with G
 You only need copy the code containing "gnus-secondary-select-methods" from my setup.
 
 Here is a sample setup,
-#+BEGIN_SRC elisp
+#+BEGIN_SRC emacs-lisp
 (add-to-list 'gnus-secondary-select-methods
              '(nnimap "gmail-second"
                       (nnimap-address "imap.gmail.com")
@@ -288,8 +288,7 @@ So Gnus can track *all your sent mails*. Since Gmail backs up sent mails in "[Gm
 Move the cursor to "offline" server then "M-x gnus-server-open-server".
 ** My setup
 The content of ~/.gnus.el,
-#+BEGIN_SRC elisp
-; -*- Lisp -*-
+#+BEGIN_SRC emacs-lisp
 (require 'nnir)
 
 ;;@see http://www.emacswiki.org/emacs/GnusGmail#toc1
