@@ -9,9 +9,9 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20150526
+Version: 20151106
 
-Updated: <2015-05-26 Tue>
+Updated: <2015-11-06 Fri>
 
 Created: <2012-10-12 Mon>
 
@@ -150,7 +150,7 @@ BTW, you can mark several mails you want to forward (hotkey is "#") and then for
 
 After the forwarded email is created, you may copy the body of that email without sending it. The copied content could be inserted into any other email.
 *** Mark mails as read
-Press "c" either in summary buffer or group buffer. This is *my most frequently used command*! Gmail's own key binding is hard to use.
+    Press "c" either in summary buffer or group buffer. This is *my most frequently used command*! Gmail's own key binding is hard to use.
 ** Advanced tips
 *** Windows?
 It's *100% usable* if you install [[https://www.cygwin.com/][Cygwin]] at first.
@@ -186,7 +186,7 @@ I use both "bbdb-complete-name" and company-mode.
 Here are the steps,
 - Go to [[https://www.google.com/contacts/]]
 - Click "More -> Export -> vCard Format -> Export".
-- Install [[https://github.com/redguardtoo/gmail2bbdb]] and run its command "gmail2bbdb-import-file". The contacts will be output into ~/.bbdb
+- Install [[https://github.com/redguardtoo/gmail2bbdb]] and run its command "gmail2bbdb-import-file". The contacts will be output into ~/.bbdb which will automatically detected.
 
 There are alternatives. But they are dependent on certain version of BBDB.
 
@@ -212,8 +212,7 @@ The code to be inserted into ~/.emacs:
                 ))))
 
 (setq user-full-name "My Name"
-      user-mail-address (if (at-office) "me@mycompany.com" "me@gmail.com")
-      )
+      user-mail-address (if (at-office) "me@mycompany.com" "me@gmail.com"))
 #+END_SRC
 
 Key points:
@@ -269,12 +268,10 @@ Here is a sample setup,
                       (nnimap-server-port 993)
                       (nnimap-stream ssl)
                       (nnir-search-engine imap)
-                      (nnimap-authinfo-file "~/.authinfo-second.gpg")
                       ; @see http://www.gnu.org/software/emacs/manual/html_node/gnus/Expiring-Mail.html
                       ;; press 'E' to expire email
                       (nnmail-expiry-target "nnimap+gmail:[Gmail]/Trash")
-                      (nnmail-expiry-wait 90)
-                      ))
+                      (nnmail-expiry-wait 90)))
 #+END_SRC
 
 "gnus-secondary-select-methods" is the list of your email accounts.
@@ -287,6 +284,8 @@ So Gnus can track *all your sent mails*. Since Gmail backs up sent mails in "[Gm
 
 Move the cursor to "offline" server then "M-x gnus-server-open-server".
 ** My setup
+This setup requires Emacs 24.3 at minimum.
+
 The content of ~/.gnus.el,
 #+BEGIN_SRC emacs-lisp
 (require 'nnir)
@@ -297,8 +296,6 @@ The content of ~/.gnus.el,
 ;; ask encyption password once
 (setq epa-file-cache-passphrase-for-symmetric-encryption t)
 
-(setq smtpmail-auth-credentials "~/.authinfo.gpg")
-
 ;;@see http://gnus.org/manual/gnus_397.html
 (add-to-list 'gnus-secondary-select-methods
              '(nnimap "gmail"
@@ -306,7 +303,6 @@ The content of ~/.gnus.el,
                       (nnimap-server-port 993)
                       (nnimap-stream ssl)
                       (nnir-search-engine imap)
-                      (nnimap-authinfo-file "~/.authinfo.gpg")
                       ; @see http://www.gnu.org/software/emacs/manual/html_node/gnus/Expiring-Mail.html
                       ;; press 'E' to expire email
                       (nnmail-expiry-target "nnimap+gmail:[Gmail]/Trash")
@@ -323,19 +319,18 @@ The content of ~/.gnus.el,
 (add-to-list 'load-path "/where/you/place/bbdb/")
 (require 'bbdb)
 (bbdb-initialize 'message 'gnus 'sendmail)
-(setq bbdb-file "~/.bbdb") ;; OPTIONAL, because I'm sharing my ~/.emacs.d
 (add-hook 'gnus-startup-hook 'bbdb-insinuate-gnus)
 (setq bbdb/mail-auto-create-p t
       bbdb/news-auto-create-p t)
 
-;; auto-complete emacs address using bbdb's own UI
+;; auto-complete emacs address using bbdb UI
 (add-hook 'message-mode-hook
           '(lambda ()
              (flyspell-mode t)
              (local-set-key "<TAB>" 'bbdb-complete-name)))
 
-;; Fetch only part of the article if we can.  I saw this in someone
-;; else's .gnus
+;; Fetch only part of the article if we can.
+;; I saw this in someone's .gnus
 (setq gnus-read-active-file 'some)
 
 ;; Tree view for groups.  I like the organisational feel this has.
@@ -360,20 +355,19 @@ The content of ~/.gnus.el,
 (setq mm-text-html-renderer 'w3m)
 
 (setq message-send-mail-function 'smtpmail-send-it
-      smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
-      smtpmail-auth-credentials '(("smtp.gmail.com" 587 "username@gmail.com" nil))
       smtpmail-default-smtp-server "smtp.gmail.com"
-      smtpmail-smtp-server "smtp.gmail.com"
       smtpmail-smtp-service 587
       smtpmail-local-domain "homepc")
 ;; http://www.gnu.org/software/emacs/manual/html_node/gnus/_005b9_002e2_005d.html
 (setq gnus-use-correct-string-widths nil)
 #+END_SRC
 
-The content of ~/.authinfo.gpg,
+Your login and password is stored "~/.authinfo.gpg" which is read by Gnus. `C-h v auth-sources` for more information,
+
+Here is its content,
 #+BEGIN_SRC conf
 machine imap.gmail.com login username@gmail.com password my-secret-password port 993
 machine smtp.gmail.com login username@gmail.com password my-secret-password port 587
 #+END_SRC
 
-Please note ".authinfo.gpg" is encrypted. You must use Emacs to open it. Emacs will do the encryption/descryption automatically. See [[http://emacswiki.org/emacs/EasyPG]] for details.
+Please note ".authinfo.gpg" is encrypted. Emacs will do the encryption/descryption when reading/writing this file. See [[http://emacswiki.org/emacs/EasyPG]] for details.
