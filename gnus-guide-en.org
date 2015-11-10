@@ -9,9 +9,9 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20151106
+Version: 20151110
 
-Updated: <2015-11-06 Fri>
+Updated: <2015-11-10 Tue>
 
 Created: <2012-10-12 Mon>
 
@@ -20,12 +20,13 @@ Copyright: This work is licensed under the [[http://creativecommons.org/licenses
 ** Introduction
 Gnus is a nice email client.
 
-People think it is hard because they get lost in its features. It would be much easier if they learned the *essential 5% features* and ignore the remaining 95%.
+But many newbies get lost in its features. It would be much easier if they learned the *essential 5% features* and ignore the remaining 95% at the beginning.
 
-So here is my guide on that 5%.
+So here is my guide on the 5%.
 
 ** Why (OPTIONAL)
 - Gnus is *solid*
+- Works on all platforms
 - Less hardware resource required
 - Mail search and filter is great
 - Bundled with Emacs, no extra installation needed
@@ -33,143 +34,150 @@ So here is my guide on that 5%.
 - powerful combined with other plugins like [[https://github.com/capitaomorte/yasnippet][yasnippet]]
 
 ** Quick start
-Some conventions: 
-- "C" means "Ctrl" and "M" means "Alt". For example, "M-x" means pressing "Alt" and "X" together.
-- "M-x mycommand" means pressing "Alt" and "X", input "mycommand", and press "Enter" key.
-- "RET" means "Enter" key.
+*** Requirements and conventions
+A little homework is needed before we start,
+- This guide applies on Emacs24+
+- You need install GnuTLS and OpenSSH on Linux/Mac/Window(Cygwin)
+- `C` means `Ctrl` and `M` means `Alt`. For example, `M-x` means pressing `Alt` and `X` together.
+- `M-x mycommand` means pressing `Alt` and `X`, input "mycommand", and press `Enter` key.
+- `RET` means `Enter` key.
 - "Group" means "mail folder".
 - "Group buffer" means the list of folders.
 - "Summary buffer" means the list of mails.
 
-Now please check [[http://www.emacswiki.org/emacs/GnusGmail]] on basic setup. You can also use my settings at the end of this article.
+*** Sample setup
+Now please check [[http://www.emacswiki.org/emacs/GnusGmail]] for basics. You can also use my settings at the end of this article.
 
-After setup, run command "M-x gnus" in Emacs.
+*** Usage
+After setup, `M-x gnus` in Emacs.
 
 You will come to the "Group Buffer" window. The "Group Buffer" lists the mail folders. In Gnus, the folder is called "Group". By default, the folders are *invisible*!
 
-Please subscribe the groups to make it visible. For example, folder "Inbox" is named "nnimap+gmail:INBOX" in "Group Buffer" and *it's invisible at the beginning*!. I admit it's confusing.
+Please subscribe the groups to make it visible. For example, INBOX is named "nnimap+gmail:INBOX" in "Group Buffer" and *it's invisible at the beginning*!. I admit it's confusing.
 
 Check section "Subscribe groups" for details.
 
-After subscribing the group INBOX, the INBOX is still *invisible* if INBOX contains only read mails. That makes no sense for a modern email client!
+At minimum, you need subcribe INBOX group. But after subscribing the INBOX is still *invisible* if INBOX contains NO unread mails. Yes, I agree with you this makes no sense for a modern email client!
 
-There is a simple solution. `C-u 5 gnus-group-list-all-groups` will get desired result. I assigned hotkey "o" to it:
+You can `C-u 5 M-x gnus-group-list-all-groups` to solve this problem.
+
+You can insert below code into ~/.emacs to create hotkey `o` for `C-u 5 M-x gnus-group-list-all-groups` :
 #+BEGIN_SRC emacs-lisp
 (defun my-gnus-group-list-subscribed-groups ()
   "List all subscribed groups with or without un-read messages"
   (interactive)
-  (gnus-group-list-all-groups 5)
-  )
+  (gnus-group-list-all-groups 5))
+
 (define-key gnus-group-mode-map 
   ;; list all the subscribed groups even they contain zero un-read messages
   (kbd "o") 'my-gnus-group-list-subscribed-groups)
 #+END_SRC
 
-In the "Group Buffer", you can enter a folder by pressing "RET". But I strongly suggest "C-u RET" because your true intention is to see ALL the mails, NOT the mails filtered by "smart" Gnus.
+In the "Group Buffer", you can enter a folder by pressing `RET`. But I strongly suggest `C-u RET` because you intend to see all the mails instead of unread mails.
 
-After entering the folder, you reach the "Summary Buffer" which is, as I said before, the list of your mails in one folder.
+In the folder, you are viewing "Summary Buffer" which is, as I said before, the list of your mails.
 
-Now it's simple, press "RET" to see the mail. Press "q" to quit "Summary Buffer".
+Now it's simple. Press `RET` to see the mail. Press `q` to quit "Summary Buffer".
 
-In summary, "Group Buffer" is the list of mail folders and "Summary Buffer" is the list of mails.
+In short, "Group Buffer" lists mail folders. "Summary Buffer" lists mails in one folder.
 
-That's all you need to know. If you are impatient, check the section [[My Gnus configuration (for Gmail)]].
+That's all you need to know. You could go to section [[My Gnus configuration (for Gmail)]] to use Gnus now without reading remaining sections.
 ** Essential 5%
 Don't memorize all the key bindings. Only pick up what you actually use.
 *** Search mails
 **** Search mails on Server
-"G G" or "M-x gnus-group-make-nnir-group" to search mails at *server side* in "Group Buffer".
+Press `G G` or `M-x gnus-group-make-nnir-group` to search mails at *server side* in "Group Buffer".
 
-You can use "#" to mark the groups where to search mails(BTW, use "M-#" to unmark).
+You can press `#` to mark the groups.  Search will be limited to marked groups. `M-#` to unmark.
 
-If you don't mark the groups, the curent group under cursor is searched.
+If no group marked, the group under cursor is searched.
 
-If you put the cursor above any group, all the groups will be searched.
+Place the cursor before the first group, all groups will be searched.
 
-If you want to search certain fields, press "C-u G G" or "C-u M-x gnus-group-make-nnir-group" instead. This is a very useful technique.
+To search certain fields in the mail, press `C-u G G` or `C-u M-x gnus-group-make-nnir-group` instead. This is a very useful technique.
 
-If you want to use [[http://tools.ietf.org/html/rfc3501#section-6.4.4][more advanced syntax]],
-- Press "C-u G G" or "C-u M-x gnus-group-make-nnir-group"
+You can apply [[http://tools.ietf.org/html/rfc3501#section-6.4.4][more advanced search syntax]] by:
+- Press `C-u G G` or `C-u M-x gnus-group-make-nnir-group`
 - Input query statements, press Enter
-- Input "imap", press enter
+- Type "imap", press enter
 
 **** Filter mails locally
-"/ /" to limit the mails by subject at "Summary Buffer". "Limiting" means *filtering mails locally*.
+Press `/ /` to limit the mails by subject at "Summary Buffer". "Limiting" means *filtering mails locally*.
 
-"/ a" to limit the mails by author at "Summary Buffer".
+Press `/ a` to limit the mails by author at "Summary Buffer".
 
-"/ w" to cancel the current filter.
+`/ w` to cancel the current filter.
 
-You can apply the limits sequentially and cancel them one by one using "/ w"
+You can apply the limits sequentially and cancel them in reverse order by pressing `/ w`.
 
-I love this "Limiting" thing. [[http://www.gnu.org/software/emacs/manual/html_mono/gnus.html#Limiting]] has more tricks.
+"Limiting" is cool. [[http://www.gnu.org/software/emacs/manual/html_mono/gnus.html#Limiting]] has more tricks.
 
-See [[http://sachachua.com/blog/2008/05/emacs-gnus-searching-mail/]] for details.
+See [[http://sachachua.com/blog/2008/05/emacs-gnus-searching-mail/]] for technical details.
 
 *** Subscribe groups
-"A A" in "Group Buffer" to list all groups on *ALL the connected server*. It take a while. I suggest pressing "L" to avoid querying data from all the servers unless the first time to access server.
+Press `A A` or `M-x gnus-group-list-active` in "Group Buffer" to fetch groups list on *all connected server*. It take a while. I suggest pressing "L" to use local cache instead after `A A` once.
 
-After getting the list of all subscribed/unsubscribed groups, press "u" to subscribe/unsubscribe specific group.
+After `A A` or `L`, press `u` to subscribe/unsubscribe specific group.
 
 In order to see all the mails in "INBOX" folder/group, you need *MANUALLY* subscribe the group "INBOX"!
 
-"l" to navigate back the default view of group buffer which is kind of confusing, as I mentioned before. You'd better *never* use this hotkey.
+Pressing `o` is *much better*. It is the hotkey I created for `C-u 5 M-x gnus-group-list-all-groups`, as mentioned in previous sections.
 
-Pressing "o" is *much better* if you uses my emacs-lisp code to show all the subscribed groups.
-
-"g" to refresh groups list.
-
+Press `g` or `M-x gnus-group-get-new-news` to refresh groups list.
 *** Reply email
-"R" to reply with quoted text. "r" to reply without quoted text.
+Press `R` to reply with quoted text. Press `r` to reply without quoted text.
 
-"S W" (press S then press W) to reply all (It's named "wide reply" in Emacs) with quoted text. "S w" to reply all without quoted.
+Press `S W` (captalized S then captalized W) to reply all with quoted text. It's called "wide reply" in Emacs.
+
+Press `S w` to reply all without quoted text.
 *** Compose new email
-The hotkey is "a" or "m" in "Summary Buffer".
+Press `a` or `m` in "Summary Buffer".
 
-BTW, you could "C-x m" anywhere in Emacs to write a new mail without bugging Gnus.
+You could also `C-x m` anywhere in Emacs to write a new mail without bugging Gnus.
 *** Attach a file
-The hotkey is "C-c C-a".
+Press `C-c C-a` or `M-x mml-attach-file`.
 
-The attached file is some simple text embedded in mail body. You can copy and modified that text.
+The attached file is actually plain text embedded in mail body. You can copy and modify the text.
 *** Download attachment
-The hotkey is "o". See "[[http://www.gnu.org/software/emacs/manual/html_node/gnus/Using-MIME.html][Using Mime]]" in Emacs manual for details.
+Press `o` or `M-x gnus-mime-save-part`. See "[[http://www.gnu.org/software/emacs/manual/html_node/gnus/Using-MIME.html][Using Mime]]" in Emacs manual for details.
 *** Send email
-"C-c C-c"
+Press `C-c C-c` or `M-x message-send-and-exit`.
 *** Refresh "Summary Buffer" (check new mails)
-hotkey "/ N" or command "M-x gnus-summary-insert-new-articles"
+hotkey `/ N` or `M-x gnus-summary-insert-new-articles`.
 *** Make all mails visible (IMPORTANT)
-"C-u RET" on the selected group in "Group Buffer", or "C-u M-g" in "Summary Buffer".
+Press `C-u RET` on the selected group in "Group Buffer", or `C-u M-g` in "Summary Buffer".
 
-That's the *most important part* of this article! Gnus only displays unread mails.
+That's the *most important part* of this article! By default, Gnus only displays unread mails.
 
-Check [[http://stackoverflow.com/questions/4982831/i-dont-want-to-expire-mail-in-gnus]] for the details.
+Check [[http://stackoverflow.com/questions/4982831/i-dont-want-to-expire-mail-in-gnus]] for details.
 *** Forward mail
-"C-c C-f" or "M-x gnus-summary-mail-forward" in "Summary Buffer".
+Press `C-c C-f` or `M-x gnus-summary-mail-forward` in "Summary Buffer".
 
-BTW, you can mark several mails you want to forward (hotkey is "#") and then forward them all at once ([[https://plus.google.com/112423173565156165016/posts][Holger Schauer]] provided this tip).
+You can mark multiple mails to forward (hotkey is "#") and forward them in one mail. [[https://plus.google.com/112423173565156165016/posts][Holger Schauer]] provided the tip.
 
-After the forwarded email is created, you may copy the body of that email without sending it. The copied content could be inserted into any other email.
+After the forwarded email is created, you may copy the body of that email without sending it. The copied content could be inserted into new mail.
 *** Mark mails as read
-    Press "c" either in summary buffer or group buffer. This is *my most frequently used command*! Gmail's own key binding is hard to use.
+Press `c` either in "Summary Buffer" or "Group Buffer". This is *my most frequently used command* because it's easier to use than web Gmail!
 ** Advanced tips
 *** Windows?
 It's *100% usable* if you install [[https://www.cygwin.com/][Cygwin]] at first.
 
 Gnus from Cygwin version of Emacs works out of the box.
 
-Native [[https://ftp.gnu.org/gnu/emacs/windows/][Emacs for Windows]] need a little bit setup:
-- Right-click "My Computer" and go to Properties->Advanced->Environmental Variables
-- set up *user variables* is good enough. You DON'T need be a Administrator to do the setup.
-- set the variable "HOME" to the parent directory of your ".emacs.d".
-- set the variable "PATH" to the "C:/cygwin/bin" because Gnus use the executable "openssh.exe". I supposed you install cygwin at C driver.
+Native [[https://ftp.gnu.org/gnu/emacs/windows/][Emacs for Windows]] need a little setup:
+- Right-click "My Computer" and go to "Properties->Advanced->Environmental Variables"
+- Set up *user variables* which does not require Administrator right
+- Set the variable "HOME" to the parent directory of your ".emacs.d" directory
+- Set the variable "PATH" to the "C:\cygwin\bin". I supposed you install cygwin at C driver
+- Install GnuTLS and OpenSSH through Cygwin's package manager
 *** Outlook?
-Exchange/Outlook users could visit [[http://blog.binchen.org/posts/how-to-get-email-from-exchange-server-without-outlook.html]] instead.
+Exchange/Outlook users could read my post [[http://blog.binchen.org/posts/how-to-get-email-from-exchange-server-without-outlook.html]].
 
-Hint, all you need is one portable program [[http://davmail.sourceforge.net/][Davmail]]. That's enough in 99% companies. But if your Adminstrator is evil, you may need [[http://ewseditor.codeplex.com/][EWSEditor]] for once.
+Basically you need one portable java program [[http://davmail.sourceforge.net/][Davmail]]. That's enough in 99% companies. But if your Adminstrator is evil, you need [[http://ewseditor.codeplex.com/][EWSEditor]] for once.
 *** Auto-complete mail address
-Install [[http://bbdb.sourceforge.net/][BBDB]]  through [[http://melpa.milkbox.net/#/bbdb][melpa]]. It is a database to store email address.
+Install [[http://bbdb.sourceforge.net/][BBDB]]  through [[http://melpa.milkbox.net/#/bbdb][melpa]]. It is a email address database written in Emacs Lisp.
 
-Then insert below code into ~/.emacs,
+Insert below code into ~/.emacs,
 #+BEGIN_SRC emacs-lisp
 (add-hook 'message-mode-hook
           '(lambda ()
@@ -178,23 +186,19 @@ Then insert below code into ~/.emacs,
              (local-set-key "<TAB>" 'bbdb-complete-name)))
 #+END_SRC
 
-[[https://github.com/company-mode/company-mode][company-mode]] does the similar job.
+[[https://github.com/company-mode/company-mode][company-mode]] does the similar job which works out of the box.
 
-I use both "bbdb-complete-name" and company-mode.
-
+I use both `M-x bbdb-complete-name` and company-mode is a little picky on BBDB versions.
 *** Synchronize from Gmail contacts
-Here are the steps,
+Please,
 - Go to [[https://www.google.com/contacts/]]
 - Click "More -> Export -> vCard Format -> Export".
-- Install [[https://github.com/redguardtoo/gmail2bbdb]] and run its command "gmail2bbdb-import-file". The contacts will be output into ~/.bbdb which will automatically detected.
+- Install [[https://github.com/redguardtoo/gmail2bbdb]] (developed by me) and press `M-x gmail2bbdb-import-file`. The contacts will be output into ~/.bbdb which is automatically detected by Emacs
 
-There are alternatives. But they are dependent on certain version of BBDB.
+There are alternatives which are picky on BBDB verions. My plugin works always.
 
-gmail2bbdb has no dependency. It always *works out of the box*.
-*** "From" field
-I want to change "From" according to the computers I'm using *automatically*.
-
-The code to be inserted into ~/.emacs:
+*** Customize mail's "From" field
+Here is the setup to change "From" field according to the computers I'm using,
 #+BEGIN_SRC emacs-lisp
 ;; (getenv "HOSTNAME") won't work because $HOSTNAME is not an env variable
 ;; (system-name) won't work because my /etc/hosts has some weird setup in office
@@ -208,20 +212,19 @@ The code to be inserted into ~/.emacs:
   (interactive)
   (and (string= my-hostname "my-sydney-workpc")
        (not (or (string= my-hostname "homepc")
-                (string= my-hostname "eee")
-                ))))
+                (string= my-hostname "eee")))))
 
 (setq user-full-name "My Name"
       user-mail-address (if (at-office) "me@mycompany.com" "me@gmail.com"))
 #+END_SRC
 
 Key points:
-- Command line program "hostname" is better than Emacs function `(system-name)`
+- Command line program `hostname` is better than Emacs function `(system-name)`
 - I works on several computers which does *not* belong to me, so I cannot change /etc/hosts which `(system-name)` try to access
 - Please [[http://support.google.com/a/bin/answer.py?hl=en&answer=22370][verify]] your email address at Gmail if you use google's SMTP server
-
+  
 *** Classify email
-[[http://getpopfile.org/][Popfile]]. A million times better than Gmail's own filter.
+[[http://getpopfile.org/][Popfile]]. Better than Gmail filter.
 
 You may think [[http://www.google.com/inbox/][Google's Inbox]] equals to Popfile. Trust me, it's not. You only need Popfile!
 
@@ -233,7 +236,7 @@ I'm 100% sure this solution will work because I've been using it for a very long
 
 Check [[http://blog.binchen.org/posts/use-popfile-at-linux.html]] for details.
 *** Send HTML mail
-[[http://orgmode.org/worg/org-contrib/org-mime.html][org-mime]].
+Use [[http://orgmode.org/worg/org-contrib/org-mime.html][org-mime]].
 *** Read HTML mail
 Install [[http://w3m.sourceforge.net/][w3m]] and [[http://www.emacswiki.org/emacs/emacs-w3m][emacs-w3m]].
 
@@ -244,19 +247,19 @@ Then insert below code into ~/.emacs,
 *** Read mail offline
 Go to the "Summary Buffer".
 
-You need mark the mails by "M-x gnus-summary-tick-article-forward".
+You need mark the mails by press `!` or `M-x gnus-summary-tick-article-forward`.
 
-The marked mails enter the disk cache. So they can be read offline.
+The marked mails enter the disk cache. They can be read offline.
 
-You may remove it from the disk cache by "M-x gnus-summary-put-mark-as-read".
+You may remove it from the disk cache by `M-x gnus-summary-put-mark-as-read`.
 
 You also need insert below code into ~/.emacs,
 #+BEGIN_SRC emacs-lisp
 (setq gnus-use-cache t)
 #+END_SRC
-We set gnus-use-cache to true to use the cache to the full extent without considering saving the disk space.
+Above code set `gnus-use-cache` to true to use the cache to the full extent by "wasting" *tens of megabytes* disk space.
 
-BTW, the disk cache is actually the directory "~/News/cache/". Back it up with Github's private repository.
+The disk cache is located at "~/News/cache/". You can back it up with Github's private repository.
 *** Multiple accounts
 You only need copy the code containing "gnus-secondary-select-methods" from my setup.
 
@@ -274,15 +277,17 @@ Here is a sample setup,
                       (nnmail-expiry-wait 90)))
 #+END_SRC
 
-"gnus-secondary-select-methods" is the list of your email accounts.
+`gnus-secondary-select-methods` is the list of your email accounts.
+
+The information of multiple accounts  is stored at  ~/.authinfo.gpg.
 *** Why Gnus displays more mails than Gmail
 Gnus counts by individual mail. Gmail count by mail thread.
 *** Subscribe "[Gmail]/Sent Mail" folder
-So Gnus can track *all your sent mails*. Since Gmail backs up sent mails in "[Gmail]/Sent Mail" folder, subscribe it in Gnus.
+So Gnus can track *all sent mails*.
 *** Reconnect mail server
-"M-x gnus-group-enter-server-mode" to go into server list.
+Press `M-x gnus-group-enter-server-mode` to go into server list.
 
-Move the cursor to "offline" server then "M-x gnus-server-open-server".
+Move the cursor to "offline" server then press `M-x gnus-server-open-server`.
 ** My setup
 This setup requires Emacs 24.3 at minimum.
 
@@ -362,7 +367,9 @@ The content of ~/.gnus.el,
 (setq gnus-use-correct-string-widths nil)
 #+END_SRC
 
-Your login and password is stored "~/.authinfo.gpg" which is read by Gnus. `C-h v auth-sources` for more information,
+Your login and password is stored "~/.authinfo.gpg" which is read by Gnus. `C-h v auth-sources` for more information. 
+
+Multiple mail accounts share one "".authinfo.gpg".
 
 Here is its content,
 #+BEGIN_SRC conf
