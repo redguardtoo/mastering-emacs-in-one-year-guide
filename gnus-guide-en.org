@@ -11,7 +11,7 @@ Author: Chen Bin (redguardtoo)
 
 Version: 20151110
 
-Updated: <2015-11-10 Tue>
+Updated: <2015-12-13 Sun>
 
 Created: <2012-10-12 Mon>
 
@@ -236,7 +236,7 @@ I'm 100% sure this solution will work because I've been using it for a very long
 
 Check [[http://blog.binchen.org/posts/use-popfile-at-linux.html]] for details.
 *** Send HTML mail
-Use [[http://orgmode.org/worg/org-contrib/org-mime.html][org-mime]].
+    Use [[http://orgmode.org/worg/org-contrib/org-mime.html][org-mime]].
 *** Read HTML mail
 Install [[http://w3m.sourceforge.net/][w3m]] and [[http://www.emacswiki.org/emacs/emacs-w3m][emacs-w3m]].
 
@@ -291,17 +291,19 @@ Move the cursor to "offline" server then press `M-x gnus-server-open-server`.
 ** My setup
 This setup requires Emacs 24.3 at minimum.
 
-The content of ~/.gnus.el,
+Please note the *multiple accounts on the same mail server is troublesome*. Don't waste time on it.
+
+Create ~/.gnus.el,
 #+BEGIN_SRC emacs-lisp
 (require 'nnir)
 
-;;@see http://www.emacswiki.org/emacs/GnusGmail#toc1
+;; @see http://www.emacswiki.org/emacs/GnusGmail#toc1
 (setq gnus-select-method '(nntp "news.gmane.org")) ;; if you read news groups 
 
 ;; ask encyption password once
 (setq epa-file-cache-passphrase-for-symmetric-encryption t)
 
-;;@see http://gnus.org/manual/gnus_397.html
+;; @see http://gnus.org/manual/gnus_397.html
 (add-to-list 'gnus-secondary-select-methods
              '(nnimap "gmail"
                       (nnimap-address "imap.gmail.com")
@@ -311,6 +313,15 @@ The content of ~/.gnus.el,
                       ; @see http://www.gnu.org/software/emacs/manual/html_node/gnus/Expiring-Mail.html
                       ;; press 'E' to expire email
                       (nnmail-expiry-target "nnimap+gmail:[Gmail]/Trash")
+                      (nnmail-expiry-wait 90)))
+
+;; OPIIONAL, the setup for Microsoft Hotmail
+(add-to-list 'gnus-secondary-select-methods
+             '(nnimap "hotmail"
+                      (nnimap-address "imap-mail.outlook.com")
+                      (nnimap-server-port 993)
+                      (nnimap-stream ssl)
+                      (nnir-search-engine imap)
                       (nnmail-expiry-wait 90)))
 
 (setq gnus-thread-sort-functions
@@ -347,7 +358,7 @@ The content of ~/.gnus.el,
 
 ;; Also, I prefer to see only the top level message.  If a message has
 ;; several replies or is part of a thread, only show the first
-;; message.  'gnus-thread-ignore-subject' will ignore the subject and
+;; messa  'gnus-thread-ignore-subject' will ignore the subject and
 ;; look at 'In-Reply-To:' and 'References:' headers.
 (setq gnus-thread-hide-subtree t)
 (setq gnus-thread-ignore-subject t)
@@ -356,9 +367,11 @@ The content of ~/.gnus.el,
 (setq user-full-name "My Name"
       user-mail-address "username@gmail.com")
 
+;; Read HTML mail
 ;; You need install the command line brower 'w3m' and Emacs plugin 'w3m'
 (setq mm-text-html-renderer 'w3m)
 
+;; Setup to send email through SMTP
 (setq message-send-mail-function 'smtpmail-send-it
       smtpmail-default-smtp-server "smtp.gmail.com"
       smtpmail-smtp-service 587
@@ -369,9 +382,7 @@ The content of ~/.gnus.el,
 
 Your login and password is stored "~/.authinfo.gpg" which is read by Gnus. `C-h v auth-sources` for more information. 
 
-Multiple mail accounts share one "".authinfo.gpg".
-
-Here is its content,
+Multiple mail accounts share one ".authinfo.gpg",
 #+BEGIN_SRC conf
 machine imap.gmail.com login username@gmail.com password my-secret-password port 993
 machine smtp.gmail.com login username@gmail.com password my-secret-password port 587
