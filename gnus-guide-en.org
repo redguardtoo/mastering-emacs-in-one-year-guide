@@ -99,7 +99,7 @@ To search certain fields in the mail, press `C-u G G` or `C-u M-x gnus-group-mak
 You can apply [[http://tools.ietf.org/html/rfc3501#section-6.4.4][more advanced search syntax]] by:
 - Press `C-u G G` or `C-u M-x gnus-group-make-nnir-group`
 - Input query statements, press Enter
-- Type "imap", press enter
+- Type "imap", press Enter
 
 **** Filter mails locally
 Press `/ /` to limit the mails by subject at "Summary Buffer". "Limiting" means *filtering mails locally*.
@@ -125,21 +125,23 @@ Pressing `o` is *much better*. It is the hotkey I created for `C-u 5 M-x gnus-gr
 
 Press `g` or `M-x gnus-group-get-new-news` to refresh groups list.
 *** Reply email
-Press `R` to reply with quoted text. Press `r` to reply without quoted text.
+Press `R` or `M-x gnus-summary-reply-with-original` to reply with quoted text. Press `r` or `M-x gnus-summary-reply` to reply without quoted text.
 
-Press `S W` (captalized S then captalized W) to reply all with quoted text. It's called "wide reply" in Emacs.
+Press `S W` (captalized S then captalized W) or `M-x gnus-summary-wide-reply-with-original`to reply all with quoted text. It's called "wide reply" in Emacs.
 
-Press `S w` to reply all without quoted text.
+Press `S w` or `M-x gnus-summary-wide-reply` to reply all without quoted text.
 *** Compose new email
-Press `a` or `m` in "Summary Buffer".
+Press `m` or `M-x gnus-new-mail` in "Summary Buffer".
 
-You could also `C-x m` anywhere in Emacs to write a new mail without bugging Gnus.
+You could also `C-x m` or `M-x componse-mail` anywhere in Emacs without bugging Gnus.
+*** Resend as new mail
+Press `S D e` or `M-x gnus-summary-resend-message-edit`. Useful if you re-send mail in Draft folder.
 *** Attach a file
 Press `C-c C-a` or `M-x mml-attach-file`.
 
 The attached file is actually plain text embedded in mail body. You can copy and modify the text.
 *** Download attachment
-Press `o` or `M-x gnus-mime-save-part`. See "[[http://www.gnu.org/software/emacs/manual/html_node/gnus/Using-MIME.html][Using Mime]]" in Emacs manual for details.
+Press `M-x gnus-mime-save-part`. See "[[http://www.gnu.org/software/emacs/manual/html_node/gnus/Using-MIME.html][Using Mime]]" in Emacs manual for details.
 *** Send email
 Press `C-c C-c` or `M-x message-send-and-exit`.
 *** Refresh "Summary Buffer" (check new mails)
