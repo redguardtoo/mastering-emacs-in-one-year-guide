@@ -9,9 +9,9 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20151110
+Version: 20160114
 
-Updated: <2015-12-13 Sun>
+Updated: <2016-01-14 Thu>
 
 Created: <2012-10-12 Mon>
 
@@ -84,6 +84,10 @@ In short, "Group Buffer" lists mail folders. "Summary Buffer" lists mails in one
 That's all you need to know. You could go to section [[My Gnus configuration (for Gmail)]] to use Gnus now without reading remaining sections.
 ** Essential 5%
 Don't memorize all the key bindings. Only pick up what you actually use.
+
+At the end of this article, I provide *my [[https://github.com/abo-abo/hydra][Hydra]] setup to help you avoid remembering key bindings *.
+
+Please check section "Use Hydra to avoid remembering key bindings".
 *** Search mails
 **** Search mails on Server
 Press `G G` or `M-x gnus-group-make-nnir-group` to search mails at *server side* in "Group Buffer".
@@ -134,7 +138,7 @@ Press `S w` or `M-x gnus-summary-wide-reply` to reply all without quoted text.
 Press `m` or `M-x gnus-new-mail` in "Summary Buffer".
 
 You could also `C-x m` or `M-x componse-mail` anywhere in Emacs without bugging Gnus.
-*** Resend as new mail
+*** Re-send as new mail
 Press `S D e` or `M-x gnus-summary-resend-message-edit`. Useful if you re-send mail in Draft folder.
 *** Attach a file
 Press `C-c C-a` or `M-x mml-attach-file`.
@@ -159,7 +163,47 @@ You can mark multiple mails to forward (hotkey is "#") and forward them in one m
 
 After the forwarded email is created, you may copy the body of that email without sending it. The copied content could be inserted into new mail.
 *** Mark mails as read
-Press `c` either in "Summary Buffer" or "Group Buffer". This is *my most frequently used command* because it's easier to use than web Gmail!
+Press `c` either in "Summary Buffer" or "Group Buffer". This is *my most frequently used command* because it's easier Gmail's own UI!
+*** Tree view of mail folders
+[[http://www.gnu.org/software/emacs/manual/html_node/gnus/Group-Topics.html][Group Topics]] is used re-organize the mail folder into tree view.
+
+For example, you can place mail folders from Gmail into "gmail" topic, mails from Outlook.com into "hotmail" topic, place "gmail" and "hotmail" under root topic "Gnus".
+
+The setup is only one line,
+#+begin_src elisp
+(add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
+#+end_src
+
+Though you can read [[http://www.gnu.org/software/emacs/manual/html_node/gnus/Topic-Commands.html][offical manual]] to learn its command, my way is much better.
+
+Insert below code into ~/.gnus.el and you are done,
+#+begin_src elisp
+(eval-after-load 'gnus-topic
+  '(progn
+     (setq gnus-message-archive-group '((format-time-string "sent.%Y")))
+     (setq gnus-topic-topology '(("Gnus" visible)
+                                 (("misc" visible))
+                                 (("hotmail" visible nil nil))
+                                 (("gmail" visible nil nil))))
+
+     (setq gnus-topic-alist '(("hotmail" ; the key of topic
+                               "nnimap+hotmail:Inbox"
+                               "nnimap+hotmail:Drafts"
+                               "nnimap+hotmail:Sent")
+                              ("gmail" ; the key of topic
+                               "INBOX"
+                               "[Gmail]/Sent Mail"
+                               "Drafts")
+                              ("misc" ; the key of topic
+                               "nnfolder+archive:sent.2015-12"
+                               "nnfolder+archive:sent.2016"
+                               "nndraft:drafts")
+                              ("Gnus")))))
+#+end_src
+
+Instead remembering topic commands, editing about snippet is more straightforward. The only requirement is a little bit of Emacs Lisp knowledge.
+
+The flag `gnus-message-archive-group` defines archive folder of sent mail. By default new folder is created *monthly*. My setup make it created *yearly*.
 ** Advanced tips
 *** Windows?
 It's *100% usable* if you install [[https://www.cygwin.com/][Cygwin]] at first.
@@ -167,15 +211,15 @@ It's *100% usable* if you install [[https://www.cygwin.com/][Cygwin]] at first.
 Gnus from Cygwin version of Emacs works out of the box.
 
 Native [[https://ftp.gnu.org/gnu/emacs/windows/][Emacs for Windows]] need a little setup:
-- Right-click "My Computer" and go to "Properties->Advanced->Environmental Variables"
-- Set up *user variables* which does not require Administrator right
+- Right-click "My Computer" and go to "Properties -> Advanced -> Environmental Variables"
+- Setup *user variables* which does not require Administrator right
 - Set the variable "HOME" to the parent directory of your ".emacs.d" directory
-- Set the variable "PATH" to the "C:\cygwin\bin". I supposed you install cygwin at C driver
+- Set the variable "PATH" to the "C:\cygwin64\bin". I supposed you install cygwin at C driver
 - Install GnuTLS and OpenSSH through Cygwin's package manager
 *** Outlook?
 Exchange/Outlook users could read my post [[http://blog.binchen.org/posts/how-to-get-email-from-exchange-server-without-outlook.html]].
 
-Basically you need one portable java program [[http://davmail.sourceforge.net/][Davmail]]. That's enough in 99% companies. But if your Adminstrator is evil, you need [[http://ewseditor.codeplex.com/][EWSEditor]] for once.
+Basically you need one portable java program [[http://davmail.sourceforge.net/][Davmail]]. That's enough in 99% companies. But if your Adminstrator is evil, you need use [[http://ewseditor.codeplex.com/][EWSEditor]] for once.
 *** Auto-complete mail address
 Install [[http://bbdb.sourceforge.net/][BBDB]]  through [[http://melpa.milkbox.net/#/bbdb][melpa]]. It is a email address database written in Emacs Lisp.
 
@@ -190,16 +234,15 @@ Insert below code into ~/.emacs,
 
 [[https://github.com/company-mode/company-mode][company-mode]] does the similar job which works out of the box.
 
-I use both `M-x bbdb-complete-name` and company-mode is a little picky on BBDB versions.
+I use both `M-x bbdb-complete-name` because company-mode is a little picky on BBDB versions.
 *** Synchronize from Gmail contacts
 Please,
 - Go to [[https://www.google.com/contacts/]]
 - Click "More -> Export -> vCard Format -> Export".
 - Install [[https://github.com/redguardtoo/gmail2bbdb]] (developed by me) and press `M-x gmail2bbdb-import-file`. The contacts will be output into ~/.bbdb which is automatically detected by Emacs
 
-There are alternatives which are picky on BBDB verions. My plugin works always.
-
-*** Customize mail's "From" field
+There are alternatives which requires certain version of BBDB. My plugin doesn't have this issue.
+*** Customize "From" field
 Here is the setup to change "From" field according to the computers I'm using,
 #+BEGIN_SRC emacs-lisp
 ;; (getenv "HOSTNAME") won't work because $HOSTNAME is not an env variable
@@ -238,7 +281,7 @@ I'm 100% sure this solution will work because I've been using it for a very long
 
 Check [[http://blog.binchen.org/posts/use-popfile-at-linux.html]] for details.
 *** Send HTML mail
-    Use [[http://orgmode.org/worg/org-contrib/org-mime.html][org-mime]].
+Use [[http://orgmode.org/worg/org-contrib/org-mime.html][org-mime]].
 *** Read HTML mail
 Install [[http://w3m.sourceforge.net/][w3m]] and [[http://www.emacswiki.org/emacs/emacs-w3m][emacs-w3m]].
 
@@ -290,12 +333,78 @@ So Gnus can track *all sent mails*.
 Press `M-x gnus-group-enter-server-mode` to go into server list.
 
 Move the cursor to "offline" server then press `M-x gnus-server-open-server`.
+*** Use Hydra to avoid remembering key bindings
+- Install [[https://github.com/abo-abo/hydra][Hydra]] through [[http://melpa.org/]]
+- Insert below code into ~/.emacs. Then press `C-c y` when composing mail. Press `y` in other modes
+
+#+begin_src elisp
+(eval-after-load 'gnus-group
+  '(progn
+     (defhydra hydra-gnus-group (:color blue)
+       "Do?"
+       ("a" gnus-group-list-active "REMOTE groups A A")
+       ("l" gnus-group-list-all-groups "LOCAL groups L")
+       ("c" gnus-topic-catchup-articles "Read all c")
+       ("G" gnus-group-make-nnir-group "Search server G G")
+       ("g" gnus-group-get-new-news "Refresh g")
+       ("s" gnus-group-enter-server-mode "Servers")
+       ("m" gnus-group-new-mail "Compose m OR C-x m")
+       ("#" gnus-topic-mark-topic "mark #")
+       ("q" nil "cancel"))
+     ;; y is not used by default
+     (define-key gnus-group-mode-map "y" 'hydra-gnus-group/body)))
+
+;; gnus-summary-mode
+(eval-after-load 'gnus-sum
+  '(progn
+     (defhydra hydra-gnus-summary (:color blue)
+       "Do?"
+       ("n" gnus-summary-insert-new-articles "Refresh / N")
+       ("f" gnus-summary-mail-forward "Forward C-c C-f")
+       ("!" gnus-summary-tick-article-forward "Mail -> disk !")
+       ("p" gnus-summary-put-mark-as-read "Mail <- disk")
+       ("c" gnus-summary-catchup-and-exit "Read all c")
+       ("e" gnus-summary-resend-message-edit "Resend S D e")
+       ("R" gnus-summary-reply-with-original "Reply with original R")
+       ("r" gnus-summary-reply "Reply r")
+       ("W" gnus-summary-wide-reply-with-original "Reply all with original S W")
+       ("w" gnus-summary-wide-reply "Reply all S w")
+       ("#" gnus-topic-mark-topic "mark #")
+       ("q" nil "cancel"))
+     ;; y is not used by default
+     (define-key gnus-summary-mode-map "y" 'hydra-gnus-summary/body)))
+
+;; gnus-article-mode
+(eval-after-load 'gnus-art
+  '(progn
+     (defhydra hydra-gnus-article (:color blue)
+       "Do?"
+       ("f" gnus-summary-mail-forward "Forward")
+       ("R" gnus-article-reply-with-original "Reply with original R")
+       ("r" gnus-article-reply "Reply r")
+       ("W" gnus-article-wide-reply-with-original "Reply all with original S W")
+       ("o" gnus-mime-save-part "Save attachment o")
+       ("w" gnus-article-wide-reply "Reply all S w")
+       ("q" nil "cancel"))
+     ;; y is not used by default
+     (define-key gnus-article-mode-map "y" 'hydra-gnus-article/body)))
+
+(eval-after-load 'message
+  '(progn
+     (defhydra hydra-message (:color blue)
+       "Do?"
+       ("ca" mml-attach-file "Attach C-c C-a")
+       ("cc" message-send-and-exit "Send C-c C-c")
+       ("q" nil "cancel"))
+     (global-set-key (kbd "C-c y") 'hydra-message/body)))
+#+end_src
+
 ** My setup
 This setup requires Emacs 24.3 at minimum.
 
 Please note the *multiple accounts on the same mail server is troublesome*. Don't waste time on it.
 
-Create ~/.gnus.el,
+My ~/.gnus.el,
 #+BEGIN_SRC emacs-lisp
 (require 'nnir)
 
@@ -380,6 +489,38 @@ Create ~/.gnus.el,
       smtpmail-local-domain "homepc")
 ;; http://www.gnu.org/software/emacs/manual/html_node/gnus/_005b9_002e2_005d.html
 (setq gnus-use-correct-string-widths nil)
+
+(eval-after-load 'gnus-topic
+  '(progn
+     (setq gnus-message-archive-group '((format-time-string "sent.%Y")))
+     (setq gnus-server-alist '(("archive" nnfolder "archive" (nnfolder-directory "~/Mail/archive")
+                                (nnfolder-active-file "~/Mail/archive/active")
+                                (nnfolder-get-new-mail nil)
+                                (nnfolder-inhibit-expiry t))))
+
+     (setq gnus-topic-topology '(("Gnus" visible)
+                                 (("misc" visible))
+                                 (("hotmail" visible nil nil))
+                                 (("gmail" visible nil nil))))
+
+     (setq gnus-topic-alist '(("hotmail" ; the key of topic
+                               "nnimap+hotmail:Inbox"
+                               "nnimap+hotmail:Drafts"
+                               "nnimap+hotmail:Sent"
+                               "nnimap+hotmail:Junk"
+                               "nnimap+hotmail:Deleted")
+                              ("gmail" ; the key of topic
+                               "INBOX"
+                               "[Gmail]/Sent Mail"
+                               "[Gmail]/Trash"
+                               "Sent Messages"
+                               "Drafts")
+                              ("misc" ; the key of topic
+                               "nnfolder+archive:sent.2015-12"
+                               "nnfolder+archive:sent.2016"
+                               "nnfolder+archive:sent.2017"
+                               "nndraft:drafts")
+                              ("Gnus")))))
 #+END_SRC
 
 Your login and password is stored "~/.authinfo.gpg" which is read by Gnus. `C-h v auth-sources` for more information. 
