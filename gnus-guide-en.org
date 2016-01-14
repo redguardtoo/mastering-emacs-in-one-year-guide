@@ -280,8 +280,12 @@ For example, after being trained by your Gmail data, Popfile becomes *smarter*. 
 I'm 100% sure this solution will work because I've been using it for a very long time. I take pity on my colleagues who know only Outlooks.
 
 Check [[http://blog.binchen.org/posts/use-popfile-at-linux.html]] for details.
-*** Send HTML mail
+*** Write HTML mail
 Use [[http://orgmode.org/worg/org-contrib/org-mime.html][org-mime]].
+
+Usage is simple. Write mail in org format and `M-x org-mime-htmlize`.
+
+Please use my patched [[https://github.com/redguardtoo/][org-mime]] which supports Emacs 24.
 *** Read HTML mail
 Install [[http://w3m.sourceforge.net/][w3m]] and [[http://www.emacswiki.org/emacs/emacs-w3m][emacs-w3m]].
 
@@ -335,7 +339,7 @@ Press `M-x gnus-group-enter-server-mode` to go into server list.
 Move the cursor to "offline" server then press `M-x gnus-server-open-server`.
 *** Use Hydra to avoid remembering key bindings
 - Install [[https://github.com/abo-abo/hydra][Hydra]] through [[http://melpa.org/]]
-- Insert below code into ~/.emacs. Then press `C-c y` when composing mail. Press `y` in other modes
+- Insert below code into ~/.emacs. Then press `C-c C-y` when composing mail. Press `y` in other modes
 
 #+begin_src elisp
 (eval-after-load 'gnus-group
@@ -396,7 +400,7 @@ Move the cursor to "offline" server then press `M-x gnus-server-open-server`.
        ("ca" mml-attach-file "Attach C-c C-a")
        ("cc" message-send-and-exit "Send C-c C-c")
        ("q" nil "cancel"))
-     (global-set-key (kbd "C-c y") 'hydra-message/body)))
+     (global-set-key (kbd "C-c C-y") 'hydra-message/body)))
 #+end_src
 
 ** My setup
