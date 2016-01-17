@@ -9,9 +9,9 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20160114
+Version: 20160117
 
-Updated: <2016-01-14 Thu>
+Updated: <2016-01-17 Sun>
 
 Created: <2012-10-12 Mon>
 
@@ -144,8 +144,41 @@ Press `S D e` or `M-x gnus-summary-resend-message-edit`. Useful if you re-send m
 Press `C-c C-a` or `M-x mml-attach-file`.
 
 The attached file is actually plain text embedded in mail body. You can copy and modify the text.
-*** Download attachment
-Press `M-x gnus-mime-save-part`. See "[[http://www.gnu.org/software/emacs/manual/html_node/gnus/Using-MIME.html][Using Mime]]" in Emacs manual for details.
+*** Save attachment
+Move *focus over the attachment* and press `o` or `M-x gnus-mime-save-part`. See "[[http://www.gnu.org/software/emacs/manual/html_node/gnus/Using-MIME.html][Using Mime]]" in Emacs manual for details.
+*** Open attachment
+Move *focus over the attachment* and press `Enter` or `M-x gnus-article-press-button`.
+
+The flag `[[https://www.gnu.org/software/emacs/manual/html_node/emacs-mime/mailcap.html][mailcap-mime-data]]` controls what program is used to open the attachment.
+
+You can change the flag directly at Window or OSX.
+
+At Linux, use `M-x mailcap-parse-mailcaps` to load data from ~/.mailcap into `mailcap-mime-data`.
+
+My ~/.mailcap:
+#+begin_src conf
+# url
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
+
+# image viewer
+image/*; feh -F -d -S filename '%s';
+
+# pdf
+application/pdf; zathura '%s';
+image/pdf; zathura '%s'
+
+# video
+video/* ; mplayer '%s'
+audio/* ; mplayer '%s'
+
+# Office files.
+application/msword; soffice '%s'
+application/rtf; soffice '%s'
+text/richtext; soffice '%s'
+application/vnd.ms-excel; soffice '%s'
+application/vnd.ms-powerpoint; soffice '%s'
+#+end_src
+
 *** Send email
 Press `C-c C-c` or `M-x message-send-and-exit`.
 *** Refresh "Summary Buffer" (check new mails)
@@ -328,7 +361,7 @@ Here is a sample setup,
 
 `gnus-secondary-select-methods` is the list of your email accounts.
 
-The information of multiple accounts  is stored at  ~/.authinfo.gpg.
+The information of multiple accounts is stored at ~/.authinfo.gpg.
 *** Why Gnus displays more mails than Gmail
 Gnus counts by individual mail. Gmail count by mail thread.
 *** Subscribe "[Gmail]/Sent Mail" folder
@@ -387,7 +420,7 @@ Move the cursor to "offline" server then press `M-x gnus-server-open-server`.
        ("R" gnus-article-reply-with-original "Reply with original R")
        ("r" gnus-article-reply "Reply r")
        ("W" gnus-article-wide-reply-with-original "Reply all with original S W")
-       ("o" gnus-mime-save-part "Save attachment o")
+       ("o" gnus-mime-save-part "Save attachment at point o")
        ("w" gnus-article-wide-reply "Reply all S w")
        ("q" nil "cancel"))
      ;; y is not used by default
@@ -464,7 +497,18 @@ My ~/.gnus.el,
 ;; I saw this in someone's .gnus
 (setq gnus-read-active-file 'some)
 
-;; Tree view for groups.  I like the organisational feel this has.
+;; open attachment
+(eval-after-load 'mailcap
+  '(progn
+     (cond
+      ;; on OSX, maybe change mailcap-mime-data?
+      ((eq system-type 'darwin))
+      ;; on Windows, maybe change mailcap-mime-data?
+      ((eq system-type 'windows-nt))
+      (t
+       ;; Linux, read ~/.mailcap
+       (mailcap-parse-mailcaps)))));; Tree view for groups.  I like the organisational feel this has.
+
 (add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
 
 ;; Threads!  I hate reading un-threaded email -- especially mailing
@@ -527,12 +571,13 @@ My ~/.gnus.el,
                               ("Gnus")))))
 #+END_SRC
 
-Your login and password is stored "~/.authinfo.gpg" which is read by Gnus. `C-h v auth-sources` for more information. 
+Your login and password is stored at "~/.authinfo.gpg" which is read by Gnus. `C-h v auth-sources` for more information. 
 
 Multiple mail accounts share one ".authinfo.gpg",
 #+BEGIN_SRC conf
 machine imap.gmail.com login username@gmail.com password my-secret-password port 993
 machine smtp.gmail.com login username@gmail.com password my-secret-password port 587
+machine imap-mail.outlook.com login username@hotmail.com password my-secret-password port 993
 #+END_SRC
 
 Please note ".authinfo.gpg" is encrypted. Emacs will do the encryption/descryption when reading/writing this file. See [[http://emacswiki.org/emacs/EasyPG]] for details.
