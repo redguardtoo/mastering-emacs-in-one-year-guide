@@ -38,8 +38,8 @@ So here is my guide on the 5%.
 A little homework is needed before we start,
 - This guide applies on Emacs24+
 - You need install GnuTLS and OpenSSH on Linux/Mac/Window(Cygwin)
-- =C= means =Ctrl= and =M= means =Alt=. For example, =M-x= means pressing =Alt= and =X= together.
-- =M-x mycommand= means pressing =Alt= and =X=, input "mycommand", and press =Enter= key.
+- =C= means =Ctrl= and =M= means =Alt=. For example, =M-x= means pressing =Alt= and =x= together.
+- =M-x mycommand= means pressing =Alt= and =x=, input "mycommand", and press =Enter= key.
 - =RET= means =Enter= key.
 - "Group" means "mail folder".
 - "Group buffer" means the list of folders.
