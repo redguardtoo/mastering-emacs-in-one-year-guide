@@ -12,9 +12,9 @@
   :END:
 作者: 陈斌(redguardtoo)
 
-版本号: 20150424
+版本号: 20160125
 
-更新时间: <2015-04-24 Fri>
+更新时间: <2016-01-25 Mon>
 
 原创时间: <2012-01-31 Tue>
 
@@ -23,7 +23,7 @@
 ** 简介
 成为高手很容易.当初我在Vi阵营,偶尔用Emacs还忘记"退出"的快捷键,一年后我[[https://github.com/redguardtoo][跨入高手行列]].
 
-很多文章强调Emacs有多牛,但关于"如何做"则语焉不详.即使涉及到"如何做",谈细节多而方法论少,所以本文就侧重方法论.
+很多文章强调Emacs有多牛,但关于"如何做"则语焉不详.即使涉及到"如何做",谈细节多而方法论少,所以本文就 *侧重方法论*.
 
 全文结构如下:
 - 为什么Emacs值得学习,如对开源文化熟悉可跳过这一章,否则至少读一下态度一节
@@ -55,13 +55,15 @@ IDE针对特定语言或框架优化,而Emacs完成通用任务更有效.
 
 我使用 Visual Studio 多年,Firefox 也是高手,相信我,大多数情况下 Emacs 更快.
 
-当然口说无凭,请看高手操作的 youtube 视频, [[http://www.youtube.com/watch?v=EQAd41VAXWo][Emacs Power: Can your editor do THIS! ]]
+口说无凭,请看高手操作的 youtube 视频, [[http://www.youtube.com/watch?v=EQAd41VAXWo][Emacs Power: Can your editor do THIS! ]]
 
 顺便说一下,很多初学者关心的代码自动完成,几门主流语言支持都不错(包括java).
 
 *** Emacs会永存
-个人开发者会丧失兴趣,公司会倒闭.但自由软件基金会将一直存在下去.Emacs 作为其招牌软件也会维护下去,我的投资永不会贬值.
-*** 使用 Emacs 可以立刻开始工作.
+[[https://forum.sublimetext.com/t/project-alive/16005][个人开发者会丧失兴趣]],公司会倒闭.但自由软件基金会将一直存在下去.
+
+Emacs作为其招牌软件也会维护下去,我的投资永不会贬值.
+*** 可以立刻开始工作.
 软件开源,配置是纯文本,且资源消耗小,安装包很小 (命令行版本 30M 左右),任何环境下都可用.
 
 这在大项目中特别有益,例如,某项目需同时编辑 Perl, Java,C, Bash, SQL, 要编辑远程服务器上的代码,网速不快. Emacs的优势就体现出来了.
@@ -70,19 +72,20 @@ IDE针对特定语言或框架优化,而Emacs完成通用任务更有效.
 我没说一年内须什么事都不干专学Emacs, 我最反对没有短期回报的悬梁刺股.
 
 我利用一年中通勤时间就取得了很大进步,自信到可以写下本文.
-
 *** 态度决定一切
 重要的是头脑开放,不先入为主.
 
-新手的问题是,开始就 *盲目* 设定了入门必知.有些必知还很费时间.
+新手的问题是,根据之前习惯 *盲目* 设定了入门必知.有些必知还很费时间.
 
 以我为例,
 - 网上教程列出的初学者必知快捷键我都 *不知道* ,因为[[http://www.emacswiki.org/emacs/Smex][不需要]]
 - [[https://github.com/purcell/emacs.d/issues?q=author%3Aredguardtoo+][很多人说从零开始配置Emacs才是最好的学习办法,我偏反其道而行之]]
 - Emacs Lisp的语法我也只掌握了一小部分. [[https://github.com/punchagan/org2blog/issues/153][比如对于If的语法还有盲点]], 但是这没有妨碍我写出[[https://github.com/redguardtoo][有用的插件]]
 - 如前所述,我掌握Emacs只用了一年
+
+也要避免门户之见,比如用了Emacs就排斥Vim的快捷键.比如一定要Helm和Ido中二选一(我是同时用的).治疗就是重读武侠小说"笑傲江湖".
 ** 具体步骤
-在正式开始前,我需要解释后文会用到的命名惯例,
+开始前,解释一下后文用到的命名惯例,
 - "C" 表示按下Ctrl键,"M"表示按下Alt键
 - "M-x my-command"表示同时按下"Alt"和"X", 输入"my-command",然后回车
 
@@ -153,6 +156,10 @@ IDE针对特定语言或框架优化,而Emacs完成通用任务更有效.
 - 说到底是态度问题,如果你真下定决心,考虑到Purcell的天赋和勤奋,追赶他的最好办法只有加入他
 - 要超越高手就必须了解其标杆在哪,你需要一年时间去模仿去学习
 - 基于Purcell的配置给他报bug(甚至是提交补丁),你就是考虑到了他未考虑到的问题,至少在这点就超过他了,日积月累就很可观了.
+
+好吧,你现在信服了.但是你是否 *真正理解* 了?
+
+比如你是否马上推论到:即使不用高手的配置,也可在github上订阅(watch)高手配置,其更新通知等价于免费的维护服务.
 *** 报bug
 像武侠小说那样拜高手为师是白日做梦.唯一能让高手指点的办法是先付出.最可靠的付出就是报bug.
 
@@ -174,13 +181,12 @@ window-number.el已完美,但Alt键还是有点慢,我结合[[https://gitorious.
 
 例如,Quora.com上有很多有趣的话题.请克制兴趣,不去定阅和Emacs无关的话题.
 
-**** Google Plus是最好的
-[[https://plus.google.com/communities/114815898697665598016][Google Plus]] 此时气场很强,贴子质量高.我上过很多社区,没有比它更好的了.例如,我加入了 Linkedin和Facebook的Emacs论坛,目前都退出了.不是它们不专业,只是Google Plus讨论技术层次较高.
-
-如你只能加入一个社区,那就是Google Plus了.
-
 **** Reddit
-[[http://www.reddit.com/r/emacs/][Reddit]]基本上和G+同样质量.优点是一直能访问.
+[[http://www.reddit.com/r/emacs/][Reddit]]是最好的.优点是一直能访问.
+**** Google Plus
+[[https://plus.google.com/communities/114815898697665598016][Google Plus]] 贴子质量高.例如,我加入了 Linkedin和Facebook的Emacs论坛,目前都退出了.不是它们不专业,只是Google Plus讨论技术层次较高.
+
+目前人气不如reddit,原因在于Google.
 **** GitHub 是 geek 云集的地方
 GitHub 的版本控制服务很好.现在它的社区化倾向越来越强了,我喜欢.
 
@@ -204,6 +210,8 @@ twitter人多,更新结果快.
 google "emacs-related-keywords site:stackoverflow.com"
 
 我会定期搜索,同一帖子反复精读.因为讨论质量很高.
+
+[[http://emacs.stackexchange.com]] 是Emacs专门的问答子社区.
 **** 到 Youtube 上看 emacs 相关的视频
 例如,我就是看了 [[http://www.youtube.com/watch?feature=player_embedded&v=oJTwQvgfgMM][Google Tech Talks 上这个 Org-mode 作者的介绍]] 而爱上 org-mode.
 
@@ -211,9 +219,9 @@ google "emacs-related-keywords site:stackoverflow.com"
 
 ** 读书最有效
 *** EmacsWiki
-[[http://www.emacswiki.org/][EmacsWiki]] 是社区维护的文档,可认为是最酷插件和最佳实践的集合点.
+[[http://www.emacswiki.org/][EmacsWiki]] 是社区维护的文档,是最酷插件和最佳实践的集合点.
 
-有人抱怨文档太乱,质量参差不齐.前者我有同感.后者不赞同.EmacsWiki文档质量相当高,因其是 *唯一的* 半官方文档.耐心忍受其乱中有序的现状吧.
+有人抱怨文档太乱,质量参差不齐.前者我有同感.后者不赞同.EmacsWiki文档质量相当高,因其是 *唯一的* 半官方文档.忍受其乱中有序的现状吧.
 
 最佳阅读方法是,选定一特定主题,从头读到尾.这样对最新进展都了解了.是否要采用其建议另当别论.
 
@@ -294,27 +302,27 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 
 是否用Emacs不重要了,重要的是随心所欲.例如,很多人争论哪个编辑器自带的文件管理较好.我[[http://blog.binchen.org/posts/how-to-do-the-file-navigation-efficiently.html][从mooz那学到大招后]],就跳出五行外,不在三界中了.
 ** 付之于行动
-具体如何行动因人而异.
+如何行动因人而异.
 
 关键是真正理解本文要点.
 
-例如，你是否意识到之前的章节如你能举一反三，意味着采取以下行动:
+例如，你是否意识到之前的章节意味着以下行动:
 - 找出所有插件的作者
 - 在Quora/Twitter/Github/Reddit/Google+上跟随他们
-- 通读他们所有已发表的贴子
+- 通读他们已发表的贴子
 ** 答疑
-*** 我是绝对菜鸟,该怎么开始
+*** 菜鸟怎么开始
 到[[https://github.com/redguardtoo/emacs.d]] 参考"Install stable version in easiest way"一节.
 
-只要点击下载两个zip文件就可以了,不需要git的任何知识.
+只要点击下载两个zip文件就可以了,不需git的任何知识.
 
 *** Steve Purcell 的配置是否有文档可以参考?
 除了 README 外没有,我主要是通过看 EmacsWiki 和源代码来了解.窍门是源代码文件的头部有使用指南和作者的联系方式.
 
 *** 高手的配置是否太重量级?
-从性能和资源消耗的角度来讲,高手的配置都是轻量级的.因为他们知道如何优化.
+高手的配置都是轻量级的,因为他们知道如何优化.
 
-比如Emacs有一种叫[[http://www.gnu.org/software/emacs/manual/html_node/elisp/Autoload.html][Autoload]]的技术. 只有当你用到模块的某一功能时那个模块才会被载入内存. 我推荐的高手都知道这类技巧.
+比如有种叫[[http://www.gnu.org/software/emacs/manual/html_node/elisp/Autoload.html][Autoload]]的技术. 只有用到模块的某一功能时那个模块才会被载入内存. 我推荐的高手都知道这类技巧.
 
 *** 除了Purcell的配置,还有其他高手的设置吗?
 我[[https://github.com/search?l=Emacs+Lisp&o=desc&q=emacs&ref=searchresults&s=stars&type=Repositories][搜了下github]]:
@@ -330,10 +338,11 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 
 注意,Purcell作为顶尖Web开发者,会试用最新的Web技术,而我的配置Web类插件更新会滞后一段时间.另外我的工具链和Purcell不完全一致.你自己权衡了.
 *** 该使用Emacs的哪个版本
-目前稳定版是Emacs 24.3.1,建议不要用高于此版本的Emacs.通常不用担心版本问题.主流的Linux发行版会处理.
+目前稳定版是Emacs 24.3 或 24.4,建议不要用高于此版本的Emacs.
 
-24.4虽然已发布,但还有些小问题,我建议再等半年左右.也也就是说,2015年下半年可以考虑升级.
-*** 我已是Vi高手,为什么要转阵营?
+通常不用担心版本问题.主流的Linux发行版会处理.
+
+*** Vi高手要转阵营吗?
 嘿嘿,我也是Vi精通后转到Emacs的.就是因为Emacs的强大(例如和 gdb 的完美结合)以及其脚本语言是Lisp.
 
 当然Vi的多模式编辑和快捷键比Emacs要高效得多,所以最佳方案是Vi+Emacs.
@@ -348,11 +357,11 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 
 解决办法是大家都使[[http://stackoverflow.com/questions/1764263/what-is-the-leader-in-a-vimrc][Leader]](Vim直接支持,Emacs需[[https://github.com/cofi/evil-leader][第三方插件]]).
 
-还有一个办法是呆在Vim的舒适区里.如果你能忍受没有org-mode和lisp的生活,那么不会有其他问题的.
+还有一个办法是呆在Vim的舒适区里.如能忍受没有org-mode和lisp的生活,那么不会有问题.
 
-如果你犹豫不决,请重读"态度决定一切"一节.
+如犹豫不决,请重读"态度决定一切"一节.
 
-我就是一旦认识到Evil和Evil-leader的潜力,立刻把我Vim的设置按Emacs的重设了一遍。
+我一旦认识到Evil和Evil-leader的潜力,立刻把我Vim的设置按Emacs的重设了一遍。
 
 更光辉灿烂的例子就是spacemacs的作者了,无数的github星星代表了他的成功.
 *** 不习惯默认快捷键,怎么办？
@@ -450,7 +459,7 @@ Emacs 下载软件包 (package) 是通过 http 方式,所以如果网络出问�
 http_proxy=http://127.0.0.1:8000 emacs -nw
 #+END_SRC
 *** 有些软件包下载不下来,也不会用代理
-那么就只能使用[[https://github.com/redguardtoo/emacs.d][我的Emacs配置]].
+那么就用[[https://github.com/redguardtoo/emacs.d][我的Emacs配置]].
 
 和我的配置配套的是我建立的独立的第三方包服务,请参考[[https://github.com/redguardtoo/myelpa][其主页上的README]].
 
@@ -459,7 +468,7 @@ http_proxy=http://127.0.0.1:8000 emacs -nw
 
 Lisp语法和通常的语言不同,除非有相当编程经验(至少10年),一般人都会对其有一点负面情绪(当然是毫无道理的偏见!).学习任何新东西,长期来说兴趣最重要.一开始应避免任何负面情绪.
 
-Emacs Lisp又是一种只用于Emacs的语言,有大量术语需要掌握.如"Buffer","Yank","Font face",只有资深用户才能理解.
+Emacs Lisp又是只用于Emacs的语言,有大量术语需要掌握.如"Buffer","Yank","Font face",只有资深用户才能理解.
 
 所以在软件使用没有相当基础前学习其拓展语言是浪费时间.
 
@@ -467,7 +476,7 @@ Emacs Lisp又是一种只用于Emacs的语言,有大量术语需要掌握.如"Bu
 
 有世界级高手(名字不点了)对我的建议不以为然,他说Lisp很强大很有趣,应该先学.
 
-但是他的盲点在于,忘记了自己转向Emacs前在其他编辑器上(如Sublime之类)已是一览众山小了.他用Python拓展Sublime已熟到厌烦,Lisp的奇特语法反而刺激了兴趣.编辑器的常用术语也不在话下. 而本文针对的是大多数的凡人.
+但是他的盲点在于,忘记了自己转向Emacs前在其他编辑器上已一览众山小了.他用Python拓展Sublime已熟到厌烦,Lisp的奇特语法反而刺激了兴趣.编辑器的常用术语也不在话下. 而本文针对的是大多数的凡人.
 
 选择适合自己的路,一年以后天才也好,凡人也好, *达到的高度都是一样的*.
 *** 掌握 Emacs Lisp 是否是成为高手的必要条件?
@@ -504,19 +513,19 @@ Emacs Lisp又是一种只用于Emacs的语言,有大量术语需要掌握.如"Bu
 
 以下是Emacs不一定能吃独食的地方:
 - 剪贴簿: 应结合命令行工具xsel(Linux)/pbpaste(OSX)/putclip(Cygwin)
-- Web浏览: 最好用Firefox结合插件如keysnail
-- 远程登录管理: 最好用screen/tmux
-- FTP: 最好用专门的FTP软件
+- Web浏览: 用Firefox结合插件如keysnail
+- 远程登录管理: 用screen/tmux
+- FTP: 用专门的FTP软件
 - 文件管理: 用专用软件
-- Lisp速度比较慢，如果有大计算量的工作,最好交给第三方工具来作.
+- Lisp速度比较慢，如有大计算量的工作,交给第三方工具来作.
 
-重点是头脑灵活,坚信Emacs无所不能,偶尔也适当变通.
+重点是头脑灵活,既坚信Emacs无所不能,也适当变通.
 ** 联系我
 这是我的 [[https://twitter.com/#!/chen_bin][Twitter]] 和 [[https://plus.google.com/110954683162859211810][Google Plus]] 以及 [[http://www.weibo.com/u/2453581630][微博]],也可通过我 email<chenbin DOT sh AT GMAIL DOT COM>联系我.我在新浪 weibo.com 上开通账号 emacsguru.
 
 主力博客为 [[http://blog.binchen.org]].
 
-我不会回答具体配置的问题.如果你通读本文,应知道哪里找答案更好.
+我不回答具体配置的问题.如你通读本文,应知道哪里找答案更好.
 
 ** 结语
 再强调一下本文最重要的观点:
@@ -527,11 +536,11 @@ Emacs Lisp又是一种只用于Emacs的语言,有大量术语需要掌握.如"Bu
 
 关键是你以严肃的态度把其当作专业技能学习.
 
-很多人之所以不赞同我的核心观点,是因为内心深处还有把Emacs当玩具用来炫耀"我有多酷"的意识.
+很多人之所以不赞同我的核心观点,是因为内心深处还有把Emacs当玩具来炫耀"我有多酷"的意识.
 
-Emacs当然很强大,可以作为一种另类娱乐来博眼球.但是它的本质是为专业人士使用的神器.
+Emacs强大到可以作为另类娱乐来博眼球.但本质是专业人士使用的神器.
 
-让我打个比方,职业杀手对于杀人的刀只关心两件事:
+打个比方,职业杀手对于刀只关心两件事:
 1. 高效地杀人
 2. 任何环境下都可靠
 
