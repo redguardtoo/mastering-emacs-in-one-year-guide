@@ -160,7 +160,7 @@ For example, although Quora.com has lots of interesting stuff, *do not* read/sub
 
 BTW, the Emacs geek [[https://plus.google.com/113859563190964307534][Xah Lee]] hosts a Q/A session at Google Plus every Tuesday. His web site is [[http://xahlee.org/]].
 **** Reddit
-[[http://www.reddit.com/r/emacs/][Reddit]] is as good as Google+. The advantage of Reddit is that it's seldom blocked by the corporate firewall.
+[[http://www.reddit.com/r/emacs/][Reddit]] is as good as Google+. The advantage of Reddit is that it's seldomly blocked by the corporate firewall.
 **** Github
 It's a social network for developers.
 
