@@ -9,9 +9,9 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20160120
+Version: 20160203
 
-Updated: <2016-01-20 Wed>
+Updated: <2016-02-03 Wed>
 
 Created: <2012-10-12 Mon>
 
@@ -128,6 +128,11 @@ In order to see all the mails in "INBOX" folder/group, you need *MANUALLY* subsc
 Pressing =o= is *much better*. It is the hotkey I created for =C-u 5 M-x gnus-group-list-all-groups=, as mentioned in previous sections.
 
 Press =g= or =M-x gnus-group-get-new-news= to refresh groups list.
+
+You can also subscribe programmatically in ~/.gnus.el:
+#+begin_src elisp
+(gnus-subscribe-hierarchically "nnimap+hotmail:Inbox")
+#+end_src
 *** Reply email
 Press =R= or =M-x gnus-summary-reply-with-original= to reply with quoted text. Press =r= or =M-x gnus-summary-reply= to reply without quoted text.
 
@@ -302,15 +307,11 @@ Key points:
 - Please [[http://support.google.com/a/bin/answer.py?hl=en&answer=22370][verify]] your email address at Gmail if you use google's SMTP server
 
 *** Classify email
-[[http://getpopfile.org/][Popfile]]. Better than Gmail filter.
+[[http://getpopfile.org/][Popfile]].
 
 You may think [[http://www.google.com/inbox/][Google's Inbox]] equals to Popfile. Trust me, it's not. You only need Popfile!
 
-Popfile is open sourced. The data is stored *locally* with my full control. So Popfile still works if I switch the mail server.
-
-For example, after being trained by your Gmail data, Popfile becomes *smarter*. You can use the smarter Popfile to classify mails from your office's Exchange Mail Server.
-
-I'm 100% sure this solution will work because I've been using it for a very long time. I take pity on my colleagues who know only Outlooks.
+Popfile is open sourced. The data is stored *locally* with my full control. For example, the algorithm trained by Gmail can be used to classify mails from Microsoft Exchange Mail Server.
 
 Check [[http://blog.binchen.org/posts/use-popfile-at-linux.html]] for details.
 *** Write HTML mail
@@ -580,4 +581,4 @@ machine smtp.gmail.com login username@gmail.com password my-secret-password port
 machine imap-mail.outlook.com login username@hotmail.com password my-secret-password port 993
 #+END_SRC
 
-Please note ".authinfo.gpg" is encrypted. Emacs will do the encryption/descryption when reading/writing this file. See [[http://emacswiki.org/emacs/EasyPG]] for details.
+Please note ".authinfo.gpg" is encrypted. Emacs will do the encryption/descryption automatically if file extention is ".gpg". See [[http://emacswiki.org/emacs/EasyPG]] for details.
