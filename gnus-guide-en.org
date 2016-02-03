@@ -281,7 +281,19 @@ Please,
 
 There are alternatives which requires certain version of BBDB. My plugin doesn't have this issue.
 *** Customize "From" field
-Here is the setup to change "From" field according to the computers I'm using,
+Easiest solution is switch the FROM field dynamically by =M-x toggle-mail-from-field=:
+#+begin_src elisp
+(defun toggle-mail-from-field ()
+  (interactive)
+  (cond
+   ((string= "personal@gmail.com" user-mail-address)
+    (setq user-mail-address "myname@office.com"))
+   (t
+    (setq user-mail-address "personal@gmail.com")))
+  (message "Mail FROM: %s" user-mail-address))
+#+end_src
+
+A more complex solution is setup FROM field by the computer you are using:
 #+BEGIN_SRC emacs-lisp
 ;; (getenv "HOSTNAME") won't work because $HOSTNAME is not an env variable
 ;; (system-name) won't work because my /etc/hosts has some weird setup in office
@@ -301,7 +313,7 @@ Here is the setup to change "From" field according to the computers I'm using,
       user-mail-address (if (at-office) "me@mycompany.com" "me@gmail.com"))
 #+END_SRC
 
-Key points:
+Please note,
 - Command line program =hostname= is better than Emacs function =(system-name)=
 - I works on several computers which does *not* belong to me, so I cannot change /etc/hosts which =(system-name)= try to access
 - Please [[http://support.google.com/a/bin/answer.py?hl=en&answer=22370][verify]] your email address at Gmail if you use google's SMTP server
