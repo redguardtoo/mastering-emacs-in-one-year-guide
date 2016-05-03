@@ -9,9 +9,9 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20160203
+Version: 20160503
 
-Updated: <2016-02-03 Wed>
+Updated: <2016-05-03 Tue>
 
 Created: <2012-10-12 Mon>
 
@@ -57,7 +57,7 @@ Please subscribe the groups to make it visible. For example, INBOX is named "nni
 
 Check section "Subscribe groups" for details.
 
-At minimum, you need subcribe INBOX group. But after subscribing the INBOX is still *invisible* if INBOX contains NO unread mails. Yes, I agree with you this makes no sense for a modern email client!
+At minimum, you need subscribe INBOX group. But after subscribing the INBOX is still *invisible* if INBOX contains NO unread mails. Yes, I agree with you this makes no sense for a modern email client!
 
 You can =C-u 5 M-x gnus-group-list-all-groups= to solve this problem.
 
@@ -92,7 +92,7 @@ Please check section "Use Hydra to avoid remembering key bindings".
 **** Search mails on Server
 Press =G G= or =M-x gnus-group-make-nnir-group= to search mails at *server side* in "Group Buffer".
 
-You can press =#= to mark the groups.  Search will be limited to marked groups. =M-#= to unmark.
+You can press =#= to mark the groups.  Search will be limited to marked groups. =M-#= to un-mark.
 
 If no group marked, the group under cursor is searched.
 
@@ -136,7 +136,7 @@ You can also subscribe programmatically in ~/.gnus.el:
 *** Reply email
 Press =R= or =M-x gnus-summary-reply-with-original= to reply with quoted text. Press =r= or =M-x gnus-summary-reply= to reply without quoted text.
 
-Press =S W= (captalized S then captalized W) or =M-x gnus-summary-wide-reply-with-original=to reply all with quoted text. It's called "wide reply" in Emacs.
+Press =S W= (capitalized S then capitalized W) or =M-x gnus-summary-wide-reply-with-original=to reply all with quoted text. It's called "wide reply" in Emacs.
 
 Press =S w= or =M-x gnus-summary-wide-reply= to reply all without quoted text.
 *** Compose new email
@@ -257,22 +257,18 @@ Native [[https://ftp.gnu.org/gnu/emacs/windows/][Emacs for Windows]] need a litt
 *** Outlook?
 Exchange/Outlook users could read my post [[http://blog.binchen.org/posts/how-to-get-email-from-exchange-server-without-outlook.html]].
 
-Basically you need one portable java program [[http://davmail.sourceforge.net/][Davmail]]. That's enough in 99% companies. But if your Adminstrator is evil, you need use [[http://ewseditor.codeplex.com/][EWSEditor]] for once.
+Basically you need one portable java program [[http://davmail.sourceforge.net/][Davmail]]. That's enough in 99% companies. But if your Administrator is evil, you need use [[http://ewseditor.codeplex.com/][EWSEditor]] for once.
 *** Auto-complete mail address
 Install [[http://bbdb.sourceforge.net/][BBDB]]  through [[http://melpa.milkbox.net/#/bbdb][melpa]]. It is a email address database written in Emacs Lisp.
 
-Insert below code into ~/.emacs,
-#+BEGIN_SRC emacs-lisp
-(add-hook 'message-mode-hook
-          '(lambda ()
-             (bbdb-initialize 'message)
-             (bbdb-initialize 'gnus)
-             (local-set-key "<TAB>" 'bbdb-complete-name)))
-#+END_SRC
+You can always use =M-x bbdb-complete-name= and =M-x bbdb-complete-mail= provided by BBDB.
 
-[[https://github.com/company-mode/company-mode][company-mode]] does the similar job which works out of the box.
+But there are are another two better plugins based on BBDB (so you still need install BBDB at first):
+- [[https://github.com/company-mode/company-mode][company-mode]] 
+- [[https://github.com/tumashu/bbdb-handy][bbdb-handy]]
 
-I use both =M-x bbdb-complete-name= because company-mode is a little picky on BBDB versions.
+You only need one of them.
+
 *** Synchronize from Gmail contacts
 Please,
 - Go to [[https://www.google.com/contacts/]]
@@ -316,7 +312,7 @@ A more complex solution is setup FROM field by the computer you are using:
 Please note,
 - Command line program =hostname= is better than Emacs function =(system-name)=
 - I works on several computers which does *not* belong to me, so I cannot change /etc/hosts which =(system-name)= try to access
-- Please [[http://support.google.com/a/bin/answer.py?hl=en&answer=22370][verify]] your email address at Gmail if you use google's SMTP server
+- Please [[http://support.google.com/a/bin/answer.py?hl=en&answer=22370][verify]] your email address at Gmail if you use Google's SMTP server
 
 *** Classify email
 [[http://getpopfile.org/][Popfile]].
@@ -593,4 +589,4 @@ machine smtp.gmail.com login username@gmail.com password my-secret-password port
 machine imap-mail.outlook.com login username@hotmail.com password my-secret-password port 993
 #+END_SRC
 
-Please note ".authinfo.gpg" is encrypted. Emacs will do the encryption/descryption automatically if file extention is ".gpg". See [[http://emacswiki.org/emacs/EasyPG]] for details.
+Please note ".authinfo.gpg" is encrypted. Emacs will do the encryption/description automatically if file extension is ".gpg". See [[http://emacswiki.org/emacs/EasyPG]] for details.
