@@ -12,11 +12,11 @@
   :END:
 作者: 陈斌(redguardtoo)
 
-版本号: 20160125
+版本号: 20160903
 
-更新时间: <2016-01-25 Mon>
+更新时间: <2016-09-03>
 
-原创时间: <2012-01-31 Tue>
+原创时间: <2012-01-31>
 
 版权: 本文采用以下协议进行授权,[[http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh][自由转载 - 非商用 - 非衍生 - 保持署名 | Creative Commons BY-NC-ND 3.0]],转载请注明作者及出处.
 
@@ -26,7 +26,8 @@
 很多文章强调Emacs有多牛,但关于"如何做"则语焉不详.即使涉及到"如何做",谈细节多而方法论少,所以本文就 *侧重方法论*.
 
 全文结构如下:
-- 为什么Emacs值得学习,如对开源文化熟悉可跳过这一章,否则至少读一下态度一节
+- 为什么Emacs值得学习,如对开源文化熟悉可跳过这一章
+- 态度很重要
 - 本文最核心观点,要充分利用高手成果,不要重新发明轮子
 - 尽快掌握Emacs的步骤
 - 进一步提高的提示(社区,阅读,知识管理)
@@ -53,11 +54,11 @@ IDE针对特定语言或框架优化,而Emacs完成通用任务更有效.
 
 例如,我碰到难题,需要上IRC请教国外高手(工作流是,粘贴代码到[[http://gist.github.com]], 在irc提问,看网页,将解决方案粘贴回来),Emacs 集成了IRC工具和浏览器 (例如),操作就很方便.
 
-我使用 Visual Studio 多年,Firefox 也是高手,相信我,大多数情况下 Emacs 更快.
+我使用 Visual Studio 多年,Firefox 也是高手.相信我,大多数情况下 Emacs 更快.
 
 口说无凭,请看高手操作的 youtube 视频, [[http://www.youtube.com/watch?v=EQAd41VAXWo][Emacs Power: Can your editor do THIS! ]]
 
-顺便说一下,很多初学者关心的代码自动完成,几门主流语言支持都不错(包括java).
+顺便说一下,很多初学者关心的代码自动完成,主流语言支持都不错(包括java).
 
 *** Emacs会永存
 [[https://forum.sublimetext.com/t/project-alive/16005][个人开发者会丧失兴趣]],公司会倒闭.但自由软件基金会将一直存在下去.
@@ -72,22 +73,46 @@ Emacs作为其招牌软件也会维护下去,我的投资永不会贬值.
 我没说一年内须什么事都不干专学Emacs, 我最反对没有短期回报的悬梁刺股.
 
 我利用一年中通勤时间就取得了很大进步,自信到可以写下本文.
-*** 态度决定一切
-重要的是头脑开放,不先入为主.
+** 态度决定一切
+*** 理解软件自由
+何为软件自由没有比自由软件基金会更权威了.我建议把[[https://www.gnu.org/philosophy/free-sw.zh-cn.html]]反复读,理解何为四大自由.
 
-新手的问题是,根据之前习惯 *盲目* 设定了入门必知.有些必知还很费时间.
+一旦真正理解了软件自由,Emacs就变得非常简单了.
 
-以我为例,
-- 网上教程列出的初学者必知快捷键我都 *不知道* ,因为[[http://www.emacswiki.org/emacs/Smex][不需要]]
-- [[https://github.com/purcell/emacs.d/issues?q=author%3Aredguardtoo+][很多人说从零开始配置Emacs才是最好的学习办法,我偏反其道而行之]]
-- Emacs Lisp的语法我也只掌握了一小部分. [[https://github.com/punchagan/org2blog/issues/153][比如对于If的语法还有盲点]], 但是这没有妨碍我写出[[https://github.com/redguardtoo][有用的插件]]
-- 如前所述,我掌握Emacs只用了一年
+例如,很多用户习惯让Emacs启动时自动从其官方插件仓库[[https://elpa.gnu.org]]下载安装插件.当改网站偶尔下线或者公司的防火墙拦截了对外网站访问时,Emacs就会启动失败.
 
-也要避免门户之见,比如用了Emacs就排斥Vim的快捷键.比如一定要Helm和Ido中二选一(我是同时用的).治疗就是重读武侠小说"笑傲江湖".
+这也就是一分钟可以解决的小事,如果你理解软件自由, *有勇气* 到 =~/.emacs.d/elpa/= 目录下看一看的话。
+
+我不明白为什么年年会有那么多人对此长篇大论的讨论.
+
+一个插件仓库(repository)本质上就是一个文件夹,它有一个含有插件列表名为 =archive-contents= 的文本文件,以及一系列插件包.你完全可以把这些文件下载下来,在本地硬盘里建立ELPA的镜像.
+
+对个人来说,安装我写的插件[[https://github.com/redguardtoo/elpa-mirror][elpa-mirror]]每年备份一下所有插件就足够了.
+*** 避免门户之见
+所谓门户之见就是贴标签."我们的"对应"他们的"."熟悉的"对应"陌生的","正统的"对应"异端"的.
+
+"我们的","熟悉的","正统的",就是"好的";"他们的","陌生的","异端的"就是"坏的".
+
+比如用了Emacs就排斥Vim的快捷键,或者反之.
+
+避免门户之见的关键就是意识到标签只存在于你的主观想像中.真实世界不会因为你的想像而扭曲.
+
+以Emacs和Vim的快捷键为例,两种快捷键完全可以无缝接合.
+
+当然思想的问题不是我空谈能解决的,关键是要实干.一个很好的治愈方法就是把[[http://planet.emacsen.org/]]上约4000篇文章通读一遍.大约需要8个小时左右.泛读就可以了.目的就是了解世界有多大.
+*** 以科学理性做指导
+之前有读者反映我的方法类似于大学里写论文做研究,事实上这正是我的灵感来源.
+
+Emacs只是一种特定领域得科学技术,其学习方法和其他学科是通用得.
+
+打好基础,让自己的知识面有 *足够的* 广度和 *适当的* 深度,对新手是最重要的.否则会在一些琐碎问题上浪费时间.
+
+比如新手的错误就是花大量的时间记快捷键,事实上网上教程列出的初学者"必知"快捷键[[http://www.emacswiki.org/emacs/Smex][都不是必需的]].
+
 ** 具体步骤
 开始前,解释一下后文用到的命名惯例,
-- "C" 表示按下Ctrl键,"M"表示按下Alt键
-- "M-x my-command"表示同时按下"Alt"和"X", 输入"my-command",然后回车
+- =C= 表示按下Ctrl键, =M= 表示按下Alt键
+- =M-x my-command= 表示同时按下Alt和X, 输入"my-command",然后回车
 
 *** 无Linux/Unix经验新手的快速指南(可选)
 建议,
@@ -98,12 +123,14 @@ Emacs作为其招牌软件也会维护下去,我的投资永不会贬值.
 - 使用Emacs 24自带的[[http://www.orgmode.org][org-mode]]作个人管理
 - org-mode关键是用起来,只要记住按TAB键是展开内容就可以了,其他都不用学
 
-这步的目的是:
-- 理解Emacs可爱之处
-- 知道Emacs如何和其他软件交互
+这一步的目的是知道Emacs如何和其他软件交互,是必需的.
+
+例如用Emacs开发C++最简单成熟的方案是使用[[http://blog.binchen.org/posts/emacs-as-c-ide-easy-way.html][GNU Global]].配置Global必需要知道设置环境变量 =GTAGSLIBPATH= .如果你连环境变量是什么都不知道,那么用Emacs开发C++也无从谈起.
+
+尽可能多的掌握其他Linux知识是很有用的,即使你只在Windows下使用Emacs.
 *** 读官方教程
 按以下步骤阅读教程:
-- 不安装任何插件打开Emacs, 比如在Shell中运行命令"emacs -nw -Q"
+- 不安装任何插件打开Emacs, 比如在Shell中运行命令 =emacs -nw -Q=
 - 同时按下 Alt 和 X 健,输入 help-with-tutorial(类似快捷键后文简写为`M-x help-with-tutorial` 代替),回车.
 
 仅需半小时.关于Emacs多难学的谬论可以休矣.半小时的代价微不足道.想想你去练了多少个半小时吧.
@@ -111,9 +138,9 @@ Emacs作为其招牌软件也会维护下去,我的投资永不会贬值.
 即使你不打算使用Emacs默认的快捷键,这步也是必须的,不要跳过!
 
 最起码要知道以下命令,
-- "M-x describe-variable", 快捷键"C-h v", 查看变量的文档
-- "M-x describe-function", 快捷键"C-h f", 查看命令的文档
-- "M-x describe-key", 快捷键 "C-h k", 查看快捷键的文档
+- =M-x describe-variable=, 快捷键 =C-h v=, 查看变量的文档
+- =M-x describe-function=, 快捷键 =C-h f=, 查看命令的文档
+- =M-x describe-key=, 快捷键 =C-h k=, 查看快捷键的文档
 *** 以实际问题作为切入点
 微小的努力如能得到巨大回报,你会越学越有乐趣,进入一个感情上的正反馈.
 
@@ -205,15 +232,17 @@ GitHub 的版本控制服务很好.现在它的社区化倾向越来越强了,�
 **** 在 twitter 上以 "emacs :en" 定期搜索
 twitter人多,更新结果快.
 
-之所以加上":en"是因为要排除日文内容.
+之所以加上":en"是因为要排除日文内容,因我不懂日文.
+
+如果你懂日文,则应充份利用日文资源,其质量相当高.
 **** 在 stackoverflow 上搜索相关讨论
 google "emacs-related-keywords site:stackoverflow.com"
 
 我会定期搜索,同一帖子反复精读.因为讨论质量很高.
 
-[[http://emacs.stackexchange.com]] 是Emacs专门的问答子社区.
+[[http://emacs.stackexchange.com]] 是Stackverflow旗下专门的Emacs问答社区.
 **** 到 Youtube 上看 emacs 相关的视频
-例如,我就是看了 [[http://www.youtube.com/watch?feature=player_embedded&v=oJTwQvgfgMM][Google Tech Talks 上这个 Org-mode 作者的介绍]] 而爱上 org-mode.
+我就是看了 [[http://www.youtube.com/watch?feature=player_embedded&v=oJTwQvgfgMM][Google Tech Talks 上这个 Org-mode 作者的介绍]] 而爱上 org-mode.
 
 不过Youtube搜索结果是最佳匹配的.由于相关视频并不多,如按照默认算法,每次总是那几个.所以如果关注最新进展,搜索应以时间排序.
 
@@ -237,7 +266,7 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 ** 知识管理
 不要低估长期管理的累积效应.
 
-正面例子参考Steve Purcell的配置. 2000年开始14年的维护! 8年github记录! 1000多颗星的配置决非浪得虚名.
+正面例子参考Steve Purcell的配置. 2000年开始维护!其声誉和质量不用我多费口舌.
 
 知识积累的越多,这些知识之间的联系就会越多.联系增长的速度是以指数的方式增长的.如从头来过,意味着积累的知识的书面记录丢失了.损失是很大的.基数已归零,增长的量又能有多少.
 
@@ -278,12 +307,11 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 | [[https://github.com/nonsequitur/smex][smex]]                | 让输入命令变得飞快                 | 没有             |
 | [[https://github.com/capitaomorte/yasnippet][yasnippet]]           | 强大的文本模板输入工具             | 没有             |
 | [[http://www.emacswiki.org/emacs/FlyMake][flymake]]             | 对不同语言做语法检查               | flycheck         |
-| [[https://github.com/emacs-helm/helm][helm]]                | 自动完成,在其上有插件完成具体功能  | ido              |
+| [[https://github.com/abo-abo/swiper/blob/master/ivy.el][ivy]] or [[https://github.com/emacs-helm/helm][helm]]         | 自动完成,在其上有插件完成具体功能  | ido              |
 | [[http://www.emacswiki.org/emacs/InteractivelyDoThings][ido]]                 | 和helm类似,helm和ido可同时用       | helm             |
 | [[https://github.com/mooz/js2-mode][js2-mode]]            | javascript的主模式,自带语法解释器  | js-mode          |
 | [[http://www.emacswiki.org/emacs/emacs-w3m][w3m]]                 | 网络浏览器(需安装命令行工具w3m)    | Eww              |
 | [[https://github.com/skeeto/emacs-web-server][simple-httpd]]        | Lisp 写的 Web 服务器               | [[https://github.com/nicferrier/elnode][elnode]]           |
-| [[https://github.com/Fuco1/smartparens][smartparens]]         | 自动输入需要成对输入的字符如括号   | autopair         |
 | [[https://github.com/nschum/window-numbering.el][window-numbering.el]] | 跳转到不同的子窗口                 | switch-window.el |
 | [[https://github.com/fxbois/web-mode][web-mode]]            | 支持各种 HTML 文件                 | nxml-mode        |
 | [[https://github.com/magit/magit][magit]]               | 玩转git                            | 没有             |
@@ -308,8 +336,178 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 
 例如，你是否意识到之前的章节意味着以下行动:
 - 找出所有插件的作者
-- 在Quora/Twitter/Github/Reddit/Google+上跟随他们
+- 在Quora/Twitter/GitHub/Reddit/Google+上跟随他们
 - 通读他们已发表的贴子
+** 使用Evil
+Evil是[[https://bitbucket.org/lyro/evil/wiki/Home][Evil]]Vim模拟器.
+
+如果你不熟悉Vim,在命令行里运行 =vimtutor= 或者安装Emacs插件[[https://github.com/syl20bnr/evil-tutor][evil-tutor]]学习Vim基本命令.
+
+该教程大概需要半小时.关于Vim的基本操作的讨论就到此为止了.网上关于Vim教程汗牛充栋,你可以自行阅读.
+
+本文的重点是探讨如何结合Emacs和Vim获得完美文本编辑器,达到*神用编辑器之神*的境界.
+
+*** Text Object
+了解[[http://vimdoc.sourceforge.net/htmldoc/motion.html][Vim Text Object]]的概念.
+
+Evil的强大之处就是你可以用Emacs Lisp来自定义"Text Object".自由的Lisp使得你完全不用理睬Vim中的"约定俗成".
+
+比如在操作自定义的Text Object时,当前焦点完全可以在Text Object之外.这是Lisp写的[[http://blog.binchen.org/posts/evil-text-object-to-select-nearby-file-path.html][寻找附近的文件路径或者URL.]] 用Vim Script写个类似的脚本难很多.即使你用了[[https://github.com/kana/vim-textobj-user][vim-textobj-user]]之类的插件辅助开发也没用的.
+
+而且Lisp代码完全可以调用*任何*的第三方插件或者Emacs的不计其数的API.比如Evil中操作Text Object的过程中我完全可以显示对话框问用户问题,访问几个网站等等.
+
+这些额外功能对Vim来说就是不可能完成的任务了.
+
+*** Leader键
+Vim自带Leader键的功能,你先按了Leader键(很多人定义为空格键)后,再按其他键(比如"kk")会触发你自定义的命令.本质就是给你更多的快捷键.
+
+在Emacs中我们需要使用第三方插件如[[https://github.com/cofi/evil-leader][evil-leader]]来实现类似功能.
+
+某些Vim用户不能迁移到Evil的原因就是自定义了太多使用Ctrl键的快捷键,和Emacs默认的快捷键有冲突.
+
+这些用户没有意识到的是借鉴Emacs的思想,他们在Vim和Emacs的效率可以有巨大的提升. 我只提三点供参考:
+
+第一,典型Vim的用户的问题是没有充份利用Leader快捷键.我看过大多数Vim高手在GitHub上的设置,他们一般定义*10到20个左右*Leader相关的快捷键.
+
+我定义了*300个*Leader相关的快捷键.
+
+典型Evil用户(如spacemacs用户)大概有3000到10000个Leader相关快捷键可用.
+
+第二,Vim用户的另一个问题是快捷键没有优化.最常用的快捷键应该最容易按.何为最常用快捷键必须来自*真实数据*.
+
+这是我用Emacs的插件[[https://github.com/dacap/keyfreq][keyfreq]]测试六个月后得到的部份数据 (我的Leader键定义为逗号):
+| Times | Percentage | Command                                | Key                   |
+|-------+------------+----------------------------------------+-----------------------|
+|  4967 |     12.00% | evilmi-jump-items                      | %                     |
+|  2892 |      6.99% | compile                                | , o o                 |
+|  2178 |      5.26% | find-file-in-project-by-selected       | , k k                 |
+|  1953 |      4.72% | copy-to-x-clipboard                    | , a a                 |
+|  1566 |      3.78% | paste-from-x-clipboard                 | , z z                 |
+|  1227 |      2.96% | er/expand-region                       | , x x                 |
+|   897 |      2.17% | evil-repeat                            | .                     |
+|   866 |      2.09% | ido-find-file                          | , x f, C-x C-f        |
+|   819 |      1.98% | toggle-full-window                     | , f f                 |
+|   815 |      1.97% | etags-select-find-tag-at-point         | C-], , h t            |
+|   721 |      1.74% | back-to-previous-buffer                | , b b                 |
+|   682 |      1.65% | split-window-vertically                | , x 2                 |
+|   539 |      1.30% | find-function                          | , h f, C-h C-f        |
+|   494 |      1.19% | counsel-recentf-goto                   | , r r                 |
+|   397 |      0.96% | counsel-git-grep                       | , g g                 |
+|   376 |      0.91% | delete-other-windows                   | , x 1, C-x 1          |
+|   372 |      0.90% | evilnc-comment-or-uncomment-lines      | , c i                 |
+|   351 |      0.85% | eval-expression                        | , e e, M-:            |
+|   326 |      0.79% | evilmi-select-items                    | , s i                 |
+|   320 |      0.77% | paredit-doublequote                    |                       |
+|   307 |      0.74% | evil-filepath-outer-text-object        |                       |
+|   300 |      0.72% | steve-ido-choose-from-recentf          |                       |
+|   295 |      0.71% | split-window-horizontally              | , x 3                 |
+|   283 |      0.68% | git-add-current-file                   | , x v a               |
+|   279 |      0.67% | winner-undo                            | , x u, , s u, C-x 4 u |
+|   278 |      0.67% | describe-function                      | , h d, C-h f          |
+|   278 |      0.67% | evil-goto-mark-line                    | '                     |
+|   269 |      0.65% | ido-kill-buffer                        | , x k, C-x k          |
+|   254 |      0.61% | evil-goto-definition                   | g d                   |
+|   253 |      0.61% | pop-tag-mark                           | M-*                   |
+|   251 |      0.61% | git-messenger:popup-message            | , x v b, C-x v p      |
+|   246 |      0.59% | my-goto-next-hunk                      | , n n                 |
+|   237 |      0.57% | evilnc-comment-operator                | , ,                   |
+|   235 |      0.57% | flyspell-goto-next-error               | , f e, C-,            |
+|   214 |      0.52% | evil-exit-emacs-state                  |                       |
+|   212 |      0.51% | browse-kill-ring-forward               |                       |
+|   210 |      0.51% | flyspell-buffer                        | , f b                 |
+第三, 由于Lisp的强大Leader键的使用在Emacs中有无限可能
+如果你使用[[https://github.com/noctuid/general.el][general.el代替evil-leader,]]你可以以同时定义多个Leader键.可以在切换文件的时候切换Leader键等等.
+
+*** Evil和Emacs原生插件的兼容性
+如果你真正理解了我前面的章节,这就根本不是问题.
+
+之前我提到了要保持头脑开放,要尽可能抄高手的代码,积极的报bug等观点.现在让我演示一下如何应用.
+
+我知道有很多人宣称,Evil和Emacs的许多插件有快捷键冲突,重新配置很麻烦.
+
+一开始我也相信了这些一派胡言,所以每装一个新的插件,都要辛辛苦苦再设置evil的快捷键.
+
+有一天我问自己,Lisp那么强大,Evil那么优秀,也许有更方便的简洁方案?许多人说不行不一定是真理,只有实际调查过的人才有发言权.
+
+我也没有自己钻研Evil的代码,取而代之的是[[https://bitbucket.org/lyro/evil/issue/511/let-certain-minor-modes-key-bindings][给Evil的开发者Frank Fischer报了个bug]],他给我了一个完美的方案,根本不需要重设快捷键.
+
+这是这个方案在[[https://github.com/pidu/git-timemachine][git-timemachine中]]的[[http://emacs.stackexchange.com/questions/9842/disable-evil-mode-when-git-timemachine-mode-is-activated][完美应用]].
+*** Evil专用的插件介绍
+我就选择[[http://melpa.org][MELPA]]上最流行的5个插件简单介绍一下,类似的优秀插件还有很多.
+
+要点不在于你装了多少插件,而在于理解由于Lisp的强大和Emacs的自由,这些插件比Vim对应的插件功能更多,更容易拓展.
+
+**** [[https://github.com/timcharper/evil-surround][evil-surround]]
+对应[[https://github.com/tpope/vim-surround][vim-surround]].
+
+我通常用[[https://github.com/magnars/expand-region.el/blob/master/expand-region-core.el][expand-region选中一段文本,然后按 =S= 或者 =M-x evil-surround-region= ,再按任意字符(比如双引号)就可以在文本]]首尾两端附加该字符.
+
+当然它也支持修改删除操作.
+
+之前提到的text object也完美支持.
+
+懂Lisp的话可以修改=evil-surround-operator-alist=自己定制操作.
+
+**** [[https://github.com/redguardtoo/evil-nerd-commenter][evil-nerd-commenter]]
+对应[[https://github.com/scrooloose/nerdcommenter][vim-nerd-commenter]],这是我写的,功能更强大.
+
+你可以 =M-x 5 evilnc-comment-or-uncomment-lines= 快速注释当前5行或者取消注释当前5行.
+
+你也可以选中一个区域 =M-x evilnc-comment-or-uncomment-lines=
+
+由于Emacs的强大,默认就支持所有世界上已知的语言,而核心代码也就是1行而已.Vim插件对应的功能代码要有400行.
+
+如果你在[[http://orgmode.org/][org-mode格式的单一文件中]]中混杂多种语言的话,它也能智能识别.这个功能在Vim中基本不可能实现.
+**** [[https://github.com/redguardtoo/evil-matchit][evil-matchit]]
+对应[[https://github.com/tmhedberg/matchit][vim-matchit]].又是我写的.自然功能更强大.
+
+本质就是你当前焦点在文件的某个位置A,你按 =%= 或者 =M-x evilmi-jump-items=,焦点移到位置B,你再按同样的键,又回到了位置A.
+
+比如在一个HTML文件中,你就可以在 =<body>= 和 =</body>= 间跳来跳去.其他各种编程语言都支持.
+
+Vim对应的代码我读过,限制比较多,比如你一定要先定义一对正则表达式来匹配A和B的位置.这种限制在某些语言如Python中就会比较麻烦.
+
+Emacs的实现就完全体现了Emacs的自由精神,我建立了一个动态查询的矩阵,矩阵的元素就是函数对象而已.用户可以在运行时替换这些函数对象,所以怎么跳转,跳到哪都是完全自由的.
+
+所以python的支持就毫无问题.想支持更多的语言或者对我的实现不满意,在 =.emacs= 中写几行Lisp代码就可以了.
+**** [[https://github.com/syl20bnr/evil-escape][evil-escape]]
+按自定义快捷键退出当前的各种状态,相当于Vim中的 =ESC= 或者Emacs中的 =C-g=.
+
+我定义自定义快捷键为 =kj=.如果你效率高的话,取消的默认快捷键就太慢了.
+
+让我给你举个例子说明什么叫效率高.我移动手指去按ESC键需要0.5秒.
+
+Sublime Text默认的文本搜索要比我的Emacs设置慢40倍.如果Sublime Text搜索需要我等待40秒,那么节省按取消键的0.5秒就毫无意义.
+
+我只需要1秒完成搜索,所以把取消操操作从0.5秒减少到0.1秒的感觉就完全不一样.
+**** [[https://github.com/bling/evil-visualstar][evil-visualstar]]
+对应[[https://github.com/bronson/vim-visual-star-search][vim-visual-star-search.]]
+
+选择一段文本,按 =#= 或者 =*= 搜索.
+*** 在Shell和Interactive Interpreter中使用Evil
+可以 =M-x shell= 或者 =M-x term= 进入Shell.
+
+传统上大家都在Shell中用Emacs的默认快捷键.
+
+不过你仔细计算过的话,会发现Vim的快捷键更有效率.
+
+Shell的作用无非就是运行命令或者脚本代码,然后输出结果.
+
+当我们在Emacs中运行Shell的时候,命令和代码往往是从别的地方拷贝过来的.
+
+粘贴命令和代码到Shell中,分析/过滤/搜索输出的结果,都是Vim的快捷键更方便.
+
+我之前提到的所有关于Evil的技巧和插件都适用于此.
+
+Interactive Interpreter和Shell没有本质区别,无非就是解释器支持的语言不一样罢了.比如[[https://github.com/nonsequitur/inf-ruby][inf-ruby]]支持Ruby.
+
+你可以按 =C-z= 切换纯Emacs快捷键.我从不切换,因为我对这种杂交的快捷键非常满意.
+**** Evil的小结
+对Vim用户来说,Evil不仅提供了Vim的完美模拟,还开辟了用Lisp拓展Vim的新世界.
+
+对Emacs用户来说,Evil也不仅仅是提供了新的快捷键,而是提供了更多的可编程的数据结构和范式(如text object).
+
+关键是发挥你的创造力,自由地接合Emacs和Vim的长处,发明新技术和新技巧.这种机会目前是很多的,赶快行动起来吧.
 ** 答疑
 *** 菜鸟怎么开始
 到[[https://github.com/redguardtoo/emacs.d]] 参考"Install stable version in easiest way"一节.
