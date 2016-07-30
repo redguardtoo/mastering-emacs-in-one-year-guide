@@ -83,11 +83,11 @@ In short, "Group Buffer" lists mail folders. "Summary Buffer" lists mails in one
 
 That's all you need to know. You could go to section [[My Gnus configuration (for Gmail)]] to use Gnus now without reading remaining sections.
 ** Essential 5%
-Don't memorize all the key bindings. Only pick up what you actually use.
+Don't memorize all key bindings. Only pick up what you actually use instead.
 
-At the end of this article, I provide *my [[https://github.com/abo-abo/hydra][Hydra]] setup to help you avoid remembering key bindings *.
+At the end of this article, I've provided *my [[https://github.com/abo-abo/hydra][Hydra]] setup* so you actually don't need remembering key binding any more.
 
-Please check section "Use Hydra to avoid remembering key bindings".
+Please see section "Use Hydra to avoid remembering key bindings" for more details.
 *** Search mails
 **** Search mails on Server
 Press =G G= or =M-x gnus-group-make-nnir-group= to search mails at *server side* in "Group Buffer".
@@ -105,7 +105,7 @@ You can apply [[http://tools.ietf.org/html/rfc3501#section-6.4.4][more advanced 
 - Input query statements, press Enter
 - Type "imap", press Enter
 
-**** Filter mails locally
+**** Search mails locally
 Press =/ /= to limit the mails by subject at "Summary Buffer". "Limiting" means *filtering mails locally*.
 
 Press =/ a= to limit the mails by author at "Summary Buffer".
@@ -114,12 +114,12 @@ Press =/ a= to limit the mails by author at "Summary Buffer".
 
 You can apply the limits sequentially and cancel them in reverse order by pressing =/ w=.
 
-"Limiting" is cool. [[http://www.gnu.org/software/emacs/manual/html_mono/gnus.html#Limiting]] has more tricks.
+"Limiting" is cool. See [[http://www.gnu.org/software/emacs/manual/html_mono/gnus.html#Limiting]] for more Limiting tricks.
 
-See [[http://sachachua.com/blog/2008/05/emacs-gnus-searching-mail/]] for technical details.
+You can also see [[http://sachachua.com/blog/2008/05/emacs-gnus-searching-mail/]] for technical details.
 
 *** Subscribe groups
-Press =A A= or =M-x gnus-group-list-active= in "Group Buffer" to fetch groups list on *all connected server*. It take a while. I suggest pressing "L" to use local cache instead after =A A= once.
+Press =A A= or =M-x gnus-group-list-active= in "Group Buffer" to fetch groups at *all connected server*. It take a while. I suggest pressing "L" to use local cache instead after =A A= once.
 
 After =A A= or =L=, press =u= to subscribe/unsubscribe specific group.
 
@@ -201,9 +201,9 @@ You can mark multiple mails to forward (hotkey is "#") and forward them in one m
 
 After the forwarded email is created, you may copy the body of that email without sending it. The copied content could be inserted into new mail.
 *** Mark mails as read
-Press =c= either in "Summary Buffer" or "Group Buffer". This is *my most frequently used command* because it's easier Gmail's own UI!
+Press =c= either in "Summary Buffer" or "Group Buffer". This is *my most frequently used command* which it's superior to Google's own UI!
 *** Tree view of mail folders
-[[http://www.gnu.org/software/emacs/manual/html_node/gnus/Group-Topics.html][Group Topics]] is used re-organize the mail folder into tree view.
+[[http://www.gnu.org/software/emacs/manual/html_node/gnus/Group-Topics.html][Group Topics]] is used to re-organize the mail folder into tree view.
 
 For example, you can place mail folders from Gmail into "gmail" topic, mails from Outlook.com into "hotmail" topic, place "gmail" and "hotmail" under root topic "Gnus".
 
@@ -212,9 +212,13 @@ The setup is only one line,
 (add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
 #+end_src
 
-Though you can read [[http://www.gnu.org/software/emacs/manual/html_node/gnus/Topic-Commands.html][offical manual]] to learn its command, my way is much better.
+After setup, you can read its [[http://www.gnu.org/software/emacs/manual/html_node/gnus/Topic-Commands.html][official manual]] to learn its commands to organize mail folders *manually*.
 
-Insert below code into ~/.gnus.el and you are done,
+It's tiresome to do this folder organizing thing again and again on different computers.
+
+So you'd better save all the trouble and  use my way instead.
+
+All you need to do is to insert below code into ~/.gnus.el and you are done,
 #+begin_src elisp
 (eval-after-load 'gnus-topic
   '(progn
@@ -224,6 +228,7 @@ Insert below code into ~/.gnus.el and you are done,
                                  (("hotmail" visible nil nil))
                                  (("gmail" visible nil nil))))
 
+     ;; Please not the key of topic is specified in my sample setup
      (setq gnus-topic-alist '(("hotmail" ; the key of topic
                                "nnimap+hotmail:Inbox"
                                "nnimap+hotmail:Drafts"
@@ -239,9 +244,9 @@ Insert below code into ~/.gnus.el and you are done,
                               ("Gnus")))))
 #+end_src
 
-Instead remembering topic commands, editing about snippet is more straightforward. The only requirement is a little bit of Emacs Lisp knowledge.
+Instead remembering topic commands, editing above snippet is more straightforward. The only requirement is a little bit of Emacs Lisp knowledge.
 
-The flag =gnus-message-archive-group= defines archive folder of sent mail. By default new folder is created *monthly*. My setup make it created *yearly*.
+The flag =gnus-message-archive-group= defines archive folder of sent mail. By default new folder is created *monthly*. My setup creates the folder *yearly*.
 ** Advanced tips
 *** Windows?
 It's *100% usable* if you install [[https://www.cygwin.com/][Cygwin]] at first.
@@ -252,12 +257,12 @@ Native [[https://ftp.gnu.org/gnu/emacs/windows/][Emacs for Windows]] need a litt
 - Right-click "My Computer" and go to "Properties -> Advanced -> Environmental Variables"
 - Setup *user variables* which does not require Administrator right
 - Set the variable "HOME" to the parent directory of your ".emacs.d" directory
-- Set the variable "PATH" to the "C:\cygwin64\bin". I supposed you install cygwin at C driver
+- Set the variable "PATH" to the "C:\cygwin64\bin". I suppose Cygwin is installed at driver C.
 - Install GnuTLS and OpenSSH through Cygwin's package manager
 *** Outlook?
 Exchange/Outlook users could read my post [[http://blog.binchen.org/posts/how-to-get-email-from-exchange-server-without-outlook.html]].
 
-Basically you need one portable java program [[http://davmail.sourceforge.net/][Davmail]]. That's enough in 99% companies. But if your Administrator is evil, you need use [[http://ewseditor.codeplex.com/][EWSEditor]] for once.
+You need one portable Java program [[http://davmail.sourceforge.net/][Davmail]]. That's enough in 99% companies. But if your Administrator is evil, you need use [[http://ewseditor.codeplex.com/][EWSEditor]] for once.
 *** Auto-complete mail address
 Install [[http://bbdb.sourceforge.net/][BBDB]]  through [[http://melpa.milkbox.net/#/bbdb][melpa]]. It is a email address database written in Emacs Lisp.
 
@@ -272,12 +277,12 @@ You only need one of them.
 *** Synchronize from Gmail contacts
 Please,
 - Go to [[https://www.google.com/contacts/]]
-- Click "More -> Export -> vCard Format -> Export".
+- Click "More -> Export -> vCard Format -> Export"
 - Install [[https://github.com/redguardtoo/gmail2bbdb]] (developed by me) and press =M-x gmail2bbdb-import-file=. The contacts will be output into ~/.bbdb which is automatically detected by Emacs
 
-There are alternatives which requires certain version of BBDB. My plugin doesn't have this issue.
+Other plugins are strict on versions of BBDB. Mine doesn't have such issue.
 *** Customize "From" field
-Easiest solution is switch the FROM field dynamically by =M-x toggle-mail-from-field=:
+Easiest solution is to switch the FROM field dynamically by =M-x toggle-mail-from-field=:
 #+begin_src elisp
 (defun toggle-mail-from-field ()
   (interactive)
@@ -448,7 +453,7 @@ Move the cursor to "offline" server then press =M-x gnus-server-open-server=.
 ** My setup
 This setup requires Emacs 24.3 at minimum.
 
-Please note the *multiple accounts on the same mail server is troublesome*. Don't waste time on it.
+Please note the *multiple accounts at the same mail server is troublesome*. Don't waste time on it.
 
 My ~/.gnus.el,
 #+BEGIN_SRC emacs-lisp
