@@ -11,7 +11,7 @@ Author: Chen Bin (redguardtoo)
 
 Version: 20160503
 
-Updated: <2016-05-03 Tue>
+Updated: <2016-08-05 Fri>
 
 Created: <2012-10-12 Mon>
 
@@ -129,9 +129,13 @@ Pressing =o= is *much better*. It is the hotkey I created for =C-u 5 M-x gnus-gr
 
 Press =g= or =M-x gnus-group-get-new-news= to refresh groups list.
 
-You can also subscribe programmatically in ~/.gnus.el:
+You can also subscribe programmatically in ~/.gnus.el *once* per emacs session:
 #+begin_src elisp
-(gnus-subscribe-hierarchically "nnimap+hotmail:Inbox")
+(defvar gnus-subscribe-groups-done nil
+  "Only subscribe groups once.  Or else Gnus will NOT restart.")
+(unless gnus-subscribe-groups-done
+  (gnus-subscribe-hierarchically "nnimap+hotmail:Inbox")
+  (setq gnus-subscribe-groups-done t))
 #+end_src
 *** Reply email
 Press =R= or =M-x gnus-summary-reply-with-original= to reply with quoted text. Press =r= or =M-x gnus-summary-reply= to reply without quoted text.
@@ -142,7 +146,7 @@ Press =S w= or =M-x gnus-summary-wide-reply= to reply all without quoted text.
 *** Compose new email
 Press =m= or =M-x gnus-new-mail= in "Summary Buffer".
 
-You could also =C-x m= or =M-x componse-mail= anywhere in Emacs without bugging Gnus.
+You could also =C-x m= or =M-x compose-mail= anywhere in Emacs without bugging Gnus.
 *** Re-send as new mail
 Press =S D e= or =M-x gnus-summary-resend-message-edit=. Useful if you re-send mail in Draft folder.
 *** Attach a file
@@ -355,7 +359,7 @@ You also need insert below code into ~/.emacs,
 #+END_SRC
 Above code set =gnus-use-cache= to true to use the cache to the full extent by "wasting" *tens of megabytes* disk space.
 
-The disk cache is located at "~/News/cache/". You can back it up with Github's private repository.
+The disk cache is located at "~/News/cache/". You can back it up with GitHub's private repository.
 *** Multiple accounts
 You only need copy the code containing "gnus-secondary-select-methods" from my setup.
 
@@ -462,7 +466,7 @@ My ~/.gnus.el,
 ;; @see http://www.emacswiki.org/emacs/GnusGmail#toc1
 (setq gnus-select-method '(nntp "news.gmane.org")) ;; if you read news groups
 
-;; ask encyption password once
+;; ask encryption password once
 (setq epa-file-cache-passphrase-for-symmetric-encryption t)
 
 ;; @see http://gnus.org/manual/gnus_397.html
@@ -477,7 +481,7 @@ My ~/.gnus.el,
                       (nnmail-expiry-target "nnimap+gmail:[Gmail]/Trash")
                       (nnmail-expiry-wait 90)))
 
-;; OPIIONAL, the setup for Microsoft Hotmail
+;; OPTIONAL, the setup for Microsoft Hotmail
 (add-to-list 'gnus-secondary-select-methods
              '(nnimap "hotmail"
                       (nnimap-address "imap-mail.outlook.com")
@@ -521,7 +525,7 @@ My ~/.gnus.el,
       ((eq system-type 'windows-nt))
       (t
        ;; Linux, read ~/.mailcap
-       (mailcap-parse-mailcaps)))));; Tree view for groups.  I like the organisational feel this has.
+       (mailcap-parse-mailcaps)))));; Tree view for groups.
 
 (add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
 
@@ -530,8 +534,8 @@ My ~/.gnus.el,
 (setq gnus-summary-thread-gathering-function 'gnus-gather-threads-by-subject)
 
 ;; Also, I prefer to see only the top level message.  If a message has
-;; several replies or is part of a thread, only show the first
-;; messa  'gnus-thread-ignore-subject' will ignore the subject and
+;; several replies or is part of a thread, only show the first message.
+;; `gnus-thread-ignore-subject' will ignore the subject and
 ;; look at 'In-Reply-To:' and 'References:' headers.
 (setq gnus-thread-hide-subtree t)
 (setq gnus-thread-ignore-subject t)
@@ -541,7 +545,7 @@ My ~/.gnus.el,
       user-mail-address "username@gmail.com")
 
 ;; Read HTML mail
-;; You need install the command line brower 'w3m' and Emacs plugin 'w3m'
+;; You need install the command line web browser 'w3m' and Emacs plugin 'w3m'
 (setq mm-text-html-renderer 'w3m)
 
 ;; Setup to send email through SMTP
