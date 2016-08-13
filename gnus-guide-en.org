@@ -9,7 +9,7 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20160503
+Version: 20160730
 
 Updated: <2016-08-05 Fri>
 
@@ -35,7 +35,7 @@ So here is my guide on the 5%.
 
 ** Quick start
 *** Requirements and conventions
-A little homework is needed before we start,
+A little homework before we start,
 - This guide applies on Emacs24+
 - You need install GnuTLS and OpenSSH on Linux/Mac/Window(Cygwin)
 - =C= means =Ctrl= and =M= means =Alt=. For example, =M-x= means pressing =Alt= and =x= together.
@@ -46,7 +46,7 @@ A little homework is needed before we start,
 - "Summary buffer" means the list of mails.
 
 *** Sample setup
-Now please check [[http://www.emacswiki.org/emacs/GnusGmail]] for basics. You can also use my settings at the end of this article.
+Please check [[http://www.emacswiki.org/emacs/GnusGmail]] for basics. You can also use my settings at the end of this article.
 
 *** Usage
 After setup, =M-x gnus= in Emacs.
@@ -250,7 +250,7 @@ All you need to do is to insert below code into ~/.gnus.el and you are done,
 
 Instead remembering topic commands, editing above snippet is more straightforward. The only requirement is a little bit of Emacs Lisp knowledge.
 
-The flag =gnus-message-archive-group= defines archive folder of sent mail. By default new folder is created *monthly*. My setup creates the folder *yearly*.
+The flag =gnus-message-archive-group= defines *local* archive folder of sent mails. By default new folder is created *monthly*. My setup creates the folder *yearly*.
 ** Advanced tips
 *** Windows?
 It's *100% usable* if you install [[https://www.cygwin.com/][Cygwin]] at first.
@@ -262,7 +262,7 @@ Native [[https://ftp.gnu.org/gnu/emacs/windows/][Emacs for Windows]] need a litt
 - Setup *user variables* which does not require Administrator right
 - Set the variable "HOME" to the parent directory of your ".emacs.d" directory
 - Set the variable "PATH" to the "C:\cygwin64\bin". I suppose Cygwin is installed at driver C.
-- Install GnuTLS and OpenSSH through Cygwin's package manager
+- Install GnuTLS and OpenSSH through Cygwin package manager
 *** Outlook?
 Exchange/Outlook users could read my post [[http://blog.binchen.org/posts/how-to-get-email-from-exchange-server-without-outlook.html]].
 
@@ -320,13 +320,13 @@ A more complex solution is setup FROM field by the computer you are using:
 
 Please note,
 - Command line program =hostname= is better than Emacs function =(system-name)=
-- I works on several computers which does *not* belong to me, so I cannot change /etc/hosts which =(system-name)= try to access
+- I works on several computers which do *not* belong to me, so I cannot change /etc/hosts which =(system-name)= try to access
 - Please [[http://support.google.com/a/bin/answer.py?hl=en&answer=22370][verify]] your email address at Gmail if you use Google's SMTP server
 
 *** Classify email
 [[http://getpopfile.org/][Popfile]].
 
-You may think [[http://www.google.com/inbox/][Google's Inbox]] equals to Popfile. Trust me, it's not. You only need Popfile!
+You may think [[http://www.google.com/inbox/][Google Inbox]] equals to Popfile. Trust me, it's not. You only need Popfile!
 
 Popfile is open sourced. The data is stored *locally* with my full control. For example, the algorithm trained by Gmail can be used to classify mails from Microsoft Exchange Mail Server.
 
@@ -347,19 +347,19 @@ Then insert below code into ~/.emacs,
 *** Read mail offline
 Go to the "Summary Buffer".
 
-You need mark the mails by press =!= or =M-x gnus-summary-tick-article-forward=.
+You need mark the mails by pressing =!= or =M-x gnus-summary-tick-article-forward=.
 
-The marked mails enter the disk cache. They can be read offline.
+The marked mails enter the disk cache. They *can be read offline*.
 
-You may remove it from the disk cache by =M-x gnus-summary-put-mark-as-read=.
+=M-x gnus-summary-put-mark-as-read= to remove the cached mail.
 
 You also need insert below code into ~/.emacs,
 #+BEGIN_SRC emacs-lisp
 (setq gnus-use-cache t)
 #+END_SRC
-Above code set =gnus-use-cache= to true to use the cache to the full extent by "wasting" *tens of megabytes* disk space.
+Above code uses the cache to the full extent by "wasting" *tens of megabytes* of disk space.
 
-The disk cache is located at "~/News/cache/". You can back it up with GitHub's private repository.
+The disk cache is located at "~/News/cache/". You can back it up with GitHub private repository.
 *** Multiple accounts
 You only need copy the code containing "gnus-secondary-select-methods" from my setup.
 
@@ -383,7 +383,7 @@ The information of multiple accounts is stored at ~/.authinfo.gpg.
 *** Why Gnus displays more mails than Gmail
 Gnus counts by individual mail. Gmail count by mail thread.
 *** Subscribe "[Gmail]/Sent Mail" folder
-So Gnus can track *all sent mails*.
+So you can see your *sent mails* in Gnus.
 *** Reconnect mail server
 Press =M-x gnus-group-enter-server-mode= to go into server list.
 
@@ -525,8 +525,9 @@ My ~/.gnus.el,
       ((eq system-type 'windows-nt))
       (t
        ;; Linux, read ~/.mailcap
-       (mailcap-parse-mailcaps)))));; Tree view for groups.
+       (mailcap-parse-mailcaps)))))
 
+;; Tree view for groups.  I like the organisational feel this has.
 (add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
 
 ;; Threads!  I hate reading un-threaded email -- especially mailing
