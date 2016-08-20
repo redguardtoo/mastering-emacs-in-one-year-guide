@@ -49,7 +49,7 @@ A little homework before we start,
 Please check [[http://www.emacswiki.org/emacs/GnusGmail]] for basics. You can also use my settings at the end of this article.
 
 *** Usage
-After setup, =M-x gnus= in Emacs.
+=M-x gnus= and Gnus will load =~/.gnus.el=. Usually we place all our setup code in =~/.gnus.el= instead of =~/.emacs= because libraries required by =.gnus.el= will be *automatically* loaded.
 
 You will come to the "Group Buffer" window. The "Group Buffer" lists the mail folders. In Gnus, the folder is called "Group". By default, the folders are *invisible*!
 
