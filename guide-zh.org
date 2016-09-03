@@ -33,6 +33,7 @@
 - 进一步提高的提示(社区,阅读,知识管理)
 - 跳出具体Emacs技巧,重要的是人
 - 答疑和小结
+
 ** 为什么用Emacs(可选)
 简单谈谈,因重点是"怎么做",不是"为什么".
 *** 真正精通后Emacs,其他编辑器自然精通
@@ -73,6 +74,7 @@ Emacs作为其招牌软件也会维护下去,我的投资永不会贬值.
 我没说一年内须什么事都不干专学Emacs, 我最反对没有短期回报的悬梁刺股.
 
 我利用一年中通勤时间就取得了很大进步,自信到可以写下本文.
+
 ** 态度决定一切
 *** 理解软件自由
 何为软件自由没有比自由软件基金会更权威了.我建议把[[https://www.gnu.org/philosophy/free-sw.zh-cn.html]]反复读,理解何为四大自由.
@@ -263,6 +265,7 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 
 *** Steve Yegge的Emacs Lisp教程
 他的[[http://steve-yegge.blogspot.com.au/2008/01/emergency-elisp.html][Emergency Elisp]]很简洁.我特别喜欢"Statements"一章.
+
 ** 知识管理
 不要低估长期管理的累积效应.
 
@@ -284,7 +287,8 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 
 请[[https://www.getdropbox.com/referrals/NTg1ODg2Mjk][点击这里注册 dropbox 帐号]].注意,dropbox 客户端完全可以在国内使用,虽然访问其首页可能有点问题.
 
-我还写了许多博客文章.这些文章都存在org格式的文件中.最后发布的静态博客也纳入版本控制,参见[[http://github.com/redguardtoo/blog.binchen.org]].
+我还写了许多博客文章.这些文章都存在org格式的文件中.最后发布的静态博客也纳入版本控制,参见[[http://github.com/redguardtoo/redguardtoo.github.io]].
+
 ** 第三方插件推荐
 初学者的问题是装了太多插件,管理成了问题.
 
@@ -329,6 +333,7 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 这个阶段可称之为 *心中有剑,手中无剑*.
 
 是否用Emacs不重要了,重要的是随心所欲.例如,很多人争论哪个编辑器自带的文件管理较好.我[[http://blog.binchen.org/posts/how-to-do-the-file-navigation-efficiently.html][从mooz那学到大招后]],就跳出五行外,不在三界中了.
+
 ** 付之于行动
 如何行动因人而异.
 
@@ -338,6 +343,7 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 - 找出所有插件的作者
 - 在Quora/Twitter/GitHub/Reddit/Google+上跟随他们
 - 通读他们已发表的贴子
+
 ** 使用Evil
 Evil是[[https://bitbucket.org/lyro/evil/wiki/Home][Evil]]Vim模拟器.
 
@@ -446,7 +452,7 @@ Vim自带Leader键的功能,你先按了Leader键(很多人定义为空格键)�
 
 之前提到的text object也完美支持.
 
-懂Lisp的话可以修改=evil-surround-operator-alist=自己定制操作.
+懂Lisp的话可以修改 =evil-surround-operator-alist= 自己定制操作.
 
 **** [[https://github.com/redguardtoo/evil-nerd-commenter][evil-nerd-commenter]]
 对应[[https://github.com/scrooloose/nerdcommenter][vim-nerd-commenter]],这是我写的,功能更强大.
@@ -502,12 +508,13 @@ Shell的作用无非就是运行命令或者脚本代码,然后输出结果.
 Interactive Interpreter和Shell没有本质区别,无非就是解释器支持的语言不一样罢了.比如[[https://github.com/nonsequitur/inf-ruby][inf-ruby]]支持Ruby.
 
 你可以按 =C-z= 切换纯Emacs快捷键.我从不切换,因为我对这种杂交的快捷键非常满意.
-**** Evil的小结
+*** Evil的小结
 对Vim用户来说,Evil不仅提供了Vim的完美模拟,还开辟了用Lisp拓展Vim的新世界.
 
 对Emacs用户来说,Evil也不仅仅是提供了新的快捷键,而是提供了更多的可编程的数据结构和范式(如text object).
 
 关键是发挥你的创造力,自由地接合Emacs和Vim的长处,发明新技术和新技巧.这种机会目前是很多的,赶快行动起来吧.
+
 ** 答疑
 *** 菜鸟怎么开始
 到[[https://github.com/redguardtoo/emacs.d]] 参考"Install stable version in easiest way"一节.
@@ -718,6 +725,7 @@ Emacs Lisp又是只用于Emacs的语言,有大量术语需要掌握.如"Buffer",
 - Lisp速度比较慢，如有大计算量的工作,交给第三方工具来作.
 
 重点是头脑灵活,既坚信Emacs无所不能,也适当变通.
+
 ** 联系我
 这是我的 [[https://twitter.com/#!/chen_bin][Twitter]] 和 [[https://plus.google.com/110954683162859211810][Google Plus]] 以及 [[http://www.weibo.com/u/2453581630][微博]],也可通过我 email<chenbin DOT sh AT GMAIL DOT COM>联系我.我在新浪 weibo.com 上开通账号 emacsguru.
 
