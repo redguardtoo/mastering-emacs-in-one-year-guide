@@ -51,13 +51,13 @@ Emacs 用 Lisp 开发,Lisp 不同寻常的语法决定了其开发者都是资�
 
 Lisp 并不能给你带来任何好处,所以其社区成员都是纯粹的技术爱好者,投机取巧的功利主义者对其没有兴趣.
 *** 和IDE比较,Emacs 做的更多更快
-IDE针对特定语言或框架优化,而Emacs完成通用任务更有效.
+IDE针对特定语言或框架优化,Emacs完成通用任务更有效.
 
-例如,我碰到难题,需要上IRC请教国外高手(工作流是,粘贴代码到[[http://gist.github.com]], 在irc提问,看网页,将解决方案粘贴回来),Emacs 集成了IRC工具和浏览器 (例如),操作就很方便.
+例如,我碰到难题需上IRC请教国外高手(工作流是,粘贴代码到[[http://gist.github.com]], 在irc提问,看网页,将解决方案粘贴回来),Emacs集成了IRC工具和浏览器操作就很方便.
 
 我使用 Visual Studio 多年,Firefox 也是高手.相信我,大多数情况下 Emacs 更快.
 
-口说无凭,请看高手操作的 youtube 视频, [[http://www.youtube.com/watch?v=EQAd41VAXWo][Emacs Power: Can your editor do THIS! ]]
+口说无凭,请看高手视频, [[http://www.youtube.com/watch?v=EQAd41VAXWo][Emacs Power: Can your editor do THIS! ]]
 
 顺便说一下,很多初学者关心的代码自动完成,主流语言支持都不错(包括java).
 
@@ -103,13 +103,13 @@ Emacs作为其招牌软件也会维护下去,我的投资永不会贬值.
 
 当然思想的问题不是我空谈能解决的,关键是要实干.一个很好的治愈方法就是把[[http://planet.emacsen.org/]]上约4000篇文章通读一遍.大约需要8个小时左右.泛读就可以了.目的就是了解世界有多大.
 *** 以科学理性做指导
-之前有读者反映我的方法类似于大学里写论文做研究,事实上这正是我的灵感来源.
+有读者反映我的方法类似于大学里写论文做研究,事实上这正是我的灵感来源.
 
 Emacs只是一种特定领域得科学技术,其学习方法和其他学科是通用得.
 
 打好基础,让自己的知识面有 *足够的* 广度和 *适当的* 深度,对新手是最重要的.否则会在一些琐碎问题上浪费时间.
 
-比如新手的错误就是花大量的时间记快捷键,事实上网上教程列出的初学者"必知"快捷键[[http://www.emacswiki.org/emacs/Smex][都不是必需的]].
+新手的错误是花大量时间记快捷键,事实上网上教程列出的初学者"必知"快捷键[[http://www.emacswiki.org/emacs/Smex][都不是必需的]].
 
 ** 具体步骤
 开始前,解释一下后文用到的命名惯例,
@@ -129,11 +129,11 @@ Emacs只是一种特定领域得科学技术,其学习方法和其他学科是�
 
 例如用Emacs开发C++最简单成熟的方案是使用[[http://blog.binchen.org/posts/emacs-as-c-ide-easy-way.html][GNU Global]].配置Global必需要知道设置环境变量 =GTAGSLIBPATH= .如果你连环境变量是什么都不知道,那么用Emacs开发C++也无从谈起.
 
-尽可能多的掌握其他Linux知识是很有用的,即使你只在Windows下使用Emacs.
+尽可能多的掌握其他Linux知识很有用,即使你只在Windows下使用Emacs.
 *** 读官方教程
 按以下步骤阅读教程:
 - 不安装任何插件打开Emacs, 比如在Shell中运行命令 =emacs -nw -Q=
-- 同时按下 Alt 和 X 健,输入 help-with-tutorial(类似快捷键后文简写为`M-x help-with-tutorial` 代替),回车.
+- 同时按下 Alt 和 X 健,输入 help-with-tutorial(类似快捷键后文简写为 =M-x help-with-tutorial= 代替),回车.
 
 仅需半小时.关于Emacs多难学的谬论可以休矣.半小时的代价微不足道.想想你去练了多少个半小时吧.
 
@@ -148,9 +148,9 @@ Emacs只是一种特定领域得科学技术,其学习方法和其他学科是�
 
 在任何领域要成为高手,兴趣是最重要的.
 
-以我为例,我急需 [[http://en.wikipedia.org/wiki/Getting_Things_Done][GTD]] 的工具,而 Emacs 的 [[http://orgmode.org/][Org-mode]] 是同类软件中最好的(没有之一). 用 Org-mode 大大节省了时间后,我对Emacs爱屋及乌,兴趣高涨了100倍.
+以我为例,我急需 [[http://en.wikipedia.org/wiki/Getting_Things_Done][GTD]] 的工具,而 Emacs 的 [[http://orgmode.org/][Org-mode]] 是同类软件中最好的(没有之一). 用 Org-mode 节省了时间后,我对Emacs爱屋及乌,兴趣高涨了100倍.
 
-反面例子是很多人以啃Lisp教程开始他们的Emacs之旅,坚持下来的人寥寥无几.
+反面例子是很多人啃Lisp教程开始他们的Emacs之旅,坚持下来的人寥寥无几.
 *** 待解决的问题设定优先度
 关键在于理性地考虑你最迫切需要解决的一个问题.
 
@@ -164,7 +164,7 @@ Emacs只是一种特定领域得科学技术,其学习方法和其他学科是�
 
 塞翁失马,由此也避免了图形界面版本的所有问题.
 *** 站在巨人的肩膀上
-这方面我是个负面榜样.刚开始抱着玩的心态,到处找有趣的配置粘贴到我的配置中去.
+这方面我是个负面榜样.刚开始抱着玩的心态,到处拷贝别人有趣的配置粘贴到我的配置中去.
 
 这是浪费时间!
 
@@ -202,7 +202,7 @@ Emacs只是一种特定领域得科学技术,其学习方法和其他学科是�
 
 再找出另一高手需要改善的地方,使用同样的方法.
 
-例如,默认在Emacs中移动子窗口焦点不是很方便.需按"C-x O"多次.我找到了emacs插件[[https://github.com/dimitri/switch-window][switch-window]],只要按"C-x O"一次,会有提示子窗口编号,接下来只要输入编号就可以了.但还有改善空间,我又找到了[[https://github.com/nschum/window-numbering.el][window-number.el]],只要按"M-NUM"就可以了.
+例如,默认在Emacs中移动子窗口焦点不是很方便.需按 =C-x O= 多次.我找到了emacs插件[[https://github.com/dimitri/switch-window][switch-window]],只要按 =C-x O= 一次,会有提示子窗口编号,接下来只要输入编号就可以了.但还有改善空间,我又找到了[[https://github.com/nschum/window-numbering.el][window-number.el]],只要按 =M-NUM= 就可以了.
 
 window-number.el已完美,但Alt键还是有点慢,我结合[[https://gitorious.org/evil/pages/Home][evil]]和[[https://github.com/cofi/evil-leader][evil-leader]],可以按逗号和数字飞速切换子窗口了.
 *** 加入社区更上一层楼
@@ -351,21 +351,21 @@ Evil是[[https://bitbucket.org/lyro/evil/wiki/Home][Evil]]Vim模拟器.
 
 该教程大概需要半小时.关于Vim的基本操作的讨论就到此为止了.网上关于Vim教程汗牛充栋,你可以自行阅读.
 
-本文的重点是探讨如何结合Emacs和Vim获得完美文本编辑器,达到*神用编辑器之神*的境界.
+本文的重点是探讨如何结合Emacs和Vim获得完美文本编辑器,达到 *神用编辑器之神* 的境界.
 
 *** Text Object
 了解[[http://vimdoc.sourceforge.net/htmldoc/motion.html][Vim Text Object]]的概念.
 
-Evil的强大之处就是你可以用Emacs Lisp来自定义"Text Object".自由的Lisp使得你完全不用理睬Vim中的"约定俗成".
+Evil的强大之处就是你可以用Emacs Lisp来自定义 =Text Object=.自由的Lisp使得你完全超越Vim的"约定俗成".
 
 比如在操作自定义的Text Object时,当前焦点完全可以在Text Object之外.这是Lisp写的[[http://blog.binchen.org/posts/evil-text-object-to-select-nearby-file-path.html][寻找附近的文件路径或者URL.]] 用Vim Script写个类似的脚本难很多.即使你用了[[https://github.com/kana/vim-textobj-user][vim-textobj-user]]之类的插件辅助开发也没用的.
 
-而且Lisp代码完全可以调用*任何*的第三方插件或者Emacs的不计其数的API.比如Evil中操作Text Object的过程中我完全可以显示对话框问用户问题,访问几个网站等等.
+而且Lisp代码完全可以调用 *任何* 的第三方插件或者Emacs的不计其数的API.比如Evil中操作 =Text Object= 的过程中可以问用户问题,访问网站等等.
 
 这些额外功能对Vim来说就是不可能完成的任务了.
 
 *** Leader键
-Vim自带Leader键的功能,你先按了Leader键(很多人定义为空格键)后,再按其他键(比如"kk")会触发你自定义的命令.本质就是给你更多的快捷键.
+Vim自带Leader键的功能,你先按了Leader键(很多人定义为空格键)后,再按其他键(比如 =kk=)会触发你自定义的命令.本质就是给你更多的快捷键.
 
 在Emacs中我们需要使用第三方插件如[[https://github.com/cofi/evil-leader][evil-leader]]来实现类似功能.
 
@@ -373,15 +373,15 @@ Vim自带Leader键的功能,你先按了Leader键(很多人定义为空格键)�
 
 这些用户没有意识到的是借鉴Emacs的思想,他们在Vim和Emacs的效率可以有巨大的提升. 我只提三点供参考:
 
-第一,典型Vim的用户的问题是没有充份利用Leader快捷键.我看过大多数Vim高手在GitHub上的设置,他们一般定义*10到20个左右*Leader相关的快捷键.
+第一,Vim的用户的问题是没有充份利用Leader快捷键.我看过大多数Vim高手在GitHub上的设置,他们一般定义 *10到20个* Leader相关的快捷键.
 
-我定义了*300个*Leader相关的快捷键.
+我定义了 *300个* 相关的快捷键.
 
-典型Evil用户(如spacemacs用户)大概有3000到10000个Leader相关快捷键可用.
+典型Evil用户(如spacemacs用户)大概有 *3000到10000个* 相关快捷键可用.
 
-第二,Vim用户的另一个问题是快捷键没有优化.最常用的快捷键应该最容易按.何为最常用快捷键必须来自*真实数据*.
+第二,Vim用户的另一个问题是快捷键没有优化.最常用的快捷键应最容易按.何为最常用快捷键须来自 *真实数据*.
 
-这是我用Emacs的插件[[https://github.com/dacap/keyfreq][keyfreq]]测试六个月后得到的部份数据 (我的Leader键定义为逗号):
+这是我用Emacs的插件[[https://github.com/dacap/keyfreq][keyfreq]]测试六个月的数据 (我的Leader键定义为逗号):
 | Times | Percentage | Command                                | Key                   |
 |-------+------------+----------------------------------------+-----------------------|
 |  4967 |     12.00% | evilmi-jump-items                      | %                     |
@@ -422,14 +422,15 @@ Vim自带Leader键的功能,你先按了Leader键(很多人定义为空格键)�
 |   212 |      0.51% | browse-kill-ring-forward               |                       |
 |   210 |      0.51% | flyspell-buffer                        | , f b                 |
 第三, 由于Lisp的强大Leader键的使用在Emacs中有无限可能
-如果你使用[[https://github.com/noctuid/general.el][general.el代替evil-leader,]]你可以以同时定义多个Leader键.可以在切换文件的时候切换Leader键等等.
+- 使用[[https://github.com/noctuid/general.el][general.el代替evil-leader,]]时定义多个Leader键
+- 可在切换文件时切换Leader键等等.
 
 *** Evil和Emacs原生插件的兼容性
 如果你真正理解了我前面的章节,这就根本不是问题.
 
 之前我提到了要保持头脑开放,要尽可能抄高手的代码,积极的报bug等观点.现在让我演示一下如何应用.
 
-我知道有很多人宣称,Evil和Emacs的许多插件有快捷键冲突,重新配置很麻烦.
+很多人宣称,Evil和Emacs的许多插件有快捷键冲突,重新配置很麻烦.
 
 一开始我也相信了这些一派胡言,所以每装一个新的插件,都要辛辛苦苦再设置evil的快捷键.
 
@@ -439,9 +440,9 @@ Vim自带Leader键的功能,你先按了Leader键(很多人定义为空格键)�
 
 这是这个方案在[[https://github.com/pidu/git-timemachine][git-timemachine中]]的[[http://emacs.stackexchange.com/questions/9842/disable-evil-mode-when-git-timemachine-mode-is-activated][完美应用]].
 *** Evil专用的插件介绍
-我就选择[[http://melpa.org][MELPA]]上最流行的5个插件简单介绍一下,类似的优秀插件还有很多.
+我就选择[[http://melpa.org][MELPA]]上最流行的5个插件介绍一下,类似优秀插件还有很多.
 
-要点不在于你装了多少插件,而在于理解由于Lisp的强大和Emacs的自由,这些插件比Vim对应的插件功能更多,更容易拓展.
+要点不在于你装了多少插件,而在于理解由于Lisp的强大和Emacs的自由,这些插件功能更多,更容易拓展.
 
 **** [[https://github.com/timcharper/evil-surround][evil-surround]]
 对应[[https://github.com/tpope/vim-surround][vim-surround]].
@@ -463,7 +464,9 @@ Vim自带Leader键的功能,你先按了Leader键(很多人定义为空格键)�
 
 由于Emacs的强大,默认就支持所有世界上已知的语言,而核心代码也就是1行而已.Vim插件对应的功能代码要有400行.
 
-如果你在[[http://orgmode.org/][org-mode格式的单一文件中]]中混杂多种语言的话,它也能智能识别.这个功能在Vim中基本不可能实现.
+如果你在[[http://orgmode.org/][org-mode格式的单一文件中]]中混杂多种语言的话,它也能智能识别.
+
+这个功能在Vim中基本不可能实现.
 **** [[https://github.com/redguardtoo/evil-matchit][evil-matchit]]
 对应[[https://github.com/tmhedberg/matchit][vim-matchit]].又是我写的.自然功能更强大.
 
@@ -483,9 +486,9 @@ Emacs的实现就完全体现了Emacs的自由精神,我建立了一个动态查
 
 让我给你举个例子说明什么叫效率高.我移动手指去按ESC键需要0.5秒.
 
-Sublime Text默认的文本搜索要比我的Emacs设置慢40倍.如果Sublime Text搜索需要我等待40秒,那么节省按取消键的0.5秒就毫无意义.
+Sublime Text默认的文本搜索要比我的Emacs设置慢40倍.如果Sublime Text搜索需要40秒,那么节省取消键的0.5秒毫无意义.
 
-我只需要1秒完成搜索,所以把取消操操作从0.5秒减少到0.1秒的感觉就完全不一样.
+Emacs只要1秒完成搜索,所以取消键从0.5秒减少到0.1秒的感觉就完全不一样.
 **** [[https://github.com/bling/evil-visualstar][evil-visualstar]]
 对应[[https://github.com/bronson/vim-visual-star-search][vim-visual-star-search.]]
 
@@ -495,9 +498,9 @@ Sublime Text默认的文本搜索要比我的Emacs设置慢40倍.如果Sublime T
 
 传统上大家都在Shell中用Emacs的默认快捷键.
 
-不过你仔细计算过的话,会发现Vim的快捷键更有效率.
+不过仔细计算过后我发现Vim的快捷键更有效率.
 
-Shell的作用无非就是运行命令或者脚本代码,然后输出结果.
+Shell的作用无非就是运行命令或脚本代码,输出运算结果.
 
 当我们在Emacs中运行Shell的时候,命令和代码往往是从别的地方拷贝过来的.
 
@@ -507,7 +510,7 @@ Shell的作用无非就是运行命令或者脚本代码,然后输出结果.
 
 Interactive Interpreter和Shell没有本质区别,无非就是解释器支持的语言不一样罢了.比如[[https://github.com/nonsequitur/inf-ruby][inf-ruby]]支持Ruby.
 
-你可以按 =C-z= 切换纯Emacs快捷键.我从不切换,因为我对这种杂交的快捷键非常满意.
+你可以按 =C-z= 切换回纯Emacs快捷键.我从不切换,因为我对这种杂交的快捷键非常满意.
 *** Evil的小结
 对Vim用户来说,Evil不仅提供了Vim的完美模拟,还开辟了用Lisp拓展Vim的新世界.
 
@@ -557,7 +560,7 @@ Interactive Interpreter和Shell没有本质区别,无非就是解释器支持的
 现在我是 *神用编辑器之神*!
 
 *警告*,我默认启用了Vim的快捷键,不习惯可打开~/.emacs.d/init.el,将其中一行代码注释掉,细节参考README.
-*** 为什么很多Vim高手不能接受Evil?
+*** 为什么很多Vim高手不接受Evil?
 因为他们对Vim快捷键做了深度配置.Emacs默认要经常按Ctrl键,如自定义的Vim快捷键也用Ctrl键,难免有冲突.
 
 解决办法是大家都使[[http://stackoverflow.com/questions/1764263/what-is-the-leader-in-a-vimrc][Leader]](Vim直接支持,Emacs需[[https://github.com/cofi/evil-leader][第三方插件]]).
@@ -600,7 +603,7 @@ Interactive Interpreter和Shell没有本质区别,无非就是解释器支持的
 *** 使用牛人配置后启动报错,如何解决？
 先确认已装上了 *你需要的* 第三方命令行工具,这些工具是可选的,清单见[[https://github.com/redguardtoo/emacs.d][我的README]].
 
-如排除了以上原因,带上"--debug-init"参数重新启动,然后将错误信息及环境报告到对应的开发者.
+如排除了以上原因,带上 =--debug-init= 参数重新启动,然后将错误信息及环境报告到对应的开发者.
 
 报告时应给出细节.例如很多读者给我的bug都是由于第三方插件版本较新引起的,我拿到版本号后,才能下载特定版本已重现 bug.否则只能靠猜,来回邮件浪费很多时间.
 *** 牛人的配置太复杂,还是从一简单的配置改起好控制
@@ -657,7 +660,7 @@ Java和C#语言的主力开发工具最好用IDE而不是Emacs.C#又比Java更�
 
 Emacs 下载软件包 (package) 是通过 http 方式,所以如果网络出问题的话你需要用 http 代理服务器,具体操作见后文.
 *** 有些网站 Emacs 访问不了
-在命令行中启动 Emacs 时加上 "http_proxy=your-proxy-server-ip:port" 前缀.
+在命令行中启动 Emacs 时加上 =http_proxy=your-proxy-server-ip:port 前缀.
 
 例如,
 #+BEGIN_SRC sh
@@ -735,7 +738,7 @@ Emacs Lisp又是只用于Emacs的语言,有大量术语需要掌握.如"Buffer",
 
 ** 结语
 再强调一下本文最重要的观点:
-- 以 *基于解决实际问题产生的兴趣引导*
+- 以 *解决实际问题* 产生的兴趣引导
 - *完全照抄世界顶尖高手如Steve Purcell的配置*,尽量避免自己写Lisp
 - 给高手报bug就是最好的学习,
 - 学习Emacs和 *学任何专业技能(拉小提琴,解数学题)的方法论都是一样的*,请参考[[http://book.douban.com/subject/4726323/][一万小时天才理论]].
