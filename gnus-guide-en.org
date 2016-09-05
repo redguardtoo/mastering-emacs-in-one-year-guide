@@ -36,17 +36,17 @@ So here is my guide on the 5%.
 ** Quick start
 *** Requirements and conventions
 A little homework before we start,
-- This guide applies on Emacs24+
+- This guide applies to Emacs24+
 - You need install GnuTLS and OpenSSH on Linux/Mac/Window(Cygwin)
 - =C= means =Ctrl= and =M= means =Alt=. For example, =M-x= means pressing =Alt= and =x= together.
 - =M-x mycommand= means pressing =Alt= and =x=, input "mycommand", and press =Enter= key.
 - =RET= means =Enter= key.
-- "Group" means "mail folder".
-- "Group buffer" means the list of folders.
-- "Summary buffer" means the list of mails.
+- =Group= means mail folder.
+- =Group buffer= means the list of folders.
+- =Summary buffer= means the list of mails.
 
 *** Sample setup
-Please check [[http://www.emacswiki.org/emacs/GnusGmail]] for basics. You can also use my settings at the end of this article.
+Either check [[http://www.emacswiki.org/emacs/GnusGmail]] or use my setup at the end of this article.
 
 *** Usage
 =M-x gnus= and Gnus will load =~/.gnus.el=. Usually we place all our setup code in =~/.gnus.el= instead of =~/.emacs= because libraries required by =.gnus.el= will be *automatically* loaded.
@@ -61,7 +61,7 @@ At minimum, you need subscribe INBOX group. But after subscribing the INBOX is s
 
 You can =C-u 5 M-x gnus-group-list-all-groups= to solve this problem.
 
-You can insert below code into ~/.emacs to create hotkey =o= for =C-u 5 M-x gnus-group-list-all-groups= :
+You can insert below code into =~/.gnus= to create hotkey =o= for =C-u 5 M-x gnus-group-list-all-groups= :
 #+BEGIN_SRC emacs-lisp
 (defun my-gnus-group-list-subscribed-groups ()
   "List all subscribed groups with or without un-read messages"
@@ -81,7 +81,7 @@ Now it's simple. Press =RET= to see the mail. Press =q= to quit "Summary Buffer"
 
 In short, "Group Buffer" lists mail folders. "Summary Buffer" lists mails in one folder.
 
-That's all you need to know. You could go to section [[My Gnus configuration (for Gmail)]] to use Gnus now without reading remaining sections.
+That's all you need to know. You could go to section "My Gnus configuration (for Gmail)" to use Gnus now without reading remaining sections.
 ** Essential 5%
 Don't memorize all key bindings. Only pick up what you actually use instead.
 
@@ -158,11 +158,11 @@ Move *focus over the attachment* and press =o= or =M-x gnus-mime-save-part=. See
 *** Open attachment
 Move *focus over the attachment* and press =Enter= or =M-x gnus-article-press-button=.
 
-The flag =[[https://www.gnu.org/software/emacs/manual/html_node/emacs-mime/mailcap.html][mailcap-mime-data]]= controls what program is used to open the attachment.
+The variable =[[https://www.gnu.org/software/emacs/manual/html_node/emacs-mime/mailcap.html][mailcap-mime-data]] defines what program is used to open the attachment.
 
-You can change the flag directly at Window or OSX.
+You can tweak the variable at Window or OSX directly.
 
-At Linux, use =M-x mailcap-parse-mailcaps= to load data from ~/.mailcap into =mailcap-mime-data=.
+At Linux, I press =M-x mailcap-parse-mailcaps= to load data from ~/.mailcap into =mailcap-mime-data= instead of tweaking =mailcap-mime-data=. 
 
 My ~/.mailcap:
 #+begin_src conf
@@ -191,7 +191,7 @@ application/vnd.ms-powerpoint; soffice '%s'
 *** Send email
 Press =C-c C-c= or =M-x message-send-and-exit=.
 *** Refresh "Summary Buffer" (check new mails)
-hotkey =/ N= or =M-x gnus-summary-insert-new-articles=.
+Press =/ N= or =M-x gnus-summary-insert-new-articles=.
 *** Make all mails visible (IMPORTANT)
 Press =C-u RET= on the selected group in "Group Buffer", or =C-u M-g= in "Summary Buffer".
 
@@ -220,9 +220,9 @@ After setup, you can read its [[http://www.gnu.org/software/emacs/manual/html_no
 
 It's tiresome to do this folder organizing thing again and again on different computers.
 
-So you'd better save all the trouble and  use my way instead.
+So you'd better save all the trouble and use my way instead.
 
-All you need to do is to insert below code into ~/.gnus.el and you are done,
+All you need to do is to insert below code into =~/.gnus.el= and you are done,
 #+begin_src elisp
 (eval-after-load 'gnus-topic
   '(progn
@@ -272,7 +272,7 @@ Install [[http://bbdb.sourceforge.net/][BBDB]]  through [[http://melpa.milkbox.n
 
 You can always use =M-x bbdb-complete-name= and =M-x bbdb-complete-mail= provided by BBDB.
 
-But there are are another two better plugins based on BBDB (so you still need install BBDB at first):
+But there are another two better plugins based on BBDB (so you still need install BBDB at first):
 - [[https://github.com/company-mode/company-mode][company-mode]] 
 - [[https://github.com/tumashu/bbdb-handy][bbdb-handy]]
 
@@ -331,6 +331,11 @@ You may think [[http://www.google.com/inbox/][Google Inbox]] equals to Popfile. 
 Popfile is open sourced. The data is stored *locally* with my full control. For example, the algorithm trained by Gmail can be used to classify mails from Microsoft Exchange Mail Server.
 
 Check [[http://blog.binchen.org/posts/use-popfile-at-linux.html]] for details.
+
+The command I use to start popfile,
+#+begin_src bash
+cd ~/bin/popfile/ && perl popfile.pl
+#+end_src
 *** Write HTML mail
 Use [[http://orgmode.org/worg/org-contrib/org-mime.html][org-mime]].
 
@@ -340,10 +345,14 @@ Please use my patched [[https://github.com/redguardtoo/][org-mime]] which suppor
 *** Read HTML mail
 Install [[http://w3m.sourceforge.net/][w3m]] and [[http://www.emacswiki.org/emacs/emacs-w3m][emacs-w3m]].
 
-Then insert below code into ~/.emacs,
+Then insert below code into =~/.emacs=,
 #+BEGIN_SRC emacs-lisp
 (setq mm-text-html-renderer 'w3m)
 #+END_SRC
+
+If we don't specify the =w3m= as html render, Emacs will use its built in browser =shr= to render HTML.
+
+I prefer =w3m= to =shr= because =w3m= is more powerful and available on all platforms.
 *** Read mail offline
 Go to the "Summary Buffer".
 
@@ -387,7 +396,7 @@ So you can see your *sent mails* in Gnus.
 *** Reconnect mail server
 Press =M-x gnus-group-enter-server-mode= to go into server list.
 
-Move the cursor to "offline" server then press =M-x gnus-server-open-server=.
+Move the cursor to the *offline* server and =M-x gnus-server-open-server=.
 *** Use Hydra to avoid remembering key bindings
 - Install [[https://github.com/abo-abo/hydra][Hydra]] through [[http://melpa.org/]]
 - Insert below code into ~/.emacs. Then press =C-c C-y= when composing mail. Press =y= in other modes
@@ -457,8 +466,6 @@ Move the cursor to "offline" server then press =M-x gnus-server-open-server=.
 ** My setup
 This setup requires Emacs 24.3 at minimum.
 
-Please note the *multiple accounts at the same mail server is troublesome*. Don't waste time on it.
-
 My ~/.gnus.el,
 #+BEGIN_SRC emacs-lisp
 (require 'nnir)
@@ -527,7 +534,7 @@ My ~/.gnus.el,
        ;; Linux, read ~/.mailcap
        (mailcap-parse-mailcaps)))))
 
-;; Tree view for groups.  I like the organisational feel this has.
+;; Tree view for groups.
 (add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
 
 ;; Threads!  I hate reading un-threaded email -- especially mailing
@@ -590,7 +597,7 @@ My ~/.gnus.el,
                               ("Gnus")))))
 #+END_SRC
 
-Your login and password is stored at "~/.authinfo.gpg" which is read by Gnus. =C-h v auth-sources= for more information.
+Your login and password is stored at "~/.authinfo.gpg" which is read by Gnus. Please press =C-h v auth-sources= for more information.
 
 Multiple mail accounts share one ".authinfo.gpg",
 #+BEGIN_SRC conf
@@ -599,4 +606,4 @@ machine smtp.gmail.com login username@gmail.com password my-secret-password port
 machine imap-mail.outlook.com login username@hotmail.com password my-secret-password port 993
 #+END_SRC
 
-Please note ".authinfo.gpg" is encrypted. Emacs will do the encryption/description automatically if file extension is ".gpg". See [[http://emacswiki.org/emacs/EasyPG]] for details.
+Please note ".authinfo.gpg" is encrypted by default. Emacs will do the encryption/description automatically if file extension is ".gpg". See [[http://emacswiki.org/emacs/EasyPG]] for details.
