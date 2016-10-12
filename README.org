@@ -15,7 +15,7 @@ Here are the tips *for your first year*:
 
 Emacs Lisp has nothing to do with your IQ. So don't feel pressured to master it asap. As I observed, most people (including me) dislike language with unfamiliar syntax. That's ok. Start from using Emacs, you will feel the love for Emacs, then comes the love for Lisp naturally.
 
-Click [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org][HERE]] to read it.
+Click [[https://github.com/zchtoy/mastering-emacs-in-one-year-guide/blob/master/guide-en.org][HERE]] to read it.
 
 ** 中文版本 (Chinese version)
 关于如何在一年内成为高手的指导.
@@ -31,10 +31,10 @@ Web版本也会发布在我的[[http://blog.csdn.net/redguardtoo/article/details
 
 Lisp和你的IQ毫无关系.不要急着学它.据我观察,大多数人(包括我)讨厌语法怪异的语言.这很正常,先从使用软件开始,当你爱上Emacs,对Lisp的爱也就跟着来了.
 
-[[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org][点击这里查看]].
+[[https://github.com/zchtoy/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org][点击这里查看]].
 
 * Practical guide to use Gnus with Gmail
 ** English version
 Gnus is the default Email client of Emacs. No technical details involved.
 
-Click [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/gnus-guide-en.org][HERE]] to read it.
+Click [[https://github.com/zchtoy/mastering-emacs-in-one-year-guide/blob/master/gnus-guide-en.org][HERE]] to read it.
