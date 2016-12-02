@@ -30,22 +30,21 @@ So,
 
 Here is the structure of the article:
 - Why Emacs matters? You can skip this part if you are familiar with Linux/Unix
-- The key point of guide is take full advantage of Master's work. Don't re-invent the wheel
+- The key point is not to re-invent the wheel
 - The steps to master Emacs
 - How to improve after grasping basics by learning from community and books
 - What matters is people
 - FAQ and Summary
 ** Why Emacs (OPTIONAL)
 I intend to keep this section short because my focus is HOW instead of WHY.
-*** Emacs master is good at other editors naturally
-Master has already known the best, so she/he has higher expectation.
+*** Emacs makes you good at every other editor
+If you master the best editor in the world, you will figure out the best pratices automatically on other text editors.
 
-For example, the master expects:
-- a good editor should have a package manager bundled. She/He is surprised that [[https://sublime.wbond.net/installation][package manager is NOT bundled in some editor]].
-- Broken package could be [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][fixed]] without touching the package's original code.
-- When remote repository is down, she/he can [[https://github.com/redguardtoo/myelpa][create a repository]] in the memory stick [[https://github.com/redguardtoo/elpa-mirror][in one minute]].
+For example, based on my Emacs knowledge, I assume a qualified text editor:
+- Should have a inbuilt package manager
+- Its broken 3rd party plugin could be [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][fixed]] by plugin user without bugging the plugin developer
+- When remote repository is down, [[https://github.com/redguardtoo/myelpa][a local repository]] could be created in the memory stick [[https://github.com/redguardtoo/elpa-mirror][in one minute]].
 
-In summary, she/he knows more than Emacs' competitors can implement.
 *** Community is strong
 Emacs uses [[http://www.gnu.org/software/emacs/manual/html_node/eintr/index.html][Lisp]]. Its [[http://en.wikipedia.org/wiki/Lisp_%28programming_language%29][compact and "unusual" syntax]] scares off the weak minds.
 *** It's powerful
@@ -54,14 +53,11 @@ IDE is optimized for one framework. [[http://www.youtube.com/watch?v=EQAd41VAXWo
 Emacs is maintained by a [[http://www.gnu.org/][non-profit organization]]. Competitors die while Emacs stays [[http://en.wikipedia.org/wiki/Emacs#History][during 40 years]].
 *** No overhead
 The installer is a [[http://ftp.gnu.org/gnu/emacs/windows/][50M bytes zip file]]. The program is portable.
-*** What matters is attitude
-If I could only give one piece of advice, it would be *being open minded*. 
+** Attitude
+I usually suggest my readers being open minded. But some readers are confused because they are already open minded *enough*.
 
-Newbies may be surprised by following facts:
-- I don't know 80% "newbie-must-know" key bindings because [[http://www.emacswiki.org/emacs/Smex][I don't need to]]
-- [[https://github.com/purcell/emacs.d/issues?q=author%3Aredguardtoo+][I don't start from my own simple setup at the beginning]]
-- I actually [[https://github.com/punchagan/org2blog/issues/153][don't fully understand Lisp "if" statement]] after I've already developed [[https://github.com/redguardtoo][useful Emacs plugins]] and written [[https://news.ycombinator.com/item?id=6909463][hardcore Emacs articles]].
-- I use my spare time in one year to master Emacs
+So I'd better be very blunt in this section,
+- It's critical to *truly* understand [[https://www.gnu.org/philosophy/free-sw.en.html][meaning of software freedom]]. Listening Richard Stallman's interviews 20 times is a good start for true understanding.
 
 ** Step by Step Guide
 Some conventions: 
