@@ -9,9 +9,9 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20160730
+Version: 20161202
 
-Updated: <2016-08-05 Fri>
+Updated: <2016-12-02 Fri>
 
 Created: <2012-10-12 Mon>
 
@@ -89,7 +89,6 @@ At the end of this article, I've provided *my [[https://github.com/abo-abo/hydra
 
 Please see section "Use Hydra to avoid remembering key bindings" for more details.
 *** Search mails
-**** Search mails on Server
 Press =G G= or =M-x gnus-group-make-nnir-group= to search mails at *server side* in "Group Buffer".
 
 You can press =#= to mark the groups.  Search will be limited to marked groups. =M-#= to un-mark.
@@ -100,19 +99,29 @@ Place the cursor before the first group, all groups will be searched.
 
 To search certain fields in the mail, press =C-u G G= or =C-u M-x gnus-group-make-nnir-group= instead. This is a very useful technique.
 
-You can apply [[http://tools.ietf.org/html/rfc3501#section-6.4.4][more advanced search syntax]] by:
+You can apply [[http://tools.ietf.org/html/rfc3501#section-6.4.4][more advanced search syntax (RFC3501 section SEARCH command)]] by:
 - Press =C-u G G= or =C-u M-x gnus-group-make-nnir-group=
 - Input query statements, press Enter
-- Type "imap", press Enter
+- Type =imap=, press Enter
 
-**** Search mails locally
+For example, I can use query like =TEXT github SINCE 1-Jan-2016 FROM chenbin= to search mails which are sent by me and contains keyword =github= on year 2016.
+
+People who dislike "friendly" RFC3501 could use [[https://support.google.com/mail/answer/7190?hl=en][Gmail]] syntax for search ([[https://github.com/rhashimoto][Roy Hashimoto]] provides this tip),
+#+begin_src elisp
+;; Let Gnus know Gmail search syntax
+(add-to-list 'nnir-imap-search-arguments '("gmail" . "X-GM-RAW"))
+;; `gnus-group-make-nnir-group' use Gmail search syntax *by default*.
+;; You can press `G G` instead `C-u G G` instead.
+(setq nnir-imap-default-search-key "gmail")
+#+end_src
+*** Filter mails locally
 Press =/ /= to limit the mails by subject at "Summary Buffer". "Limiting" means *filtering mails locally*.
 
-Press =/ a= to limit the mails by author at "Summary Buffer".
+Press =/ a= to limit the mails by author.
 
 =/ w= to cancel the current filter.
 
-You can apply the limits sequentially and cancel them in reverse order by pressing =/ w=.
+You can apply the limits sequentially and cancel them in reverse order by pressing =/ w= multiple times.
 
 "Limiting" is cool. See [[http://www.gnu.org/software/emacs/manual/html_mono/gnus.html#Limiting]] for more Limiting tricks.
 
@@ -273,6 +282,7 @@ Install [[http://bbdb.sourceforge.net/][BBDB]]  through [[http://melpa.milkbox.n
 You can always use =M-x bbdb-complete-name= and =M-x bbdb-complete-mail= provided by BBDB.
 
 But there are another two better plugins based on BBDB (so you still need install BBDB at first):
+- [[https://github.com/redguardtoo/counsel-bbdb][counsel-bbdb]] (counsel-bbdb is a lightweight alternative developed by me)
 - [[https://github.com/company-mode/company-mode][company-mode]] 
 - [[https://github.com/tumashu/bbdb-handy][bbdb-handy]]
 
@@ -328,7 +338,7 @@ Please note,
 
 You may think [[http://www.google.com/inbox/][Google Inbox]] equals to Popfile. Trust me, it's not. You only need Popfile!
 
-Popfile is open sourced. The data is stored *locally* with my full control. For example, the algorithm trained by Gmail can be used to classify mails from Microsoft Exchange Mail Server.
+Popfile is open source software. The data is stored *locally* with my full control. For example, the algorithm trained by Gmail can be used to classify mails from Microsoft Exchange Mail Server.
 
 Check [[http://blog.binchen.org/posts/use-popfile-at-linux.html]] for details.
 
@@ -352,7 +362,7 @@ Then insert below code into =~/.emacs=,
 
 If we don't specify the =w3m= as html render, Emacs will use its built in browser =shr= to render HTML.
 
-I prefer =w3m= to =shr= because =w3m= is more powerful and available on all platforms.
+I prefer =w3m= because it's more powerful and available on all operating systems.
 *** Read mail offline
 Go to the "Summary Buffer".
 
@@ -423,6 +433,8 @@ Move the cursor to the *offline* server and =M-x gnus-server-open-server=.
   '(progn
      (defhydra hydra-gnus-summary (:color blue)
        "Do?"
+       ("s" gnus-summary-show-thread "Show thread")
+       ("h" gnus-summary-hide-thread "Hide thread")
        ("n" gnus-summary-insert-new-articles "Refresh / N")
        ("f" gnus-summary-mail-forward "Forward C-c C-f")
        ("!" gnus-summary-tick-article-forward "Mail -> disk !")
@@ -498,7 +510,7 @@ My ~/.gnus.el,
                       (nnmail-expiry-wait 90)))
 
 (setq gnus-thread-sort-functions
-      '((not gnus-thread-sort-by-date)
+      '(gnus-thread-sort-by-most-recent-date
         (not gnus-thread-sort-by-number)))
 
 ; NO 'passive
