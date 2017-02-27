@@ -21,7 +21,7 @@
 版权: 本文采用以下协议进行授权,[[http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh][自由转载 - 非商用 - 非衍生 - 保持署名 | Creative Commons BY-NC-ND 3.0]],转载请注明作者及出处.
 
 ** 简介
-成为高手很容易.当初我在Vi阵营,偶尔用Emacs还忘记"退出"的快捷键,一年后我[[https://github.com/redguardtoo][跨入高手行列]].
+成为高手很容易.我初学Emacs时还忘记"退出"的快捷键,一年后我[[https://github.com/redguardtoo][跨入高手行列]].
 
 很多文章强调Emacs有多牛,但关于"如何做"则语焉不详.即使涉及到"如何做",谈细节多而方法论少,所以本文就 *侧重方法论*.
 
@@ -77,7 +77,7 @@ Emacs作为其招牌软件也会维护下去,我的投资永不会贬值.
 
 ** 态度决定一切
 *** 理解软件自由
-何为软件自由没有比自由软件基金会更权威了.我建议把[[https://www.gnu.org/philosophy/free-sw.zh-cn.html]]反复读,理解何为四大自由.
+何为软件自由没有比自由软件基金会更权威了.建议把[[https://www.gnu.org/philosophy/free-sw.zh-cn.html]]反复读,理解何为四大自由.
 
 一旦真正理解了软件自由,Emacs就变得非常简单了.
 
@@ -144,9 +144,9 @@ Emacs只是一种技术,其学习方法和其他学科是通用的.
 - =M-x describe-function=, 快捷键 =C-h f=, 查看命令的文档
 - =M-x describe-key=, 快捷键 =C-h k=, 查看快捷键的文档
 *** 以实际问题作为切入点
-微小的努力如能得到巨大回报,你会越学越有乐趣,进入一个感情上的正反馈.
+努力能很快得到回报,你会越学越有乐趣,进入感情上的正反馈.
 
-在任何领域要成为高手,兴趣是最重要的.
+要成为高手,兴趣是最重要的.
 
 以我为例,我急需 [[http://en.wikipedia.org/wiki/Getting_Things_Done][GTD]] 的工具,而 Emacs 的 [[http://orgmode.org/][Org-mode]] 是同类软件中最好的(没有之一). 用 Org-mode 节省了时间后,我对Emacs爱屋及乌,兴趣高涨了100倍.
 
@@ -179,12 +179,12 @@ Emacs只是一种技术,其学习方法和其他学科是通用的.
 为了加深印象,让我再举一例.有人向我反映,Emacs 快捷键太多,背起来压力很大.我的建议是,拿高手配置来用,而不是强加给自己背快捷键这样无聊的任务.你会发觉高手已安装了名为[[https://github.com/nonsequitur/smex][smex]] 的插件,使直接输入命令比快捷键还快.
 
 如果你还未信服,请再考虑一下我的理由:
-- 文章标题是 *一年成为高手*,不是一年入门.
+- 文章标题是 *一年成为高手*,不是一年入门
 - 高手是世界级别的高手,不是关起门来一个小圈子内的高手
-- 我就是这么做的,你可以[[https://github.com/purcell/emacs.d/issues?direction=asc&page=1&sort=created&state=closed][看看一年内我给他报了多少 bug]]
-- 说到底是态度问题,如果你真下定决心,考虑到Purcell的天赋和勤奋,追赶他的最好办法只有加入他
-- 要超越高手就必须了解其标杆在哪,你需要一年时间去模仿去学习
-- 基于Purcell的配置给他报bug(甚至是提交补丁),你就是考虑到了他未考虑到的问题,至少在这点就超过他了,日积月累就很可观了.
+- 我就是这么做的,[[https://github.com/purcell/emacs.d/issues?direction=asc&page=1&sort=created&state=closed][看看一年内我给他报了多少 bug]]
+- 如果你真下定决心,考虑到Purcell的天赋和勤奋,追赶他的最好办法只有加入他
+- 要超越高手就必须了解其高度,你需要一年时间去模仿去学习
+- 基于Purcell的配置给他报bug(甚至是提交补丁),你就是考虑到了他未考虑到的问题,至少在这点就超过他了,日积月累就很可观了
 
 好吧,你现在信服了.但是你是否 *真正理解* 了?
 
@@ -202,7 +202,7 @@ Emacs只是一种技术,其学习方法和其他学科是通用的.
 
 再找出另一高手需要改善的地方,使用同样的方法.
 
-例如,默认在Emacs中移动子窗口焦点不是很方便.需按 =C-x O= 多次.我找到了emacs插件[[https://github.com/dimitri/switch-window][switch-window]],只要按 =C-x O= 一次,会有提示子窗口编号,接下来只要输入编号就可以了.但还有改善空间,我又找到了[[https://github.com/nschum/window-numbering.el][window-number.el]],只要按 =M-NUM= 就可以了.
+例如,默认在Emacs中移动子窗口焦点不是很方便.需按 =C-x O= 多次.我找到了emacs插件[[https://github.com/dimitri/switch-window][switch-window]],只要按 =C-x O= 一次,会有提示子窗口编号,接下来输入编号就可以了.但还有改善空间,我又找到了[[https://github.com/nschum/window-numbering.el][window-number.el]],只要按 =M-NUM= 一次.
 
 window-number.el已完美,但Alt键还是有点慢,我结合[[https://gitorious.org/evil/pages/Home][evil]]和[[https://github.com/cofi/evil-leader][evil-leader]],可以按逗号和数字飞速切换子窗口了.
 *** 加入社区更上一层楼
@@ -211,11 +211,11 @@ window-number.el已完美,但Alt键还是有点慢,我结合[[https://gitorious.
 例如,Quora.com上有很多有趣的话题.请克制兴趣,不去定阅和Emacs无关的话题.
 
 **** Reddit
-[[http://www.reddit.com/r/emacs/][Reddit]]是最好的.优点是一直能访问.
+[[http://www.reddit.com/r/emacs/][Reddit]]是最好的.能从中国大陆访问.
 **** Google Plus
 [[https://plus.google.com/communities/114815898697665598016][Google Plus]] 贴子质量高.例如,我加入了 Linkedin和Facebook的Emacs论坛,目前都退出了.不是它们不专业,只是Google Plus讨论技术层次较高.
 
-目前人气不如reddit,原因在于Google.
+目前人气不如reddit.
 **** GitHub 是 geek 云集的地方
 GitHub 的版本控制服务很好.现在它的社区化倾向越来越强了,我喜欢.
 
@@ -267,7 +267,7 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 他的[[http://steve-yegge.blogspot.com.au/2008/01/emergency-elisp.html][Emergency Elisp]]很简洁.我特别喜欢"Statements"一章.
 
 ** 知识管理
-不要低估长期管理的累积效应.
+不要低估长时间的累积效应.
 
 正面例子参考Steve Purcell的配置. 2000年开始维护!其声誉和质量不用我多费口舌.
 
@@ -276,16 +276,16 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 所以决不要重置配置!
 
 这也是后文谈到为什么要用工具保存配置和知识的原因.
-*** 配置纳入 github 的版本控制
+*** 配置纳入 GitHub 的版本控制
 我的配置见 [[https://github.com/redguardtoo/emacs.d]].
 
 版本控制可以认为是一个集中式的知识管理,任何时刻任何地点对配置的修改都要及时上传合并 (merge).这是积累能力的关键.
 
 共享实际也是一种利己行为,有很多人使用我的配置,等于帮我测试.
 *** 将相关资料 (如电子图书,博客文章) 备份
-我将所有资讯都放在 dropbox 的服务器上,这样资料就同步到我的智能手机和我的平板电脑上,我可利用空闲时间学习.
+我将所有资讯都放在 Dropbox 的服务器上,这样资料就同步到我的智能手机和我的平板电脑上,我可利用空闲时间学习.
 
-请[[https://www.getdropbox.com/referrals/NTg1ODg2Mjk][点击这里注册 dropbox 帐号]].注意,dropbox 客户端完全可以在国内使用,虽然访问其首页可能有点问题.
+请[[https://www.getdropbox.com/referrals/NTg1ODg2Mjk][点击这里注册 Dropbox 帐号]].注意,Dropbox 客户端完全可以在国内使用,虽然访问其首页可能有点问题.
 
 我还写了许多博客文章.这些文章都存在org格式的文件中.最后发布的静态博客也纳入版本控制,参见[[http://github.com/redguardtoo/redguardtoo.github.io]].
 
@@ -345,14 +345,15 @@ Xah Lee 提供[[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费Li
 - 通读他们已发表的贴子
 
 ** 使用Evil
-Evil是[[https://bitbucket.org/lyro/evil/wiki/Home][Evil]]Vim模拟器.
+Evil是[[https://bitbucket.org/lyro/evil/wiki/Home][Vim模拟器]].
 
 如果你不熟悉Vim,在命令行里运行 =vimtutor= 或者安装Emacs插件[[https://github.com/syl20bnr/evil-tutor][evil-tutor]]学习Vim基本命令.
 
 该教程大概需要半小时.关于Vim的基本操作的讨论就到此为止了.网上关于Vim教程汗牛充栋,你可以自行阅读.
 
-本文的重点是探讨如何结合Emacs和Vim获得完美文本编辑器,达到 *神用编辑器之神* 的境界.
+我的重点是展示一些高级技巧(有些技巧是我独创的),以说明Emacs给我真正的自由.
 
+我引以为豪自己使用Emacs的方式和其他Emacs或者Vim用户完全不同.
 *** Text Object
 了解[[http://vimdoc.sourceforge.net/htmldoc/motion.html][Vim Text Object]]的概念.
 
@@ -535,7 +536,7 @@ Interactive Interpreter和Shell没有本质区别,无非就是解释器支持的
 *** 除了Purcell的配置,还有其他高手的设置吗?
 我[[https://github.com/search?l=Emacs+Lisp&o=desc&q=emacs&ref=searchresults&s=stars&type=Repositories][搜了下github]]:
 - [[https://github.com/bbatsov/prelude][Bozhidar Batsov's emacs.d]]
-- [[https://github.com/syl20bnr/spacemacs][Sylvain Benner's spacemacs]] (Spacemacs是针对Vim用户优化的，所以非Vim用户不用试了)
+- [[https://github.com/syl20bnr/spacemacs][Sylvain Benner's Spacemacs]] (Spacemacs是针对Vim用户优化的，所以非Vim用户不用试了)
 - [[https://github.com/eschulte/emacs24-starter-kit/][Eric Schulte's Emacs Starter Kit]].
 *** 有没有更简单的配置？
 可用 [[https://github.com/redguardtoo/emacs.d][我的配置]]：
