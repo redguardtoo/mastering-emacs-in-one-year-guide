@@ -564,7 +564,7 @@ Interactive Interpreter 和 Shell 没有本质区别, 无非就是解释器支�
 *** 为什么很多 Vim 高手不接受 Evil?
 因为他们对 Vim 快捷键做了深度配置. Emacs 默认要经常按 Ctrl 键, 如自定义的 Vim 快捷键也用 Ctrl 键, 难免有冲突.
 
-解决办法是大家都使 [[http://stackoverflow.com/questions/1764263/what-is-the-leader-in-a-vimrc][Leader]](Vim 直接支持, Emacs 需 [[https://github.com/cofi/evil-leader][第三方插件]]).
+解决办法是大家都使 [[http://stackoverflow.com/questions/1764263/what-is-the-leader-in-a-vimrc][Leader]] (Vim 直接支持, Emacs 需 [[https://github.com/cofi/evil-leader][第三方插件]]).
 
 还有一个办法是呆在 Vim 的舒适区里. 如能忍受没有 org-mode 和 lisp 的生活, 那么不会有问题.
 
