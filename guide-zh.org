@@ -341,7 +341,7 @@ Xah Lee 提供 [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费 
 
 例如，你是否意识到之前的章节意味着以下行动:
 - 找出所有插件的作者
-- 在 Quora/Twitter/GitHub/Reddit/Google+上跟随他们
+- 在 Quora/Twitter/GitHub/Reddit/Google+ 上跟随他们
 - 通读他们已发表的贴子
 
 ** 使用 Evil
@@ -554,7 +554,7 @@ Interactive Interpreter 和 Shell 没有本质区别, 无非就是解释器支�
 *** Vi 高手要转阵营吗?
 嘿嘿, 我也是 Vi 精通后转到 Emacs 的. 就是因为 Emacs 的强大 (例如和 gdb 的完美结合) 以及其脚本语言是 Lisp.
 
-当然 Vi 的多模式编辑和快捷键比 Emacs 要高效得多, 所以最佳方案是 Vi+Emacs.
+当然 Vi 的多模式编辑和快捷键比 Emacs 要高效得多, 所以最佳方案是 Vi + Emacs.
 
 目前我用 [[http://www.emacswiki.org/Evil][Evil]], 在 Emacs 下模拟 Vim, 结合两者优点.
 
@@ -653,7 +653,7 @@ Java 和 C# 语言的主力开发工具最好用 IDE 而不是 Emacs.C# 又比 J
 
 如你必须访问 Microsoft Exchange Servers, 还要用 [[http://davmail.sourceforge.net/][Davmail]].
 
-用了 Davmail 后, 还可以用 [[http://getpopfile.org/][Popfile]] 来分捡邮件. Davmail+Popfile 让我生活在天堂.
+用了 Davmail 后, 还可以用 [[http://getpopfile.org/][Popfile]] 来分捡邮件. Davmail + Popfile 让我生活在天堂.
 *** 为什么 Emacs 启动时从服务器 (elpa) 安装第三方软件包 (package) 会失败?
 请启动 Emacs 后, 运行 `M-x package-refresh-contents` 以从服务器更新软件索引, 然后重启 Emacs 即可.
 
