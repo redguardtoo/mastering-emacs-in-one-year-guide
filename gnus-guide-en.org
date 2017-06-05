@@ -9,9 +9,9 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20161202
+Version: 20170605
 
-Updated: <2016-12-02 Fri>
+Updated: <2017-06-05 Mon> 
 
 Created: <2012-10-12 Mon>
 
@@ -261,7 +261,7 @@ Instead remembering topic commands, editing above snippet is more straightforwar
 
 The flag =gnus-message-archive-group= defines *local* archive folder of sent mails. By default new folder is created *monthly*. My setup creates the folder *yearly*.
 ** Advanced tips
-*** Windows?
+*** Windows setup
 It's *100% usable* if you install [[https://www.cygwin.com/][Cygwin]] at first.
 
 Gnus from Cygwin version of Emacs works out of the box.
@@ -272,10 +272,26 @@ Native [[https://ftp.gnu.org/gnu/emacs/windows/][Emacs for Windows]] need a litt
 - Set the variable "HOME" to the parent directory of your ".emacs.d" directory
 - Set the variable "PATH" to the "C:\cygwin64\bin". I suppose Cygwin is installed at driver C.
 - Install GnuTLS and OpenSSH through Cygwin package manager
-*** Outlook?
-Exchange/Outlook users could read my post [[http://blog.binchen.org/posts/how-to-get-email-from-exchange-server-without-outlook.html]].
+*** Microsoft Outlook
+If your Exchange Server is not using standard protocol like IMAP or you can't access IMAP port behind firewall, you can use [[http://davmail.sourceforge.net/][DavMail]]. DavMail is a "POP/IMAP/SMTP/Caldav/Carddav/LDAP exchange gateway".
 
-You need one portable Java program [[http://davmail.sourceforge.net/][Davmail]]. That's enough in 99% companies. But if your Administrator is evil, you need use [[http://ewseditor.codeplex.com/][EWSEditor]] for once.
+Please read [[http://davmail.sourceforge.net/gettingstarted.html][its manual]], it's easy to setup. 
+
+Here are a few tips for DavMail setup.
+
+The Administrator might use non-standard =OWA url=, you can use [[http://ewseditor.codeplex.com/][EWSEditor]] to find out the url.
+
+The IMAP setup should set =nnimap-stream= to =plain= by default.
+
+Here is a sample setup for Davmail:
+#+begin_src elisp
+(setq gnus-select-method
+      '(nnimap "companyname"
+               (nnimap-address "127.0.0.1")
+               (nnimap-server-port 1143)
+               (nnimap-stream plain)
+               (nnir-search-engine imap)))
+#+end_src
 *** Auto-complete mail address
 Install [[http://bbdb.sourceforge.net/][BBDB]]  through [[http://melpa.milkbox.net/#/bbdb][melpa]]. It is a email address database written in Emacs Lisp.
 
@@ -475,8 +491,118 @@ Move the cursor to the *offline* server and =M-x gnus-server-open-server=.
      (global-set-key (kbd "C-c C-y") 'hydra-message/body)))
 #+end_src
 
+*** Use Gwene to read RSS/Atom feed as a news group
+You can either submit [[http://gwene.org/][single RSS/Atom feed url]] or upload [[http://gwene.org/opml.php][OMPL file]].
+
+I suggest using [[https://www.emacswiki.org/emacs/emacs-w3m][emacs-w3m]] to upload OPML file because in Emacs it's easy to select the links created by Gwene. Then you can use techniques I introduced in previous section "Tree view of mail folders" to organize the feeds. Please make up your mind before uploading.
+
+To view/download embedded video/audio in feed, you can use mplayer if its support for network streaming is enabled. It's enabled by default at most Linux distributions, OSX, and Windows.
+
+There are also CLI tricks to open images at different OS. Check my code for details.
+
+Here are three commands =w3mext-open-with-mplayer=, =w3mext-download-rss-stream=, and =w3mext-open-link-or-image-or-url= to process multimedia:
+#+begin_src elisp
+;; https://www.emacswiki.org/emacs/emacs-w3m
+(require 'w3m)
+;; Install https://github.com/rolandwalker/simpleclip for clipboard support
+(require 'simpleclip)
+
+(defun my-buffer-str ()
+  (buffer-substring-no-properties (point-min) (point-max)))
+
+(defun my-guess-image-viewer-path (file &optional is-stream)
+  (let ((rlt "mplayer"))
+    (cond
+     (*is-a-mac*
+      (setq rlt
+            (format "open %s &" file)))
+     (*linux*
+      (setq rlt
+            (if is-stream (format "curl -L %s | feh -F - &" file) (format "feh -F %s &" file))))
+     (*cygwin* (setq rlt "feh -F"))
+     (t ; windows
+      (setq rlt
+            (format "rundll32.exe %SystemRoot%\\\\System32\\\\\shimgvw.dll, ImageView_Fullscreen %s &" file))))
+    rlt))
+
+(defun my-guess-mplayer-path ()
+  (let* ((rlt "mplayer"))
+    (cond
+     (*is-a-mac* (setq rlt "mplayer -quiet"))
+     (*linux* (setq rlt "mplayer -quiet -stop-xscreensaver"))
+     (*cygwin*
+      (if (file-executable-p "/cygdrive/c/mplayer/mplayer.exe")
+          (setq rlt "/cygdrive/c/mplayer/mplayer.exe -quiet")
+        (setq rlt "/cygdrive/d/mplayer/mplayer.exe -quiet")))
+     (t ; windows
+      (if (file-executable-p "c:\\\\mplayer\\\\mplayer.exe")
+          (setq rlt "c:\\\\mplayer\\\\mplayer.exe -quiet")
+        (setq rlt "d:\\\\mplayer\\\\mplayer.exe -quiet"))))
+    rlt))
+
+(defun w3mext-subject-to-target-filename ()
+  (let (rlt str)
+    (save-excursion
+      (goto-char (point-min))
+      ;; first line in email could be some hidden line containing NO to field
+      (setq str (my-buffer-str)))
+    (if (string-match "^Subject: \\(.+\\)" str)
+        (setq rlt (match-string 1 str)))
+    ;; clean the timestamp at the end of subject
+    (setq rlt (replace-regexp-in-string "[ 0-9_.'/-]+$" "" rlt))
+    (setq rlt (replace-regexp-in-string "'s " " " rlt))
+    (setq rlt (replace-regexp-in-string "[ ,_'/-]+" "-" rlt))
+    rlt))
+
+(defun w3mext-download-rss-stream ()
+  (interactive)
+  (let (url cmd)
+    (when (or (string= major-mode "w3m-mode") (string= major-mode "gnus-article-mode"))
+      (setq url (w3m-anchor))
+      (cond
+       ((or (not url) (string= url "buffer://"))
+        (message "This link is not video/audio stream."))
+       (t
+        (setq cmd (format "curl -L %s > %s.%s"  url (w3mext-subject-to-target-filename) (file-name-extension url)))
+        (kill-new cmd)
+        (simpleclip-set-contents cmd)
+        (message "%s => clipd/kill-ring" cmd))))))
+
+(defun w3mext-open-link-or-image-or-url ()
+  "Opens the current link or image or current page's uri or any url-like text under cursor in firefox."
+  (interactive)
+  (let* (url)
+    (when (or (string= major-mode "w3m-mode") (string= major-mode "gnus-article-mode"))
+      (setq url (w3m-anchor))
+      (if (or (not url) (string= url "buffer://"))
+          (setq url (or (w3m-image) w3m-current-url))))
+    (browse-url-generic (if url url (car (browse-url-interactive-arg "URL: "))))))
+
+(defun w3mext-encode-specials (str)
+  (setq str (replace-regexp-in-string "(" "%28" str))
+  (setq str (replace-regexp-in-string ")" "%29" str))
+  (setq str (replace-regexp-in-string ")" "%20" str)))
+
+(defun w3mext-open-with-mplayer ()
+  (interactive)
+  (let (url cmd str)
+    (when (or (string= major-mode "w3m-mode") (string= major-mode "gnus-article-mode"))
+      ;; weird, `w3m-anchor' fail to extract url while `w3m-image' can
+      (setq url (or (w3m-anchor) (w3m-image)))
+      (unless url
+        (save-excursion
+          (goto-char (point-min))
+          (when (string-match "^Archived-at: <?\\([^ <>]*\\)>?" (setq str (my-buffer-str)))
+            (setq url (match-string 1 str)))))
+      (setq url (w3mext-encode-specials url))
+      (setq cmd (format "%s -cache 2000 %s &" (my-guess-mplayer-path) url))
+      (when (string= url "buffer://")
+        ;; cache 2M data and don't block UI
+        (setq cmd (my-guess-image-viewer-path url t))))
+    (if url (shell-command cmd))))
+#+end_src
 ** My setup
-This setup requires Emacs 24.3 at minimum.
+This setup requires Emacs 24.3+.
 
 My ~/.gnus.el,
 #+BEGIN_SRC emacs-lisp
@@ -566,6 +692,8 @@ My ~/.gnus.el,
 
 ;; Read HTML mail
 ;; You need install the command line web browser 'w3m' and Emacs plugin 'w3m'
+;; Mnually specify the html render as w3m so my setup works on all versions
+;; of Emacs
 (setq mm-text-html-renderer 'w3m)
 
 ;; Setup to send email through SMTP
