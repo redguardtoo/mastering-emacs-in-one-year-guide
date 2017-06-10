@@ -654,7 +654,7 @@ My ~/.gnus.el,
 (add-hook 'message-mode-hook
           '(lambda ()
              (flyspell-mode t)
-             (local-set-key "<TAB>" 'bbdb-complete-name)))
+             (local-set-key (kdb "TAB") 'bbdb-complete-name)))
 
 ;; Fetch only part of the article if we can.
 ;; I saw this in someone's .gnus
