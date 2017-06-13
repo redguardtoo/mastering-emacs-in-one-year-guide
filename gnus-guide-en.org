@@ -9,9 +9,9 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20170605
+Version: 20170613
 
-Updated: <2017-06-05 Mon> 
+Updated: <2017-06-13 Tue>
 
 Created: <2012-10-12 Mon>
 
@@ -376,9 +376,11 @@ Then insert below code into =~/.emacs=,
 (setq mm-text-html-renderer 'w3m)
 #+END_SRC
 
-If we don't specify the =w3m= as html render, Emacs will use its built in browser =shr= to render HTML.
+If we don't specify the =w3m= as html render, Emacs will use its built in browser =shr= to render HTML since version =24.4=.
 
-I prefer =w3m= because it's more powerful and available on all operating systems.
+I prefer =w3m= because it has powerful APIs and available on all operating systems.
+
+Some people prefer =shr= because it can display HTML colors.
 *** Read mail offline
 Go to the "Summary Buffer".
 
@@ -494,7 +496,9 @@ Move the cursor to the *offline* server and =M-x gnus-server-open-server=.
 *** Use Gwene to read RSS/Atom feed as a news group
 You can either submit [[http://gwene.org/][single RSS/Atom feed url]] or upload [[http://gwene.org/opml.php][OMPL file]].
 
-I suggest using [[https://www.emacswiki.org/emacs/emacs-w3m][emacs-w3m]] to upload OPML file because in Emacs it's easy to select the links created by Gwene. Then you can use techniques I introduced in previous section "Tree view of mail folders" to organize the feeds. Please make up your mind before uploading.
+I suggest using [[https://www.emacswiki.org/emacs/emacs-w3m][emacs-w3m]] to upload OPML file because it's easy to select the links created by Gwene.
+
+Then you can use techniques I introduced in previous section "Tree view of mail folders" to organize the feeds. Please make up your mind before uploading.
 
 To view/download embedded video/audio in feed, you can use mplayer if its support for network streaming is enabled. It's enabled by default at most Linux distributions, OSX, and Windows.
 
@@ -601,6 +605,8 @@ Here are three commands =w3mext-open-with-mplayer=, =w3mext-download-rss-stream=
         (setq cmd (my-guess-image-viewer-path url t))))
     (if url (shell-command cmd))))
 #+end_src
+
+Please note these commands require =(setq mm-text-html-renderer 'w3m)= in your setup.
 ** My setup
 This setup requires Emacs 24.3+.
 
