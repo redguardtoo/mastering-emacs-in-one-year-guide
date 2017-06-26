@@ -101,11 +101,11 @@ Focus on your most critical issue only. Ignore other issues temporarily. Sometim
 
 For example, I always use Emacs in terminal because at the beginning my most urgent problem is to edit the file on the remote server.
 
-After a happy year with Emacs, I'm curious why other people keep complaining that their Emacs issues, especially on OSX (font not rendered properly, window not maxmized, cannot increase font size, etc). It turns out they are using GUI version while I'm using terminal version. My terminal application already take over and solve these issues perfectly.
+After a happy year with Emacs, I'm curious why other people keep complaining that their Emacs issues, especially on OSX (font not rendered properly, window not maximized, cannot increase font size, etc). It turns out they are using GUI version while I'm using terminal version. My terminal application already take over and solve these issues perfectly.
 *** On the shoulders of giants
 This is *the most important section*!
 
-I learned the lesson the hard way. At the beginning, I regarded Emacs as a toy. I digged around the internet for cool code I can copy.
+I learned the lesson the hard way. At the beginning, I regarded Emacs as a toy. I dug around the internet for cool code I can copy.
 
 That's totally a waste of time if my goal is to become an Emacs master!
 
@@ -138,8 +138,6 @@ If you are still not convinced, consider my reasons:
 - You will get guidance from the master when he/she analyzes your bug report.
 
 *** Report bugs
-That's only way to become the padawan of the master.
-
 For example, I learned [[phttp://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][some advanced Lisp skill]] by [[https://github.com/capitaomorte/yasnippet/issues/256][reporting a bug]]. The bonus is that bug report is actually a case study. Knowledge from such a case study is hard to forget.
 
 *** Better yourself everyday
@@ -150,7 +148,7 @@ Go look over Paul Nordstrom's shoulder while he works sometime, if you don't bel
 
 After reading the text, I decided to be as good as Paul Nordstrom. It's mission impossible considering [[http://www.linkedin.com/in/paulnpcom][who Paul Nordstrom is]]. The reason to set a goal I can never reach is to make me not to stop. Whatever minor task I take, I always ask myself how Paul Nordstrom will handle it. Is my operation efficient enough that Steve Yegge will be surprised?
 
-For example, switch focus between sub-windows in Emacs is not efficient by default. I need press "Ctrl-x O" several times to jump to a sub-window. After some investigation, I found [[https://github.com/dimitri/switch-window][switch-window]]. Press "Ctrl-x O" plus number key to finish the operation. I kept searching and found [[https://github.com/nschum/window-numbering.el][window-numbering]]. ALT key plus number key is enough. That's 60% productivity improvement. Alt key is still a little bit far away from my fingers. Another improvement is to use [[https://gitorious.org/evil/pages/Home][Evil-mode]] and [[https://github.com/cofi/evil-leader][evil-leader]], I need only [[https://github.com/redguardtoo/emacs.d/blob/master/init-evil.el][press comma key and number key to switch window]].
+For example, switch focus between sub-windows in Emacs is not efficient by default. I need press "Ctrl-x O" several times to jump to a sub-window. After some investigation, I found [[https://github.com/dimitri/switch-window][switch-window]]. Press "Ctrl-x O" plus number key to finish the operation. I kept searching and found [[https://github.com/nschum/window-numbering.el][window-numbering]]. ALT key plus number key is enough. That's 60% productivity improvement. Alt key is still a little bit far away from my fingers. Another improvement is to use [[https://github.com/emacs-evil/evil][Evil-mode]] and [[https://github.com/cofi/evil-leader][evil-leader]], I need only [[https://github.com/redguardtoo/emacs.d/blob/master/init-evil.el][press comma key and number key to switch window]].
 *** Join the community
 I suggest focusing on Emacs only in order to take full advantage of communities.
 
@@ -161,14 +159,14 @@ For example, although Quora.com has lots of interesting stuff, *do not* read/sub
 BTW, the Emacs geek [[https://plus.google.com/113859563190964307534][Xah Lee]] hosts a Q/A session at Google Plus every Tuesday. His web site is [[http://xahlee.org/]].
 **** Reddit
 [[http://www.reddit.com/r/emacs/][Reddit]] is as good as Google+. The advantage of Reddit is that it's usually NOT blocked by the corporate firewall.
-**** Github
+**** GitHub
 It's a social network for developers.
 
 You can search [[https://github.com/languages/Emacs%20Lisp]] for latest Emacs Lisp code.
 
 If you agrees with my "follow master" strategy, you may like following tip.
 
-I *avoid the pain of maintaining* by watching other masters' emacs.d repositories. I get notified by the bugs and *fix* automatically. All I need to do is clicking "Watch" button on the right top of Github page.
+I *avoid the pain of maintaining* by watching other masters' emacs.d repositories. I get notified by the bugs and *fix* automatically. All I need to do is clicking "Watch" button on the right top of GitHub page.
 **** Blogs
 [[http://planet.emacsen.org/][Planet Emacsen]] is the best collection of Emacs related blogs.
 **** Quora.com
@@ -176,10 +174,10 @@ Follow the question on specific topic instead general one. For example, "What's 
 
 Everybody can say something about a general question. But to answer a specific question, you need *first-hand experience*.
 
-Even if you are only interestd in general questions, starting from more practical question is still better. Find the people who provides the best and the shortest answer and follow her.
+Even if you are only interested in general questions, starting from more practical question is still better. Find the people who provides the best and the shortest answer and follow her.
 **** Twitter
 I use keyword "emacs :en" to search latest news. The reason to search English only twitter is that there are lots of Japanese post and I don't know Japanese.
-**** StackOverflow
+**** Stack Overflow
 Insert "emacs-related-keywords site:stackoverflow.com" in Google search engine.
 
 The quality on stackoverflow discussion is good but there are not many new questions there.
@@ -207,12 +205,12 @@ Steve Yegge's [[http://steve-yegge.blogspot.com.au/2008/01/emergency-elisp.html]
 
 Don't study the Lisp at the beginning until you are confident about your Emacs mastery.
 ** Knowledge management 
-*** Place your setup at Github, *publicly*
+*** Place your setup at GitHub, *publicly*
 I uploaded my setup onto [[https://github.com/redguardtoo/emacs.d]].
 
-Github is the most efficient way of knowledge management because you will never lose the setup.
+GitHub is the most efficient way of knowledge management because you will never lose the setup.
 
-Github is also a wonderful tool for sharing. I benefit a lot by sharing. People who use my setup are actually helping me perfect my setup. I am the first guy who benefits from a better setup.
+GitHub is also a wonderful tool for sharing. I benefit a lot by sharing. People who use my setup are actually helping me perfect my setup. I am the first guy who benefits from a better setup.
 
 For example, people reported that I mixed my personal stuff (email address, full path of my hobby project) into my setup which they need remove. They expected it usable out of the box.
 
@@ -270,7 +268,7 @@ But please make sure you *actually* understand the key points of this article at
 
 For example, do you realize that previous sections imply following actions:
 - Find all the developers of the Emacs plugins I listed
-- Follow them on Quora/Twitter/Github/Reddit/Google+
+- Follow them on Quora/Twitter/GitHub/Reddit/Google+
 - Read all their old posts on Quora/Reddit/Google+
 ** FAQ
 *** I'm Emacs dummy. How to start?
@@ -316,7 +314,7 @@ I am die-hard Vi user with 14 year experience. After realizing the potential of 
 Another more brilliant example is [[https://github.com/syl20bnr/spacemacs][a guy who earning tons of Github stars]].
 *** I don't like default key bindings
 [[http://ergoemacs.org/][ergoemacs]] if you prefer Microsoft's key bindings.
-*** Too many key bindings to memorise
+*** Too many key bindings to memorize
 Use [[http://www.emacswiki.org/Smex][Smex]]. It's a myth that a Emacs guru must remember many key bindings.
 *** I am not comfortable with other people's setup. Can I modify it?
 Try to understand the master's setup at first. Don't make judgment too early. It's easy to make judgment. But understanding needs wisdom and hard work.
@@ -344,13 +342,13 @@ If you are sure it's actually an *error* message,
 *** My own setup is more controllable
 That's what I thought at the beginning. After several months I realized that I could never be as good as a master like Steve Purcell if keeping this way.
 
-While I spend serveral weeks to overcome some minor issues in Emacs setup, Purcell has already installed/developed dozens of cool plugins.
+While I spend several weeks to overcome some minor issues in Emacs setup, Purcell has already installed/developed dozens of cool plugins.
 
 If I cannot win, the only strategy is to join him, that's why I clone his setup and start to report bug for him. Here is [[https://github.com/purcell/emacs.d/issues/6][first issue I reported]]. Besides, reporting bugs also gives me the opportunity to talk with the master.
 
 So don't run away from the master's huge setup. Regard it as a challenge to improve yourself.
 *** Why I cannot add my own plugins into master's setup
-Though the quality of Emacs plugins are generally good, they may have compatibility issues. It's usually because plugins are developed by different people. For example, both [[https://github.com/auto-complete][auto-complete]] and [[https://github.com/capitaomorte/yasnippet][yasnippet]] will use TAB key to expand code. So there is confict if I use both plugins.
+Though the quality of Emacs plugins are generally good, they may have compatibility issues. It's usually because plugins are developed by different people. For example, both [[https://github.com/auto-complete][auto-complete]] and [[https://github.com/capitaomorte/yasnippet][yasnippet]] will use TAB key to expand code. So there is conflict if I use both plugins.
 
 That's another reason to stick to the master's setup at the beginning.
 *** How to use Emacs on windows
@@ -390,7 +388,7 @@ That's why I stress that you need avoid tweaking Emacs at the beginning. Please 
 
 Unless you have seen how Lisp gets your job done, you will not have the *enough stimulus* to finish the its course.
 
-Me, for example, never feel pressued to learning Lisp. Actually, my initial plan is being great *without* touching Lisp.
+Me, for example, never feel pressed to learning Lisp. Actually, my initial plan is being great *without* touching Lisp.
 
 As a *proof*, please visit [[https://github.com/redguardtoo/][my github account]]. Check all the issues I reported at the beginning. As you can see, I know little about Emacs Lisp for a very long time.
 
@@ -429,6 +427,6 @@ Please don't ask basic questions, since I've already shown you how to find the a
 
 This article is published at [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide]].
 
-Please use github's bug tracker instead of emailing me directly. Github notification mail is always in my first priority folder.
+Please use GitHub's bug tracker instead of emailing me directly. GitHub notification mail is always in my first priority folder.
 
 Emacs is actually a platform. Cool people keep appearing. I will update this article from time to time in the future.

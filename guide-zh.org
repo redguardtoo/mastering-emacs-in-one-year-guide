@@ -204,7 +204,7 @@ Emacs 只是一种技术, 其学习方法和其他学科是通用的.
 
 例如, 默认在 Emacs 中移动子窗口焦点不是很方便. 需按 =C-x O= 多次. 我找到了 emacs 插件 [[https://github.com/dimitri/switch-window][switch-window]], 只要按 =C-x O= 一次, 会有提示子窗口编号, 接下来输入编号就可以了. 但还有改善空间, 我又找到了 [[https://github.com/nschum/window-numbering.el][window-number.el]], 只要按 =M-NUM= 一次.
 
-window-number.el 已完美, 但 Alt 键还是有点慢, 我结合 [[https://gitorious.org/evil/pages/Home][evil]] 和 [[https://github.com/cofi/evil-leader][evil-leader]], 可以按逗号和数字飞速切换子窗口了.
+window-number.el 已完美, 但 Alt 键还是有点慢, 我结合 [[https://github.com/emacs-evil/evil][evil]] 和 [[https://github.com/cofi/evil-leader][evil-leader]], 可以按逗号和数字飞速切换子窗口了.
 *** 加入社区更上一层楼
 最重要的是专一.
 
@@ -304,7 +304,7 @@ Xah Lee 提供 [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费 
 以下是清单：
 | 名称                | 说明                               | 同类插件         |
 |---------------------+------------------------------------+------------------|
-| [[https://gitorious.org/evil/][Evil]]                | 将 Emacs 变为 Vim                    | 没有             |
+| [[https://github.com/emacs-evil/evil][Evil]]                | 将 Emacs 变为 Vim                    | 没有             |
 | [[http://orgmode.org/][Org]]                 | org-mode, 全能的笔记工具            | 没有             |
 | [[https://github.com/company-mode/company-mode][company-mode]]        | 自动完成输入, 支持各种语言和后端    | auto-complete    |
 | [[https://github.com/magnars/expand-region.el][expand-region]]       | 快捷键选中文本, 可将选择区域伸缩    | 没有             |
