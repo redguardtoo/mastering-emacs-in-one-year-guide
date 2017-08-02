@@ -13,7 +13,7 @@ Here are the tips *for your first year*:
 - DON'T learn Lisp
 - DON'T remember key bindings
 
-Emacs Lisp has nothing to do with your IQ. So don't feel pressured to master it asap. As I observed, most people (including me) dislike language with unfamiliar syntax. That's ok. Start from using Emacs, you will feel the love for Emacs, then comes the love for Lisp naturally.
+Emacs Lisp has nothing to do with your IQ. So don't feel pressured to master it asap. As I have observed, most people (including me) dislike language with unfamiliar syntax. That's ok. Start from using Emacs, you will feel the love for Emacs, then comes the love for Lisp naturally.
 
 Click [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org][HERE]] to read it.
 
