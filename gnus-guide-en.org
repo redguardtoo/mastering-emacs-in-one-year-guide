@@ -294,12 +294,12 @@ Install [[http://bbdb.sourceforge.net/][BBDB]]  through [[http://melpa.milkbox.n
 
 You can always use =M-x bbdb-complete-name= and =M-x bbdb-complete-mail= provided by BBDB.
 
-But there are another two better plugins based on BBDB (so you still need install BBDB at first):
+But there are other better plugins based on BBDB (so you still need install BBDB at first):
 - [[https://github.com/redguardtoo/counsel-bbdb][counsel-bbdb]] (counsel-bbdb is a lightweight alternative developed by me)
 - [[https://github.com/company-mode/company-mode][company-mode]]
 - [[https://github.com/tumashu/bbdb-handy][bbdb-handy]]
 
-You only need one from above packages.
+You only need one of above packages.
 *** Synchronize from Gmail contacts
 Please,
 - Go to [[https://www.google.com/contacts/]]
