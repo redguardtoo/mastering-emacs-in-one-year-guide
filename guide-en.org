@@ -11,22 +11,20 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20150424
+Version: 20180107
 
-Updated: <2015-04-24 Fri>
+Updated: <2018-01-07 Sun>
 
 Created: [2012-01-31 Tue 15:08]
 
 Copyright: This work is licensed under the [[http://creativecommons.org/licenses/by-nc-nd/3.0/][Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License]].
 
 ** Introduction
-I was a Microsoft fan because I was born in China. There was no Unix culture when I was young. My professor knew as much as I knew about Unix. Zero knowledge. Nothing. I believed Microsoft Windows was the only platform worth developing software on. I believed Visual Studio was the best IDE in the world. I was so loyal to Microsoft that I used Visual Studio to edit the code running on Linux server during my first job.
+I was a Microsoft fan because I was born in China. There was no Unix culture when I was young. My professor knew as much as I knew about Unix. Basically it's nothing. I believed Microsoft Windows was the only platform worth developing software on. I believed Visual Studio was the best IDE in the world. I was so loyal to Microsoft that I used Visual Studio to edit the code running on Linux server in my first job.
 
-Besides, computers scared me to death. I'm ashamed to admit now that when I graduated from university I didn't know clipboard. If I need input duplicated texts, I typed them character by character. I chose an IT career simply for money. There was no other career path for talented young people in China then.
+Besides, computers scared me to death. I'm ashamed to admit now that when I graduated from university I didn't know clipboard. If I need input duplicated texts, I typed them character by character. I chose an IT career simply for money.
 
-So,
-- This guide is about using Emacs as a professional's tool. I will not show off Emacs as a geek's toy because I am far from geek stereotype. I will focus on philosophy and methodology only. No technical details involved.
-- If a computer dummy can [[https://github.com/redguardtoo][be good at Emacs in one year]], you can do better.
+My point is if a computer dummy like me can [[https://github.com/redguardtoo][be good at Emacs in one year]], you can do better.
 
 Here is the structure of the article:
 - Why Emacs matters? You can skip this part if you are familiar with Linux/Unix
@@ -148,15 +146,13 @@ Go look over Paul Nordstrom's shoulder while he works sometime, if you don't bel
 
 After reading the text, I decided to be as good as Paul Nordstrom. It's mission impossible considering [[http://www.linkedin.com/in/paulnpcom][who Paul Nordstrom is]]. The reason to set a goal I can never reach is to make me not to stop. Whatever minor task I take, I always ask myself how Paul Nordstrom will handle it. Is my operation efficient enough that Steve Yegge will be surprised?
 
-For example, switch focus between sub-windows in Emacs is not efficient by default. I need press "Ctrl-x O" several times to jump to a sub-window. After some investigation, I found [[https://github.com/dimitri/switch-window][switch-window]]. Press "Ctrl-x O" plus number key to finish the operation. I kept searching and found [[https://github.com/nschum/window-numbering.el][window-numbering]]. ALT key plus number key is enough. That's 60% productivity improvement. Alt key is still a little bit far away from my fingers. Another improvement is to use [[https://github.com/emacs-evil/evil][Evil-mode]] and [[https://github.com/cofi/evil-leader][evil-leader]], I need only [[https://github.com/redguardtoo/emacs.d/blob/master/init-evil.el][press comma key and number key to switch window]].
+For example, switch focus between sub-windows in Emacs is not efficient by default. I need press =Ctrl-x O= several times to jump to a sub-window. After some investigation, I found [[https://github.com/dimitri/switch-window][switch-window]]. Press =Ctrl-x O= plus number key to finish the operation. I kept searching and found [[https://github.com/nschum/window-numbering.el][window-numbering]]. ALT key plus number key is enough. That's 60% productivity improvement. Alt key is still a little bit far away from my fingers. Another improvement is to use [[https://github.com/emacs-evil/evil][Evil-mode]] and [[https://github.com/cofi/evil-leader][evil-leader]], I need only [[https://github.com/redguardtoo/emacs.d/blob/master/lisp/init-evil.el][press comma key and number key to switch window]].
 *** Join the community
 I suggest focusing on Emacs only in order to take full advantage of communities.
 
 For example, although Quora.com has lots of interesting stuff, *do not* read/subscribe/follow them unless it's related to Emacs.
 **** Google+
 [[https://plus.google.com/communities/114815898697665598016][Emacs community on Google+]] is the best. The average quality of discussion on Google+ is better.
-
-BTW, the Emacs geek [[https://plus.google.com/113859563190964307534][Xah Lee]] hosts a Q/A session at Google Plus every Tuesday. His web site is [[http://xahlee.org/]].
 **** Reddit
 [[http://www.reddit.com/r/emacs/][Reddit]] is as good as Google+. The advantage of Reddit is that it's usually NOT blocked by the corporate firewall.
 **** GitHub
@@ -273,8 +269,6 @@ For example, do you realize that previous sections imply following actions:
 ** FAQ
 *** I'm Emacs dummy. How to start?
 Go to [[https://github.com/redguardtoo/emacs.d]] and check the section "Install stable version in easiest way" in [[https://github.com/redguardtoo/emacs.d/blob/master/README.org][README]].
-
-Then follow the steps at [[https://github.com/redguardtoo/emacs.d/blob/master/BETA.org]].
 *** Any documentation on Steve Purcell's setup?
 Nope. Read its README and code comment. The header of the code file usually has some guide and the developer's email.
 *** Is Master's setup too heavy weight?
