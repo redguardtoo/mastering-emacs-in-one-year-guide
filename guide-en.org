@@ -11,9 +11,9 @@
   :END:
 Author: Chen Bin (redguardtoo)
 
-Version: 20180107
+Version: 20180212
 
-Updated: <2018-01-07 Sun>
+Updated: <2018-02-12>
 
 Created: [2012-01-31 Tue 15:08]
 
@@ -232,8 +232,7 @@ So I list the actively-maintained-and-high-quality plugins to help newbies start
 | [[https://github.com/nonsequitur/smex][smex]]                | Input command efficiently               | none             |
 | [[https://github.com/capitaomorte/yasnippet][yasnippet]]           | text template                           | none             |
 | [[http://www.emacswiki.org/emacs/FlyMake][flymake]]             | syntax check.                           | flycheck         |
-| [[https://github.com/emacs-helm/helm][helm]]                | a framework to choose candidates        | ido              |
-| [[http://www.emacswiki.org/emacs/InteractivelyDoThings][ido]]                 | similar to helm                         | helm             |
+| [[https://github.com/abo-abo/swiper][ivy]] or [[https://github.com/emacs-helm/helm][helm]]         | a framework to choose candidates        | ido              |
 | [[https://github.com/mooz/js2-mode][js2-mode]]            | everything for javascript               | js-mode          |
 | [[http://www.emacswiki.org/emacs/emacs-w3m][w3m]]                 | web browser                             | Eww              |
 | [[https://github.com/skeeto/emacs-web-server][simple-httpd]]        | web server                              | [[https://github.com/nicferrier/elnode][elnode]]           |
@@ -357,10 +356,9 @@ Thanks to [[http://clang.llvm.org/][Clang]] && [[http://www.gnu.org/software/glo
 
 I suggesting you using IDE when dealing with Java and C# in big projects.
 *** What about web browsing?
-I strongly recommend Firefox plus [[https://github.com/mooz/keysnail/][Keysnail]].
+I strongly recommend Firefox plus [[https://github.com/mooz/keysnail/][Keysnail]]. This is the perfect solution for Emacs fans. Trust me, I've already investigated *every* solution.
 
-This is the perfect solution for Emacs fans. Trust me, I've already investigated *every* solution.
-
+Firefox v57+ broke some APIs so Keysnail's development was forced to stop. You can use Google Chrome plus [[https://github.com/brookhong/Surfingkeys][Surfingkeys]] instead.
 *** Email?
 I use [[http://www.gnus.org/][Gnus]]. But there are many alternatives. If you have to fetch email from Microsoft Exchange Servers, you need [[http://davmail.sourceforge.net/][Davmail]].
 

@@ -12,9 +12,9 @@
   :END:
 作者: 陈斌 (redguardtoo)
 
-版本号: 20170927
+版本号: 20180212
 
-更新时间: <2017-09-27>
+更新时间: <2018-02-12>
 
 原创时间: <2012-01-31>
 
@@ -301,7 +301,6 @@ Xah Lee 提供 [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费 
 | [[https://github.com/capitaomorte/yasnippet][yasnippet]]           | 强大的文本模板输入工具                | 没有             |
 | [[http://www.emacswiki.org/emacs/FlyMake][flymake]]             | 对不同语言做语法检查                  | flycheck         |
 | [[https://github.com/abo-abo/swiper/blob/master/ivy.el][ivy]] or [[https://github.com/emacs-helm/helm][helm]]         | 自动完成, 在其上有插件完成具体功能    | ido              |
-| [[http://www.emacswiki.org/emacs/InteractivelyDoThings][ido]]                 | 和 helm 类似, helm 和 ido 可同时用    | helm             |
 | [[https://github.com/mooz/js2-mode][js2-mode]]            | javascript 的主模式, 自带语法解释器   | js-mode          |
 | [[http://www.emacswiki.org/emacs/emacs-w3m][w3m]]                 | 网络浏览器 (需安装命令行工具 w3m)     | Eww              |
 | [[https://github.com/skeeto/emacs-web-server][simple-httpd]]        | Lisp 写的 Web 服务器                  | [[https://github.com/nicferrier/elnode][elnode]]           |
@@ -637,6 +636,8 @@ Java 和 C# 语言的主力开发工具最好用 IDE 而不是 Emacs.C# 又比 J
 强烈建议用 [[https://github.com/mooz/keysnail/][Keysnail]].
 
 这是最佳的, 我已试过 *所有* 可选项.
+
+Firefox v57+的更新使得keysnail无法维护下去了，可以暂时使用低版本的Firefox或者转用Google Chrome加上[[https://github.com/brookhong/Surfingkeys][Surfingkeys]]代替.
 *** 邮件
 我用 [[http://www.gnus.org/][Gnus]]. 但有很多其他方案.
 
@@ -711,7 +712,7 @@ Emacs Lisp 又是只用于 Emacs 的语言, 有大量术语需要掌握. 如 "Bu
 
 以下是 Emacs 不一定能吃独食的地方:
 - 剪贴簿: 应结合命令行工具 xsel (Linux) /pbpaste (OSX) /putclip (Cygwin)
-- Web 浏览: 用 Firefox 结合插件如 keysnail
+- Web 浏览: 用传统浏览器配合其插件
 - 远程登录管理: 用 screen/tmux
 - FTP: 用专门的 FTP 软件
 - 文件管理: 用专用软件
@@ -762,3 +763,4 @@ Emacs 本质上是一个社区和平台, 不断有新的有趣的人和技术出
 - 中英文纯文字版会发布在 GitHub 上 ([[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide]])
 - 中文 HTML 版会发布到我的官方博客 (http://blog.binchen.org/?p=268)
 - 考虑到中国大陆的网络情况, 还有另一中文 HTML 版镜像 ([[http://blog.csdn.net/redguardtoo/article/details/7222501]])
+  
