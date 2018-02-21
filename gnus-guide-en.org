@@ -40,21 +40,22 @@ Here is my guide on that 5%.
 - =C= means =Ctrl= and =M= means =Alt=. For example, =M-x= means pressing =Alt= and =x= together.
 - =M-x mycommand= means pressing =Alt= and =x=, input "mycommand", and press =Enter= key.
 - =RET= means =Enter= key
-- =Group= is the mail folder
-- =Group buffer= is the list of folders
-- =Summary buffer= is the list of mails
+- =Group= means the mail folder
+- =Group buffer= is the buffer listing folders
+- =Summary buffer= is the buffer listing mails
+- =~= means HOME directory. The full path of =~= is setup in the environment variable =HOME=. For example, =~/.gnus.el= means a file named =.gnus.el= is placed in HOME directory. *Only* on windows, you must setup HOME environment variable manually. So if you are a windows user, please setup HOME right now!
 *** Sample setup
-Either use [[http://www.emacswiki.org/emacs/GnusGmail]] or my setup at the end of this article.
-*** Usage
-=M-x gnus= loads =~/.gnus.el=. Usually we place all setup code in =~/.gnus.el= so third party libraries used only by Gnus is not loaded during Emacs startup.
+=M-x gnus= will load =~/.gnus.el=. Usually we place all setup code in =~/.gnus.el= so third party libraries used only by Gnus is not loaded during Emacs startup.
 
-After starting Gnus, you come to the "Group Buffer". The "Group Buffer" lists the mail folders. In Gnus, the folder is called "Group". By default, the folders are *invisible*!
+Before start Gnus, you *must* have =.gnus.el= ready. Either use [[http://www.emacswiki.org/emacs/GnusGmail]] or my setup at the end of this article for your =.gnus.el=.
+*** Usage
+After starting Gnus by =M-x gnus=, you come to the "Group Buffer". The "Group Buffer" lists the mail folders. In Gnus, the folder is called "Group". By default, the folders are *invisible*!
 
 You need subscribe the groups to make it visible. For example, INBOX is named "nnimap+gmail:INBOX" in "Group Buffer" and *it's invisible at the beginning*!. I admit it's confusing.
 
 Check section "Subscribe groups" for details.
 
-At minimum, you need subscribe INBOX group. The subsscrible groups could still be *invisible* if they contains NO unread mails. Yes, I agree with you this makes no sense for a modern email client!
+At minimum, you need subscribe INBOX group. The subscribed groups could still be *invisible* if they contains NO unread mails. Yes, I agree with you this makes no sense for a modern email client!
 
 You need =C-u 5 M-x gnus-group-list-all-groups= to solve this problem.
 
@@ -164,13 +165,13 @@ Move *focus over the attachment* and press =o= or =M-x gnus-mime-save-part=. See
 *** Open attachment
 Move *focus over the attachment* and press =Enter= or =M-x gnus-article-press-button=.
 
-The variable =[[https://www.gnu.org/software/emacs/manual/html_node/emacs-mime/mailcap.html][mailcap-mime-data]] defines the program to open the attachment.
+The variable [[https://www.gnu.org/software/emacs/manual/html_node/emacs-mime/mailcap.html][mailcap-mime-data]] defines the program to open the attachment.
 
-You can tweak the variable on Window or OSX.
+You can tweak the variable on Windows or OSX.
 
-On Linux, I press =M-x mailcap-parse-mailcaps= to load data from ~/.mailcap into =mailcap-mime-data= instead of tweaking =mailcap-mime-data=.
+On Linux, I press =M-x mailcap-parse-mailcaps= to load data from ~/.mailcap into =mailcap-mime-data= instead of tweaking =mailcap-mime-data= directly.
 
-My ~/.mailcap:
+My =~/.mailcap=:
 #+begin_src conf
 # url
 text/html; w3m -I %{charset} -T text/html; copiousoutput;
@@ -211,7 +212,7 @@ You can mark multiple mails to forward (hotkey is "#") and forward them in one m
 
 After the forwarded email is created, you may copy the body of that email without sending it. The copied content could be inserted into new mail.
 *** Mark mails as read
-Press =c= either in "Summary Buffer" or "Group Buffer". This is *my favourite used command* which it's more efficient than average mail client.
+Press =c= either in "Summary Buffer" or "Group Buffer". This is *my favorite used command* which it's more efficient than average mail client.
 *** Tree view of mail folders
 [[http://www.gnu.org/software/emacs/manual/html_node/gnus/Group-Topics.html][Group Topics]] is used to re-organize the mail folder into tree view.
 
@@ -270,7 +271,7 @@ Native [[https://ftp.gnu.org/gnu/emacs/windows/][Emacs for Windows]] need a litt
 - Set the variable "PATH" to the "C:\cygwin64\bin". I suppose Cygwin is installed at driver C.
 - Install GnuTLS and OpenSSH through Cygwin package manager
 *** Microsoft Outlook
-If your Exchange Server is not using standard protocol like IMAP or you can't access IMAP port behind firewall, you can use [[http://davmail.sourceforge.net/][DavMail]]. DavMail is a "POP/IMAP/SMTP/Caldav/Carddav/LDAP exchange gateway".
+If your Exchange Server is not using standard protocol like IMAP or you can't access IMAP port behind firewall, you can use [[http://davmail.sourceforge.net/][DavMail]]. DavMail is a "POP/IMAP/SMTP/CalDAV/CardDAV/LDAP exchange gateway".
 
 Please read [[http://davmail.sourceforge.net/gettingstarted.html][its manual]], it's easy to setup.
 
@@ -494,7 +495,7 @@ Move the cursor to the *offline* server and =M-x gnus-server-open-server=.
 *** Use Gwene to read RSS/Atom feed as a news group
 You can either submit [[http://gwene.org/][single RSS/Atom feed url]] or upload [[http://gwene.org/opml.php][OMPL file]].
 
-I suggest using [[https://www.emacswiki.org/emacs/emacs-w3m][emacs-w3m]] to upload OPML file because it's easy to select the links created by Gwene.
+I suggest using [[https://www.emacswiki.org/emacs/emacs-w3m][emacs-w3m]] to upload [[https://en.wikipedia.org/wiki/OPML][OPML]] file because it's easy to select the links created by Gwene.
 
 Then you can use techniques I introduced in previous section "Tree view of mail folders" to organize the feeds. Please make up your mind before uploading.
 
@@ -694,13 +695,18 @@ My ~/.gnus.el,
 (setq user-full-name "My Name"
       user-mail-address "username@gmail.com")
 
-;; Read HTML mail
+;; Read HTML mail:
 ;; You need install the command line web browser 'w3m' and Emacs plugin 'w3m'
-;; Mnually specify the html render as w3m so my setup works on all versions
-;; of Emacs
-(setq mm-text-html-renderer 'w3m)
+;; manually. It specify the html render as w3m so my setup works on all versions
+;; of Emacs.
+;;
+;; Since Emacs 24+, a default html rendering engine `shr' is provided:
+;;   - It works out of box without any cli program dependency or setup
+;;   - It can render html color
+;; So below line is optional.
+(setq mm-text-html-renderer 'w3m) ; OPTIONAL
 
-;; Setup to send email through SMTP
+;; Send email through SMTP
 (setq message-send-mail-function 'smtpmail-send-it
       smtpmail-default-smtp-server "smtp.gmail.com"
       smtpmail-smtp-service 587
@@ -708,6 +714,8 @@ My ~/.gnus.el,
 ;; http://www.gnu.org/software/emacs/manual/html_node/gnus/_005b9_002e2_005d.html
 (setq gnus-use-correct-string-widths nil)
 
+;; Sample on how to organize mail folders.
+;; It's dependent on `gnus-topic-mode'.
 (eval-after-load 'gnus-topic
   '(progn
      (setq gnus-message-archive-group '((format-time-string "sent.%Y")))
@@ -716,11 +724,13 @@ My ~/.gnus.el,
                                 (nnfolder-get-new-mail nil)
                                 (nnfolder-inhibit-expiry t))))
 
+     ;; "Gnus" is the root folder, and there are three mail accounts, "misc", "hotmail", "gmail"
      (setq gnus-topic-topology '(("Gnus" visible)
                                  (("misc" visible))
                                  (("hotmail" visible nil nil))
                                  (("gmail" visible nil nil))))
 
+     ;; each topic corresponds to a public imap folder
      (setq gnus-topic-alist '(("hotmail" ; the key of topic
                                "nnimap+hotmail:Inbox"
                                "nnimap+hotmail:Drafts"
@@ -741,9 +751,9 @@ My ~/.gnus.el,
                               ("Gnus")))))
 #+END_SRC
 
-Your login and password is stored at "~/.authinfo.gpg" which is read by Gnus. Please press =C-h v auth-sources= for more information.
+Your login and password is stored at =~/.authinfo.gpg= which is read by Gnus. Please press =C-h v auth-sources= for more information.
 
-Multiple mail accounts share one ".authinfo.gpg",
+Multiple mail accounts share one =.authinfo.gpg=,
 #+BEGIN_SRC conf
 machine imap.gmail.com login username@gmail.com password my-secret-password port 993
 machine smtp.gmail.com login username@gmail.com password my-secret-password port 587
