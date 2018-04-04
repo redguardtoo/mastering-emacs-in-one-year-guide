@@ -554,7 +554,7 @@ Interactive Interpreter 和 Shell 没有本质区别, 无非就是解释器支�
 
 解决办法是大家都使 [[http://stackoverflow.com/questions/1764263/what-is-the-leader-in-a-vimrc][Leader]] (Vim 直接支持, Emacs 需 [[https://github.com/cofi/evil-leader][第三方插件]]).
 
-还有一个办法是呆在 Vim 的舒适区里. 如能忍受没有 Org-mode 和 Lisp 的生活, 那么不会有问题.
+还有一个办法是待在 Vim 的舒适区里. 如能忍受没有 Org-mode 和 Lisp 的生活, 那么不会有问题.
 
 如犹豫不决, 请重读 "态度决定一切" 一节.
 
