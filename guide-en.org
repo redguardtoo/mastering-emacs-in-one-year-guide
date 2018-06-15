@@ -140,8 +140,8 @@ For example, I learned [[phttp://www.gnu.org/software/emacs/manual/html_node/eli
 
 *** Better yourself everyday
 I was inspired by [[https://sites.google.com/site/steveyegge2/tour-de-babel][Steve Yegges' article]]. Here is the text quoted:
-#+BEGIN_EXAMPLE
-Go look over Paul Nordstrom's shoulder while he works sometime, if you don't believe me. It's a real eye-opener for someone who's used Visual Blub .NET-like IDEs their whole career.
+#+BEGIN_EXAMPLE -n 70
+Go look over Paul Nordstrom's shoulder while he works sometime, if you don't believe me.It's a real eye-opener for someone who's used Visual Blub .NET-like IDEs their whole career.
 #+END_EXAMPLE
 
 After reading the text, I decided to be as good as Paul Nordstrom. It's mission impossible considering [[http://www.linkedin.com/in/paulnpcom][who Paul Nordstrom is]]. The reason to set a goal I can never reach is to make me not to stop. Whatever minor task I take, I always ask myself how Paul Nordstrom will handle it. Is my operation efficient enough that Steve Yegge will be surprised?
