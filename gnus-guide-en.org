@@ -29,9 +29,8 @@ Here is my guide on that 5%.
 - Works on all platforms
 - Less hardware resource required
 - Searcher and filter is great
-- Built it Emacs
-- Mail can be viewed when offline. See the "offline" part in the section "Advanced tips"
-- Powerful combined with other Emacs plugins like [[https://github.com/capitaomorte/yasnippet][yasnippet]]
+- Mail can be viewed when offline. See the "offline" in section "Advanced tips"
+- Powerful when used with other Emacs plugins like [[https://github.com/capitaomorte/yasnippet][yasnippet]]
 
 ** Quick start
 *** Things you need to know at first
@@ -43,19 +42,19 @@ Here is my guide on that 5%.
 - =Group= means the mail folder
 - =Group buffer= is the buffer listing folders
 - =Summary buffer= is the buffer listing mails
-- =~= means HOME directory. The full path of =~= is setup in the environment variable =HOME=. For example, =~/.gnus.el= means a file named =.gnus.el= is placed in HOME directory. *Only* on windows, you must setup HOME environment variable manually. So if you are a windows user, please setup HOME right now!
+- =~= means HOME directory. The full path of =~= is setup in the environment variable =HOME=. For example, =~/.gnus.el= means a file named =.gnus.el= is placed in HOME directory. *Only* on windows, you must setup HOME environment variable manually. If you are a windows user, please setup HOME right now!
 *** Sample setup
 =M-x gnus= will load =~/.gnus.el=. Usually we place all setup code in =~/.gnus.el= so third party libraries used only by Gnus is not loaded during Emacs startup.
 
-Before start Gnus, you *must* have =.gnus.el= ready. Either use [[http://www.emacswiki.org/emacs/GnusGmail]] or my setup at the end of this article for your =.gnus.el=.
+Before start Gnus, you *must* create =.gnus.el=. Please check [[http://www.emacswiki.org/emacs/GnusGmail]] or use my setup at the end of this article.
 *** Usage
 After starting Gnus by =M-x gnus=, you come to the "Group Buffer". The "Group Buffer" lists the mail folders. In Gnus, the folder is called "Group". By default, the folders are *invisible*!
 
-You need subscribe the groups to make it visible. For example, INBOX is named "nnimap+gmail:INBOX" in "Group Buffer" and *it's invisible at the beginning*!. I admit it's confusing.
+You need subscribe the groups to make it visible. For example, INBOX is named "nnimap+gmail:INBOX" in "Group Buffer" and *it's invisible* at the beginning!. I admit it's confusing.
 
 Check section "Subscribe groups" for details.
 
-At minimum, you need subscribe INBOX group. The subscribed groups could still be *invisible* if they contains NO unread mails. Yes, I agree with you this makes no sense for a modern email client!
+At minimum, you need subscribe INBOX group. The subscribed groups could still be *invisible* if they contains NO unread mails. Yes, I admit this makes no sense for a modern email client!
 
 You need =C-u 5 M-x gnus-group-list-all-groups= to solve this problem.
 
@@ -305,7 +304,7 @@ You only need one of above packages.
 Please,
 - Go to [[https://www.google.com/contacts/]]
 - Click "More -> Export -> vCard Format -> Export"
-- Install [[https://github.com/redguardtoo/gmail2bbdb]] (developed by me) and press =M-x gmail2bbdb-import-file=. The contacts will be output into ~/.bbdb which is automatically detected by Emacs
+- Install [[https://github.com/redguardtoo/gmail2bbdb]] (developed by me) and press =M-x gmail2bbdb-import-file=. The contacts will be output into =~/.bbdb= which is automatically detected by Emacs
 
 Other plugins are strict on versions of BBDB. Mine doesn't have such issue.
 *** Customize "From" field
