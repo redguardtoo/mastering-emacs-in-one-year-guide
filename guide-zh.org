@@ -572,7 +572,7 @@ Interactive Interpreter 和 Shell 没有本质区别, 无非就是解释器支�
 
 目前很多高手在用 [[http://www.emacswiki.org/Smex][Smex]], 可飞快输入命令, 快捷键实际上不需要了.
 *** 使用牛人配置后, 界面有些奇怪的 bug, 怎么改?
-不要改! 参考上文 [[站在巨人的肩膀上]] 一章, 你觉得奇怪是因为缺乏经验, 把某些特性误认为是 bug. 请坚持至少一年.
+不要改! 参考上文 [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org#站在巨人的肩膀上][站在巨人的肩膀上]] 一章, 你觉得奇怪是因为缺乏经验, 把某些特性误认为是 bug. 请坚持至少一年.
 
 例如, 有人反映右边第 80 列处总有一竖线, 希望能去掉.
 
