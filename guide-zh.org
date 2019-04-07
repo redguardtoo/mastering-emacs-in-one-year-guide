@@ -702,7 +702,7 @@ Firefox v57+的更新使得keysnail无法维护下去了，可以暂时使用低
 
 用了 Davmail 后, 还可以用 [[http://getpopfile.org/][Popfile]] 来分捡邮件. Davmail + Popfile 让我生活在天堂.
 ** 为什么 Emacs 启动时从服务器 (elpa) 安装第三方软件包 (package) 会失败?
-请启动 Emacs 后, 运行 `M-x package-refresh-contents` 以从服务器更新软件索引, 然后重启 Emacs 即可.
+请启动 Emacs 后, 运行 =M-x package-refresh-contents= 以从服务器更新软件索引, 然后重启 Emacs 即可.
 
 如果你没有用 Emacs24, 没有完全拷贝高手的配置 (这是本文的中心思想), 那么你需要安装 package.el, 细节参考 [[http://marmalade-repo.org/][这里]].
 
