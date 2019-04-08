@@ -106,7 +106,7 @@ Some conventions:
 - "M-x my-command" means press "Alt" and "x" together, enter "my-command"
 ** Quick start for greenhorns of Linux/Unix (OPTIONAL) 
 Here are the steps:
-- Install Emacs 24
+- Install Emacs 26
 - Don't install any plugins
 - Learn basic knowledge about [[http://en.wikipedia.org/wiki/Environment_variable][environment variable]] and [[http://en.wikipedia.org/wiki/Redirection_%28computing%29][pipe]]
 - Read the official tutorial
@@ -318,11 +318,10 @@ I did [[https://github.com/search?l=Emacs+Lisp&o=desc&q=emacs&ref=searchresults&
 - [[https://github.com/syl20bnr/spacemacs][Sylvain Benner's spacemacs]] (Spacemacs focus on [[http://www.emacswiki.org/emacs/Evil][Evil]], so it might not be good for non-vim users)
 - [[https://github.com/eschulte/emacs24-starter-kit/][Eric Schulte's Emacs Starter Kit]].
 ** Which version I should use?
-v24.3.1 is the latest stable version, it has been released for more than one year without any big issue. It can be installed easily on any platform.
+[[https://www.gnu.org/software/emacs/index.html#Releases][v26.1]] is the latest stable version, it has been released for about a year without any big issue. It can be installed easily on any platform.
 
 I've watched too many people failed because they started from un-stable version!
 
-Though v24.4 is released, it has some compatibility issues with third party plugins. I suggest you wait at least half a year before switching to the new version.
 ** As a Vi person, why should I turn to Emacs?
 [[http://www.emacswiki.org/emacs/Evil][Evil]], the best of the best! 
 
