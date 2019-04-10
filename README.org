@@ -38,3 +38,7 @@ Lisp和你的IQ毫无关系.不要急着学它.据我观察,大多数人(包括�
 Gnus is the default Email client of Emacs. No technical details involved.
 
 Click [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/gnus-guide-en.org][HERE]] to read it.
+* Guide for developers
+Many tutorials teach you how to convert Emacs into a perfect IDE.
+
+[[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/developer-guide-en.org][This guide]] explains how to convert Emacs into a good IDE with minimum setup.

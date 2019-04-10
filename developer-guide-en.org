@@ -1,0 +1,86 @@
+#+TITLE: Guide for developers
+#+AUTHOR: Chen Bin (redguardtoo)
+#+LANGUAGE: en
+#+TEXINFO_DIR_CATEGORY: Emacs
+#+OPTIONS: ^:{} toc:nil H:5 num:0
+#+OPTIONS: ^:{}
+* Introduction
+The purpose is to help developers start using Emacs as quickly as possible on Linux/Windows/macOS.
+
+Easy/light/good solutions are provided instead of difficult/heavy/perfect solutions.
+* Table of Content                                                              :noexport:TOC:
+- [[#introduction][Introduction]]
+- [[#code-completion][Code completion]]
+- [[#git][Git]]
+- [[#editing][Editing]]
+- [[#code-navigation][Code navigation]]
+- [[#syntax-check][Syntax check]]
+- [[#compile][Compile]]
+- [[#debug][Debug]]
+- [[#documentation][Documentation]]
+- [[#clipboard][Clipboard]]
+- [[#find-file-and-grep-text][Find file and grep text]]
+- [[#sub-windows][Sub-windows]]
+- [[#execute-command][Execute command]]
+- [[#code-template][Code template]]
+
+* Code completion
+It's hard to setup [[http://cedet.sourceforge.net/][Cedet]]. Use [[https://github.com/company-mode/company-mode][company-mode]] instead.
+
+If the C++/Java project is huge (100,000 files for example). Use =company-gtags= from =company-mode=. [[https://www.gnu.org/software/global/][GNU Global]] create tags file for =company-gtags=.
+
+=company-etags= from =company-mode= could be used to replace =company-gtags=. It's slower than =company-gtags=. It can handle 10,000 files. =Ctags= is used to create tags file. [[https://github.com/universal-ctags/ctags][Universal-Ctags]] is more actively maintained than [[http://ctags.sourceforge.net/][Exuberant Ctags]].
+* Git
+Most people prefer [[https://magit.vc/][Magit]] though CLI Git is good enough for me.
+* Editing
+Use [[https://github.com/emacs-evil/evil][evil]] because most time your are move cursor left/right/up/down. Evil (Vim emulator) uses =hjkl= to do these things.
+* Code navigation
+Use [[https://github.com/syohex/emacs-counsel-gtags][counsel-gtags]] if =company-gtags= is already used.
+
+Use [[https://github.com/redguardtoo/counsel-etags][counsel-etags]] if =company-etags= is already used.
+* Syntax check
+Use either built in Flymake or [[https://www.flycheck.org/][Flycheck]].
+
+If you use Flymake, read documentation of =flymake-proc-allowed-file-name-masks=.
+* Compile
+Assign some convenient shortcut to =M-x compile=. Learn how to setup =compile-comand=.
+
+* Debug
+Try =M-x gud-gdb= which is solid.
+
+Setup shortcut for =M-x gud-run=.
+
+=Gud= and =dired= could be programmatically changed, so you can jump to the directory of executable easily
+* Documentation
+Google =keyword1 keyword2 site:stackoverflow.com= or google =keyword1 keyword2 site:github.com filetype:cpp=.
+* Clipboard
+Use [[http://www.vergenet.net/~conrad/software/xsel/][xsel]] on Linux.
+
+Use =pbcopy/pbpaste= on macOS.
+
+Use =/dev/clipboard= on Cygwin.
+
+Use =powershell.exe -command Get-Clipboard= and =clip.exe= on Windows 10.
+
+Trust me, you need learn how to manipulate clipboard through command line.
+* Find file and grep text
+Install [[https://github.com/abo-abo/swiper][counsle/ivy/swiper]].
+
+Make sure your project is using git.
+
+=M-x counsel-git= to find file.
+
+=M-x counsel-git-grep= to use [[https://git-scm.com/docs/git-grep][git-grep]] to grep text in project.
+
+All developer will encounter the problem to find file with similar file name. C++ developers need find "window.hpp" from "window.cpp". Javascript developers need find "Component.test.js" from "Component.js".
+
+The easiest solution is just sorting the candidates from =counsel-git= by string distance. See [[https://www.emacswiki.org/emacs/LevenshteinDistance][LevenshteinDistance]].
+
+* Sub-windows
+I usually open 4~8 sub-windows and use [[https://github.com/deb0ch/emacs-winum][winum]] to move focus between sub-windows.
+
+You need some package to save and load sub-windows layout.
+* Execute command
+Run =M-x counsel-M-x=.
+* Code template
+I prefer using =yasnippet= independently instead of using it as a plugin of =company-mode=.
