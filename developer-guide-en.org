@@ -5,7 +5,7 @@
 #+OPTIONS: ^:{} toc:nil H:5 num:0
 #+OPTIONS: ^:{}
 * Introduction
-The purpose is to help developers start using Emacs as quickly as possible on Linux/Windows/macOS.
+This article helps developers start using Emacs as quickly as possible on Linux/Windows/macOS.
 
 Easy/light/good solutions are provided instead of difficult/heavy/perfect solutions.
 * Table of Content                                                              :noexport:TOC:
@@ -25,7 +25,7 @@ Easy/light/good solutions are provided instead of difficult/heavy/perfect soluti
 - [[#code-template][Code template]]
 
 * Code completion
-It's hard to setup [[http://cedet.sourceforge.net/][Cedet]]. Use [[https://github.com/company-mode/company-mode][company-mode]] instead.
+It's difficult to setup [[http://cedet.sourceforge.net/][Cedet]]. Use [[https://github.com/company-mode/company-mode][company-mode]] instead.
 
 If the C++/Java project is huge (100,000 files for example). Use =company-gtags= from =company-mode=. [[https://www.gnu.org/software/global/][GNU Global]] create tags file for =company-gtags=.
 
@@ -33,7 +33,7 @@ If the C++/Java project is huge (100,000 files for example). Use =company-gtags=
 * Git
 Most people prefer [[https://magit.vc/][Magit]] though CLI Git is good enough for me.
 * Editing
-Use [[https://github.com/emacs-evil/evil][evil]] because most time your are move cursor left/right/up/down. Evil (Vim emulator) uses =hjkl= to do these things.
+Use [[https://github.com/emacs-evil/evil][Evil]] because most time your are moving cursor in left/right/up/down direction. Evil (Vim emulator) uses =hjkl= to do these things.
 * Code navigation
 Use [[https://github.com/syohex/emacs-counsel-gtags][counsel-gtags]] if =company-gtags= is already used.
 
@@ -41,7 +41,7 @@ Use [[https://github.com/redguardtoo/counsel-etags][counsel-etags]] if =company-
 * Syntax check
 Use either built in Flymake or [[https://www.flycheck.org/][Flycheck]].
 
-If you use Flymake, read documentation of =flymake-proc-allowed-file-name-masks=.
+If you use Flymake, read documentation =flymake-allowed-file-name-masks=.
 * Compile
 Assign some convenient shortcut to =M-x compile=. Learn how to setup =compile-comand=.
 
@@ -50,9 +50,9 @@ Try =M-x gud-gdb= which is solid.
 
 Setup shortcut for =M-x gud-run=.
 
-=Gud= and =dired= could be programmatically changed, so you can jump to the directory of executable easily
+=Gud= and =dired= could be programmatically changed, so you can jump to the directory of executable easily.
 * Documentation
-Google =keyword1 keyword2 site:stackoverflow.com= or google =keyword1 keyword2 site:github.com filetype:cpp=.
+Google =keyword1 keyword2 site:stackoverflow.com= or google =keyword1 keyword2 site:github.com filetype:el=.
 * Clipboard
 Use [[http://www.vergenet.net/~conrad/software/xsel/][xsel]] on Linux.
 
@@ -79,8 +79,8 @@ The easiest solution is just sorting the candidates from =counsel-git= by string
 * Sub-windows
 I usually open 4~8 sub-windows and use [[https://github.com/deb0ch/emacs-winum][winum]] to move focus between sub-windows.
 
-You need some package to save and load sub-windows layout.
+You need some package to save and load sub-windows layout. You can start from [[https://github.com/wasamasa/eyebrowse][eyebrowse]].
 * Execute command
-Run =M-x counsel-M-x=.
+Run =M-x counsel-M-x= from =counsel=.
 * Code template
-I prefer using =yasnippet= independently instead of using it as a plugin of =company-mode=.
+I prefer using =yasnippet= independently instead of using it as a plugin of =company-mode=. So I don't need think, "OK this candidate IS NOT from yasnippet, so what I see is what to be inserted. That candidate IS from yasnippet, so what I see is not what to be inserted".
