@@ -11,9 +11,9 @@ Easy/light/good solutions are provided instead of difficult/heavy/perfect soluti
 * Table of Content                                                              :noexport:TOC:
 - [[#introduction][Introduction]]
 - [[#code-completion][Code completion]]
-- [[#git][Git]]
-- [[#editing][Editing]]
 - [[#code-navigation][Code navigation]]
+- [[#editing][Editing]]
+- [[#git][Git]]
 - [[#syntax-check][Syntax check]]
 - [[#compile][Compile]]
 - [[#debug][Debug]]
@@ -30,20 +30,55 @@ It's difficult to setup [[http://cedet.sourceforge.net/][Cedet]]. Use [[https://
 If the C++/Java project is huge (100,000 files for example). Use =company-gtags= from =company-mode=. [[https://www.gnu.org/software/global/][GNU Global]] create tags file for =company-gtags=.
 
 =company-etags= from =company-mode= could be used to replace =company-gtags=. It's slower than =company-gtags=. It can handle 10,000 files. =Ctags= is used to create tags file. [[https://github.com/universal-ctags/ctags][Universal-Ctags]] is more actively maintained than [[http://ctags.sourceforge.net/][Exuberant Ctags]].
-* Git
-Most people prefer [[https://magit.vc/][Magit]] though CLI Git is good enough for me.
-* Editing
-Use [[https://github.com/emacs-evil/evil][Evil]] because most time your are moving cursor in left/right/up/down direction. Evil (Vim emulator) uses =hjkl= to do these things.
+
+My [[https://gist.github.com/redguardtoo/b12ddae3b8010a276e9b][~/.ctags]].
 * Code navigation
 Use [[https://github.com/syohex/emacs-counsel-gtags][counsel-gtags]] if =company-gtags= is already used.
 
 Use [[https://github.com/redguardtoo/counsel-etags][counsel-etags]] if =company-etags= is already used.
+
+Exclude patterns can be used to filter the candidates. For example, input "k1 !neg1 neg2" means candidates should contain string "k1" but neither "neg1" or "neg2".
+* Editing
+Use [[https://github.com/emacs-evil/evil][Evil]] because most time your are moving cursor in left/right/up/down direction. Evil (Vim emulator) uses =hjkl= to do these things.
+
+Evil also gives you chance to use advanced editing techniques like Vim text objects.
+
+Evil is even better than Vim because you use can use Emacs Lisp to create your own text object. It's truly black magic because you can combine the power of Emacs and Vim.
+* Git
+Most people prefer [[https://magit.vc/][Magit]] though CLI Git is good enough for me (My [[https://gist.github.com/redguardtoo/d4ecd51f785bd117a6a0][~/.gitconfig]]).
+
+[[https://github.com/syohex/emacs-git-gutter][git-gutter]] can display diff hunks in current buffer.
+
+The API =git-gutter:set-start-revisio= from =git-gutter= is very useful.
+
+For example, I created two commands =git-gutter-reset-to-header-parent= and =git-gutter-reset-to-default=. =git-gutter-reset-to-header-parent= display the hunks of HEAD commit. =git-gutter-reset-to-default= reset the =git-gutter= to its default status:
+#+begin_src elisp
+(require 'git-gutter)
+
+(defun git-gutter-reset-to-head-parent()
+  (interactive)
+  (let (parent (filename (buffer-file-name)))
+    (if (eq git-gutter:vcs-type 'svn)
+        (setq parent "PREV")
+      (setq parent (if filename (concat (shell-command-to-string (concat "git --no-pager log --oneline -n1 --pretty=\"format:%H\" " filename)) "^") "HEAD^")))
+    (git-gutter:set-start-revision parent)
+    (message "git-gutter:set-start-revision HEAD^")))
+
+(defun git-gutter-reset-to-default ()
+  (interactive)
+  (git-gutter:set-start-revision nil)
+  (message "git-gutter reset"))
+#+end_src
+
 * Syntax check
 Use either built in Flymake or [[https://www.flycheck.org/][Flycheck]].
 
 If you use Flymake, read documentation =flymake-allowed-file-name-masks=.
 * Compile
-Assign some convenient shortcut to =M-x compile=. Learn how to setup =compile-comand=.
+Assign some convenient shortcut to =M-x compile=. Learn how to setup =compile-comand=,
+#+begin_src elisp
+(setq compile-command "cd ~/projs/proj1 && make && make test")
+#+end_src
 
 * Debug
 Try =M-x gud-gdb= which is solid.
@@ -62,9 +97,11 @@ Use =/dev/clipboard= on Cygwin.
 
 Use =powershell.exe -command Get-Clipboard= and =clip.exe= on Windows 10.
 
-Trust me, you need learn how to manipulate clipboard through command line.
+You need know how to manipulate clipboard through command line for two reasons:
+- Traditional way to paste from clipboard could be slow if clipboard content is huge
+- Share clipboard between ssh server and client
 * Find file and grep text
-Install [[https://github.com/abo-abo/swiper][counsle/ivy/swiper]].
+Install [[https://github.com/abo-abo/swiper][counsle/ivy/swiper]] (=counsel= is dependent on =swiper= while swiper is dependent =ivy=).
 
 Make sure your project is using git.
 
@@ -76,6 +113,17 @@ All developer will encounter the problem to find file with similar file name. C+
 
 The easiest solution is just sorting the candidates from =counsel-git= by string distance. See [[https://www.emacswiki.org/emacs/LevenshteinDistance][LevenshteinDistance]].
 
+There are tons of handy commands from these counsel/swiper/ivy (=counsel-imenu=, =counsel-recentf=, =counsel-ibuffer=, ...).
+
+API =ivy-read= from =ivy= is useful. Here is a simple demo on how to use =ivy-read=,
+
+#+begin_src elisp
+(require 'ivy)
+(ivy-read "Your choice:"
+          '("apple" "plum" "orange")
+          :action (lambda (choice)
+                    (message "I chose %s" choice)))
+#+end_src
 * Sub-windows
 I usually open 4~8 sub-windows and use [[https://github.com/deb0ch/emacs-winum][winum]] to move focus between sub-windows.
 
