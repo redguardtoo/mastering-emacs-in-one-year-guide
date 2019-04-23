@@ -18,9 +18,9 @@ Here is my guide on that 5%.
   - [[#sample-setup][Sample setup]]
   - [[#usage][Usage]]
 - [[#essential-5][Essential 5%]]
+  - [[#subscribe-groups][Subscribe groups]]
   - [[#search-mails][Search mails]]
   - [[#filter-mails-locally][Filter mails locally]]
-  - [[#subscribe-groups][Subscribe groups]]
   - [[#reply-email][Reply email]]
   - [[#compose-new-email][Compose new email]]
   - [[#re-send-as-new-mail][Re-send as new mail]]
@@ -45,7 +45,7 @@ Here is my guide on that 5%.
   - [[#read-mail-offline][Read mail offline]]
   - [[#multiple-accounts][Multiple accounts]]
   - [[#why-gnus-displays-more-mails-than-gmail][Why Gnus displays more mails than Gmail]]
-  - [[#its-recommended-to-subscribe-gmailsent-mail-folder][It's recommended to subscribe "[Gmail]/Sent Mail" folder]]
+  - [[#subscribe-sent-mail-folder][Subscribe "Sent Mail" folder]]
   - [[#reconnect-mail-server][Reconnect mail server]]
   - [[#use-hydra-to-avoid-remembering-key-bindings][Use Hydra to avoid remembering key bindings]]
   - [[#use-gwene-to-read-rssatom-feed-as-a-news-group][Use Gwene to read RSS/Atom feed as a news group]]
@@ -58,7 +58,7 @@ Here is my guide on that 5%.
 - Less resource required
 - Searcher and filter is great
 - Mail can be viewed offline. See the "offline" in section "Advanced tips"
-- Powerful when used with other Emacs plugins (yasnippet, evil, swiper, ...)
+- Powerful when used with other Emacs plugins (Yasnippet, Evil, Swiper, ...)
 ,
 * Quick start
 ** Things you need to know at first
@@ -108,44 +108,7 @@ In short, "Group Buffer" lists mail folders. "Summary Buffer" lists mails in one
 
 That's all you need to know. You could go to section "My =~/
 * Essential 5%
-It's waste of time to memorize keybindings because I provide *my [[https://github.com/abo-abo/hydra][Hydra]] setup* in the section "Use Hydra to avoid remembering key bindings".
-** Search mails
-Press =G G= or =M-x gnus-group-make-nnir-group= to search mails at *server side* in "Group Buffer".
-
-You can press =#= to mark the groups (mail folders). Search is limited to marked groups. =M-#= to un-mark.
-
-If no group is marked, the group under cursor is searched.
-
-If cursor is placed before the first group, all groups will be searched.
-
-You can use [[http://tools.ietf.org/html/rfc3501#section-6.4.4][more advanced search syntax (RFC3501 section SEARCH command)]] by:
-- Press =C-u G G= or =C-u M-x gnus-group-make-nnir-group=
-- Input query statements, press Enter
-- Type =imap=, press Enter
-
-For example, query =TEXT github SINCE 1-Jan-2016 FROM chenbin= searches mails are sent by me and contains keyword =github= on year 2016.
-
-People who dislike "friendly" RFC3501 could use [[https://support.google.com/mail/answer/7190?hl=en][Gmail]] syntax([[https://github.com/rhashimoto][Roy Hashimoto]] provides this tip),
-#+begin_src elisp
-;; Let Gnus know Gmail search syntax
-(add-to-list 'nnir-imap-search-arguments '("gmail" . "X-GM-RAW"))
-;; `gnus-group-make-nnir-group' use Gmail search syntax *by default*.
-;; You can press `G G` instead `C-u G G` instead.
-(setq nnir-imap-default-search-key "gmail")
-#+end_src
-** Filter mails locally
-Press =/ /= to limit the mails by subject at "Summary Buffer". In Emacs, "Limiting" means *filtering mails locally*.
-
-Press =/ a= to limit the mails by author.
-
-=/ w= to cancel the current filter.
-
-You can apply the limits sequentially and cancel them in reverse order by pressing =/ w= multiple times.
-
-"Limiting" is cool. See [[http://www.gnu.org/software/emacs/manual/html_mono/gnus.html#Limiting]] for more Limiting tricks.
-
-You can also see [[http://sachachua.com/blog/2008/05/emacs-gnus-searching-mail/]] for technical details.
-
+It's waste of time to memorize keybindings because I provide my [[https://github.com/abo-abo/hydra][Hydra]] setup in the section "Use Hydra to avoid remembering key bindings".
 ** Subscribe groups
 Press =A A= or =M-x gnus-group-list-active= in "Group Buffer" to fetch groups from *all connected server*. It take a while. I suggest pressing "L" to use local cache instead. You need =A A= when it's the first time you use Gnus.
 
@@ -166,6 +129,47 @@ You can also subscribe groups programmatically by insert below code into =~/.gnu
   (gnus-subscribe-hierarchically "nnimap+hotmail:Inbox")
   (setq gnus-subscribe-groups-done t))
 #+end_src
+
+** Search mails
+Press =G G= or =M-x gnus-group-make-nnir-group= to search mails at *server side* in "Group Buffer".
+
+A temporary group is created to store the search result. Since it's a group, it can be subscribed, like other groups.
+
+You can press =#= to mark the groups (mail folders). Search is limited to marked groups. =M-#= to un-mark.
+
+If no group is marked, the group under cursor is searched.
+
+If cursor is placed before the first group, all groups will be searched.
+
+You can use [[http://tools.ietf.org/html/rfc3501#section-6.4.4][more advanced search syntax (RFC3501 section SEARCH command)]] by:
+- Press =C-u G G= or =C-u M-x gnus-group-make-nnir-group=
+- Input query statements, press Enter
+- Type =imap=, press Enter
+
+For example, query statement =TEXT github SINCE 1-Jan-2016 FROM chenbin= means searching mails are sent by me and contains keyword =github= on year 2016.
+
+People who dislike "friendly" RFC3501 could use [[https://support.google.com/mail/answer/7190?hl=en][Gmail]] syntax([[https://github.com/rhashimoto][Roy Hashimoto]] provides this tip),
+
+=gnus-summary-make-nnir-group= is similar to =gnus-group-make-nnir-group= but it only searches mails in current group.
+#+begin_src elisp
+;; Let Gnus know Gmail search syntax
+(add-to-list 'nnir-imap-search-arguments '("gmail" . "X-GM-RAW"))
+;; `gnus-group-make-nnir-group' use Gmail search syntax *by default*.
+;; You can press `G G` instead `C-u G G` instead.
+(setq nnir-imap-default-search-key "gmail")
+#+end_src
+** Filter mails locally
+Press =/ /= to limit the mails by subject at "Summary Buffer". In Emacs, "Limiting" means *filtering mails locally*.
+
+Press =/ a= to limit the mails by author.
+
+=/ w= to cancel the current filter.
+
+You can apply the limits sequentially and cancel them in reverse order by pressing =/ w= multiple times.
+
+"Limiting" is cool. See [[http://www.gnu.org/software/emacs/manual/html_mono/gnus.html#Limiting]] for more Limiting tricks.
+
+You can also see [[http://sachachua.com/blog/2008/05/emacs-gnus-searching-mail/]] for technical details.
 
 ** Reply email
 Press =R= or =M-x gnus-summary-reply-with-original= to reply with quoted text. Press =r= or =M-x gnus-summary-reply= to reply WITHOUT quoted text.
@@ -296,7 +300,7 @@ Native [[https://ftp.gnu.org/gnu/emacs/windows/][Emacs for Windows]] need a litt
 - Set the variable "PATH" to the "C:\cygwin64\bin". I suppose Cygwin is installed at driver C.
 - Install GnuTLS and OpenSSH through Cygwin package manager
 ** Microsoft Outlook
-If syour Exchange Server is not using standard protocol like IMAP or you can't access IMAP port behind firewall, you need [[http://davmail.sourceforge.net/][DavMail]], a "POP/IMAP/SMTP/CalDAV/CardDAV/LDAP exchange gateway".
+If your Exchange Server is not using standard protocol like IMAP or you can't access IMAP port behind firewall, you need [[http://davmail.sourceforge.net/][DavMail]], a "POP/IMAP/SMTP/CalDAV/CardDAV/LDAP exchange gateway".
 
 Please read [[http://davmail.sourceforge.net/gettingstarted.html][its manual]], it's simple to setup.
 
@@ -334,7 +338,7 @@ Please,
 
 Other plugins are strict on versions of BBDB. Mine doesn't have such issue.
 ** Customize "From" field
-Easiest solution is to switch the FROM field dynamically by =M-x toggle-mail-from-field= (bleow):
+Easiest solution is to switch the FROM field dynamically by =M-x toggle-mail-from-field=,
 #+begin_src elisp
 ;; Please note below code is not included in sample .gnus.el
 (defun toggle-mail-from-field ()
@@ -388,7 +392,7 @@ Use [[http://orgmode.org/worg/org-contrib/org-mime.html][org-mime]].
 
 Usage is simple. Write mail in org format and =M-x org-mime-htmlize=.
 
-Please use [[https://github.com/org-mime/][org-mime]] which supports Emacs 24+. It's also the offical version of =org-mime=.
+Please use [[https://github.com/org-mime/][org-mime]] which supports Emacs 24+. It's also the official version of =org-mime=.
 ** Read HTML mail
 No setup is required. It works out of box.
 
@@ -444,7 +448,8 @@ Here is a sample setup,
 The information of multiple accounts is stored in =~/.authinfo.gpg=.
 ** Why Gnus displays more mails than Gmail
 Gnus counts by individual mail. Gmail counts by mail thread.
-** It's recommended to subscribe "[Gmail]/Sent Mail" folder
+** Subscribe "Sent Mail" folder 
+It's recommended to subscribe "[Gmail]/Sent Mail" folder
 So you can see your *sent mails* in Gnus.
 ** Reconnect mail server
 Press =M-x gnus-group-enter-server-mode= to list all the servers.
@@ -455,19 +460,26 @@ Install [[https://github.com/abo-abo/hydra][Hydra]] through [[http://melpa.org/]
 
 Insert below code into =~/.emacs=. Then press =C-c C-y= when composing mail. Press =y= in other modes,
 #+begin_src elisp
+;; @see https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/gnus-guide-en.org
+;; gnus-group-mode
 (eval-after-load 'gnus-group
   '(progn
      (defhydra hydra-gnus-group (:color blue)
-       "Do?"
-       ("a" gnus-group-list-active "REMOTE groups A A")
-       ("l" gnus-group-list-all-groups "LOCAL groups L")
-       ("c" gnus-topic-catchup-articles "Read all c")
-       ("G" gnus-group-make-nnir-group "Search server G G")
-       ("g" gnus-group-get-new-news "Refresh g")
-       ("s" gnus-group-enter-server-mode "Servers")
-       ("m" gnus-group-new-mail "Compose m OR C-x m")
-       ("#" gnus-topic-mark-topic "mark #")
-       ("q" nil "cancel"))
+       "
+[_A_] Remote groups (A A) [_g_] Refresh
+[_L_] Local groups        [_\\^_] List servers
+[_c_] Mark all read       [_m_] Compose new mail
+[_G_] Search mails (G G) [_#_] Mark mail
+"
+       ("A" gnus-group-list-active)
+       ("L" gnus-group-list-all-groups)
+       ("c" gnus-topic-catchup-articles)
+       ("G" gnus-group-make-nnir-group)
+       ("g" gnus-group-get-new-news)
+       ("^" gnus-group-enter-server-mode)
+       ("m" gnus-group-new-mail)
+       ("#" gnus-topic-mark-topic)
+       ("q" nil))
      ;; y is not used by default
      (define-key gnus-group-mode-map "y" 'hydra-gnus-group/body)))
 
@@ -475,21 +487,30 @@ Insert below code into =~/.emacs=. Then press =C-c C-y= when composing mail. Pre
 (eval-after-load 'gnus-sum
   '(progn
      (defhydra hydra-gnus-summary (:color blue)
-       "Do?"
-       ("s" gnus-summary-show-thread "Show thread")
-       ("h" gnus-summary-hide-thread "Hide thread")
-       ("n" gnus-summary-insert-new-articles "Refresh / N")
-       ("f" gnus-summary-mail-forward "Forward C-c C-f")
-       ("!" gnus-summary-tick-article-forward "Mail -> disk !")
-       ("p" gnus-summary-put-mark-as-read "Mail <- disk")
-       ("c" gnus-summary-catchup-and-exit "Read all c")
-       ("e" gnus-summary-resend-message-edit "Resend S D e")
-       ("R" gnus-summary-reply-with-original "Reply with original R")
-       ("r" gnus-summary-reply "Reply r")
-       ("W" gnus-summary-wide-reply-with-original "Reply all with original S W")
-       ("w" gnus-summary-wide-reply "Reply all S w")
-       ("#" gnus-topic-mark-topic "mark #")
-       ("q" nil "cancel"))
+       "
+[_s_] Show thread   [_F_] Forward (C-c C-f)
+[_h_] Hide thread   [_e_] Resend (S D e)
+[_n_] Refresh (/ N) [_r_] Reply
+[_!_] Mail -> disk  [_R_] Reply with original
+[_p_] Disk -> mail  [_w_] Reply all (S w)
+[_c_] Read all      [_W_] Reply all with original (S W)
+[_#_] Mark          [_G_] Search mails in current folder
+"
+       ("s" gnus-summary-show-thread)
+       ("h" gnus-summary-hide-thread)
+       ("n" gnus-summary-insert-new-articles)
+       ("F" gnus-summary-mail-forward)
+       ("!" gnus-summary-tick-article-forward)
+       ("p" gnus-summary-put-mark-as-read)
+       ("c" gnus-summary-catchup-and-exit)
+       ("e" gnus-summary-resend-message-edit)
+       ("R" gnus-summary-reply-with-original)
+       ("r" gnus-summary-reply)
+       ("W" gnus-summary-wide-reply-with-original)
+       ("w" gnus-summary-wide-reply)
+       ("#" gnus-topic-mark-topic)
+       ("G" gnus-summary-make-nnir-group)
+       ("q" nil))
      ;; y is not used by default
      (define-key gnus-summary-mode-map "y" 'hydra-gnus-summary/body)))
 
@@ -497,25 +518,46 @@ Insert below code into =~/.emacs=. Then press =C-c C-y= when composing mail. Pre
 (eval-after-load 'gnus-art
   '(progn
      (defhydra hydra-gnus-article (:color blue)
-       "Do?"
-       ("f" gnus-summary-mail-forward "Forward")
-       ("R" gnus-article-reply-with-original "Reply with original R")
-       ("r" gnus-article-reply "Reply r")
-       ("W" gnus-article-wide-reply-with-original "Reply all with original S W")
-       ("o" gnus-mime-save-part "Save attachment at point o")
-       ("w" gnus-article-wide-reply "Reply all S w")
-       ("q" nil "cancel"))
+       "
+[_o_] Save attachment        [_F_] Forward
+[_v_] Play video/audio       [_r_] Reply
+[_d_] CLI to dowloand stream [_R_] Reply with original
+[_b_] Open external browser  [_w_] Reply all (S w)
+[_f_] Click link/button      [_W_] Reply all with original (S W)
+[_g_] Focus link/button
+"
+       ("F" gnus-summary-mail-forward)
+       ("r" gnus-article-reply)
+       ("R" gnus-article-reply-with-original)
+       ("w" gnus-article-wide-reply)
+       ("W" gnus-article-wide-reply-with-original)
+       ("o" gnus-mime-save-part)
+       ("v" w3mext-open-with-mplayer)
+       ("d" w3mext-download-rss-stream)
+       ("b" w3mext-open-link-or-image-or-url)
+       ("f" w3m-lnum-follow)
+       ("g" w3m-lnum-goto)
+       ("q" nil))
      ;; y is not used by default
      (define-key gnus-article-mode-map "y" 'hydra-gnus-article/body)))
 
+;; message-mode
 (eval-after-load 'message
   '(progn
      (defhydra hydra-message (:color blue)
-       "Do?"
-       ("ca" mml-attach-file "Attach C-c C-a")
-       ("cc" message-send-and-exit "Send C-c C-c")
-       ("q" nil "cancel"))
-     (global-set-key (kbd "C-c C-y") 'hydra-message/body)))
+  "
+[_c_] Complete mail address
+[_a_] Attach file
+[_s_] Send mail (C-c C-c)
+"
+       ("c" counsel-bbdb-complete-mail)
+       ("a" mml-attach-file)
+       ("s" message-send-and-exit)
+       ("q" nil))))
+
+(defun message-mode-hook-hydra-setup ()
+  (local-set-key (kbd "C-c C-y") 'hydra-message/body))
+(add-hook 'message-mode-hook 'message-mode-hook-hydra-setup)
 #+end_src
 
 ** Use Gwene to read RSS/Atom feed as a news group
@@ -525,9 +567,7 @@ I suggest using [[https://www.emacswiki.org/emacs/emacs-w3m][emacs-w3m]] to uplo
 
 Then you can use techniques I introduced in previous section "Tree view of mail folders" to organize the feeds.
 
-To view/download embedded video/audio in feed, you can use mplayer if its support for network streaming is enabled. It's should be enabled by default at Linux/macOS/Windows.
-
-There are also CLI tricks to open images at different OS. See my code for details.
+To view or download video/audio in feed, you can use mplayer if its support for network streaming is enabled. It's should be enabled by default at Linux/macOS/Windows.
 
 I created three commands =w3mext-open-with-mplayer=, =w3mext-download-rss-stream=, and =w3mext-open-link-or-image-or-url= to process multimedia,
 #+begin_src elisp
