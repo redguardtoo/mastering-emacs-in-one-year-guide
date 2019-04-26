@@ -1,14 +1,14 @@
-#+TITLE: Practical guide to use Gnus with Gmail
+#+TITLE: A Practical Guide to Gnus
 #+AUTHOR: Chen Bin (redguardtoo)
 #+LANGUAGE: en
 #+TEXINFO_DIR_CATEGORY: Emacs
 #+OPTIONS: ^:{} toc:nil H:5 num:0
 * Introduction
-Gnus is a good email client.
+Gnus is a powerful email client.
 
 But many people get lost in its endless features. It would be much easier if they had learned the *essential 5% features* and ignored the remaining 95% at the beginning.
 
-Here is my guide on that 5%.
+Here is my guide to the 5%.
 
 * Table of Content                                                              :noexport:TOC:
 - [[#introduction][Introduction]]
@@ -39,6 +39,7 @@ Here is my guide on that 5%.
   - [[#auto-complete-mail-address][Auto-complete mail address]]
   - [[#synchronize-from-gmail-contacts][Synchronize from Gmail contacts]]
   - [[#customize-from-field][Customize "From" field]]
+  - [[#why-gnus-is-slow-to-start-up][Why Gnus is slow to start up]]
   - [[#classify-email][Classify email]]
   - [[#write-html-mail][Write HTML mail]]
   - [[#read-html-mail][Read HTML mail]]
@@ -49,7 +50,7 @@ Here is my guide on that 5%.
   - [[#reconnect-mail-server][Reconnect mail server]]
   - [[#use-hydra-to-avoid-remembering-key-bindings][Use Hydra to avoid remembering key bindings]]
   - [[#use-gwene-to-read-rssatom-feed-as-a-news-group][Use Gwene to read RSS/Atom feed as a news group]]
-- [[#my-gnusel][My =~/.gnus.el=]]
+- [[#my-gnusel][My "~/.gnus.el"]]
 - [[#copyright][Copyright]]
 
 * Why (OPTIONAL)
@@ -71,12 +72,13 @@ Here is my guide on that 5%.
 - =Group buffer= is the buffer which lists mail folders
 - =Summary buffer= is the buffer which lists mails
 - =~= means HOME directory. The full path of =~= is the value of the environment variable =HOME=. For example, =~/.gnus.el= means a file named =.gnus.el= is placed in HOME directory. *Only* on Windows, you must setup HOME environment variable manually.
+- Gmail server is used in sample code but this article is generic enough for all POP3/SMTP/IMAP server
 ** Sample setup
 =M-x gnus= will load =~/.gnus.el=. Usually we place all setup code in =~/.gnus.el= so third party libraries used only by Gnus is not loaded during Emacs startup.
 
 Before start Gnus, you *must* create =.gnus.el=. Please check [[http://www.emacswiki.org/emacs/GnusGmail]] or use my setup at the end of this article.
 ** Usage
-After starting Gnus by =M-x gnus=, you come to the "Group Buffer". The "Group Buffer" lists the mail folders. In Gnus, the folder is called "Group". Please the folders are *invisible* in Group Buttfer by default!
+After starting Gnus by =M-x gnus=, you come to the "Group Buffer". The "Group Buffer" lists the mail folders. In Gnus, the folder is called "Group". Please the folders are *invisible* in Group Buffer by default!
 
 You need subscribe the groups to make it visible. For example, INBOX is named "nnimap+gmail:INBOX" in "Group Buffer" and *it's invisible* at the beginning! It's confusing for users.
 
@@ -146,7 +148,7 @@ You can use [[http://tools.ietf.org/html/rfc3501#section-6.4.4][more advanced se
 - Input query statements, press Enter
 - Type =imap=, press Enter
 
-For example, query statement =TEXT github SINCE 1-Jan-2016 FROM chenbin= means searching mails are sent by me and contains keyword =github= on year 2016.
+For example, query statement =TEXT github SINCE 1-Jan-2016 FROM chenbin= means searching mails are sent by me and contains keyword "github" on year 2016.
 
 People who dislike "friendly" RFC3501 could use [[https://support.google.com/mail/answer/7190?hl=en][Gmail]] syntax([[https://github.com/rhashimoto][Roy Hashimoto]] provides this tip),
 
@@ -377,6 +379,12 @@ Please note,
 - I work on several computers which do *not* belong to me, so I cannot change =/etc/hosts= which =(system-name)= try to access
 - Please [[http://support.google.com/a/bin/answer.py?hl=en&answer=22370][verify]] your email address at Gmail if you use Google's SMTP server
 
+** Why Gnus is slow to start up
+Gnus need fetch flags of all mails during startup. As I investigated, =nnimap-retrieve-group-data-early= sends the command =UID FETCH 1:* FLAGS= to the IMAP server.
+
+To speedup startup,
+- Don't restart Gnus
+- Move old mails into a folder named "archived". That folder should be invisible to Gnus
 ** Classify email
 [[http://getpopfile.org/][Popfile]].
 
@@ -673,7 +681,7 @@ I created three commands =w3mext-open-with-mplayer=, =w3mext-download-rss-stream
 #+end_src
 
 Please note these commands require =(setq mm-text-html-renderer 'w3m)=.
-* My =~/.gnus.el=
+* My "~/.gnus.el"
 Emacs 24.4+ is required,
 #+BEGIN_SRC emacs-lisp
 (require 'nnir)
