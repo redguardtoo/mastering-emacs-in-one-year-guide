@@ -100,11 +100,13 @@ You can insert below code into =~/.gnus.el= to create hotkey =o= for =C-u 5 M-x 
   (kbd "o") 'my-gnus-group-list-subscribed-groups)
 #+END_SRC
 
-In the "Group Buffer", you can enter a folder by pressing =RET=. But I strongly suggest using =C-u RET= in order to see all the mails instead of unread mails.
+In the "Group Buffer", you can enter a folder by pressing =RET= (executing command =gnus-topic-select-group=).
 
-An opened mail folder is called "Summary Buffer" which is, as I said before, lists all mails .
+But I strongly suggest using =C-u RET= in order to see all the mails instead of unread mails. After =C-u RET=, you will be asked how many mails to display. If you never delete or move the mail in inbox, the number you provided is usually the exact number of mails to be displayed. If you does delete or move mails in inbox but Gnus is still using the cached data of inbox, you need provide a bigger number instead. Another solution is to delete files =.newsrc.eld= or =.newsrc-dribble= and restart Gnus.
 
-Now it's simple. Press =RET= to see the mail. Press =q= to quit "Summary Buffer".
+An opened mail folder is called "Summary Buffer".
+
+Press =RET= or =C-u RET= to enter the "Summary Buffer". Press =q= to quit "Summary Buffer".
 
 In short, "Group Buffer" lists mail folders. "Summary Buffer" lists mails in one folder.
 
@@ -425,7 +427,7 @@ Mark mails by pressing =!= or =M-x gnus-summary-tick-article-forward=.
 
 The marked mails enter the disk cache. They *can be read offline*.
 
-=M-x gnus-summary-put-mark-as-read= to remove the cached mail.
+=M-x gnus-summary-put-mark-as-read-next= to remove the cached mail and move focus to next mail.
 
 You also need insert below code into =~/.emacs=,
 #+BEGIN_SRC emacs-lisp
@@ -500,7 +502,7 @@ Insert below code into =~/.emacs=. Then press =C-c C-y= when composing mail. Pre
 [_h_] Hide thread   [_e_] Resend (S D e)
 [_n_] Refresh (/ N) [_r_] Reply
 [_!_] Mail -> disk  [_R_] Reply with original
-[_p_] Disk -> mail  [_w_] Reply all (S w)
+[_d_] Disk -> mail  [_w_] Reply all (S w)
 [_c_] Read all      [_W_] Reply all with original (S W)
 [_#_] Mark          [_G_] Search mails in current folder
 "
@@ -509,7 +511,7 @@ Insert below code into =~/.emacs=. Then press =C-c C-y= when composing mail. Pre
        ("n" gnus-summary-insert-new-articles)
        ("F" gnus-summary-mail-forward)
        ("!" gnus-summary-tick-article-forward)
-       ("p" gnus-summary-put-mark-as-read)
+       ("d" gnus-summary-put-mark-as-read-next)
        ("c" gnus-summary-catchup-and-exit)
        ("e" gnus-summary-resend-message-edit)
        ("R" gnus-summary-reply-with-original)
