@@ -5,7 +5,7 @@
 #+OPTIONS: ^:{} toc:nil H:5 num:0
 #+OPTIONS: ^:{}
 * Introduction
-This article helps developers start using Emacs as quickly as possible on Linux/Windows/macOS.
+This article helps developers start using Emacs as easily as possible on Linux/Windows/macOS.
 
 Easy/light/good solutions are provided instead of difficult/heavy/perfect solutions.
 * Table of Content                                                              :noexport:TOC:
@@ -41,9 +41,9 @@ Exclude patterns can be used to filter the candidates. For example, input "k1 !n
 * Editing
 Use [[https://github.com/emacs-evil/evil][Evil]] because most time your are moving cursor in left/right/up/down direction. Evil (Vim emulator) uses =hjkl= to do these things.
 
-Evil also gives you chance to use advanced editing techniques like Vim text objects.
+Evil also gives you chance to use advanced editing techniques like [[http://vimdoc.sourceforge.net/htmldoc/motion.html#object-select][Vim text objects]].
 
-Evil is even better than Vim because you use can use Emacs Lisp to create your own text object. It's truly black magic because you can combine the power of Emacs and Vim.
+Evil is even better than Vim because you can use Emacs Lisp to create your own text object. It's truly black magic because you can combine the power of Emacs and Vim.
 * Git
 Most people prefer [[https://magit.vc/][Magit]] though CLI Git is good enough for me (My [[https://gist.github.com/redguardtoo/d4ecd51f785bd117a6a0][~/.gitconfig]]).
 
@@ -131,4 +131,4 @@ You need some package to save and load sub-windows layout. You can start from [[
 * Execute command
 Run =M-x counsel-M-x= from =counsel=.
 * Code template
-I prefer using =yasnippet= independently instead of using it as a plugin of =company-mode=. So I don't need think, "OK this candidate IS NOT from yasnippet, so what I see is what to be inserted. That candidate IS from yasnippet, so what I see is not what to be inserted".
+I prefer using =yasnippet= independently instead of as a plugin of =company-mode=. So I don't need think, "OK this candidate is NOT from yasnippet, What I see is what to be inserted. That candidate IS from yasnippet, what I see is not what to be inserted".
