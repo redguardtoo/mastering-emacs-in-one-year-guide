@@ -150,7 +150,9 @@ You can use [[http://tools.ietf.org/html/rfc3501#section-6.4.4][more advanced se
 
 For example, query statement =TEXT github SINCE 1-Jan-2016 FROM chenbin= means searching mails are sent by me and contains keyword "github" on year 2016.
 
-People who dislike "friendly" RFC3501 could use [[https://support.google.com/mail/answer/7190?hl=en][Gmail]] syntax([[https://github.com/rhashimoto][Roy Hashimoto]] provides this tip),
+I recommend using =dianyou-group-make-nnir-group= from [[https://github.com/redguardtoo/dianyou][dianyou]] (I'm the author of dianyou) to replace =gnus-group-make-nnir-group=. It support shortcuts in query. For example "t github s 1y2w3d f chenbin" means search mails containing text "github" and sent by chenbin since 1 year 2 week 3day ago .
+
+People who dislike RFC3501 could use [[https://support.google.com/mail/answer/7190?hl=en][Gmail]] syntax([[https://github.com/rhashimoto][Roy Hashimoto]] provides this tip),
 
 =gnus-summary-make-nnir-group= is similar to =gnus-group-make-nnir-group= but it only searches mails in current group.
 #+begin_src elisp
@@ -191,6 +193,8 @@ Press =C-c C-a= or =M-x mml-attach-file=.
 The attached file is actually plain text embedded in mail body which could be copied and modified.
 ** Save attachment
 Move *focus over the attachment* and press =o= or =M-x gnus-mime-save-part=. See "[[http://www.gnu.org/software/emacs/manual/html_node/gnus/Using-MIME.html][Using Mime]]" in Emacs manual for details.
+
+Please note =gnus-mime-save-part= return the full path of saved file which can be inserted into clipboard. This is an example how Gnus could be extended.
 ** Open attachment
 Move *focus over the attachment* and press =Enter= or =M-x gnus-article-press-button=.
 
@@ -321,6 +325,8 @@ Here is a sample setup for Davmail:
                (nnimap-stream plain)
                (nnir-search-engine imap)))
 #+end_src
+
+As I tested, Davmail's IMAP search command works but does not support "OR" and "NOT" operator. Maybe it's because Davmail is only wrapper of Microsoft's HTTP API which has limited functionalities.
 ** Auto-complete mail address
 Install [[http://bbdb.sourceforge.net/][BBDB]]  through [[http://melpa.milkbox.net/#/bbdb][melpa]]. It is a email address database written in Emacs Lisp.
 
@@ -332,6 +338,9 @@ But there are other better plugins based on BBDB (so you still need install BBDB
 - [[https://github.com/tumashu/bbdb-handy][bbdb-handy]]
 
 You only need one of above packages.
+
+If BBDB is updated yet, you can insert email address from received mails instead. Run =M-x dianyou-insert-email-address-from-received-mails= from [[https://github.com/redguardtoo/dianyou][dianyou]].
+
 ** Synchronize from Gmail contacts
 Please,
 - Go to [[https://www.google.com/contacts/]]
@@ -561,6 +570,7 @@ Insert below code into =~/.emacs=. Then press =C-c C-y= when composing mail. Pre
        ("c" counsel-bbdb-complete-mail)
        ("a" mml-attach-file)
        ("s" message-send-and-exit)
+       ("i" dianyou-insert-email-address-from-received-mails)
        ("q" nil))))
 
 (defun message-mode-hook-hydra-setup ()
