@@ -277,12 +277,12 @@ All you need to do is to insert below code into =~/.gnus.el=,
      ;; key of topic is specified in my sample ".gnus.el"
      (setq gnus-topic-alist '(("hotmail" ; the key of topic
                                "nnimap+hotmail:Inbox"
-                               "nnimap+hotmail:Drafts"
-                               "nnimap+hotmail:Sent")
+                               "nnimap+hotmail:Sent"
+                               "nnimap+hotmail:Drafts")
                               ("gmail" ; the key of topic
-                               "INBOX"
-                               "[Gmail]/Sent Mail"
-                               "Drafts")
+                               "nnimap+gmail:INBOX"
+                               "nnimap+gmail:[Gmail]/Sent Mail"
+                               "nnimap+gmail:[Gmail]/Drafts")
                               ("misc" ; the key of topic
                                "nnfolder+archive:sent.2015-12"
                                "nnfolder+archive:sent.2016"
