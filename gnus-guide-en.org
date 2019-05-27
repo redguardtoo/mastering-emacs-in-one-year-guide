@@ -326,7 +326,7 @@ Here is a sample setup for Davmail:
                (nnir-search-engine imap)))
 #+end_src
 
-As I tested, Davmail's IMAP search command works but does not support "OR" and "NOT" operator. Maybe it's because Davmail is only wrapper of Microsoft's HTTP API which has limited functionalities.
+As I tested, IMAP search command of Davmail does not support "OR" and "NOT" operator. Maybe it's because Davmail is only wrapper of Microsoft's HTTP API which has limited functionalities.
 ** Auto-complete mail address
 Install [[http://bbdb.sourceforge.net/][BBDB]]  through [[http://melpa.milkbox.net/#/bbdb][melpa]]. It is a email address database written in Emacs Lisp.
 
@@ -399,7 +399,7 @@ To speedup startup,
 
 You may think [[http://www.google.com/inbox/][Google Inbox]] equals to Popfile. Trust me, it's not. You only need Popfile!
 
-Popfile is open source software. The data is stored *locally*.
+Popfile is open source software. The data is stored *locally*. So you can use still same setup&data when you switch to another email service.
 
 Check [[http://blog.binchen.org/posts/use-popfile-at-linux.html]] for details.
 
@@ -696,8 +696,8 @@ Emacs 24.4+ is required,
 #+BEGIN_SRC emacs-lisp
 (require 'nnir)
 
-;; @see http://www.emacswiki.org/emacs/GnusGmail#toc1
-(setq gnus-select-method '(nntp "news.gmane.org")) ;; if you read news groups
+;; Please note mail folders in `gnus-select-method' have NO prefix like "nnimap+hotmail:" or "nnimap+gmail:"
+(setq gnus-select-method '(nntp "news.gwene.org")) ;; Read feeds/atom through gwene
 
 ;; ask encryption password once
 (setq epa-file-cache-passphrase-for-symmetric-encryption t)
@@ -832,15 +832,13 @@ Emacs 24.4+ is required,
                                "nnimap+hotmail:Junk"
                                "nnimap+hotmail:Deleted")
                               ("gmail" ; the key of topic
-                               "INBOX"
-                               "[Gmail]/Sent Mail"
-                               "[Gmail]/Trash"
-                               "Sent Messages"
-                               "Drafts")
+                               "nnimap+gmail:INBOX"
+                               "nnimap+gmail:[Gmail]/Sent Mail"
+                               "nnimap+gmail:[Gmail]/Trash"
+                               "nnimap+gmail:Drafts")
                               ("misc" ; the key of topic
-                               "nnfolder+archive:sent.2015-12"
-                               "nnfolder+archive:sent.2016"
-                               "nnfolder+archive:sent.2017"
+                               "nnfolder+archive:sent.2018"
+                               "nnfolder+archive:sent.2019"
                                "nndraft:drafts")
                               ("Gnus")))))
 #+END_SRC
