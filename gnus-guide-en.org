@@ -44,6 +44,7 @@ Here is my guide on that 5%.
   - [[#write-html-mail][Write HTML mail]]
   - [[#read-html-mail][Read HTML mail]]
   - [[#read-mail-offline][Read mail offline]]
+  - [[#paste-image-from-clipboard][Paste image from clipboard]]
   - [[#multiple-accounts][Multiple accounts]]
   - [[#why-gnus-displays-more-mails-than-gmail][Why Gnus displays more mails than Gmail]]
   - [[#subscribe-sent-mail-folder][Subscribe "Sent Mail" folder]]
@@ -60,7 +61,7 @@ Here is my guide on that 5%.
 - Searcher and filter is great
 - Mail can be viewed offline. See the "offline" in section "Advanced tips"
 - Powerful when used with other Emacs plugins (Yasnippet, Evil, Swiper, ...)
-,
+
 * Quick start
 ** Things you need to know at first
 - This guide applies to Emacs24+
@@ -84,7 +85,7 @@ You need subscribe a group to make it visible. For example, INBOX is named "nnim
 
 Check section [[#subscribe-groups][Subscribe groups]] on how to subscribe groups.
 
-At minimum, you need subscribe INBOX group. The subscribed group could still be *invisible* if it contain zero unread mails. Yes, I admit this makes no sense for a modern email client!
+At minimum, you need subscribe INBOX group. The subscribed group could still be *invisible* if it contains zero unread mails. Yes, I admit this makes no sense for a modern email client!
 
 You need =C-u 5 M-x gnus-group-list-all-groups= to solve this problem.
 
@@ -102,7 +103,7 @@ You can insert below code into =~/.gnus.el= to create hotkey =o= for =C-u 5 M-x 
 
 In the "Group Buffer", you can enter a folder by pressing =RET= (executing command =gnus-topic-select-group=).
 
-But I strongly suggest using =C-u RET= in order to see all the mails instead of unread mails. After =C-u RET=, you will be asked how many mails to display. If you never delete or move the mail in inbox, the number you provided is usually the exact number of mails to be displayed. If you does delete or move mails in inbox but Gnus is still using the cached data of inbox, you need provide a bigger number instead. Another solution is to delete files =.newsrc.eld= or =.newsrc-dribble= and restart Gnus.
+But I strongly suggest using =C-u RET= in order to see all the mails instead of unread mails. After =C-u RET=, you will be asked how many mails to display. If you never delete or move the mail in inbox, the number you provided is usually the exact number of mails to be displayed. If you do delete or move mails in inbox but Gnus is still using the cached data of inbox, you need provide a bigger number instead. Another solution is to delete files =.newsrc.eld= or =.newsrc-dribble= and restart Gnus.
 
 An opened mail folder is called "Summary Buffer".
 
@@ -112,7 +113,7 @@ In short, "Group Buffer" lists mail folders. "Summary Buffer" lists mails in one
 * Essential 5%
 It's waste of time to memorize keybindings because I provide my [[https://github.com/abo-abo/hydra][Hydra]] setup in [[#use-hydra-to-avoid-remembering-key-bindings][Use Hydra to avoid remembering key bindings]].
 ** Subscribe groups
-Press =A A= or =M-x gnus-group-list-active= in "Group Buffer" to fetch groups from *all connected server*. It take a while. I suggest pressing "L" to use local cache instead. You need =A A= when it's the first time you use Gnus.
+Press =A A= or =M-x gnus-group-list-active= in "Group Buffer" to fetch groups from *all connected server*. It takes a while. I suggest pressing "L" to use local cache instead. You need =A A= when it's the first time you use Gnus.
 
 After =A A= or =L=, press =u= to subscribe/unsubscribe specific group.
 
@@ -150,7 +151,7 @@ You can use [[http://tools.ietf.org/html/rfc3501#section-6.4.4][more advanced se
 
 For example, query statement =TEXT github SINCE 1-Jan-2016 FROM chenbin= means searching mails are sent by me and contains keyword "github" on year 2016.
 
-I recommend using =dianyou-group-make-nnir-group= from [[https://github.com/redguardtoo/dianyou][dianyou]] (I'm the author of dianyou) to replace =gnus-group-make-nnir-group=. It support shortcuts in query. For example "t github s 1y2w3d f chenbin" means search mails containing text "github" and sent by chenbin since 1 year 2 week 3day ago .
+I recommend using =dianyou-group-make-nnir-group= from [[https://github.com/redguardtoo/dianyou][dianyou]] (I'm the author of dianyou) to replace =gnus-group-make-nnir-group=. It supports shortcuts in query. For example "t github s 1y2w3d f chenbin" means search mails containing text "github" and sent by chenbin since 1 year 2 weeks 3 days ago.
 
 People who dislike RFC3501 could use [[https://support.google.com/mail/answer/7190?hl=en][Gmail]] syntax([[https://github.com/rhashimoto][Roy Hashimoto]] provides this tip),
 
@@ -178,7 +179,7 @@ You can also see [[http://sachachua.com/blog/2008/05/emacs-gnus-searching-mail/]
 ** Reply email
 Press =R= or =M-x gnus-summary-reply-with-original= to reply with quoted text. Press =r= or =M-x gnus-summary-reply= to reply WITHOUT quoted text.
 
-Press =S W= (capitalized S then capitalized W) or =M-x gnus-summary-wide-reply-with-original= to reply all with quoted text.  "reply all" is called "wide reply" in Emacs.
+Press =S W= (capitalized S then capitalized W) or =M-x gnus-summary-wide-reply-with-original= to reply all with quoted text.  Please note "reply all" is called "wide reply" in Emacs.
 
 Press =S w= or =M-x gnus-summary-wide-reply= to reply all without quoted text.
 ** Compose new email
@@ -204,7 +205,7 @@ You can tweak the variable on Windows or macOS.
 
 On Linux, run =M-x mailcap-parse-mailcaps= to load data from =~/.mailcap= into =mailcap-mime-data= instead of modifying =mailcap-mime-data= directly.
 
-The reason to load load =~/.mailcap= is other programs need access =~/.mailcap=.
+Other programs use =~/.mailcap= too. So it's better to make Gnus follow suit.
 
 My =~/.mailcap=:
 #+begin_src conf
@@ -235,7 +236,7 @@ Press =C-c C-c= or =M-x message-send-and-exit=.
 ** Refresh "Summary Buffer" (check new mails)
 Press =/ N= or =M-x gnus-summary-insert-new-articles=.
 ** Make all mails visible (important)
-Select a group and press  =C-u RET= in "Group Buffer". Or =C-u M-g= in "Summary Buffer".
+Select a group and press =C-u RET= in "Group Buffer". Or =C-u M-g= in "Summary Buffer".
 
 That's the *most important part* of this article! By default, Gnus only displays unread mails.
 
@@ -292,7 +293,7 @@ All you need to do is to insert below code into =~/.gnus.el=,
 
 Instead of remembering extra commands, editing above snippet is more straightforward. The only requirement is a little Emacs Lisp knowledge.
 
-The flag =gnus-message-archive-group= defines *local* folder for archived sent mails. By default the folder is created *monthly*. My setup creates the folder *yearly*.
+The flag =gnus-message-archive-group= defines *local* folder for archived sent mails. By default, the folder is created *monthly*. My setup creates the folder *yearly*.
 * Advanced tips
 ** Windows setup
 Please install [[https://www.cygwin.com/][Cygwin]] at first.
@@ -308,7 +309,7 @@ Native [[https://ftp.gnu.org/gnu/emacs/windows/][Emacs for Windows]] need a litt
 ** Microsoft Outlook
 If your Exchange Server is not using standard protocol like IMAP or you can't access IMAP port behind firewall, you need [[http://davmail.sourceforge.net/][DavMail]], a "POP/IMAP/SMTP/CalDAV/CardDAV/LDAP exchange gateway".
 
-Please read [[http://davmail.sourceforge.net/gettingstarted.html][its manual]], it's simple to setup.
+Please read [[http://davmail.sourceforge.net/gettingstarted.html][its manual]], it's simple to set up.
 
 Here are a few tips for DavMail setup.
 
@@ -328,7 +329,7 @@ Here is a sample setup for Davmail:
 
 As I tested, IMAP search command of Davmail does not support "OR" and "NOT" operator. Maybe it's because Davmail is only wrapper of Microsoft's HTTP API which has limited functionalities.
 ** Auto-complete mail address
-Install [[http://bbdb.sourceforge.net/][BBDB]]  through [[http://melpa.milkbox.net/#/bbdb][melpa]]. It is a email address database written in Emacs Lisp.
+Install [[http://bbdb.sourceforge.net/][BBDB]]  through [[http://melpa.milkbox.net/#/bbdb][melpa]]. It is an email address database written in Emacs Lisp.
 
 You can always use =M-x bbdb-complete-name= and =M-x bbdb-complete-mail= provided by BBDB.
 
@@ -349,7 +350,7 @@ Please,
 
 Other plugins are strict on versions of BBDB. Mine doesn't have such issue.
 ** Customize "From" field
-Easiest solution is to switch the FROM field dynamically by =M-x toggle-mail-from-field=,
+The easiest solution is to switch the "FROM" field dynamically by =M-x toggle-mail-from-field=,
 #+begin_src elisp
 ;; Please note below code is not included in sample .gnus.el
 (defun toggle-mail-from-field ()
@@ -362,7 +363,7 @@ Easiest solution is to switch the FROM field dynamically by =M-x toggle-mail-fro
   (message "Mail FROM: %s" user-mail-address))
 #+end_src
 
-A more complex solution is to setup FROM field by the computer you are using:
+A more complex solution is to set up FROM field by the computer you are using:
 #+BEGIN_SRC emacs-lisp
 ;; Please note above code is not included in sample .gnus.el
 ;; (getenv "HOSTNAME") won't work because $HOSTNAME is not an env variable
@@ -403,7 +404,7 @@ Popfile is open source software. The data is stored *locally*. So you can use st
 
 Check [[http://blog.binchen.org/posts/use-popfile-at-linux.html]] for details.
 
-I use shell command =cd ~/bin/popfile/ && perl popfile.pl= to start =popfile=. The "cd" part in CLI is necessary.
+I use the command =cd ~/bin/popfile/ && perl popfile.pl= to start =popfile=. The "cd" part in CLI is necessary.
 ** Write HTML mail
 Use [[http://orgmode.org/worg/org-contrib/org-mime.html][org-mime]].
 
@@ -443,6 +444,8 @@ You also need insert below code into =~/.emacs=,
 Above code uses the cache to the full extent by "wasting" *tens of megabytes* of disk space.
 
 The disk cache is located at =~/News/cache/= which can be pushed to Git private repository.
+** Paste image from clipboard
+Use =dianyou-paste-image-from-clipboard= from [[https://github.com/redguardtoo/dianyou][dianyou]]. CLI program [[https://github.com/astrand/xclip][xclip]] should be installed at first.
 ** Multiple accounts
 You only need copy the code containing =gnus-secondary-select-methods= from my setup.
 
@@ -491,7 +494,7 @@ Insert below code into =~/.emacs=. Then press =C-c C-y= when composing mail. Pre
        ("A" gnus-group-list-active)
        ("L" gnus-group-list-all-groups)
        ("c" gnus-topic-catchup-articles)
-       ("G" gnus-group-make-nnir-group)
+       ("G" dianyou-group-make-nnir-group)
        ("g" gnus-group-get-new-news)
        ("^" gnus-group-enter-server-mode)
        ("m" gnus-group-new-mail)
@@ -511,7 +514,7 @@ Insert below code into =~/.emacs=. Then press =C-c C-y= when composing mail. Pre
 [_!_] Mail -> disk  [_R_] Reply with original
 [_d_] Disk -> mail  [_w_] Reply all (S w)
 [_c_] Read all      [_W_] Reply all with original (S W)
-[_#_] Mark          [_G_] Search mails in current folder
+[_#_] Mark          [_G_] Search mails
 "
        ("s" gnus-summary-show-thread)
        ("h" gnus-summary-hide-thread)
@@ -526,7 +529,7 @@ Insert below code into =~/.emacs=. Then press =C-c C-y= when composing mail. Pre
        ("W" gnus-summary-wide-reply-with-original)
        ("w" gnus-summary-wide-reply)
        ("#" gnus-topic-mark-topic)
-       ("G" gnus-summary-make-nnir-group)
+       ("G" dianyou-group-make-nnir-group)
        ("q" nil))
      ;; y is not used by default
      (define-key gnus-summary-mode-map "y" 'hydra-gnus-summary/body)))
