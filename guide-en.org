@@ -17,89 +17,74 @@ Here is the structure of the article:
 - What matters is people
 - FAQ and Summary
 * Table of Contents                                            :noexport:TOC:
- - [[#introduction][Introduction]]
- - [[#why-emacs-optional][Why Emacs (OPTIONAL)]]
-   - [[#emacs-master-is-good-at-other-editors-naturally][Emacs master is good at other editors naturally]]
-   - [[#community-is-strong][Community is strong]]
-   - [[#its-powerful][It's powerful]]
-   - [[#it-lives-forever][It lives forever]]
-   - [[#no-overhead][No overhead]]
-   - [[#what-matters-is-attitude][What matters is attitude]]
- - [[#step-by-step-guide][Step by Step Guide]]
-   - [[#quick-start-for-greenhorns-of-linuxunix-optional][Quick start for greenhorns of Linux/Unix (OPTIONAL)]]
-   - [[#read-the-official-tutorial][Read the official tutorial]]
-   - [[#start-from-practical-problem][Start from practical problem]]
-   - [[#set-the-priorities][Set the priorities]]
-   - [[#on-the-shoulders-of-giants][On the shoulders of giants]]
-   - [[#report-bugs][Report bugs]]
-   - [[#better-yourself-everyday][Better yourself everyday]]
-   - [[#join-the-community][Join the community]]
- - [[#readings][Readings]]
-   - [[#emacswiki][EmacsWiki]]
-   - [[#emacs-lisp-book][Emacs Lisp book]]
- - [[#knowledge-management][Knowledge management]]
-   - [[#place-your-setup-at-github-publicly][Place your setup at GitHub, *publicly*]]
-   - [[#dropbox][Dropbox]]
- - [[#my-favorite-emacs-addons][My favorite Emacs addons]]
- - [[#emacs-is-a-way-of-life][Emacs is a way of life]]
- - [[#take-action][Take action]]
- - [[#faq][FAQ]]
-   - [[#im-emacs-dummy-how-to-start][I'm Emacs dummy. How to start?]]
-   - [[#any-documentation-on-steve-purcells-setup][Any documentation on Steve Purcell's setup?]]
-   - [[#is-masters-setup-too-heavy-weight][Is Master's setup too heavy weight?]]
-   - [[#any-other-setup-you-can-recommend-except-purcells][Any other setup you can recommend *except* Purcell's?]]
-   - [[#which-version-i-should-use][Which version I should use?]]
-   - [[#as-a-vi-person-why-should-i-turn-to-emacs][As a Vi person, why should I turn to Emacs?]]
-   - [[#why-some-vim-users-cannot-accept-evil][Why some Vim users cannot accept Evil?]]
-   - [[#i-dont-like-default-key-bindings][I don't like default key bindings]]
-   - [[#too-many-key-bindings-to-memorize][Too many key bindings to memorize]]
-   - [[#i-am-not-comfortable-with-other-peoples-setup-can-i-modify-it][I am not comfortable with other people's setup. Can I modify it?]]
-   - [[#ive-cloned-the-masters-setup-but-the-package-is-not-upgraded][I've cloned the master's setup but the package is not upgraded.]]
-   - [[#i-have-some-specific-question-about-emacs][I have some specific question about Emacs]]
-   - [[#i-got-some-error-message-when-starting-emacs-with-masters-setup][I got some error message when starting Emacs with master's setup]]
-   - [[#my-own-setup-is-more-controllable][My own setup is more controllable]]
-   - [[#why-i-cannot-add-my-own-plugins-into-masters-setup][Why I cannot add my own plugins into master's setup]]
-   - [[#how-to-use-emacs-on-windows][How to use Emacs on windows]]
-   - [[#what-about-code-navigation-and-code-completion][What about code-navigation and code-completion?]]
-   - [[#what-about-web-browsing][What about web browsing?]]
-   - [[#email][Email?]]
-   - [[#why-emacs-cannot-download-packages][Why Emacs cannot download packages?]]
-   - [[#as-a-greenhorn-of-emacs-should-i-learn-emacs-lisp-at-first][As a greenhorn of Emacs, should I learn Emacs Lisp at first?]]
-   - [[#after-knowing-the-basics-what-to-do-next][After knowing the basics, what to do next?]]
-   - [[#do-i-need-learn-keyboard-macros][Do I need learn keyboard macros?]]
-   - [[#what-do-you-think-emacs-can-do-everything][What do you think "Emacs can do everything"?]]
- - [[#contact-me][Contact me]]
- - [[#summary][Summary]]
- - [[#copyright][Copyright]]
+- [[#introduction][Introduction]]
+- [[#why-use-emacs-optional][Why use Emacs (optional)]]
+  - [[#after-mastering-emacs-other-editors-become-easy][After mastering Emacs, other editors become easy]]
+  - [[#community][Community]]
+- [[#step-by-step-guide][Step by Step Guide]]
+  - [[#quick-start-for-greenhorns-of-linuxunix-optional][Quick start for greenhorns of Linux/Unix (OPTIONAL)]]
+  - [[#read-the-official-tutorial][Read the official tutorial]]
+  - [[#start-from-practical-problem][Start from practical problem]]
+  - [[#set-the-priorities][Set the priorities]]
+  - [[#on-the-shoulders-of-giants][On the shoulders of giants]]
+  - [[#report-bugs][Report bugs]]
+  - [[#better-yourself-everyday][Better yourself everyday]]
+  - [[#join-the-community][Join the community]]
+- [[#readings][Readings]]
+  - [[#emacswiki][EmacsWiki]]
+  - [[#emacs-lisp-book][Emacs Lisp book]]
+- [[#knowledge-management][Knowledge management]]
+  - [[#place-your-setup-at-github-publicly][Place your setup at GitHub, *publicly*]]
+  - [[#dropbox][Dropbox]]
+- [[#my-favorite-emacs-addons][My favorite Emacs addons]]
+- [[#emacs-is-a-way-of-life][Emacs is a way of life]]
+- [[#take-action][Take action]]
+- [[#faq][FAQ]]
+  - [[#im-emacs-dummy-how-to-start][I'm Emacs dummy. How to start?]]
+  - [[#any-documentation-on-steve-purcells-setup][Any documentation on Steve Purcell's setup?]]
+  - [[#is-masters-setup-too-heavy-weight][Is Master's setup too heavy weight?]]
+  - [[#any-other-setup-you-can-recommend-except-purcells][Any other setup you can recommend *except* Purcell's?]]
+  - [[#which-version-i-should-use][Which version I should use?]]
+  - [[#as-a-vi-person-why-should-i-turn-to-emacs][As a Vi person, why should I turn to Emacs?]]
+  - [[#why-some-vim-users-cannot-accept-evil][Why some Vim users cannot accept Evil?]]
+  - [[#i-dont-like-default-key-bindings][I don't like default key bindings]]
+  - [[#too-many-key-bindings-to-memorize][Too many key bindings to memorize]]
+  - [[#i-am-not-comfortable-with-other-peoples-setup-can-i-modify-it][I am not comfortable with other people's setup. Can I modify it?]]
+  - [[#ive-cloned-the-masters-setup-but-the-package-is-not-upgraded][I've cloned the master's setup but the package is not upgraded.]]
+  - [[#i-have-some-specific-question-about-emacs][I have some specific question about Emacs]]
+  - [[#i-got-some-error-message-when-starting-emacs-with-masters-setup][I got some error message when starting Emacs with master's setup]]
+  - [[#my-own-setup-is-more-controllable][My own setup is more controllable]]
+  - [[#why-i-cannot-add-my-own-plugins-into-masters-setup][Why I cannot add my own plugins into master's setup]]
+  - [[#how-to-use-emacs-on-windows][How to use Emacs on windows]]
+  - [[#what-about-code-navigation-and-code-completion][What about code-navigation and code-completion?]]
+  - [[#what-about-web-browsing][What about web browsing?]]
+  - [[#email][Email?]]
+  - [[#why-emacs-cannot-download-packages][Why Emacs cannot download packages?]]
+  - [[#as-a-greenhorn-of-emacs-should-i-learn-emacs-lisp-at-first][As a greenhorn of Emacs, should I learn Emacs Lisp at first?]]
+  - [[#after-knowing-the-basics-what-to-do-next][After knowing the basics, what to do next?]]
+  - [[#do-i-need-learn-keyboard-macros][Do I need learn keyboard macros?]]
+  - [[#what-do-you-think-emacs-can-do-everything][What do you think "Emacs can do everything"?]]
+- [[#contact-me][Contact me]]
+- [[#summary][Summary]]
+- [[#copyright][Copyright]]
 
-* Why Emacs (OPTIONAL)
-I intend to keep this section short because my focus is HOW instead of WHY.
-** Emacs master is good at other editors naturally
-Master has already known the best, so she/he has higher expectation.
+* Why use Emacs (optional)
+This article focuses on on "how" instead of "why". But it is necessary to explain why Emacs is worth learning.
 
-For example, the master expects:
-- a good editor should have a package manager bundled. She/He is surprised that [[https://sublime.wbond.net/installation][package manager is NOT bundled in some editor]].
-- Broken package could be [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][fixed]] without touching the package's original code.
-- When remote repository is down, she/he can [[https://github.com/redguardtoo/myelpa][create a repository]] in the memory stick [[https://github.com/redguardtoo/elpa-mirror][in one minute]].
+** After mastering Emacs, other editors become easy
+Many people regards Emacs as an old editor which lacks the cool features of modern text editors. This is totally wrong.
 
-In summary, she/he knows more than Emacs' competitors can implement.
-** Community is strong
-Emacs uses [[http://www.gnu.org/software/emacs/manual/html_node/eintr/index.html][Lisp]]. Its [[http://en.wikipedia.org/wiki/Lisp_%28programming_language%29][compact and "unusual" syntax]] scares off the weak minds.
-** It's powerful
-IDE is optimized for one framework. [[http://www.youtube.com/watch?v=EQAd41VAXWo][Emacs can do everything in great way]].
-** It lives forever
-Emacs is maintained by a [[http://www.gnu.org/][non-profit organization]]. Competitors die while Emacs stays [[http://en.wikipedia.org/wiki/Emacs#History][during 40 years]].
-** No overhead
-The installer is a [[http://ftp.gnu.org/gnu/emacs/windows/][50M bytes zip file]]. The program is portable.
-** What matters is attitude
-If I could only give one piece of advice, it would be *being open minded*. 
+Emacs has long history and it give users maximum freedom to customize. So all the features beyond your imagination is already invented by third party package developers ages ago.
 
-Newbies may be surprised by following facts:
-- I don't know 80% "newbie-must-know" key bindings because [[http://www.emacswiki.org/emacs/Smex][I don't need to]]
-- [[https://github.com/purcell/emacs.d/issues?q=author%3Aredguardtoo+][I don't start from my own simple setup at the beginning]]
-- I actually [[https://github.com/punchagan/org2blog/issues/153][don't fully understand Lisp "if" statement]] after I've already developed [[https://github.com/redguardtoo][useful Emacs plugins]] and written [[https://news.ycombinator.com/item?id=6909463][hardcore Emacs articles]].
-- I use my spare time in one year to master Emacs
+The only thing you need to do is to take full of advantage of those packages,
+- You can [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][patch a package without touching its code]]
+- You can easily create a package repository mirror [[https://github.com/redguardtoo/elpa-mirror][on your USB flash drives]]
 
+Many popular editors don't have above functions.
+** Community 
+Emacs was developed with Lisp. Lisp's unusual grammar determines that its users are senior developers who have mastered multiple languages. A developer's first programming language is usually C/C++/C#/Java. His/Her second language could be Python/Ruby. After mastering third or even fourth programming languages he/she might be tired of "normal" language and try something different like Erlang/Lisp/Clojure.
+
+So lisp community members are usually experienced programmer. Many of them are technology enthusiasts.
 * Step by Step Guide
 Some conventions: 
 - "C" means "Ctrl" and "M" means "Alt"
