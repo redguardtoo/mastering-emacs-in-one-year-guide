@@ -74,7 +74,7 @@ This article focuses on on "how" instead of "why". But it is necessary to explai
 ** After mastering Emacs, other editors become easy
 Many people regards Emacs as an old editor which lacks the cool features of modern text editors. This is totally wrong.
 
-Emacs has long history and it give users maximum freedom to customize. So all the features beyond your imagination is already invented by third party package developers ages ago.
+Emacs has long history and gives users maximum freedom to customize. So all the features beyond your imagination are already invented by third party package developers ages ago.
 
 The only thing you need to do is to take full of advantage of those packages,
 - You can [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][patch a package without touching its code]]
@@ -82,9 +82,9 @@ The only thing you need to do is to take full of advantage of those packages,
 
 Many popular editors don't have above functions.
 ** Community 
-Emacs was developed with Lisp. Lisp's unusual grammar determines that its users are senior developers who have mastered multiple languages. A developer's first programming language is usually C/C++/C#/Java. His/Her second language could be Python/Ruby. After mastering third or even fourth programming languages he/she might be tired of "normal" language and try something different like Erlang/Lisp/Clojure.
+Emacs is developed with Lisp. Lisp's unusual grammar determines that its users are senior developers who have mastered multiple languages. A developer's first programming language is usually C/C++/C#/Java. His/Her second language could be a script language like Javascript/Python/Ruby. After mastering third or even fourth programming languages he/she might be tired of "normal" language and try something different like Erlang/Lisp/Clojure.
 
-So lisp community members are usually experienced programmer. Many of them are technology enthusiasts.
+So lisp community members are experienced programmers and technology enthusiasts.
 * Step by Step Guide
 Some conventions: 
 - "C" means "Ctrl" and "M" means "Alt"
