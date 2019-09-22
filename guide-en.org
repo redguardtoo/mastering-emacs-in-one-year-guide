@@ -21,6 +21,7 @@ Here is the structure of the article:
 - [[#why-use-emacs-optional][Why use Emacs (optional)]]
   - [[#after-mastering-emacs-other-editors-become-easy][After mastering Emacs, other editors become easy]]
   - [[#community][Community]]
+  - [[#code-faster][Code faster]]
 - [[#step-by-step-guide][Step by Step Guide]]
   - [[#quick-start-for-greenhorns-of-linuxunix-optional][Quick start for greenhorns of Linux/Unix (OPTIONAL)]]
   - [[#read-the-official-tutorial][Read the official tutorial]]
@@ -81,15 +82,38 @@ The only thing you need to do is to take full of advantage of those packages,
 - You can easily create a package repository mirror [[https://github.com/redguardtoo/elpa-mirror][on your USB flash drives]]
 
 Many popular editors don't have above functions.
-** Community 
+** Community
 Emacs is developed with Lisp. Lisp's unusual grammar determines that its users are senior developers who have mastered multiple languages. A developer's first programming language is usually C/C++/C#/Java. His/Her second language could be a script language like Javascript/Python/Ruby. After mastering third or even fourth programming languages he/she might be tired of "normal" language and try something different like Erlang/Lisp/Clojure.
 
 So lisp community members are experienced programmers and technology enthusiasts.
+** Code faster
+The IDE is optimized for a specific programming language or framework. Emacs is more effective for generic tasks.
+
+For example, sometime I need consult other programmers on [[https://en.wikipedia.org/wiki/Internet_Relay_Chat][IRC]] or web forum. My workflow is,
+- Paste the code to [[http://gist.github.com]]
+- Ask questions at IRC on online forum and paste the code back into my editor
+- Emacs has built in integration of IRC and web browser so my flow is very fluent
+
+I've been using Visual Studio and Firefox for many years. Trust me, Emacs is simply better.
+
+Here is a demo from Emacs master, [[https://www.youtube.com/watch?v=AgRsYOJi6ao][abo-abo demo search replacement technology]]
+
+By the way, "code completion" and "code navigation" of Emacs are good enough.
+
+"Good" means 90% of the functionalities works with minimum setup. If you need force Emacs to compete with IDE on specific programming language, you need install extra plugins.
+
+But sometimes it's just impossible to make Emacs as 100% same as IDE. So you need compromise. If 100% is a impossible goal but 95% is reachable, then stop at 95%.
+
+I know many people are too concerned on replicating the "intelligent" code completion of IDE so they totally ignore Emacs' other killer features in code completion (energy saving, faster completion, fuzzy matching ...).
+
+Senior developers are already familiar with APIs. In large projects, new code usually use same APIs as old code. So they don't care about the so-called "intelligence". They care about more completions candidate could popup faster.
+
+For example, web programmers need to write css/html/ javascript in one javascript file (google css-in-js and jsx). Emacs+ctags/gtags could auto-complete html and css code in javascript file.
 * Step by Step Guide
-Some conventions: 
+Some conventions:
 - "C" means "Ctrl" and "M" means "Alt"
 - "M-x my-command" means press "Alt" and "x" together, enter "my-command"
-** Quick start for greenhorns of Linux/Unix (OPTIONAL) 
+** Quick start for greenhorns of Linux/Unix (OPTIONAL)
 Here are the steps:
 - Install Emacs 26
 - Don't install any plugins
@@ -224,7 +248,7 @@ Xah Lee's [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][Emacs Lisp t
 Steve Yegge's [[http://steve-yegge.blogspot.com.au/2008/01/emergency-elisp.html][Emergency Elisp]] is short but it includes the necessary information for writing Emacs Lisp.
 
 Don't study the Lisp at the beginning until you are confident about your Emacs mastery.
-* Knowledge management 
+* Knowledge management
 ** Place your setup at GitHub, *publicly*
 I uploaded my setup onto [[https://github.com/redguardtoo/emacs.d]].
 
@@ -279,7 +303,7 @@ Things that used to be important become trivial now. For example, I don't care w
 We are living in the world of science and engineering. I improve myself *more quickly* by sharing to the best, by learning from the best. Knowledge is not black magic. Hiding knowledge will *make it stale*.
 
 * Take action
-All roads lead to Rome. It doesn't matter which road you choose. What matters is walking on the road right now. 
+All roads lead to Rome. It doesn't matter which road you choose. What matters is walking on the road right now.
 
 But please make sure you *actually* understand the key points of this article at first.
 
@@ -308,7 +332,7 @@ I did [[https://github.com/search?l=Emacs+Lisp&o=desc&q=emacs&ref=searchresults&
 I've watched too many people failed because they started from un-stable version!
 
 ** As a Vi person, why should I turn to Emacs?
-[[http://www.emacswiki.org/emacs/Evil][Evil]], the best of the best! 
+[[http://www.emacswiki.org/emacs/Evil][Evil]], the best of the best!
 
 ** Why some Vim users cannot accept Evil?
 It's because their customized key bindings conflict with Emacs/Evil default key bindings.
@@ -348,7 +372,7 @@ That message could be ignored. It's just the *warning* message when Emacs can't 
 
 If you need install that missing tool, search the list in [[https://github.com/redguardtoo/emacs.d][my readme]].
 
-If you are sure it's actually an *error* message, 
+If you are sure it's actually an *error* message,
 - Run "emacs -nw --debug-init" in terminal
 - Send the output to the author of the setup
 - Please use bug tracker if possible
@@ -412,10 +436,10 @@ Here is my example:
 - When I use Wordpress blog, I use [[https://github.com/punchagan/org2blog][org2blog]] to post articles. It's ten times faster than any other client.
 - I installed cmake-mode to do the cross-platform development with [[http://www.cmake.org/Wiki/CMake/Editors/Emacs][cmake]].
 - window-numbering.el is useful when jumping focus between sub-windows.
-- When I work for some huge projects, I use [[https://github.com/redguardtoo/evil-nerd-commenter][evil-nerd-commenter]] to comment code lines because I need deal with too many programming languages. 
+- When I work for some huge projects, I use [[https://github.com/redguardtoo/evil-nerd-commenter][evil-nerd-commenter]] to comment code lines because I need deal with too many programming languages.
 
 ** Do I need learn keyboard macros?
-No. Emacs Lisp is enough. 
+No. Emacs Lisp is enough.
 
 But, studying the Lisp code created by macro does help to understand some interesting problems. So I suggest you learn keyboard macro *after* mastering Lisp.
 ** What do you think "Emacs can do everything"?
@@ -445,4 +469,3 @@ Please use GitHub's bug tracker instead of emailing me directly. GitHub notifica
 Emacs is actually a platform. Cool people keep appearing. I will update this article from time to time in the future.
 * Copyright
 This work is licensed under the [[http://creativecommons.org/licenses/by-nc-nd/3.0/][Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License]].
-
