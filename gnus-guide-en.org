@@ -77,7 +77,7 @@ Here is my guide on that 5%.
 ** Sample setup
 =M-x gnus= will load =~/.gnus.el=. Usually we place all setup code in =~/.gnus.el= so third party libraries used only by Gnus is not loaded during Emacs startup.
 
-Before start Gnus, you *must* create =.gnus.el=. You could use my [[#my-gnusel][my "~/.gnus.el"]].
+Before start Gnus, you *must* create =.gnus.el=. You could use [[#my-gnusel][my "~/.gnus.el"]].
 ** Usage
 After starting Gnus by =M-x gnus=, you come to the "Group Buffer". The "Group Buffer" lists the mail folders. In Gnus, the folder is called "Group". Please note the folders are *invisible* in Group Buffer by default!
 
@@ -103,7 +103,7 @@ You can insert below code into =~/.gnus.el= to create hotkey =o= for =C-u 5 M-x 
 
 In the "Group Buffer", you can enter a folder by pressing =RET= (executing command =gnus-topic-select-group=).
 
-But I strongly suggest using =C-u RET= in order to see all the mails instead of unread mails. After =C-u RET=, you will be asked how many mails to display. If you never delete or move the mail in inbox, the number you provided is usually the exact number of mails to be displayed. If you do delete or move mails in inbox but Gnus is still using the cached data of inbox, you need provide a bigger number instead. Another solution is to delete files =.newsrc.eld= or =.newsrc-dribble= and restart Gnus.
+But I strongly suggest using =C-u RET= in order to see all the mails instead of unread mails. After =C-u RET=, you will be asked how many mails to display. If you never delete or move the mail in inbox, the number you provided is usually the exact number of mails to be displayed. If you do delete or move mails in inbox but Gnus is still using the cached data of inbox, you need provide a bigger number instead. Another solution is to delete =~/.newsrc.eld= or =~/.newsrc-dribble= and restart Gnus.
 
 An opened mail folder is called "Summary Buffer".
 
@@ -541,7 +541,7 @@ Insert below code into =~/.emacs=. Then press =C-c C-y= when composing mail. Pre
        "
 [_o_] Save attachment        [_F_] Forward
 [_v_] Play video/audio       [_r_] Reply
-[_d_] CLI to dowloand stream [_R_] Reply with original
+[_d_] CLI to download stream [_R_] Reply with original
 [_b_] Open external browser  [_w_] Reply all (S w)
 [_f_] Click link/button      [_W_] Reply all with original (S W)
 [_g_] Focus link/button
@@ -657,7 +657,7 @@ I created three commands =w3mext-open-with-mplayer=, =w3mext-download-rss-stream
         (setq cmd (format "curl -L %s > %s.%s"  url (w3mext-subject-to-target-filename) (file-name-extension url)))
         (kill-new cmd)
         (simpleclip-set-contents cmd)
-        (message "%s => clipd/kill-ring" cmd))))))
+        (message "%s => clipboard/kill-ring" cmd))))))
 
 (defun w3mext-open-link-or-image-or-url ()
   "Opens the current link or image or current page's uri or any url-like text under cursor in firefox."
