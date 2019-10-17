@@ -38,6 +38,12 @@
 - 如何提高 (社区, 阅读, 知识管理)
 - 跳出具体技巧, 重要的是人
 - 答疑和小结
+* 广告                                                                          :noexport:
+我开发了一套教授文本文件操作术的课程, 此操作术可用于所有主流编辑器和IDE(Visual Studio Code, Vim, Emacs, Sublime Text 3, IntelliJ IDEA...).
+
+中国大陆用户的课程链接: [[https://edu.51cto.com/sd/de7e7]]
+
+海外华人得课程链接: [[https://www.udemy.com/course/how-to-code-faster-zh/]]
 * 目录                                                                          :noexport:TOC:
 - [[#简介][简介]]
 - [[#为什么用-emacs-可选][为什么用 Emacs (可选)]]
@@ -111,7 +117,6 @@
 - [[#结语][结语]]
   - [[#如何报-bug][如何报 bug]]
   - [[#不要复制粘帖本文][不要复制粘帖本文]]
-- [[#广告][广告]]
 - [[#版权][版权]]
 
 * 为什么用 Emacs (可选)
@@ -851,13 +856,5 @@ Emacs 本质上是一个社区和平台, 不断有新的有趣的人和技术出
 如果你拷贝粘帖全文, 会使自己和他人错过更新.
 
 我建议分享本文的链接, 中英文纯文字版会发布在 GitHub 上 ([[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide]])
-* 广告
-我开了教授一套高效通用的文本文件操作术的收费课程,可以大大提高编程速度.
-
-此操作术使用于所有主流得编辑器和IDE.在教程里我把它应用于VSCode, Vim, Emacs, Sublime Text 3, IntelliJ IDEA.
-
-中国大陆用户的课程链接: [[https://edu.51cto.com/sd/de7e7]]
-
-海外华人得课程链接: [[https://www.udemy.com/course/how-to-code-faster-zh/]]
 * 版权
 本文采用以下协议进行授权, [[http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh][自由转载 - 非商用 - 非衍生 - 保持署名 | Creative Commons BY-NC-ND 3.0]], 转载请注明作者及出处.
