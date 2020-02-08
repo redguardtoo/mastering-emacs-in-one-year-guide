@@ -198,7 +198,7 @@ Emacs 作为其招牌软件也会维护下去, 我的投资永不会贬值.
 
 以 Emacs 和 Vim 的快捷键为例, 两种快捷键完全可以无缝接合.
 
-当然思想的问题不是我空谈能解决的, 关键是要实干. 一个很好的治愈方法就是把 [[http://planet.emacsen.org/]] 上约 4000 篇文章通读一遍. 大约需要 8 个小时左右. 泛读就可以了. 目的就是了解世界有多大.
+当然思想的问题不是我空谈能解决的, 关键是要实干. 一个很好的治愈方法就是把 [[https://planet.emacslife.com/]] 上约 4000 篇文章通读一遍. 大约需要 8 个小时左右. 泛读就可以了. 目的就是了解世界有多大.
 ** 以科学理性做指导
 有读者反映我的方法类似于大学里写论文做研究, 事实上这正是我的灵感来源.
 
@@ -313,7 +313,7 @@ GitHub 的版本控制服务很好. 现在它的社区化倾向越来越强了, 
 例如, 可以看一下 [[https://github.com/search?p=1&q=stars%3A%3E20+extension%3Ael+language%3Aelisp&ref=searchresults&type=Repositories]] 上最酷的 Emacs 插件.
 
 *** Emacs 牛人的博客
-最好的是 [[http://planet.emacsen.org/][Planet Emacsen]], 多个 Emacs 博客的集合.
+最好的是 [[https://planet.emacslife.com/][Planet EmacsLife]], 多个 Emacs 博客的集合.
 
 *** 在 twitter 上以 "emacs :en" 定期搜索
 twitter 人多, 更新结果快.

@@ -212,7 +212,7 @@ If you agrees with my "follow master" strategy, you may like following tip.
 
 I *avoid the pain of maintaining* by watching other masters' emacs.d repositories. I get notified by the bugs and *fix* automatically. All I need to do is clicking "Watch" button on the right top of GitHub page.
 *** Blogs
-[[http://planet.emacsen.org/][Planet Emacsen]] is the best collection of Emacs related blogs.
+[[https://planet.emacslife.com/][Planet EmacsLife]] is the best collection of Emacs related blogs.
 *** Quora.com
 Follow the question on specific topic instead general one. For example, "What's the best Emacs addon" is more useful than "How to learn Emacs".
 
