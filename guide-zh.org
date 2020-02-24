@@ -428,7 +428,7 @@ Xah Lee 提供 [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费 
 - 通读他们已发表的贴子
 
 * 使用 Evil
-Evil 是 [[https://bitbucket.org/lyro/evil/wiki/Home][Vim 模拟器]].
+Evil 是 [[https://github.com/emacs-evil/evil][Vim 模拟器]].
 
 如果你不熟悉 Vim, 在命令行里运行 =vimtutor= 或者安装 Emacs 插件 [[https://github.com/syl20bnr/evil-tutor][evil-tutor]] 学习 Vim 基本命令.
 
@@ -520,7 +520,7 @@ Vim 自带 Leader 键的功能, 你先按了 Leader 键 (很多人定义为空�
 
 有一天我问自己, Lisp 那么强大, Evil 那么优秀, 也许有更方便简洁的方案?许多人说不行不一定是真理, 只有实际调查过的人才有发言权.
 
-我也没有自己钻研 Evil 的代码, 取而代之的是 [[https://bitbucket.org/lyro/evil/issue/511/let-certain-minor-modes-key-bindings][给 Evil 的开发者 Frank Fischer 报了个 bug]], 他给我了一个完美的方案, 根本不需要重设快捷键.
+我也没有自己钻研 Evil 的代码, 取而代之的是 [[https://github.com/emacs-evil/evil/issues/511][给 Evil 的开发者 Frank Fischer 报了个 bug]], 他给我了一个完美的方案, 根本不需要重设快捷键.
 
 这是这个方案在 [[https://github.com/pidu/git-timemachine][git-timemachine 中]] 的 [[http://emacs.stackexchange.com/questions/9842/disable-evil-mode-when-git-timemachine-mode-is-activated][完美应用]].
 ** Evil 专用的插件介绍
