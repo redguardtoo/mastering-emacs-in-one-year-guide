@@ -522,7 +522,7 @@ Vim 自带 Leader 键的功能, 你先按了 Leader 键 (很多人定义为空�
 
 我也没有自己钻研 Evil 的代码, 取而代之的是 [[https://github.com/emacs-evil/evil/issues/511][给 Evil 的开发者 Frank Fischer 报了个 bug]], 他给我了一个完美的方案, 根本不需要重设快捷键.
 
-这是这个方案在 [[https://github.com/pidu/git-timemachine][git-timemachine 中]] 的 [[http://emacs.stackexchange.com/questions/9842/disable-evil-mode-when-git-timemachine-mode-is-activated][完美应用]].
+这是这个方案在 [[https://github.com/emacsmirror/git-timemachine][git-timemachine 中]] 的 [[http://emacs.stackexchange.com/questions/9842/disable-evil-mode-when-git-timemachine-mode-is-activated][完美应用]].
 ** Evil 专用的插件介绍
 我选择 [[http://melpa.org][MELPA]] 上最流行的5个Evil插件介绍一下, 类似优秀插件还有很多.
 
