@@ -40,6 +40,7 @@ Here is my guide on the 5%.
   - [[#synchronize-from-gmail-contacts][Synchronize from Gmail contacts]]
   - [[#customize-from-field][Customize "From" field]]
   - [[#why-gnus-is-slow-to-start-up][Why Gnus is slow to start up]]
+  - [[#customize-the-group-parameters][Customize the group parameters]]
   - [[#classify-email][Classify email]]
   - [[#write-html-mail][Write HTML mail]]
   - [[#read-html-mail][Read HTML mail]]
@@ -101,7 +102,7 @@ You can insert below code into =~/.gnus.el= to assign hotkey =o= to =C-u 5 M-x g
   (kbd "o") 'my-gnus-group-list-subscribed-groups)
 #+END_SRC
 
-In the "Group Buffer", you can enter a folder by pressing =RET= (executing command =gnus-topic-select-group=).
+In the "Group Buffer", you can enter a folder by pressing =RET= (executing command =gnus-group-select-group= or =gnus-topic-select-group=).
 
 But I strongly suggest using =C-u RET= in order to see all the mails instead of unread mails. After =C-u RET=, you will be asked how many mails to display. If you never delete or move the mail in inbox, the number you provided is usually the exact number of mails to be displayed. If you do delete or move mails in inbox but Gnus is still using the cached data of inbox, you need input a bigger number instead. Another solution is to delete =~/.newsrc.eld= or =~/.newsrc-dribble= and restart Gnus.
 
@@ -293,6 +294,8 @@ All you need to do is to insert below code into =~/.gnus.el=,
 
 Instead of remembering extra commands, editing above snippet is more straightforward. The only requirement is a little Emacs Lisp knowledge.
 
+How I know this trick? I know Gnus writes the configuration into =~/.newsrc.eld= and =~/.newsrc-dribble=. The configuration is actually just simple lisp code I could move into =~/.gnus.el=.
+
 The flag =gnus-message-archive-group= defines *local* folder for archived sent mails. By default, the folder is created *monthly*. My setup creates the folder *yearly*.
 * Advanced tips
 ** Windows setup
@@ -395,6 +398,26 @@ Gnus need fetch flags of all mails during startup. As I investigated, =nnimap-re
 To speedup startup,
 - Don't restart Gnus
 - Move old mails into a folder named "archived". That folder should be invisible to Gnus
+** Customize the group parameters
+Move the focus over the group, press =G p= or =M-x  gnus-group-edit-group-parameters= to edit [[https://www.gnu.org/software/emacs/manual/html_node/gnus/Group-Parameters.html#Group-Parameters][group parameters]]. Please note the =display= parameter.
+
+You can set display parameter to a integer to display the last integer articles in the group. This is the same as entering the group with C-u integer. It's reported this setup *makes the Gnus more responsive if the group contains many unread mails* (haoisli9 provides this tip).
+
+If =gnus-topic-mode= is enabled and focus is over a topic, pressing =G p= executes command =gnus-topic-edit-parameters=. This command will set [[https://www.gnu.org/software/emacs/manual/html_node/gnus/Topic-Parameters.html#Topic-Parameters][topic parameters]]. Since the groups will inherit parameters of their parent topic, it seems it's more efficeint to set topic parameters directly.
+
+After executing =gnus-topic-edit-parameters= and dig into =~/.newsrc.eld= or =~/.newsrc-dribble=, I realized that =gnus-topic-edit-parameters= actually executes function =gnus-topic-set-parameters=. Executing =gnus-topic-set-parameters= in =~/.gnus.el= is obviously more manageable.
+
+Here is sample code,
+#+begin_src elisp
+(eval-after-load 'gnus-topic
+  '(progn
+     (add-to-list 'gnus-topic-alist
+                  '("gmail" ; the key of topic
+                    "INBOX"
+                    "[Gmail]/Trash"))
+     ;; see latest 200 mails in topic "gmail" when press Enter on any group inside topic
+     (gnus-topic-set-parameters "gmail" '((display . 200)))))
+#+end_src
 ** Classify email
 Use [[http://getpopfile.org/][Popfile]].
 
@@ -464,7 +487,7 @@ Here is a sample setup,
 The credentials of mail accounts are stored in =~/.authinfo.gpg=.
 ** Why Gnus displays more mails than Gmail
 Gnus counts by individual mail. Gmail counts by mail thread.
-** Subscribe "Sent Mail" folder 
+** Subscribe "Sent Mail" folder
 It's recommended to subscribe "[Gmail]/Sent Mail" folder
 So you can see your *sent mails* in Gnus.
 ** Reconnect mail server
@@ -839,7 +862,11 @@ Emacs 24.4+ is required,
                                "nnfolder+archive:sent.2018"
                                "nnfolder+archive:sent.2019"
                                "nndraft:drafts")
-                              ("Gnus")))))
+                              ("Gnus")))
+
+     ;; see latest 200 mails in topic hen press Enter on any group
+     (gnus-topic-set-parameters "gmail" '((display . 200)))
+     (gnus-topic-set-parameters "hotmail" '((display . 200)))))
 #+END_SRC
 
 Login and password is stored in =~/.authinfo.gpg= which is read by Gnus. Please press =C-h v auth-sources= for more information.
