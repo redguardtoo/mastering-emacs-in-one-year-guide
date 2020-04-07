@@ -40,6 +40,7 @@ Here is my guide on the 5%.
   - [[#synchronize-from-gmail-contacts][Synchronize from Gmail contacts]]
   - [[#customize-from-field][Customize "From" field]]
   - [[#why-gnus-is-slow-to-start-up][Why Gnus is slow to start up]]
+  - [[#double-check-content-of-mail-before-sending-it][Double check content of mail before sending it]]
   - [[#customize-the-group-parameters][Customize the group parameters]]
   - [[#classify-email][Classify email]]
   - [[#write-html-mail][Write HTML mail]]
@@ -398,12 +399,30 @@ Gnus need fetch flags of all mails during startup. As I investigated, =nnimap-re
 To speedup startup,
 - Don't restart Gnus
 - Move old mails into a folder named "archived". That folder should be invisible to Gnus
+** Double check content of mail before sending it
+For example, the email client could remind you the files you forget to attach.
+
+This could be easily implemented by add hooks to =message-send-hook=.
+
+Here is prototype,
+#+begin_src elisp
+(defun my-forgot-attachment () t)
+(defun my-message-pre-send-check-attachment ()
+  "Check attachment before send mail."
+  (when (my-forgot-attachment)
+    (unless
+        (y-or-n-p "The message suggests that you may want to attach something, but no attachment is found. Send anyway?")
+      (error "It seems that an attachment is needed, but none was found. Aborting sending."))))
+(add-hook 'message-send-hook 'my-message-pre-send-check-attachment)
+#+end_src
+
+The full implementation is at [[https://github.com/redguardtoo/emacs.d/blob/4bafca0dbd5b8bda73c615cdf7cff19999f413c6/lisp/init-misc.el#L697]].
 ** Customize the group parameters
-Move the focus over the group, press =G p= or =M-x  gnus-group-edit-group-parameters= to edit [[https://www.gnu.org/software/emacs/manual/html_node/gnus/Group-Parameters.html#Group-Parameters][group parameters]]. Please note the =display= parameter.
+Move the focus over the group, press =G p= or =M-x  gnus-group-edit-group-parameters= to edit [[https://www.gnu.org/software/emacs/manual/html_node/gnus/Group-Parameters.html#Group-Parameters][group parameters]]. Please pay attention to the =display= parameter.
 
 You can set display parameter to a integer to display the last integer articles in the group. This is the same as entering the group with C-u integer. It's reported this setup *makes the Gnus more responsive if the group contains many unread mails* (haoisli9 provides this tip).
 
-If =gnus-topic-mode= is enabled and focus is over a topic, pressing =G p= executes command =gnus-topic-edit-parameters=. This command will set [[https://www.gnu.org/software/emacs/manual/html_node/gnus/Topic-Parameters.html#Topic-Parameters][topic parameters]]. Since the groups will inherit parameters of their parent topic, it seems it's more efficeint to set topic parameters directly.
+If =gnus-topic-mode= is enabled and focus is over a topic, pressing =G p= executes command =gnus-topic-edit-parameters=. This command will set [[https://www.gnu.org/software/emacs/manual/html_node/gnus/Topic-Parameters.html#Topic-Parameters][topic parameters]]. Since the groups will inherit parameters of their parent topic, it seems it's more efficient to set topic parameters directly.
 
 After executing =gnus-topic-edit-parameters= and dig into =~/.newsrc.eld= or =~/.newsrc-dribble=, I realized that =gnus-topic-edit-parameters= actually executes function =gnus-topic-set-parameters=. Executing =gnus-topic-set-parameters= in =~/.gnus.el= is obviously more manageable.
 
