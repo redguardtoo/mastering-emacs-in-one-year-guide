@@ -315,12 +315,14 @@ GitHub 的版本控制服务很好. 现在它的社区化倾向越来越强了, 
 *** Emacs 牛人的博客
 最好的是 [[https://planet.emacslife.com/][Planet EmacsLife]], 多个 Emacs 博客的集合.
 
-*** 在 twitter 上以 "emacs :en" 定期搜索
+*** 在 twitter 上以 "emacs lang:en" 定期搜索
 twitter 人多, 更新结果快.
 
-之所以加上 ":en" 是因为要排除日文内容, 因我不懂日文.
+之所以加上 "lang:en" 是因为要排除日文内容, 因我不懂日文.
 
 如果你懂日文, 则应充分利用日文资源, 其质量相当高.
+
+也可以用 [[https://twitter.com/search-advanced][Advanced Search]] 搜索 ([[https://github.com/Ynjxsjmh][Winy Song]] 提供此技巧).
 *** 在 Stack Overflow 上搜索相关讨论
 google "emacs-related-keywords site:stackoverflow.com"
 
