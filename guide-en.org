@@ -184,7 +184,7 @@ If you are still not convinced, consider my reasons:
 - You will get guidance from the master when he/she analyzes your bug report.
 
 ** Report bugs
-For example, I learned [[phttp://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][some advanced Lisp skill]] by [[https://github.com/capitaomorte/yasnippet/issues/256][reporting a bug]]. The bonus is that bug report is actually a case study. Knowledge from such a case study is hard to forget.
+For example, I learned [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html][some advanced Lisp skill]] by [[https://github.com/capitaomorte/yasnippet/issues/256][reporting a bug]]. The bonus is that bug report is actually a case study. Knowledge from such a case study is hard to forget.
 
 ** Better yourself everyday
 I was inspired by [[https://sites.google.com/site/steveyegge2/tour-de-babel][Steve Yegges' article]]. Here is the text quoted:
