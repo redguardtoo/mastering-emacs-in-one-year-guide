@@ -299,7 +299,7 @@ Emacs 只是一种技术, 其学习方法和其它技术是通用的.
 
 再找出另一高手需要改善的地方, 使用同样的方法.
 
-例如, 默认在 Emacs 中移动子窗口焦点不是很方便. 需按 =C-x o= 多次. 我找到了 emacs 插件 [[https://github.com/dimitri/switch-window][switch-window]], 只要按 =C-x o= 一次, 会有提示子窗口编号, 接下来输入编号就可以了. 但还有改善空间, 我又找到了 [[https://github.com/nschum/window-numbering.el][window-number.el]], 只要按 =M-NUM= 一次. 这个方法已几乎完美, 但 Alt 键还是有点慢, 我结合 [[https://github.com/emacs-evil/evil][evil]] 和 [[https://github.com/cofi/evil-leader][evil-leader]], 可以按逗号和数字飞速切换子窗口了. 我的这个点子后来被[[https://github.com/syl20bnr/spacemacs/commit/0931e4abece1307def3a024f4f2717359fb8d6e8][spacemcs采用]].现在已是大多数Emacs用户的标准配置了.
+例如, 默认在 Emacs 中移动子窗口焦点不是很方便. 需按 =C-x o= 多次. 我找到了 emacs 插件 [[https://github.com/dimitri/switch-window][switch-window]], 只要按 =C-x o= 一次, 会有提示子窗口编号, 接下来输入编号就可以了. 但还有改善空间, 我又找到了 [[https://github.com/nschum/window-numbering.el][window-number.el]], 只要按 =M-NUM= 一次. 这个方法已几乎完美, 但 Alt 键还是有点慢, 我结合 [[https://github.com/emacs-evil/evil][evil]] 和 [[https://github.com/cofi/evil-leader][evil-leader]], 可以按逗号和数字飞速切换子窗口了. 我的这个点子后来被[[https://github.com/syl20bnr/spacemacs/commit/0931e4abece1307def3a024f4f2717359fb8d6e8][spacemacs采用]].现在已是大多数Emacs用户的标准配置了.
 ** 加入社区更上一层楼
 最重要的是专一.
 
