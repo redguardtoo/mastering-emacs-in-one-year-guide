@@ -199,14 +199,10 @@ For example, switch focus between sub-windows in Emacs is not efficient by defau
 I suggest focusing on Emacs only in order to take full advantage of communities.
 
 For example, although Quora.com has lots of interesting stuff, *do not* read/subscribe/follow them unless it's related to Emacs.
-*** Google+
-[[https://plus.google.com/communities/114815898697665598016][Emacs community on Google+]] is the best. The average quality of discussion on Google+ is better.
 *** Reddit
-[[http://www.reddit.com/r/emacs/][Reddit]] is as good as Google+. The advantage of Reddit is that it's usually NOT blocked by the corporate firewall.
-*** GitHub
-It's a social network for developers.
-
-You can search [[https://github.com/languages/Emacs%20Lisp]] for latest Emacs Lisp code.
+The average quality of discussion on [[https://www.reddit.com/r/emacs/][Reddit]] is better. The advantage of Reddit is that it's usually NOT blocked by the corporate firewall.
+*** git cloud services
+[[https://github.com][GitHub]], [[https://gitlab.com][GitLab]] and [[https://bitbucket.org][Bitbucket]] are social networks for developers.
 
 If you agrees with my "follow master" strategy, you may like following tip.
 
@@ -235,6 +231,8 @@ Some videos are great.
 For example, [[http://www.youtube.com/watch?feature=player_embedded&v=oJTwQvgfgMM][Emacs Org-mode - a system for note-taking and project planning]] is the best tutorial on org-mode. Carsten proved that org-mode is simple. The only thing to remember is pressing "TAB" key to expand a text node. That's the killer feature of org-mode. Other stuff are bonus.
 
 Youtube lists the best matched results at the top. So you will always see the same things. I suggest sorting the results by upload date.
+*** IRC
+Join the #emacs and/or #emacs-beginners channels on [[https://webchat.freenode.net/][freenode]] for questions and discussions.
 * Readings
 ** EmacsWiki
 [[http://www.emacswiki.org/emacs/][EmacsWiki]] has all the tips you need for tweaking the Emacs. It's actively maintained by the community.
@@ -311,8 +309,8 @@ But please make sure you *actually* understand the key points of this article at
 
 For example, do you realize that previous sections imply following actions:
 - Find all the developers of the Emacs plugins I listed
-- Follow them on Quora/Twitter/GitHub/Reddit/Google+
-- Read all their old posts on Quora/Reddit/Google+
+- Follow them on Quora/Twitter/GitHub/Reddit
+- Read all their old posts on Quora/Reddit
 * FAQ
 ** I'm Emacs dummy. How to start?
 Go to [[https://github.com/redguardtoo/emacs.d]] and check the section "Install stable version in easiest way" in [[https://github.com/redguardtoo/emacs.d/blob/master/README.org][README]].
@@ -453,7 +451,7 @@ After consulting with me, he found that the [[https://github.com/tumashu/chinese
 
 So be practical. [[http://en.wikipedia.org/wiki/Richard_Stallman][Richard Stallman]] created a whole GNU ecosystem for you. Emacs is only one component. Why not take full advantage of the system?
 * Contact me
-Here is my [[https://twitter.com/#!/chen_bin][twitter]] and [[https://plus.google.com/110954683162859211810][google+]].
+Here is my [[https://twitter.com/#!/chen_bin][twitter]].
 
 My blog is at [[http://blog.binchen.org]].
 
