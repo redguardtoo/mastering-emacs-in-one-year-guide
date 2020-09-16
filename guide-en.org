@@ -201,12 +201,18 @@ I suggest focusing on Emacs only in order to take full advantage of communities.
 For example, although Quora.com has lots of interesting stuff, *do not* read/subscribe/follow them unless it's related to Emacs.
 *** Reddit
 The average quality of discussion on [[https://www.reddit.com/r/emacs/][Reddit]] is better. The advantage of Reddit is that it's usually NOT blocked by the corporate firewall.
-*** git cloud services
-[[https://github.com][GitHub]], [[https://gitlab.com][GitLab]] and [[https://bitbucket.org][Bitbucket]] are social networks for developers.
+*** Git cloud services
+[[https://github.com][GitHub]] is still top one social network for developers.
 
-If you agrees with my "follow master" strategy, you may like following tip.
+I know some hard core geeks turn to [[https://gitlab.com][GitLab]] because the Github is bought by "evil" Microsoft.
 
-I *avoid the pain of maintaining* by watching other masters' emacs.d repositories. I get notified by the bugs and *fix* automatically. All I need to do is clicking "Watch" button on the right top of GitHub page.
+I do use [[https://bitbucket.org][Bitbucket]] sometimes. But Bitbucket is not good at social networking.
+
+Github is still my most favorite site for finding interesting projects and sharing knowledge.
+
+For example, I could *avoid the pain of maintaining my own emacs configuration* by watching other masters' repositories at Github.
+
+Git services has same "watch" button at home page. But the quality of Github notification is at different level.
 *** Blogs
 [[https://planet.emacslife.com/][Planet EmacsLife]] is the best collection of Emacs related blogs.
 *** Quora.com
@@ -231,8 +237,6 @@ Some videos are great.
 For example, [[http://www.youtube.com/watch?feature=player_embedded&v=oJTwQvgfgMM][Emacs Org-mode - a system for note-taking and project planning]] is the best tutorial on org-mode. Carsten proved that org-mode is simple. The only thing to remember is pressing "TAB" key to expand a text node. That's the killer feature of org-mode. Other stuff are bonus.
 
 Youtube lists the best matched results at the top. So you will always see the same things. I suggest sorting the results by upload date.
-*** IRC
-Join the #emacs and/or #emacs-beginners channels on [[https://webchat.freenode.net/][freenode]] for questions and discussions.
 * Readings
 ** EmacsWiki
 [[http://www.emacswiki.org/emacs/][EmacsWiki]] has all the tips you need for tweaking the Emacs. It's actively maintained by the community.
