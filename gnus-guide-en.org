@@ -355,7 +355,7 @@ But there are other better plugins based on BBDB (so you still need install BBDB
 
 You only need one of above packages.
 
-If BBDB is updated yet, you can insert email address from received mails instead. Run =M-x dianyou-insert-email-address-from-received-mails= from [[https://github.com/redguardtoo/dianyou][dianyou]].
+If BBDB database is not updated yet, you can insert email address from received mails instead. Run =M-x dianyou-insert-email-address-from-received-mails= from [[https://github.com/redguardtoo/dianyou][dianyou]].
 
 ** Synchronize from Gmail contacts
 Please,
