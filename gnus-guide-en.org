@@ -540,7 +540,7 @@ You also need insert below code into =~/.emacs=,
 #+BEGIN_SRC emacs-lisp
 (setq gnus-use-cache t)
 #+END_SRC
-Above code uses the cache to the full extent by *"wasting" tens of megabytes of disk space*.
+Above code uses the cache to the full extent by "wasting" tens of megabytes of disk space.
 
 The disk cache is located at =~/News/cache/= which can be pushed to Git private repository.
 ** Paste image from clipboard
@@ -794,7 +794,7 @@ I created three commands =w3mext-open-with-mplayer=, =w3mext-download-rss-stream
 
 Please note these commands require =(setq mm-text-html-renderer 'w3m)=.
 * My "~/.gnus.el"
-Before creating =.gnus.el=, you might need
+Here is =.gnus.el=,
 #+BEGIN_SRC emacs-lisp
 ;; {{ If you'd like to compose mail outside of Gnus, below code should be moved into "~/.emacs.d/init.el",
 ;; Personal Information
@@ -958,11 +958,11 @@ Press =C-h v auth-sources= for more information.
 
 Please note =.authinfo.gpg= is encrypted by default. Emacs will do the encryption/description automatically if file extension is =.gpg=. See [[http://emacswiki.org/emacs/EasyPG]] for details.
 
-You could use =~/.authoinfo= instead. But it's a plain text file. It's not wise to store your credentials into a text file without encryption.
+You could use =~/.authoinfo= instead. But it's a plain text file.
 
 Multiple mail accounts share one =.authinfo.gpg=,
 
-Here is sample =.authinfo.gpg=,
+Sample of =.authinfo.gpg=,
 #+BEGIN_SRC conf
 machine imap.gmail.com login username@gmail.com password my-secret-password port 993
 machine smtp.gmail.com login username@gmail.com password my-secret-password port 587
