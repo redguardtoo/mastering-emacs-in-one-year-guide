@@ -43,7 +43,7 @@
 
 中国大陆用户的课程链接: [[https://edu.51cto.com/sd/de7e7]]
 
-海外华人得课程链接: [[https://www.udemy.com/course/how-to-code-faster-zh/]]
+海外华人的课程链接: [[https://www.udemy.com/course/how-to-code-faster-zh/]]
 * 目录                                                                          :noexport:TOC:
 - [[#简介][简介]]
 - [[#为什么用-emacs-可选][为什么用 Emacs (可选)]]
