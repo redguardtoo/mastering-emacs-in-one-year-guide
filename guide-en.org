@@ -200,7 +200,7 @@ I suggest focusing on Emacs only in order to take full advantage of communities.
 
 For example, although Quora.com has lots of interesting stuff, *do not* read/subscribe/follow them unless it's related to Emacs.
 *** Reddit
-The average quality of discussion on [[https://www.reddit.com/r/emacs/][Reddit]] is better. The advantage of Reddit is that it's usually NOT blocked by the corporate firewall.
+The average quality of discussion on [[https://www.reddit.com/r/emacs/][Reddit]] is better.
 *** Git cloud services
 [[https://github.com][GitHub]] is still top one social network for developers.
 

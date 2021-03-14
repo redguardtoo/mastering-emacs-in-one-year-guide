@@ -306,7 +306,7 @@ Emacs 只是一种技术, 其学习方法和其它技术是通用的.
 例如, Quora.com 上有很多有趣的话题. 请克制兴趣, 不去定阅和 Emacs 无关的话题.
 
 *** Reddit
-[[http://www.reddit.com/r/emacs/][Reddit]] 是最好的. 能从中国大陆访问.
+[[http://www.reddit.com/r/emacs/][Reddit]] 是最好的.
 *** GitHub 是高手云集的地方
 GitHub 的版本控制服务很好. 现在它的社区化倾向越来越强了, 我喜欢.
 
