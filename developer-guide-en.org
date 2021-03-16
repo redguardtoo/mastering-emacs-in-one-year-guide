@@ -12,6 +12,7 @@ Easy/light/good solutions are provided instead of difficult/heavy/perfect soluti
 - [[#introduction][Introduction]]
 - [[#code-completion][Code completion]]
 - [[#code-navigation][Code navigation]]
+- [[#language-server-protocol][Language Server Protocol]]
 - [[#editing][Editing]]
 - [[#git][Git]]
 - [[#syntax-check][Syntax check]]
@@ -38,6 +39,10 @@ Use [[https://github.com/syohex/emacs-counsel-gtags][counsel-gtags]] if =company
 Use [[https://github.com/redguardtoo/counsel-etags][counsel-etags]] if =company-etags= is already used.
 
 Exclude patterns can be used to filter the candidates. For example, input "k1 !neg1 neg2" means candidates should contain string "k1" but neither "neg1" or "neg2".
+* Language Server Protocol
+Right now [[https://www.emacswiki.org/emacs/LanguageServerProtocol][Language Server Protocol]] is very popular. It provides code completion, code navigation , and many other features. It could be a bit slower than more light weight solutions.
+
+But in Emacs world, you could use multiple solutions at the same time. For example, you could use =company-gtags= from =company-mode= AND =company-capf= from [[https://github.com/emacs-lsp/lsp-mode/][lsp-mode]] in one project. See the documentation of =company-backends= of =company-mode= for details.
 * Editing
 Use [[https://github.com/emacs-evil/evil][Evil]] because most time your are moving cursor in left/right/up/down direction. Evil (Vim emulator) uses =hjkl= to do these things.
 
@@ -111,11 +116,11 @@ Make sure your project is using git.
 
 All developer will encounter the problem to find file with similar file name. C++ developers need find "window.hpp" from "window.cpp". Javascript developers need find "Component.test.js" from "Component.js".
 
-The easiest solution is just sorting the candidates from =counsel-git= by string distance. See [[https://www.emacswiki.org/emacs/LevenshteinDistance][LevenshteinDistance]].
+The easiest solution is to sort the candidates from =counsel-git= by [[https://www.emacswiki.org/emacs/LevenshteinDistance][string distance]]. 
 
-There are tons of handy commands from these counsel/swiper/ivy (=counsel-imenu=, =counsel-recentf=, =counsel-ibuffer=, ...).
+There are tons of handy commands from counsel/swiper/ivy (=counsel-imenu=, =counsel-recentf=, =counsel-ibuffer=, ...).
 
-API =ivy-read= from =ivy= is useful. Here is a simple demo on how to use =ivy-read=,
+API =ivy-read= from =ivy= is very useful. Here is a simple demo on how to use =ivy-read=,
 
 #+begin_src elisp
 (require 'ivy)
@@ -125,7 +130,7 @@ API =ivy-read= from =ivy= is useful. Here is a simple demo on how to use =ivy-re
                     (message "I chose %s" choice)))
 #+end_src
 * Sub-windows
-I usually open 4~8 sub-windows and use [[https://github.com/deb0ch/emacs-winum][winum]] to move focus between sub-windows.
+I usually open 4 sub-windows and use [[https://github.com/deb0ch/emacs-winum][winum]] to move cursor between sub-windows.
 
 You need some package to save and load sub-windows layout. You can start from [[https://github.com/wasamasa/eyebrowse][eyebrowse]].
 * Execute command
