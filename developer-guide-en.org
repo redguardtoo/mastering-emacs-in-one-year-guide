@@ -106,7 +106,7 @@ You need know how to manipulate clipboard through command line for two reasons:
 - Traditional way to paste from clipboard could be slow if clipboard content is huge
 - Share clipboard between ssh server and client
 * Find file and grep text
-Install [[https://github.com/abo-abo/swiper][counsle/ivy/swiper]] (=counsel= is dependent on =swiper= while swiper is dependent =ivy=).
+Install [[https://github.com/abo-abo/swiper][counsel/ivy/swiper]] (=counsel= is dependent on =swiper= while swiper is dependent =ivy=).
 
 Make sure your project is using git.
 
