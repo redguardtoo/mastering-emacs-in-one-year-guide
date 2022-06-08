@@ -347,7 +347,7 @@ Bob Glickstein 的 [[http://www.amazon.com/Writing-GNU-Emacs-Extensions-Glickste
 
 生动, 例子丰富. 作者用心安排了书的结构. 例如, 很早就介绍了 defadvice 的用法. defadvice 是 Emacs Lisp 的精华.
 
-Xah Lee 提供 [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][付费 Lisp 教程]] 也相当不错.
+Xah Lee 提供 [[http://xahlee.info/emacs/emacs/buy_xah_emacs_tutorial.html][付费 Lisp 教程]] 也相当不错.
 
 ** Steve Yegge 的 Emacs Lisp 教程
 他的 [[http://steve-yegge.blogspot.com.au/2008/01/emergency-elisp.html][Emergency Elisp]] 很简洁. 我特别喜欢 "Statements" 一章.

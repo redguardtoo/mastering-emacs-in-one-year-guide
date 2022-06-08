@@ -247,7 +247,7 @@ Actually, *most documents* on EmacsWiki is still far better than any other resou
 ** Emacs Lisp book
 I recommend [[http://www.amazon.com/Writing-GNU-Emacs-Extensions-Glickstein/dp/1565922611][Writing GNU Emacs Extensions]] by Bob Glickstein. I like his writing style and the way he organizes chapters.
 
-Xah Lee's [[http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html][Emacs Lisp tutorial]] is practical and easy to read.
+Xah Lee's [[http://xahlee.info/emacs/emacs/buy_xah_emacs_tutorial.html][Emacs Lisp tutorial]] is practical and easy to read.
 
 Steve Yegge's [[http://steve-yegge.blogspot.com.au/2008/01/emergency-elisp.html][Emergency Elisp]] is short but it includes the necessary information for writing Emacs Lisp.
 
