@@ -663,7 +663,7 @@ Interactive Interpreter 和 Shell 没有本质区别, 无非就是解释器支�
 
 默认快捷键经过几十年考验相当高效, 未成为高手前还是要忍.
 
-如一定要在用 Windows 快捷键的, 可考虑 [[http://ergoemacs.org/][ergoemacs]].
+如一定要在用 Windows 快捷键的, 可考虑 [[http://xahlee.info/emacs/][ergoemacs]].
 ** 快捷键太多记不住怎么办?
 没必要记, 我也只记常用的十几个快捷键. 顺其自然, 多用记住, 不用就忘, 很正常.
 
