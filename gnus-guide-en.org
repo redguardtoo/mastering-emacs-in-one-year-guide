@@ -6,12 +6,10 @@
 * Introduction
 Gnus is a powerful email client.
 
-But many people get lost in its endless features. It would be much easier if they had learned the *essential 5% features* and ignored the remaining 95% features at the beginning.
-
-So here is my guide on the 5%.
+But many people get lost in its endless features. It would be much easier if they had learned the *essential 5% features* and ignored the remaining 95% at the beginning. This guide focus on essential 5%.
 * Table of Content                                                              :noexport:TOC:
 - [[#introduction][Introduction]]
-- [[#why-optional][Why (OPTIONAL)]]
+- [[#why-use-gnus-optional][Why use Gnus (OPTIONAL)]]
 - [[#quick-start][Quick start]]
   - [[#things-you-need-to-know-at-first][Things you need to know at first]]
   - [[#sample-setup][Sample setup]]
@@ -56,7 +54,7 @@ So here is my guide on the 5%.
 - [[#my-gnusel][My "~/.gnus.el"]]
 - [[#copyright][Copyright]]
 
-* Why (OPTIONAL)
+* Why use Gnus (OPTIONAL)
 - Gnus is *solid*
 - Works on all platforms
 - Less resource is required
@@ -64,11 +62,29 @@ So here is my guide on the 5%.
 - Mail can be viewed offline
 - Powerful when combined with other packages (Yasnippet, Evil, Swiper, ...)
 * Quick start
+I learned Gnus in a simpler way. I copied from another guy's configuration file ("~/.gnus.el"), changed the login account, and ran =Alt x gnus= to starting Gnus.
+
+I didn't read [[http://www.gnus.org/manual.html][its manual]] at the beginning because it's huge.
+
+Like most people, I read [[https://www.emacswiki.org/emacs/GnusTutorial][one page tutorial at EmacsWiki]] instead.
+
+The problem of EmacsWiki tutorial is it's too short. It does cover the full workflow. But it doesn't show your why Gnus's workflow is more efficient than workflows of other email clients. So many people may find the experience is very painful and they have to give up Gnus at the end.
+
+The best way to use this guide is to copy the sample "~/.gnus.el" provided by this article and start using Gnus. Optionally, you can also use [[https://github.com/redguardtoo/emacs.d][my emacs.d]] which includes packages mentioned in this article.
+
+You'd better be good at Emacs before using Gnus.
+
+It's unnecessary to read this guide from the beginning to the end. It's more a mini-manual than a textbook.
+
+You can simply copy the "~/.gnus.el", finish reading the section "quick start", clone my "emacs.d", and start using Gnus immediately.
+
+When you meet some problems in your daily Gnus workflow, you can look up the solutions in this article.
+
 ** Things you need to know at first
 - Emacs 24.4 is required
 - You need install GnuTLS and OpenSSH on Linux/Mac/Window(Cygwin)
 - =C= means =Ctrl= and =M= means =Alt=. For example, =M-x= means pressing =Alt= and =x= together.
-- =M-x mycommand= means pressing =Alt= and =x=, input "mycommand", and press =Enter= key.
+- =M-x my-command= means pressing =Alt= and =x=, input "mycommand", and press =Enter= key.
 - =RET= is =Enter= key
 - In Gnus, =Group= means the mail folder
 - In Gnus, =Group buffer= means the buffer which lists mail folders
@@ -78,7 +94,7 @@ So here is my guide on the 5%.
 ** Sample setup
 =M-x gnus= will load =~/.gnus.el=. Usually the Gnus configuration is placed in =~/.gnus.el= instead of =~/.emacs.d/init.el=. So third party libraries required only by Gnus is not loaded during Emacs startup.
 
-Before starting Gnus, you *must* create =.gnus.el=. Here is [[#my-gnusel][my "~/.gnus.el"]].
+Before starting Gnus, you *need* create =~/.gnus.el=. When your run =M-x gnus=, this file is loaded. Here is [[#my-gnusel][my "~/.gnus.el"]]. 
 ** Usage
 After starting Gnus by =M-x gnus=, the "Group Buffer" is opened which lists the mail folders. In Gnus, the folder is called "Group". Please note *the folders are invisible in Group Buffer by default*!
 
@@ -651,9 +667,9 @@ Insert below code into =~/.emacs=. Then press =C-c C-y= when composing mail. Pre
        ("w" gnus-article-wide-reply)
        ("W" gnus-article-wide-reply-with-original)
        ("o" gnus-mime-save-part)
-       ("v" w3mext-open-with-mplayer)
-       ("d" w3mext-download-rss-stream)
-       ("b" w3mext-open-link-or-image-or-url)
+       ("v" my-w3m-open-with-mplayer)
+       ("d" my-w3m-download-rss-stream)
+       ("b" my-w3m-open-link-or-image-or-url)
        ("f" w3m-lnum-follow)
        ("g" w3m-lnum-goto)
        ("q" nil))
@@ -689,7 +705,7 @@ Then you can use techniques I introduced in previous section "Tree view of mail 
 
 To view or download video/audio in feed, you can use mplayer if its support for network streaming is enabled. It's should be enabled by default at Linux/macOS/Windows.
 
-I created three commands =w3mext-open-with-mplayer=, =w3mext-download-rss-stream=, and =w3mext-open-link-or-image-or-url= to process multimedia,
+I created three commands =my-w3m-open-with-mplayer=, =my-w3m-download-rss-stream=, and =my-w3m-open-link-or-image-or-url= to process multimedia,
 #+begin_src emacs-lisp
 ;; Please note below code is not included in sample .gnus.el
 ;; https://www.emacswiki.org/emacs/emacs-w3m
@@ -730,7 +746,7 @@ I created three commands =w3mext-open-with-mplayer=, =w3mext-download-rss-stream
         (setq rlt "d:\\\\mplayer\\\\mplayer.exe -quiet"))))
     rlt))
 
-(defun w3mext-subject-to-target-filename ()
+(defun my-w3m-subject-to-target-filename ()
   (let (rlt str)
     (save-excursion
       (goto-char (point-min))
@@ -744,7 +760,7 @@ I created three commands =w3mext-open-with-mplayer=, =w3mext-download-rss-stream
     (setq rlt (replace-regexp-in-string "[ ,_'/-]+" "-" rlt))
     rlt))
 
-(defun w3mext-download-rss-stream ()
+(defun my-w3m-download-rss-stream ()
   (interactive)
   (let (url cmd)
     (when (or (string= major-mode "w3m-mode") (string= major-mode "gnus-article-mode"))
@@ -753,12 +769,12 @@ I created three commands =w3mext-open-with-mplayer=, =w3mext-download-rss-stream
        ((or (not url) (string= url "buffer://"))
         (message "This link is not video/audio stream."))
        (t
-        (setq cmd (format "curl -L %s > %s.%s"  url (w3mext-subject-to-target-filename) (file-name-extension url)))
+        (setq cmd (format "curl -L %s > %s.%s"  url (my-w3m-subject-to-target-filename) (file-name-extension url)))
         (kill-new cmd)
         (simpleclip-set-contents cmd)
         (message "%s => clipboard/kill-ring" cmd))))))
 
-(defun w3mext-open-link-or-image-or-url ()
+(defun my-w3m-open-link-or-image-or-url ()
   "Opens the current link or image or current page's uri or any url-like text under cursor in firefox."
   (interactive)
   (let* (url)
@@ -768,12 +784,12 @@ I created three commands =w3mext-open-with-mplayer=, =w3mext-download-rss-stream
           (setq url (or (w3m-image) w3m-current-url))))
     (browse-url-generic (if url url (car (browse-url-interactive-arg "URL: "))))))
 
-(defun w3mext-encode-specials (str)
+(defun my-w3m-encode-specials (str)
   (setq str (replace-regexp-in-string "(" "%28" str))
   (setq str (replace-regexp-in-string ")" "%29" str))
   (setq str (replace-regexp-in-string ")" "%20" str)))
 
-(defun w3mext-open-with-mplayer ()
+(defun my-w3m-open-with-mplayer ()
   (interactive)
   (let (url cmd str)
     (when (or (string= major-mode "w3m-mode") (string= major-mode "gnus-article-mode"))
@@ -784,7 +800,7 @@ I created three commands =w3mext-open-with-mplayer=, =w3mext-download-rss-stream
           (goto-char (point-min))
           (when (string-match "^Archived-at: <?\\([^ <>]*\\)>?" (setq str (my-buffer-str)))
             (setq url (match-string 1 str)))))
-      (setq url (w3mext-encode-specials url))
+      (setq url (my-w3m-encode-specials url))
       (setq cmd (format "%s -cache 2000 %s &" (my-guess-mplayer-path) url))
       (when (string= url "buffer://")
         ;; cache 2M data and don't block UI
@@ -952,7 +968,7 @@ Here is =.gnus.el=,
      (gnus-topic-set-parameters "hotmail" '((display . 200)))))
 #+END_SRC
 
-Login and password is stored in =~/.authinfo.gpg=.
+Login and password is stored in =~/.authinfo.gpg=. Please note some mail service provider (Gmail, etc) require users to turn on 2-Step verification and generate one app password for login.
 
 Press =C-h v auth-sources= for more information.
 
