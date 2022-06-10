@@ -355,7 +355,7 @@ I am die-hard Vi user with 14 year experience. After realizing the potential of 
 
 Another more brilliant example is [[https://github.com/syl20bnr/spacemacs][a guy who earning tons of Github stars]].
 ** I don't like default key bindings
-[[http://ergoemacs.org/][ergoemacs]] if you prefer Microsoft's key bindings.
+[[http://xahlee.info/emacs/][ergoemacs]] if you prefer Microsoft's key bindings.
 ** Too many key bindings to memorize
 Use [[http://www.emacswiki.org/Smex][Smex]]. It's a myth that a Emacs guru must remember many key bindings.
 ** I am not comfortable with other people's setup. Can I modify it?
